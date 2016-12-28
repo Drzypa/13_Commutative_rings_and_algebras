@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RationalNumber}
+\pmcreated{2013-03-22 11:50:30}
+\pmmodified{2013-03-22 11:50:30}
+\pmowner{djao}{24}
+\pmmodifier{djao}{24}
+\pmtitle{rational number}
+\pmrecord{15}{30396}
+\pmprivacy{1}
+\pmauthor{djao}{24}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13B30}
+\pmclassification{msc}{11A99}
+\pmclassification{msc}{03E99}
+\pmsynonym{$\mathbb{Q}$}{RationalNumber}
+\pmrelated{Fraction}
+\pmrelated{ProofThatTheRationalsAreCountable}
+\pmdefines{rational}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+%%%%\usepackage{xypic}
+\begin{document}
+The rational numbers $\mathbb{Q}$ are the fraction field of the ring $\mathbb{Z}$ of integers. In more elementary terms, a rational number is a quotient $a/b$ of two integers $a$ and $b$, where $b$ is nonzero. Two fractions $a/b$ and $c/d$ are equivalent if the product of the cross terms is equal:
+$$
+\frac{a}{b} = \frac{c}{d} \iff ad = bc
+$$
+Addition and multiplication of fractions are given by the formulae
+\begin{eqnarray*}
+\frac{a}{b} + \frac{c}{d} & = & \frac{ad + bc}{bd} \\
+\frac{a}{b} \cdot \frac{c}{d} & = & \frac{ac}{bd}
+\end{eqnarray*}
+
+The field of rational numbers is an ordered field, under the ordering relation $\leq$ defined as follows: $a/b \leq c/d$ if
+\begin{enumerate}
+\item the inequality $a\cdot d \leq b \cdot c$ holds in the integers, and $b$ has the same sign as $d$, or
+\item the inequality $a\cdot d \geq b \cdot c$ holds in the integers, and $b$ has the opposite sign as $d$.
+\end{enumerate}
+Under this ordering relation, the rational numbers form a topological space under the order topology. The set of rational numbers is dense when considered as a subset of the real numbers.
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+\end{document}

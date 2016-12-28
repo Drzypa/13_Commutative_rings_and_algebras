@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IdealsContainedInAUnionOfIdeals}
+\pmcreated{2013-03-22 19:03:55}
+\pmmodified{2013-03-22 19:03:55}
+\pmowner{joking}{16130}
+\pmmodifier{joking}{16130}
+\pmtitle{ideals contained in a union of ideals}
+\pmrecord{4}{41949}
+\pmprivacy{1}
+\pmauthor{joking}{16130}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13A15}
+\pmrelated{IdealIncludedInUnionOfPrimeIdeals}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Assume that $R$ is a commutative ring.
+
+\textbf{Lemma.} Let $A$, $B$, $C$ be ideals in $R$ such that $A\subseteq B\cup C$. Then $A\subseteq B$ or $A\subseteq C$.
+
+\textit{Proof.} Assume that this is not true. Then there are $x,y\in A$ such that $x\in B$, $y\in C$ and $x\not\in C$, $y\not\in B$. Obviously $x+y\in A\subseteq B\cup C$ and without loss of generality we may assume that $x+y\in B$. Then $y=(x+y)-x\in B$. Contradiction. $\square$
+
+\textbf{Remark.} This lemma is also true if we exchange ring with a group and ideals with subgroups (because we didn't use multiplication and commutativity of addition in proof).
+
+\textbf{Proposition.} Let $I$, $P_1,\ldots, P_n$ be ideals in $R$ such that each $P_i$ is prime. If $I\subseteq P_1\cup\cdots\cup P_n$, then there exists $i\in\{1,\ldots,n\}$ such that $I\subseteq P_i$.
+
+\textit{Proof.} We will use the induction on $n$. For $n=2$ our lemma applies. Let $n>2$. Assume that $I\not\subseteq P_1\cup\cdots\cup P_n$. For $i\in\{1,\ldots, n\}$ define $$\overline{P_i}=P_1\cup\cdots\cup P_{i-1}\cup P_{i+1}\cup\cdots\cup P_n.$$ By our assumption (and induction hypothesis) $I\not\subseteq \overline{P_i}$ for any $i\in\{1,\ldots, n\}$. Thus for any $i$ there is $x_i\in I$ such that $x_i\not\in\overline{P_i}$.
+
+Now for any $i\in\{1,\ldots, n\}$ define $\overline{x_i}=x_1\cdots x_{i-1} x_{i+1}\cdots x_n\in I$. Then we have
+$$\overline{x_1}+\cdots +\overline{x_n}\in I$$
+and thus there is $j\in\{1,\ldots, n\}$ such that $\overline{x_1}+\cdots +\overline{x_n}\in P_j$. Since $\overline{x_i}\in P_j$ for any $i\neq j$, then we have that $$\overline{x_j}\in P_j.$$ But $P_j$ is prime, so there is $k\neq j$ such that $x_k\in P_j\subseteq \overline{P_k}$. Contradiction. $\square$
+
+\textbf{Counterexample.} We will show, that if $P_i$'s are not prime, then the thesis no longer hold, even when $n=3$. Consider the ring of polynomials in two variables over a simple field of order $2$, i.e. $\mathbb{Z}_{2}[X,Y]$. Let $R=\mathbb{Z}_{2}[X,Y]/(X^2, XY, Y^2)$. For $W(X,Y)\in \mathbb{Z}_{2}[X,Y]$ we shall write $\overline{W(X,Y)}=W(X,Y)+(X^2,XY,Y^2)\in R$. Then it is easy to see, that
+$$R=\{ \overline{0}, \overline{1}, \overline{X}, \overline{Y}, \overline{X}+\overline{Y}, \overline{X}+\overline{1}, \overline{Y}+\overline{1}, \overline{X}+\overline{Y}+\overline{1}\}.$$
+Let $$I=\{\overline{0}, \overline{X}, \overline{Y}, \overline{X}+\overline{Y}\};$$ $$A_1=\{\overline{0}, \overline{X}\};$$ $$A_2=\{\overline{0}, \overline{Y}\};$$ $$A_3=\{\overline{0}, \overline{X}+\overline{Y}\}.$$ It can be easily checked, that $I, A_1, A_2, A_3$ are all ideals and $I\subseteq A_1\cup A_2\cup A_3$ but obviously $I\not\subseteq A_i$ for any $i=1,2,3$. $\square$
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,39 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AFiniteIntegralDomainIsAField}
+\pmcreated{2013-03-22 12:50:02}
+\pmmodified{2013-03-22 12:50:02}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{a finite integral domain is a field}
+\pmrecord{11}{33158}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13G05}
+\pmrelated{FiniteRingHasNoProperOverrings}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\begin{document}
+A finite integral domain is a field.
+
+{\bf Proof:\\}
+Let $R$ be a finite integral domain.  Let $a$ be nonzero element of $R$.
+
+Define a function $\varphi \colon R \rightarrow R$ by $\varphi(r)=ar$.
+
+Suppose $\varphi(r)=\varphi(s)$ for some $r,s \in R$.  Then $ar=as$, which implies $a(r-s)=0$.  Since $a \neq 0$ and $R$ is a cancellation ring, we have $r-s=0$.  So $r=s$, and hence $\varphi$ is injective.
+
+Since $R$ is finite and $\varphi$ is injective, by the pigeonhole principle we see that $\varphi$ is also surjective.  Thus there exists some $b \in R$ such that $\varphi(b)= ab = 1_R$, and thus $a$ is a unit.
+
+Thus $R$ is a finite division ring.  Since it is commutative, it is also a field.
+
+{\bf Note:\\}
+A more general result is that an Artinian integral domain is a field.
+%%%%%
+%%%%%
+\end{document}

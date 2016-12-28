@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CriterionForAModuleToBeNoetherian}
+\pmcreated{2013-03-22 15:28:46}
+\pmmodified{2013-03-22 15:28:46}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{criterion for a module to be noetherian}
+\pmrecord{9}{37334}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13E05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{theorem}{Theorem}
+\newcommand{\fm}[1]{{\it #1}}
+\begin{document}
+\begin{theorem}
+A module is noetherian if and only if all of its submodules and 
+\PMlinkname{quotients}{QuotientModule} are noetherian.
+\end{theorem}
+\begin{proof}  Suppose $M$ is Noetherian (over a ring $R$), and $N\subseteq M$ a submodule.  Since any submodule of $M$ is finitely generated, any submodule of $N$, being a submodule of $M$, is finitely generated as well.  Next, if $A/N$ is a submodule of $M/N$, and if $a_1,\ldots, a_n$ is a generating set for $A\subseteq M$, then $a_1+N,\ldots,a_n+N$ is a generating set for $A/N$.  Conversely, if every submodule of $M$ is Noetherian, then $M$, being a submodule itself, must be Noetherian.
+\end{proof}
+
+A weaker form of the converse is the following:
+\begin{theorem}
+If $N\subseteq M$ is a submodule of $M$ such that $N$ and $M/N$ are Noetherian, then $M$ is Noetherian.
+\end{theorem}
+\begin{proof}  Suppose $A_1\subseteq A_2\subseteq \cdots $ is an ascending chain of submodules of $M$.  Let $B_i=A_i\cap N$, then $B_1\subseteq B_2\subseteq \cdots $ is an ascending chain of submodules of $N$.  Since $N$ is Noetherian, the chain terminates at, say $B_n$.  Let $C_i=(A_i+N)/N$, then $C_1\subseteq C_2\subseteq \cdots $ is an ascending chain of submodules of $M/N$.  Since $M/N$ is Noetherian, the chain stops at, say $C_m$.  Let $k=\max(m,n)$.  Then we have $B_k=B_{k+1}$ and $C_k=C_{k+1}$.  We want to show that $A_k=A_{k+1}$.  Since $A_k\subseteq A_{k+1}$, we need the other inclusion.  Pick $a\in A_{k+1}$.  Then $a+N=b+N$, where $b\in A_k$.  This means that $a-b\in N$.  But $b\in A_{k+1}$ as well, so $a-b\in N\cap A_{k+1}$.  Since $N\cap A_k =N\cap A_{k+1}$, this means that $a-b\in A_k$ or $a\in A_k$.
+\end{proof}
+\PMlinkescapeword{noetherian}
+%%%%%
+%%%%%
+\end{document}

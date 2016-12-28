@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{mathbbZn}
+\pmcreated{2013-03-22 15:58:10}
+\pmmodified{2013-03-22 15:58:10}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{${\mathbb{Z}}_n$}
+\pmrecord{25}{37985}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13-00}
+\pmclassification{msc}{13M05}
+\pmclassification{msc}{11-00}
+\pmsynonym{integers mod n}{mathbbZn}
+\pmrelated{ResidueSystems}
+\pmrelated{MathbbZ}
+\pmrelated{CyclicRingsThatAreIsomorphicToKmathbbZ_kn}
+\pmrelated{Congruences}
+\pmrelated{EquivalenceRelation}
+\pmdefines{modulus}
+\pmdefines{modular arithmetic}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapeword{class}
+\PMlinkescapeword{prime}
+
+Let $n \in \mathbb{Z}$.  An equivalence relation, called \PMlinkname{congruence}{Congruent2}, can be defined on $\mathbb{Z}$ by $a \equiv b \operatorname{mod} n$ iff $n$ divides $b-a$.  Note first of all that $a \equiv b \operatorname{mod} n$ iff $a \equiv b \operatorname{mod} |n|$.  Thus, without loss of generality, only nonnegative $n$ need be considered.  Secondly, note that the case $n=0$ is not very interesting.  If $a \equiv b \operatorname{mod} 0$, then $0$ divides $b-a$, which occurs exactly when $a=b$.  In this case, the set of all equivalence classes can be identified with $\mathbb{Z}$.  Thus, only positive $n$ need be considered.  The set of all equivalence classes of $\mathbb{Z}$ under the given equivalence relation is called ${\mathbb{Z}}_n$.
+
+Some mathematicians consider the notation ${\mathbb{Z}}_n$ to be archaic and somewhat confusing.  This matter of notation is most considerable when $n=p$ for some \PMlinkname{prime}{PrimeNumber} $p$, as ${\mathbb{Z}}_p$ is used to refer to the \PMlinkname{$p$-adic integers}{MathbbZ_p}.   To avoid this confusion, some mathematicians use the notation $\mathbb{Z}/n\mathbb{Z}$ instead of ${\mathbb{Z}}_n$.  On the other hand, the notation ${\mathbb{Z}}_n$ should not cause confusion when $n$ is not prime, and is an intuitive shorthand way to write $\mathbb{Z}/n\mathbb{Z}$.  Thus, others use ${\mathbb{F}}_p$ when $n=p$ for some prime $p$ and ${\mathbb{Z}}_n$ otherwise.  (The explanation of the usage of $\mathbb{F}_p$ will come later.)  Still others, especially those who are unfamiliar with the \PMlinkescapetext{$p$-adic integers}, use the notation ${\mathbb{Z}}_n$ exclusively.  (In this entry, the notation ${\mathbb{Z}}_n$ is used exclusively, though it is highly recommended to use another notation when $n=p$ for some prime $p$.)
+
+One usually identifies an element of ${\mathbb{Z}}_n$ (which is technically a \PMlinkname{class}{EquivalenceClass}, \PMlinkescapetext{not a number}) with the unique element $r$ in the class such that $0 \le r < n$.  One can use the division algorithm to establish that, for each class, an $r$ as described exists uniquely.  (The set of all $r$'s as described is an example of a residue system.)  Thus, the sets ${\mathbb{Z}}_n$ are finite with exactly $n$ elements.  Addition and multiplication operations can also be defined on ${\mathbb{Z}}_n$ in a natural way that corresponds to the operations on $\mathbb{Z}$.  Under these operations, ${\mathbb{Z}}_n$ is a commutative ring with \PMlinkname{identity}{MultiplicativeIdentity} as well as a cyclic ring with behavior $1$.  When $n=p$ for some prime $p$, ${\mathbb{Z}}_n$ is a field.  In this case, the notation ${\mathbb{F}}_p$ highlights the fact that the \PMlinkescapetext{structure} is a field.  When $n$ is composite, ${\mathbb{Z}}_n$ has zero divisors and thus is neither a field nor an integral domain.  Also note that ${\mathbb{Z}}_1$ is a zero ring, since all integers are \PMlinkname{equivalent}{Equivalent}, yielding only one equivalence class.
+
+The $n$ in both ${\mathbb{Z}}_n$ and $a \equiv b \operatorname{mod} n$ is called the \emph{modulus}.  Performing computations such as addition, subtraction, multiplication, and taking \PMlinkname{exponents}{Exponent2} in one of the rings ${\mathbb{Z}}_n$ is called \emph{modular arithmetic}.
+%%%%%
+%%%%%
+\end{document}

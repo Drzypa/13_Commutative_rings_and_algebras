@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{KrullValuationDomain}
+\pmcreated{2013-03-22 14:55:01}
+\pmmodified{2013-03-22 14:55:01}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Krull valuation domain}
+\pmrecord{8}{36603}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13F30}
+\pmclassification{msc}{13A18}
+\pmclassification{msc}{12J20}
+\pmclassification{msc}{11R99}
+\pmrelated{ValuationDeterminedByValuationDomain}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+\begin{thmplain}
+ \, Any Krull valuation \,$|\cdot|$\, of a field $K$ determines a unique valuation domain \,$R = \{a\in K: \,\,|x|\leqq 1\}$, whose field of fraction is $K$.
+\end{thmplain}
+
+{\em Proof.} \,We first see that \,$1\in R$\, since \,$|1| = 1$. \,Let then \,$a,\,b$\, be any two elements of $R$. \,The non-archimedean triangle inequality shows that \,$|a-b| \leqq \max\{|a|,\,|b|\} \leqq 1$, \,i.e. that the difference \,$a-b$\, belongs to $R$. \,Using the \PMlinkname{multiplication rule}{OrderedGroup} 4 of inequalities we obtain
+       $$|ab| = |a|\cdot|b| \leqq 1\cdot 1 = 1$$
+which shows that also the product $ab$ is element of $R$. \,Thus, $R$ is a subring of the field $K$, and so an integral domain. \,Let now $c$ be an arbitrary element of $K$ not belonging to $R$. \,This implies that \,$1 < |c|$, \,whence \,$|c^{-1}| = |c|^{-1} < 1$ (see the \PMlinkname{inverse rule}{OrderedGroup} 5). \,Consequently, the inverse $c^{-1}$ belongs to $R$, and we conclude that $R$ is a valuation domain. \, The \PMlinkescapetext{presentations} \,$a = \frac{a}{1}$\, and \,$c = \frac{1}{c^{-1}}$\, make evident that $K$ is the field of fractions of $R$.
+%%%%%
+%%%%%
+\end{document}

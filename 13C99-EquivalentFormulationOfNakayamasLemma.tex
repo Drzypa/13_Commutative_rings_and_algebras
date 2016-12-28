@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EquivalentFormulationOfNakayamasLemma}
+\pmcreated{2013-03-22 19:11:47}
+\pmmodified{2013-03-22 19:11:47}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{equivalent formulation of Nakayama's lemma}
+\pmrecord{4}{42109}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13C99}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\BQ}{\mathbb{Q}}
+\newcommand{\BR}{\mathbb{R}}
+\newcommand{\BZ}{\mathbb{Z}}
+\newcommand{\sma}{\mathfrak{a}}
+\begin{document}
+The following is equivalent to Nakayama's lemma.
+
+Let $A$ be a ring, $M$ be a finitely-generated $A$-module, $N$ a submodule of $M$, and $\sma$ an ideal of $A$ contained in its Jacobson radical. Then $M = \sma M + N \Rightarrow M=N$.
+
+Clearly this statement implies Nakayama's Lemma, by setting $N$ to $0$. To see that it follows from Nakayama's Lemma, note first that by the second isomorphism theorem for modules,
+\[
+  \frac{\sma M+N}{N} = \frac{\sma M}{\sma M\cap N}
+\]
+and the obvious map
+\[
+  \sma M\to \sma\frac{M}{N} : am\mapsto a(m+N)
+\]
+is surjective; the kernel is clearly $\sma M\cap N$. Thus
+\[
+  \frac{\sma M+N}{N} \cong \sma\frac{M}{N}
+\]
+So from $M=\sma M+N$ we get $M/N = \sma(M/N)$. Since $\sma$ is contained in the Jacobson radical of $M$, it is contained in the Jacobson radical of $M/N$, so by Nakayama, $M/N=0$, i.e. $M=N$.
+
+
+%%%%%
+%%%%%
+\end{document}

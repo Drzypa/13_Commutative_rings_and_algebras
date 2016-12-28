@@ -1,0 +1,45 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AFiniteRingIsCyclicIfAndOnlyItsOrderAndCharacteristicAreEqual}
+\pmcreated{2013-03-22 13:30:30}
+\pmmodified{2013-03-22 13:30:30}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{a finite ring is cyclic if and only its order and characteristic are equal}
+\pmrecord{12}{34090}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+{\bf \PMlinkescapetext{Lemma}.}  A finite ring is cyclic if and only if its \PMlinkname{order}{OrderRing} and characteristic are equal.  
+
+\begin{proof}
+If $R$ is a cyclic ring and $r$ is a \PMlinkname{generator}{Generator} of the additive group of $R$, then $|r|=|R|$.  Since, for every $s \in R$, $|s|$ divides $|R|$, then it follows that $\operatorname{char}~R=|R|$.  Conversely, if $R$ is a finite ring such that $\operatorname{char}~R=|R|$, then the exponent of the additive group of $R$ is also equal to $|R|$.  Thus, there exists $t \in R$ such that $|t|=|R|$.  Since $\langle t \rangle$ is a subgroup of the additive group of $R$ and $|\langle t \rangle |=|t|=|R|$, it follows that $R$ is a cyclic ring.\end{proof}
+%%%%%
+%%%%%
+\end{document}

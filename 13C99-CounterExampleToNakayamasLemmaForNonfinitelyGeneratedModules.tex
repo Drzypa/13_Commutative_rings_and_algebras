@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CounterExampleToNakayamasLemmaForNonfinitelyGeneratedModules}
+\pmcreated{2013-03-22 18:03:55}
+\pmmodified{2013-03-22 18:03:55}
+\pmowner{sjm}{20613}
+\pmmodifier{sjm}{20613}
+\pmtitle{counter example to Nakayama's lemma for non-finitely generated modules}
+\pmrecord{9}{40597}
+\pmprivacy{1}
+\pmauthor{sjm}{20613}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13C99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\begin{document}
+The hypothesis that the module $M$ be finitely generated is really
+necessary. For example, the field of $p$-adic numbers $\Q_p$ is
+not finitely generated over its ring of integers $\Z_p$ and
+$(p)\Q_p = \Q_p$. \\
+
+In one sense, the reason why $\Q_p$ is ``bad'' is that is has no
+proper sub module which is also maximal. Thus $\Q_p$ has no non-zero simple
+quotient. This explains why the following
+\PMlinkname{Proof of Nakayama's Lemma}{ProofOfNakayamasLemma2}
+does not work for non-finitely generated modules.
+%%%%%
+%%%%%
+\end{document}

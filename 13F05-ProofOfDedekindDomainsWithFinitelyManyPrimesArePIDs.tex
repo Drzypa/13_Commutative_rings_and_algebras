@@ -1,0 +1,45 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfDedekindDomainsWithFinitelyManyPrimesArePIDs}
+\pmcreated{2013-03-22 18:35:24}
+\pmmodified{2013-03-22 18:35:24}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{proof of Dedekind domains with finitely many primes are PIDs}
+\pmrecord{4}{41317}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13F05}
+\pmclassification{msc}{11R04}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\smp}{\mathfrak{p}}
+\begin{document}
+\begin{proof} Let $\smp_1,\ldots,\smp_k$ be all the primes of a Dedekind domain $R$. If $I$ is any ideal of $R$, then by the Weak Approximation Theorem we can choose $x\in R$ such that $\nu_{\smp_i}((x))=\nu_{\smp_i}(I)$ for all $i$ (where $\nu_{\smp}$ is the $\smp$-adic valuation). But since $R$ is Dedekind, ideals have unique factorization; since $(x)$ and $I$ have identical factorizations, we must have $(x)=I$ and $I$ is principal.
+\end{proof}
+
+%%%%%
+%%%%%
+\end{document}

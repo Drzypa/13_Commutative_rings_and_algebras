@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Antiisomorphism}
+\pmcreated{2013-03-22 16:01:08}
+\pmmodified{2013-03-22 16:01:08}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{anti-isomorphism}
+\pmrecord{15}{38057}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13B10}
+\pmclassification{msc}{16B99}
+\pmdefines{anti-endomorphism}
+\pmdefines{anti-homomorphism}
+\pmdefines{anti-isomorphic}
+\pmdefines{anti-automorphism}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $R$ and $S$ be rings and $f: R\longrightarrow S$ be a function such 
+that $f(r_{1}r_{2}) = f(r_{2})f(r_{1})$ for all $r_{1}, r_{2} \in R$.
+
+
+If $f$ is a homomorphism of the additive groups of $R$ and $S$,
+then $f$ is called an {\it anti-homomorphsim}.
+
+If $f$ is a bijection and anti-homomorphism,
+then $f$ is called an {\it anti-isomorphism}.
+
+If $f$ is an anti-homomorphism and $R=S$
+then $f$ is called an {\it anti-endomorphism}.
+
+If $f$ is an anti-isomorphism and $R=S$
+then $f$ is called an {\it anti-automorphism}.
+
+
+As an example, when $m \neq n$, the mapping that sends a matrix to its transpose
+(or to its conjugate transpose if the matrix is complex) is an anti-isomorphism
+of $M_{m,n} \to M_{n,m}$. 
+
+
+$R$ and $S$ are \emph{anti-isomorphic} if there is an anti-isomorphism $R \to S$.
+
+All of the things defined in this entry are also defined for groups.
+
+
+
+%%%%%
+%%%%%
+\end{document}

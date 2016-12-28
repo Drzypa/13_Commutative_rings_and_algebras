@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PropertiesOfAGcdDomain}
+\pmcreated{2013-03-22 18:18:44}
+\pmmodified{2013-03-22 18:18:44}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{properties of a gcd domain}
+\pmrecord{9}{40936}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13G05}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\newcommand{\GCD}{\operatorname{GCD}}
+\begin{document}
+Let $D$ be a gcd domain.  For any $a\in D$, denote $[a]$ the set of all elements in $D$ that are associates of $a$, $\GCD(a,b)$ the set of all gcd's of elements $a$ and $b$ in $D$, and any $S\subseteq D$, $mS:=\lbrace ms\mid s\in S\rbrace$.  Then
+\begin{enumerate}
+\item $\GCD(a,b)=[a]$ iff $a\mid b$.
+\item $m\GCD(a,b)= \GCD(ma,mb)$.
+\item If $\GCD(ab,c)=[1]$, then $\GCD(a,c)=[1]$
+\item If $\GCD(a,b)=[1]$ and $\GCD(a,c)=[1]$, then $\GCD(a,bc)=[1]$.
+\item If $\GCD(a,b)=[1]$ and $a\mid bc$, then $a\mid c$.
+\end{enumerate}
+\begin{proof}  To aid in the proof of these properties, let us denote, for $a\in D$ and $S\subseteq D$, $a|S$ to mean that every element of $S$ is divisible by $a$, and $S|a$ to mean that every element in $S$ divides $a$.
+We take the following four steps:
+\begin{enumerate}
+\item One direction is obvious from the definition.  So now suppose $a\mid b$.  Then $a\mid\GCD(a,b)$.  But by
+definition, $\GCD(a,b)\mid a$, so $[a]=\GCD(a,b)$.
+\item Pick $d \in \GCD(a,b)$ and $x\in \GCD(ma,mb)$.  We want to show that $md$ and $x$ are associates.  By assumption, $d\mid a$ and $d\mid b$, so $md\mid ma$ and $md\mid mb$, which implies that $md\mid x$.  Write $x=mn$ for some $n\in D$.  Then $mn\mid ma$ and $mn\mid mb$ imply that $n\mid a$ and $n\mid b$, and therefore $n\mid d$ since $d$ is a gcd of $a$ and $b$.  As a result, $mn\mid md$, or $x\mid md$, showing that $x$ and $md$ are associates.  As a result, the map $f: m\GCD(a,b)\to \GCD(ma,mb)$ given by $f(d)=md$ is a bijection.
+\item If $d\mid a$ and $d\mid c$, then $d\mid ab$ and $d\mid c$.  So $d\mid\GCD(ab,c)=[1]$, hence $d$ is a unit and
+the result follows.
+\item Suppose $d\mid a$ and $d\mid bc$.  Then $d\mid ab$ and $d\mid bc$ and hence $d\mid\GCD(ab,bc)=b\GCD(a,c)=[b]$.  But $d\mid a$ also, so $d\mid\GCD(a,b)=[1]$ and $d$ is a unit.
+\item $\GCD(a,b)=[1]$ implies $[c]=\GCD(ac,bc)$.  Now, $a\mid ac$ and by assumption, $a\mid bc$.  Therefore,
+$a\mid\GCD(ac,bc)=[c]$.
+\end{enumerate}
+\end{proof}
+
+The second property above can be generalized to arbitrary integral domain: let $D$ be an integral domain, $a,b\in D$, with $\GCD(a,b)\ne \varnothing \ne \GCD(ma,mb)$, then $d\in \GCD(a,b)$ iff $md \in \GCD(ma,mb)$.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofThatSylvestersMatrixEqualsTheResultant}
+\pmcreated{2013-03-22 14:36:50}
+\pmmodified{2013-03-22 14:36:50}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{proof that Sylvester's matrix equals the resultant}
+\pmrecord{8}{36190}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13P10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+In the derivation of Sylvester's matrix for the resultant, it was seen that if two polynomials have a common root, then Sylvester's determinant will equal zero.  Since two polynomials have a common root if and only if their resultant is zero, it follows that if the resultant is zero, then Sylvester's determinant equals zero.  In this entry, we shall use this fact to show that Sylvester's determinant equals the resultant.
+
+The secret is to view both Sylvester's determinant and the resultant as functions of the roots.  A more precise way of saying what this means is that we will study polnomials in the indeterminates $a_0, r_1, r_2, \ldots, r_m, b_0, s_1, s_2, \ldots, s_n$.  We will regard $a_1, a_2, \ldots, a_m, b_1, b_2, \ldots, b_m$ as polynomials in these variables using the expression of coefficients of a polynomial as symmetric functions of its roots, e.g.
+ $$a_1 = a_0 (r_1 + r_2 + \cdots)$$
+ $$a_2 = a_0 (r_1 r_2 + r_1 r_3 + \cdots)$$
+Note that $a_k$ is a $k^{\hbox{th}}$ order polynomial in the $r_i$'s and $b_k$ is a $k^{\hbox{th}}$ order polynomial in the $s_i$'s.
+
+Let $R$ be the polynomial
+ $$R = a_0^n b_0^m \prod_{i=1}^m \prod_{j=1}^n (r_i - s_j)$$
+and let $D$ be the polynomial which is gotten by replacing occurrences of $a_1, a_2, \ldots, a_m, b_1, b_2, \ldots, b_m$ in Sylvester's matrix by their expressions in \PMlinkescapetext{terms} of $a_0, r_1, r_2, \ldots, r_m, b_0, s_1, s_2, \ldots, s_n$.  We want to show that $R = D$.
+
+First, note that, in each row of Sylvester's matrix, every entry is multiplied by either an $a_0$ or a $b_0$.  By a fundamental property of determinants, this means that we may pull all those factors of $a_0$ and $b_0$ outside the determinant.  Since there are $n$ rows containing $a_0$ and $m$ rows containing $b_0$, this means that $D = a_0^m b_0^n D'(r_1, \ldots, r_m, s_1, \ldots, s_n)$.  Note that these factors correspond to the powers of $a_0$ and $b_0$ in the definition of $R$.  Hence, to show that $D = R$ it only remains to show that $D' = R'$, where
+ $$R' = \prod_{i=1}^m \prod_{j=1}^n (r_i - s_j)$$
+
+Second, note that the degree of $D'$ is not greater than the degree of $R'$.  From the definition, it is obvious that $R'$ is a polynomial of degree $mn$.  By examining Sylvester's determinant and keeping in mind that $a_k$ and $b_k$ are of degree $k$, it is not hard to see that the degree of $D'$ cannot exceed $mn$.
+
+Third, we will show that $R'$ divides $D'$.  In the derivation of the Sylvester determinant, we saw that if $r_i = s_j$ for some choice of $i$ and $j$, then $D=0$, and hence $D'=0$.  The only way for a non-zero polynomial to to equal zero when $r_i = s_j$ is for $r_i - s_i$ to be a factor of the polynomial.  It is easy to see that $D'$ is not the zero polynomial, and hence, $s_i - s_j$ must be a factor of $D'$.  This means that every factor of $R'$ is also a factor of $D'$.  Since all the factors of $R'$ occur with multiplicity one, it follows that $D'$ is a multiple of $R'$.
+
+Combining the \PMlinkescapetext{observations} of the last two paragraphs, we come to the conclusion that $D'$ must be a constant multiple of $R'$.  To determine the constant of proportionality, all one needs to do is to compare the values of the two polynomials for a set of value of the variables for which they to not vanish.  For instance, one could try $r_1 = r_2 = \cdots = r_m = 1$ and $s_1 = s_2 = \cdots = s_n = 0$.  Both $R'$ and $D'$ equal $1$ for this special set of values, and hence $R' = D'$.
+%%%%%
+%%%%%
+\end{document}

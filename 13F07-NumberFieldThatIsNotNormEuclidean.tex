@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NumberFieldThatIsNotNormEuclidean}
+\pmcreated{2013-03-22 16:56:56}
+\pmmodified{2013-03-22 16:56:56}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{number field that is not norm-Euclidean}
+\pmrecord{15}{39217}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13F07}
+\pmclassification{msc}{11R21}
+\pmclassification{msc}{11R04}
+\pmrelated{UniqueFactorizationAndIdealsInRingOfIntegers}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Proposition.}\, The real quadratic field $\mathbb{Q}(\sqrt{14})$ is not norm-Euclidean.
+
+{\em Proof.}\, We take the number\, $\gamma = \frac{1}{2}+\frac{1}{2}\sqrt{14}$\, which is not integer of the field ($14 \equiv 2 \pmod{4}$).\, Antithesis:\, $\gamma = \varkappa+\delta$\, where\, $\varkappa = a+b\sqrt{14}$\, is an integer of the field ($a,\,b\in\mathbb{Z}$) and
+$$|\mbox{N}(\delta)| = \left|\left(\frac{1}{2}-a\right)^2-14\left(\frac{1}{2}-b\right)^2\right| < 1.$$
+Thus we would have
+$$|\underbrace{(2a-1)^2-14(2b-1)^2}_{E}| < 4.$$
+And since\, $(2a-1)^2 = 4(a-1)a+1 \equiv 1 \pmod{8}$,\, it follows\, $E \equiv 1-14\cdot1 \equiv 3 \pmod{8}$,\, i.e.\, $E = 3$.\, So we must have
+\begin{align}
+(2a-1)^2 \equiv (2a-1)^2-14(2b-1)^2 \equiv 3 \pmod{7}.
+\end{align}
+But\, $\{0,\,\pm1,\,\pm2,\,\pm3\}$\, is a complete residue system modulo 7, giving\, the set\, $\{1,\,2,\,4\}$\, of possible quadratic residues modulo 7.\, Therefore (1) is impossible.\, The antithesis is wrong, whence the \PMlinkname{theorem 1 of the parent entry}{EuclideanNumberField} says that the number field is not norm-Euclidean.\\
+
+\textbf{Note.}\, The function N used in the proof is the usual \PMlinkescapetext{norm}
+$$\mbox{N}:\,\, r\!+\!s\sqrt{14}\, \mapsto\, r^2\!-\!14s^2 \quad(r,\,s \in \mathbb{Q})$$
+defined in the field $\mathbb{Q}(\sqrt{14})$.\, The notion of norm-Euclidean number field is based on the \PMlinkname{norm}{NormAndTraceOfAlgebraicNumber}.\, There exists a fainter function, the so-called Euclidean valuation, which can be defined in the maximal orders of some \PMlinkname{algebraic number fields}{NumberField}; such a maximal order, i.e. the ring of integers of the number field, is then a Euclidean domain.\, The existence of a Euclidean valuation guarantees that the maximal order is a UFD and thus a PID.\, Recently it has been shown the existence of the Euclidean domain $\mathbb{Z}[\frac{1+\sqrt{69}}{2}]$ in the field $\mathbb{Q}(\sqrt{69})$ but the field is not norm-Euclidean. 
+
+The maximal order $\mathbb{Z}[\sqrt{14}]$ of $\mathbb{Q}(\sqrt{14})$ has also been proven to be a Euclidean domain (Malcolm Harper 2004 in {\em Canadian Journal of Mathematics}).
+%%%%%
+%%%%%
+\end{document}

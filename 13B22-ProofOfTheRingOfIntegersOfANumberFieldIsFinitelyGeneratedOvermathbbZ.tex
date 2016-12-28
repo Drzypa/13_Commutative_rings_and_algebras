@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfTheRingOfIntegersOfANumberFieldIsFinitelyGeneratedOvermathbbZ}
+\pmcreated{2013-03-22 16:03:07}
+\pmmodified{2013-03-22 16:03:07}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{proof of the ring of integers of a number field is finitely generated over $\mathbb{Z}$}
+\pmrecord{9}{38103}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13B22}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+
+
+
+\begin{document}
+\textbf{Proof:}\,
+Choose any basis $\alpha_1,\ldots,\alpha_n$ of $K$ over $\Rats$. Using the theorem in the entry multiples of an algebraic number, we can multiply each element of the basis by an integer to get a new basis $\alpha_1,\ldots,\alpha_n$ with each $\alpha_i\in\mathcal{O}_K$.
+\newline
+Consider the group homomorphism
+\[\varphi:K\rightarrow \Rats^n:\gamma\mapsto(\operatorname{Tr}_\Rats^K(\gamma\alpha_1),\ldots,\operatorname{Tr}_\Rats^K(\gamma\alpha_n))\]
+where $\operatorname{Tr}_\Rats^K$ is the \PMlinkname{trace}{trace2} from $K$ to $\Rats$. Note that $\varphi$ is $1-1$, since if $\gamma\neq 0$ and $\varphi(\gamma)=0$, then 
+\[n=\operatorname{Tr}_\Rats^K(1)=\operatorname{Tr}_\Rats^K(\gamma\gamma^{-1})=\operatorname{Tr}_\Rats^K(\gamma\sum r_i\alpha_i)=\sum r_i \operatorname{Tr}_\Rats^K(\gamma\alpha_i)=0\]
+where the last equality holds since $\gamma\in\ker\varphi$.
+
+Hence $\varphi:\mathcal{O}_K\hookrightarrow \Ints^n$, so $\mathcal{O}_K$ is finitely generated and torsion-free. It has rank $\geq n$ since the $\alpha_i$ are linearly independent, and rank $\leq n$ since it injects into $\Ints^n$, so it has rank $n$.
+
+%%%%%
+%%%%%
+\end{document}

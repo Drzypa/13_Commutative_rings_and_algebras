@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ContinuationOfExponent}
+\pmcreated{2013-03-22 17:59:49}
+\pmmodified{2013-03-22 17:59:49}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{continuation of exponent}
+\pmrecord{6}{40509}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13A18}
+\pmclassification{msc}{12J20}
+\pmclassification{msc}{11R99}
+\pmclassification{msc}{13F30}
+\pmsynonym{prolongation of exponent}{ContinuationOfExponent}
+\pmdefines{induce}
+\pmdefines{continuation}
+\pmdefines{continuation of the exponent}
+\pmdefines{ramification index of the exponent}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{exponent}
+
+\textbf{Theorem.}\, Let $K/k$ be a finite field extension and $\nu$ an exponent valuation of the extension field $K$.\, Then there exists one and only one positive integer $e$ such that the function
+\[
+(1) \qquad\qquad\qquad \nu_0(x)\, := \,  
+\begin{cases}
+& \infty \quad \mbox{when }\; x = 0,\\
+& \frac{\nu(x)}{e} \;\; \mbox{when }\; x \neq 0,
+\end{cases} 
+\]
+defined in the base field $k$, is an \PMlinkname{exponent}{ExponentValuation} of $k$.
+
+{\em Proof.}\, The exponent $\nu$ of $K$ attains in the set $k\!\smallsetminus\!\{0\}$ also non-zero values; otherwise\, $k$ would be included in $\mathcal{O}_\nu$, the ring of the exponent $\nu$.\, Since any element $\xi$ of $K$ are integral over $k$, it would then be also integral over $\mathcal{O}_\nu$, which is integrally closed in its quotient field $K$ (see theorem 1 in ring of exponent); the situation would mean that\, $\xi \in \mathcal{O}_\nu$ and thus the whole $K$ would be contained in $\mathcal{O}_\nu$.\, This is impossible, because an exponent of $K$ attains also negative values.\, So we infer that $\nu$ does not vanish in the whole $k\!\smallsetminus\!\{0\}$.\, Furthermore, $\nu$ attains in $k\!\smallsetminus\!\{0\}$ both negative and positive values, since\, $\nu(a)\!+\!\nu(a^{-1}) = 
+\nu(aa^{-1}) = \nu(1) = 0$.
+
+Let $p$ be such an element of $k$ on which $\nu$ attains as its value the least possible positive integer $e$ in the field $k$ and let $a$ be an arbitrary non-zero element of $k$.\, If 
+$$\nu(a) = m = qe+r \quad (q,\,r \in \mathbb{Z},\;\; 0 \leqq r < e),$$
+then\, $\nu(ap^{-q}) = m-qe = r$,\, and thus\, $r = 0$\, on grounds of the choice of $p$.\, This means that $\nu(a)$ is always divisible by $e$, i.e. that the values of the function $\nu_0$ in $k\!\smallsetminus\!\{0\}$ are integers.\, Because\, $\nu_0(p) = 1$\, and\, $\nu_0(p^l) = l$,\, the function attains in $k$ every integer value.\, Also the conditions
+$$\nu_0(ab) = \nu_0(a)+\nu_0(b), \quad \nu_0(a+b) \geqq \min\{\nu_0(a),\,\nu_0(b)\}$$
+are in \PMlinkescapetext{force}, whence $\nu_0$ is an exponent of the field $k$.\\
+
+
+\textbf{Definition.}\, Let $K/k$ be a finite field extension.\, If the exponent $\nu_0$ of $k$ is tied with the exponent $\nu$ of $K$ via the condition (1), one says that $\nu$ {\em induces} $\nu_0$ to $k$ and that $\nu$ is the {\em continuation} of $\nu_0$ to $K$.\, The positive integer $e$, uniquely determined by (1), is the {\em ramification index} of $\nu$ with respect to $\nu_0$ (or with respect to the subfield $k$).
+
+\begin{thebibliography}{9}
+\bibitem{BS}{\sc S. Borewicz \& I. Safarevic}: {\em Zahlentheorie}.\, Birkh\"auser Verlag. Basel und Stuttgart (1966).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

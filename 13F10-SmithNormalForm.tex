@@ -1,0 +1,112 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SmithNormalForm}
+\pmcreated{2013-03-22 13:52:08}
+\pmmodified{2013-03-22 13:52:08}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{Smith normal form}
+\pmrecord{21}{34611}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13F10}
+\pmdefines{elementary divisor}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+This topic gives a version of the Gauss elimination algorithm for a commutative principal ideal domain which is usually described only for a field.
+
+Let $A \ne 0$ be a $m \times n$-matrix with entries from a commutative principal ideal
+domain $R$. For $a \in R \setminus \{0\}$ $\delta(a)$ denotes the number of
+prime factors of $a$. Start with $t=1$ and choose $j_t$ to be the smallest
+column index of $A$ with a non-zero entry.
+\begin{description}
+\item[(I)]
+If $a_{t, j_t}=0$ and $a_{k,j_t} \ne 0$, exchange rows 1 and $k$.
+\item[(II)]
+If there is an entry at position $(k,j_t)$ such that $a_{t,j_t} \nmid
+a_{k,j_t}$, then set $\beta =\gcd\left(a_{t,j_t}, a_{k,j_t}\right)$ and choose
+$\sigma, \tau \in R$ such that
+\begin{equation*}
+\sigma\cdot a_{t,j_t}-\tau \cdot a_{k,j_t}=\beta.
+\end{equation*}
+By left-multiplication with an appropriate matrix it can be achieved that row 1
+of the matrix product is the sum of row 1 multiplied by $\sigma$ and row $k$
+multiplied by $(-\tau)$. Then we get $\beta$ at position $(t,j_t)$, where
+$\delta(\beta) < \delta(a_{t,j_t})$.
+Repeating these steps one obtains a matrix having an entry at position
+$(t,j_t)$ that divides all entries in column $j_t$.
+\item[(III)]
+Finally, adding appropriate multiples of row $t$, it can be achieved that all
+entries in column $j_t$ except for that at position $(t,j_t)$ are zero. This can
+be achieved by left-multiplication with an appropriate matrix.
+\end{description}
+Applying the steps described above to the remaining non-zero columns of the
+resulting matrix (if any), we get an $m \times n$-matrix with column indices
+$j_1, \ldots, j_r$ where $r \le \min(m,n)$, each of which satisfies the
+following:
+\begin{enumerate}
+\item
+the entry at position $(l,j_l)$ is non-zero;
+\item
+all entries below and above position $(l,j_l)$ as well as entries left of
+$(l,j_l)$ are zero.
+\end{enumerate}
+Furthermore, all rows below the $r$-th row are zero.
+
+Now we can re-order the columns of this matrix so that elements on positions
+$(i,i)$ for $1 \le i\le r$ are nonzero and $\delta(a_{i,i}) \le
+\delta(a_{i+1,i+1})$ for $1 \le i < r$; and all columns right of the $r$-th
+column (if present) are zero. For short set $\alpha_i$ for the element at
+position $(i,i)$. $\delta$ has non-negative integer values; so
+$\delta(\alpha_1)=0$ is equivalent to $\alpha_1$ being a unit of $R$.
+$\delta(\alpha_i) =\delta(\alpha_{i+1})$ can either happen if $\alpha_i$ and
+$\alpha_{i+1}$ differ by a unit factor, or if they are relatively prime. In the
+latter case one can add column $i+1$ to column $i$ (which doesn't change
+$\alpha_i)$ and then apply appropriate row manipulations to get $\alpha_i=1$.
+And for $\delta(\alpha_i)<\delta(\alpha_{i+1})$ and $\alpha_i \nmid
+\alpha_{i+1}$ one can apply step (II) after adding column $i+1$ to column $i$.
+This diminishes the minimum $\delta$-values for non-zero entries of the matrix,
+and by reordering columns etc. we end up with a matrix whose diagonal elements
+$\alpha_i$ satisfy $\alpha_i \mid \alpha_{i+1}\;\forall\;1 \le i < r$.
+
+Since all row and column manipulations involved in the process are \PMlinkescapetext{invertible},
+this shows that there exist invertible $m \times m$ and $n \times n$-matrices
+$S,T$ so that $SAT$ is
+
+$$\left[\begin{matrix}
+\alpha_1 & 0 & \ldots & 0 \\
+0 & \alpha_2 &  \ldots & 0 \\
+\vdots &\vdots & \ddots & \vdots\\
+0 & 0 & \ldots & \alpha_r  \\
+0 & 0 & \ldots & 0 \\
+\vdots & \vdots & \ldots & \vdots \\
+0 & 0 & \ldots & 0 
+\end{matrix}\right].$$
+This is the \textbf{Smith normal form} of the matrix. The elements $\alpha_i$ are unique up to associates and are called
+\textbf{elementary divisors}.
+%%%%%
+%%%%%
+\end{document}

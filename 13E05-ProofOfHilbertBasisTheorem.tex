@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfHilbertBasisTheorem}
+\pmcreated{2013-03-22 12:59:27}
+\pmmodified{2013-03-22 12:59:27}
+\pmowner{bwebste}{988}
+\pmmodifier{bwebste}{988}
+\pmtitle{proof of Hilbert basis theorem}
+\pmrecord{6}{33365}
+\pmprivacy{1}
+\pmauthor{bwebste}{988}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13E05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\newenvironment{proof}[1][Proof]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{definition}[1][Definition]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{example}[1][Example]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{remark}[1][Remark]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\begin{document}
+Let $R$ be a noetherian ring and let $f(x) = a_n x^n + a_{n-1}
+x^{n-1} + \ldots + a_1 x + a_0 \in R[x]$ with $a_n\neq 0$. Then
+call $a_n$ the \emph{initial coefficient} of $f$.
+
+Let $I$ be an ideal in $R[x]$.  We will show $I$ is finitely
+generated, so that $R[x]$ is noetherian.  Now let $f_0$ be a
+polynomial of least degree in $I$, and if $f_0, f_1, \ldots , f_k$
+have been chosen then choose $f_{k+1}$ from $I\smallsetminus (f_0,
+f_1, \ldots , f_k)$ of minimal degree.  Continuing inductively
+gives a sequence $(f_k)$ of elements of $I$.
+
+Let $a_k$ be the initial coefficient of $f_k$, and
+consider the ideal $J=(a_1, a_2, a_3, \ldots )$ of initial
+coefficients. Since $R$ is noetherian, $J=(a_0, \ldots , a_N)$ for
+some $N$.
+
+Then $I=(f_0, f_1, \ldots , f_N)$.  For if not then
+$f_{N+1}\in I\smallsetminus (f_0, f_1, \ldots , f_N)$, and
+$a_{N+1} = \sum_{k=0}^N u_k a_k$ for some $u_1, u_2, \ldots ,
+u_N\in R$. Let $g(x)=\sum_{k=0}^N u_k f_k x^{\nu_k}$ where $\nu_k
+= \operatorname{deg}(f_{N+1})-\operatorname{deg}(f_k)$.
+
+Then $\operatorname{deg}(f_{N+1} - g) <
+\operatorname{deg}(f_{N+1})$, and $f_{N+1} - g \in I$ and
+$f_{N+1}-g\notin (f_0, f_1, \ldots , f_N)$.  But this contradicts
+minimality of $\operatorname{deg}(f_{N+1})$.
+
+Hence, $R[x]$ is noetherian.$\square$
+%%%%%
+%%%%%
+\end{document}

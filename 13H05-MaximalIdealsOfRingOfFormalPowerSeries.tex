@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MaximalIdealsOfRingOfFormalPowerSeries}
+\pmcreated{2013-03-22 19:10:49}
+\pmmodified{2013-03-22 19:10:49}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{maximal ideals of ring of formal power series}
+\pmrecord{7}{42088}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13H05}
+\pmclassification{msc}{13J05}
+\pmclassification{msc}{13C13}
+\pmclassification{msc}{13F25}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Suppose that $R$ is a commutative ring with non-zero unity.\\
+
+If $\mathfrak{m}$ is a maximal ideal of $R$, then\, $\mathfrak{M} \,:=\, \mathfrak{m}\!+\!(X)$\, is a maximal ideal of the ring $R[[X]]$ of formal power series.
+
+Also the converse is true, i.e. if $\mathfrak{M}$ is a maximal ideal of $R[[X]]$, then there is a maximal ideal 
+$\mathfrak{m}$ of $R$ such that\, $\mathfrak{M} \,=\, \mathfrak{m}\!+\!(X)$.\\
+
+
+\textbf{Note.}\, In the special case that $R$ is a field, the only maximal ideal of which is the zero ideal $(0)$, this corresponds to the only maximal ideal $(X)$ of $R[[X]]$ (see \PMlinkid{formal power series over field}{12087}).\\
+
+
+We here prove the first assertion.\, So, $\mathfrak{m}$ is assumed to be maximal.\, Let 
+$$f(x) \;:=\; a_0\!+\!a_1X\!+\!a_2X^2\!+\ldots$$
+be any formal power series in $R[[X]]\!\smallsetminus\!\mathfrak{M}$.\, Hence, the constant term $a_0$ cannot lie in $\mathfrak{m}$.\, According to the criterion for maximal ideal, there is an element $r$ of $R$ such that\, $1\!+\!ra_0 \in \mathfrak{m}$.\, Therefore
+$$1\!+\!rf(X) \;=\; (1\!+\!ra_0)\!+\!r(a_1\!+\!a_2X\!+\!a_3X^2\!+\ldots)X \;\in\;\mathfrak{m}\!+\!(X)
+ \;=\; \mathfrak{M},$$
+whence the same criterion says that $\mathfrak{M}$ is a maximal ideal of $R[[X]]$.
+
+%%%%%
+%%%%%
+\end{document}

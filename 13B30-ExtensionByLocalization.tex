@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExtensionByLocalization}
+\pmcreated{2013-03-22 14:24:42}
+\pmmodified{2013-03-22 14:24:42}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{extension by localization}
+\pmrecord{15}{35916}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13B30}
+\pmsynonym{ring extension by localization}{ExtensionByLocalization}
+\pmrelated{TotalRingOfFractions}
+\pmrelated{ClassicalRingOfQuotients}
+\pmrelated{FiniteRingHasNoProperOverrings}
+\pmdefines{ring of fractions}
+\pmdefines{ring of quotients}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{extension}
+Let $R$ be a commutative ring and let $S$ be a non-empty multiplicative subset of $R$.\, Then the \PMlinkname{localisation}{Localization} of $R$ at $S$ gives the commutative ring \,$S^{-1}R$\, but, generally, it has no subring isomorphic to $R$.\, Formally, $S^{-1}R$ consists of all elements $\frac{a}{s}$ ($a \in R$, $s \in S$).\, Therefore, $S^{-1}R$ is called also a {\em ring of quotients} of $R$.\, If\, $0 \in S$, then\, 
+$S^{-1}R = \{0\}$;\, we assume now that\, $0 \notin S$.
+
+\begin{itemize}
+\item The mapping \,$a \mapsto \frac{as}{s}$, where $s$ is any element of $S$, is well-defined and a homomorphism from $R$ to $S^{-1}R$. \,All elements of $S$ are mapped to units of $S^{-1}R$.
+\item If, especially, $S$ contains no zero divisors of the ring $R$, then the above mapping is an isomorphism from $R$ to a certain subring of $S^{-1}R$, and we may think that\, $S^{-1}R \supseteq R$.\, In this case, the ring of fractions of $R$ is an extension ring of $R$; this concerns of course the case that $R$ is an integral domain.\, But if $R$ is a finite ring, then\, $S^{-1}R = R$,\, and no proper extension is obtained.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

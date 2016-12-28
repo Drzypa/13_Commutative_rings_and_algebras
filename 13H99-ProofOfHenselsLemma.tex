@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfHenselsLemma}
+\pmcreated{2013-03-22 15:32:16}
+\pmmodified{2013-03-22 15:32:16}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{proof of Hensel's lemma}
+\pmrecord{5}{37432}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13H99}
+\pmclassification{msc}{12J99}
+\pmclassification{msc}{11S99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\textbf{Lemma:}\, Using the setup and terminology of the statement of Hensel's Lemma, for $i\geq 0$,
+\begin{eqnarray*}
+& \mbox{i) } & |f'(\alpha_i)| = |f'(\alpha_0)| \\
+& \mbox{ii) } & \left|\frac{f(\alpha_i)}{f'(\alpha_i)^2}\right| \leq D^{2^i} \\
+& \mbox{iii) } & | \alpha_i - \alpha_0 | \leq D \\
+& \mbox{iv) } & \alpha_i \in \mathcal{O}_K
+\end{eqnarray*}
+where $ D=\left|\frac{f(\alpha_0)}{f'(\alpha_0)^2}\right|$.
+
+\textbf{Proof:}
+All four statements clearly hold when $i=0$. Suppose they are true for $i$. The proof for $i+1$ essentially uses Taylor's formula. Let $\delta = \left|\frac{-f(\alpha_i)}{f'(\alpha_i)}\right|$. Then
+$$f'(\alpha_{i+1}) = f'(\alpha_i+\delta) = f'(\alpha_i) + {\delta}u$$
+$$f(\alpha_{i+1}) = f(\alpha_i+\delta) = f(\alpha_i) + f'(\alpha_i)\delta + {\delta^2}v$$
+for $u, v \in \mathcal{O}_K$. $|\delta| \leq D^{2^i}|f'(\alpha_i)|$ by induction, and since $D < 1$, it follows that $|\delta| < |f'(\alpha_i)|$. Since the norm is non-Archimedean, we see that $$f'(\alpha_{i+1}) = f'(\alpha_i)$$ proving i).
+
+$f(\alpha_i)+f'(\alpha_i)\delta = 0$ by definition of $\delta$, so $f(\alpha_{i+1}) = {\delta^2}v$ and hence $|f(\alpha_{i+1})| \leq |\delta^2|$. Hence
+$$\left|\frac{f(\alpha_{i+1})}{f'(\alpha_{i+1})^2}\right| \leq \frac{|\delta|^2}{|f'(\alpha_{i+1})|^2} = \frac{|\delta|^2}{|f'(\alpha_i)|^2}=\left(\frac{|\delta|}{|f'(\alpha_i)|}\right)^2 = \left(\frac{|f(\alpha_i)|}{|f'(\alpha_i)|^2}\right)^2 \leq D^{2^{i+1}}$$
+where the last equality follows by induction. This proves ii).
+
+To prove iii), note that $|\alpha_{i+1}-\alpha_i| = |\delta|$ by the definitions of $\delta$ and $\alpha_{i+1}$, so $|\alpha_{i+1}-\alpha_i| \leq D^{2^i}|f'(\alpha_i)| = D^{2^i}|f'(\alpha_0) < D$ when $i>0$ since $D^2 < D = \left|\frac{f(\alpha_0)}{f'(\alpha_0)^2}\right|$. So by induction, $|\alpha_{i+1}-\alpha_0| \leq D$.
+
+Finally, to prove iv) and \PMlinkescapetext{complete} the proof of the lemma, $\delta \in \mathcal{O}_K$ since $|\delta| < \left|\frac{f(\alpha_0)}{f'(\alpha_0)}\right| \leq 1$ and hence is in the valuation ring of $K$. So by induction, $\alpha_{i+1} = \alpha_i + \delta \in \mathcal{O}_K$.
+
+\textbf{Proof of Hensel's Lemma:}
+
+To prove Hensel's lemma from the above lemma, note that $\delta = \delta_i \to 0$ since $|\delta| \leq D^{2^i}|f'(\alpha_0)|$, so $\{\alpha_i\}$ converges to $\alpha \in \mathcal{O}_K$ since $K$ is complete. Thus $f(\alpha_i)\to f(\alpha)$ by continuity. But $|f(\alpha_i)| \leq |\delta^2| = D^{2^{i+1}}|f'(\alpha_0)|$, so $|f(\alpha_i)| \to 0$, so $f(\alpha)=0$ and the proof is complete.
+%%%%%
+%%%%%
+\end{document}

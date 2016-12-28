@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HomogeneousElementsOfAGradedRing}
+\pmcreated{2013-03-22 14:14:52}
+\pmmodified{2013-03-22 14:14:52}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{homogeneous elements of a graded ring}
+\pmrecord{6}{35694}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13A02}
+\pmrelated{HomogeneousIdeal}
+\pmdefines{homogeneous element}
+\pmdefines{homogeneous degree}
+\pmdefines{irrelevant ideal}
+\pmdefines{homogeneous union}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\mc}{\mathcal}
+\newcommand{\mb}{\mathbb}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\ol}{\overline}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\la}{\leftarrow}
+\newcommand{\La}{\Leftarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\nor}{\vartriangleleft}
+\newcommand{\Gal}{\text{Gal}}
+\newcommand{\GL}{\text{GL}}
+\newcommand{\Z}{\mb{Z}}
+\newcommand{\R}{\mb{R}}
+\newcommand{\Q}{\mb{Q}}
+\newcommand{\C}{\mb{C}}
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+\begin{document}
+Let $k$ be a field, and let $R$ be a connected commutative $k$-algebra \PMlinkname{graded}{GradedAlgebra} by $\mb{N}^m$.  Then via the grading, we can decompose $R$ into a direct sum of vector spaces:  $R=\coprod_{\omega\in\mb{N}^m} R_\omega$, where $R_0=k$.
+
+For an arbitrary ring element $x\in R$, we define the \emph{homogeneous degree} of $x$ to be the value $\omega$ such that $x\in R_\omega$, and we denote this by $\deg(x)=\omega$.  (See also homogeneous ideal)
+
+A set of some importance (ironically), is the \emph{irrelevant ideal} of $R$, denoted by $R^+$, and given by
+
+\begin{align*}
+R_+=\coprod_{\omega\neq 0}R_\omega.
+\end{align*}
+
+Finally, we often need to consider the elements of such a ring $R$ without using the grading, and we do this by looking at the \emph{homogeneous union} of $R$:
+
+\begin{align*}
+\mathcal{H}(R)=\bigcup_\omega R_\omega.
+\end{align*}
+
+In particular, in defining a homogeneous system of parameters, we are looking at elements of $\mathcal{H}(R_+)$.
+\begin{thebibliography}{9}
+\bibitem{Stan} Richard P. Stanley, {\em Combinatorics and Commutative Algebra}, Second edition, Birkhauser Press.  Boston, MA.  1986.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

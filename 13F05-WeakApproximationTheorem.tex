@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{WeakApproximationTheorem}
+\pmcreated{2013-03-22 18:35:21}
+\pmmodified{2013-03-22 18:35:21}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{weak approximation theorem}
+\pmrecord{6}{41316}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13F05}
+\pmclassification{msc}{11R04}
+\pmrelated{IndependenceOfTheValuations}
+\pmrelated{ChineseRemainderTheoremInTermsOfDivisorTheory}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\smp}{\mathfrak{p}}
+\newcommand{\smq}{\mathfrak{q}}
+\newtheorem{thm}{Theorem}
+
+\begin{document}
+The weak approximation theorem allows selection, in a Dedekind ring, of an element having specific valuations at a specific finite set of primes, and nonnegative valuations at all other primes. It is essentially a generalization of the Chinese Remainder theorem, as is evident from its proof.
+\begin{thm}[Weak \PMlinkescapetext{Approximation Theorem}] Let $A$ be a Dedekind domain with fraction field $K$. Then for any finite set $\smp_1,\dotsc,\smp_k$ of primes of $A$ and integers $a_1,\dotsc,a_k$, there is $x\in K^{\star}$ such that $\nu_{\smp_i}((x))=a_i$ and for all other prime ideals $\smp$, $\nu_{\smp}((x))\geq 0$. Here $\nu_{\smp}$ is the $\smp$-adic valuation associated with a prime ideal $\smp$.
+\end{thm}
+\begin{proof}
+Assume first that all $a_i\geq 0$. By the Chinese Remainder Theorem,
+\[
+  A/\smp_1^{a_1+1}\times\cdots A/\smp_k^{a_k+1}\cong A/\smp_1^{a_1+1}\cdots\smp_k^{a_k+1}
+\]
+Thus the map
+\[
+  A\to A/\smp_1^{a_1+1}\times\cdots A/\smp_k^{a_k+1}
+\]
+is surjective. Now choose $x_i\in p_i^{a_i}, x_i\notin p_i^{a_i+1}$; this is possible since these two ideals are unequal by unique factorization. Choose $x\in A$ with image $(x_1,\dotsc,x_k)$. Clearly $\nu_{\smp_i}((x))=a_i$. But $x\in A$, so all other valuations are nonnegative.
+
+In the general case, assume wlog that we are given a set $\smp_1,\dotsc,\smp_r$ of primes of $A$ and integers $a_1,\dotsc,a_r\geq 0$, and a set $\smq_1,\dotsc,\smq_t$ of primes with integers $b_1,\dotsc,b_t<0$. First choose $y\in K^{\star}$ (using the case already proved above) so that
+\[
+  \begin{cases}
+    \nu_{\smp}((y)) = 0    & \smp = \smp_i \\
+    \nu_{\smp}((y)) = -b_i & \smp = \smq_j \\
+    \nu_{\smp}((y)) \geq 0 & \text{otherwise}
+  \end{cases}
+\]
+Now, there are only a finite number of primes $\smp'_k$ such that $\smp'_k$ is not the same as any of the $\smq_j$ and $\nu_{\smp'_k}((y))>0$. Let $\nu_{\smp'_k}((y)) = c_k>0$. Again using the case proved above, choose $x\in K^{\star}$ such that
+\[
+  \begin{cases}
+    \nu_{\smp}((x)) = a_i  & \smp = \smp_i \\
+    \nu_{\smp}((x)) = 0    & \smp = \smq_j \\
+    \nu_{\smp}((x)) = c_k  & \smp = \smp'_k\\
+    \nu_{\smp}((x)) \geq 0 & \text{otherwise}
+  \end{cases}
+\]
+Then $x/y$ is the required element.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

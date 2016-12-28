@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IrreducibleIdeal}
+\pmcreated{2013-03-22 18:19:47}
+\pmmodified{2013-03-22 18:19:47}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{irreducible ideal}
+\pmrecord{10}{40961}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13E05}
+\pmclassification{msc}{13A15}
+\pmclassification{msc}{16D25}
+\pmsynonym{indecomposable ideal}{IrreducibleIdeal}
+\pmrelated{IrreducibleElement}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Let $R$ be a ring.  An ideal $I$ in $R$ is said to be \PMlinkescapetext{\emph{irreducible}} if, whenever $I$ is an intersection of two ideals: $I=J\cap K$, then either $I=J$ or $I=K$.
+
+Irreducible ideals are closely related to the notions of irreducible elements in a ring.  In fact, the following holds:
+
+%\begin{prop} In any integral domain $D$, if a principal ideal $(x)$ is irreducible, then $x$ is an irreducible element.  
+%\end{prop}
+%\begin{proof}
+%We may assume that $I=(x)\ne D$, for otherwise $x$ is a unit and we are done.  Suppose $x=ab$.  Let $J=(a)$ and $K=(b)$.  Then $I\subseteq JK\subseteq J\cap K$.  On the other hand, if $y\in J\cap K$, then $y$ is the sum of products of the form $a_ib_i$, where $a_i\in J$ and $b_i\in K$.  Hence $y\in I$.  This shows that $I=J\cap K$.  As a result, $I=J$ or $I=K$ by the irreducibility of $I$.  Say $I=J$.  So $a=xc$ for some $c\in D$.  Then $x=ab=xcb$, implying $1=cb$, or that $b$ is a unit.  Therefore, $x$ is irreducible.
+%\end{proof}
+
+%With the additional assumption that $D$ is gcd, the converse holds too:
+
+\begin{prop}
+If $D$ is a gcd domain, and $x$ is an irreducible element, then $I=(x)$ is an irreducible ideal.
+\end{prop}
+
+\begin{proof}
+If $x$ is a unit, then $I=D$ and we are done.  So we assume that $x$ is not a unit for the remainder of the proof.
+
+Let $I = J\cap K$ and suppose $a\in J-I$ and $b\in K-I$.  Then $ab=x^n$ for some $n\in \mathbb{N}$.  Let $c$ be a gcd of $a$ and $x$.  So $$cd=x$$ for some $d\in D$.  Since $x$ is irreducible, either $c$ is a unit or $d$ is.  The proof now breaks down into two cases:
+\begin{itemize}
+\item $c$ is a unit.  Let $t$ be a lcm of $a$ and $x$.  Then $tc$ is an associate of $ax$.  But $c$ is a unit, $t$ and $ax$ are associates, so that $ax$ is a lcm of $a$ and $x$.  As $ab=x^n$, both $a\mid ab$ and $x\mid ab$ hold, which imply that $ax\mid ab$.  Write $axr=ab$, where $r\in D$.  Then $b=xr\in I$, which is impossible by assumption.
+\item $d$ is a unit.  So $c$ is an associate of $x$.  Because $c$ divides $a$, we get that $x\mid a$ as well, or $a\in I$, which is again impossible by assumption.
+\end{itemize}
+Therefore, the assumption that $J-I\ne \varnothing$ and $K-I\ne \varnothing$ is false, which is the same as saying $J\subseteq I$ or $K\subseteq I$.  But $I\subseteq J$ and $I\subseteq K$, either $I=J$ or $I=K$, or $I$ is irreducible.
+\end{proof}
+
+\textbf{Remark}.  In a commutative Noetherian ring, the notion of an irreducible ideal can be used to prove the Lasker-Noether theorem: every ideal (in a Noetherian ring) has a primary decomposition.
+
+\begin{thebibliography}{9}
+\bibitem{DGN}
+D.G. Northcott, \emph{Ideal Theory}, Cambridge University Press, 1953.
+\bibitem{HM}
+H. Matsumura, \emph{Commutative Ring Theory}, Cambridge University Press, 1989.
+\bibitem{MR}
+M. Reid, \emph{Undergraduate Commutative Algebra}, Cambridge University Press, 1996.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

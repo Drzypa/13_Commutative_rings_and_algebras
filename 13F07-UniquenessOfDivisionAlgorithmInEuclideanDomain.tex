@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UniquenessOfDivisionAlgorithmInEuclideanDomain}
+\pmcreated{2013-03-22 17:53:00}
+\pmmodified{2013-03-22 17:53:00}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{uniqueness of division algorithm in Euclidean domain}
+\pmrecord{7}{40366}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13F07}
+\pmrelated{KrullValuation}
+\pmrelated{Quotient}
+\pmdefines{incomplete quotient}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Theorem.}\, Let $a,\,b$ be non-zero elements of a Euclidean domain $D$ with the Euclidean valuation $\nu$.\, The {\em incomplete quotient} $q$ and the remainder $r$ of the division algorithm
+$$a = qb+r \quad \mbox{where} \quad r = 0 \;\; \mbox{or}\;\; \nu(r) < \nu(b)$$
+are unique if and only if
+\begin{align}
+\nu(a+b) \leqq \max\{\nu(a),\,\nu(b)\}.
+\end{align}
+
+{\em Proof.}\, Assume first (1) for the elements $a,\,b$ of $D$.\, If we had
+\begin{align*}
+\begin{cases}
+a = qb+r \quad \mbox{with} \quad r = 0 \;\;\;\;\lor\;\; \nu(r) < \nu(b),\\
+a = q'b+r' \quad \mbox{with} \quad r' = 0 \;\;\lor\;\; \nu(r') < \nu(b)
+\end{cases}
+\end{align*}
+and\, $r' \neq r$,\, $q' \neq q$,\, then the \PMlinkname{properties of the Euclidean valuation}{EuclideanValuation} and the assumption yield the \PMlinkescapetext{chain} of inequalities
+$$\nu(b) \leqq \nu((q'-q)b) = \nu(r'-r) \leqq \max\{\nu(r'),\,\nu(-r)\} < \nu(b)$$
+which is impossible.\, We must infer that\, $r'-r = 0$\, or\, $q'-q = 0$.\, But these two conditions are \PMlinkname{equivalent}{Equivalent3}.\, Thus the division algorithm is unique.
+
+Conversely, assume that (1) is not true for non-zero elements $a,\,b$ of $D$, i.e.
+$$\nu(a+b) > \max\{\nu(a),\,\nu(b)\}.$$
+Then we obtain two repsesentations
+$$b = 0(a+b)+b = 1(a+b)-a$$
+where\, $\nu(b) < \nu(a+b)$\, and\, $\nu(-a) = \nu(a) < \nu(a+b)$.\, Thus the incomplete quotient and the remainder are not unique.
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,98 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DivisibilityInRings}
+\pmcreated{2015-05-06 15:18:14}
+\pmmodified{2015-05-06 15:18:14}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{divisibility in rings}
+\pmrecord{24}{36322}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13A05}
+\pmclassification{msc}{11A51}
+%\pmkeywords{divide}
+%\pmkeywords{divisor}
+%\pmkeywords{factor}
+\pmrelated{PrimeElement}
+\pmrelated{Irreducible}
+\pmrelated{GroupOfUnits}
+\pmrelated{DivisibilityByPrimeNumber}
+\pmrelated{GcdDomain}
+\pmrelated{CorollaryOfBezoutsLemma}
+\pmrelated{ExistenceAndUniquenessOfTheGcdOfTwoIntegers}
+\pmrelated{MultiplicationRing}
+\pmrelated{IdealDecompositionInDedekindDomain}
+\pmrelated{IdealMultiplicationLaws}
+\pmrelated{UnityPlusNilpotentIsUnit}
+\pmdefines{divisible}
+\pmdefines{divisibility}
+\pmdefines{divisibility of ideals}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let\, $(A,\,+,\,\cdot)$\, be a commutative ring with a non-zero 
+unity 1.\, If $a$ and $b$ are two elements of $A$ and if there 
+is an element $q$ of $A$ such that\, $b = qa$,\, then $b$ is 
+said to be {\em divisible} by $a$; it may be denoted by\, 
+$a\mid b$.\, (If $A$ has no zero divisors and\, $a \neq 0$,\, 
+then $q$ is uniquely determined.)
+
+When $b$ is divisible by $a$, $a$ is said to be a 
+{\it divisor} or 
+{\it \PMlinkname{factor}{DivisibilityInRings}} 
+of $b$.\, On the other hand, $b$ is not said to be 
+a {\it multiple} of $a$ except in the case that $A$ is the 
+ring $\mathbb{Z}$ of the integers.\, In some languages, e.g. in 
+the Finnish, $b$ has a name which could be approximately be 
+translated as `{\it containant}':\quad  $b$ is a {\it containant} 
+of $a$ (``$b$ on $a$:n {\it sis\"alt\"aj\"a}'').
+
+
+\textbf{\PMlinkescapetext{Properties}}
+\begin{itemize}
+\item $a\mid b$\; iff\; $(b)\subseteq (a)$\,\, [see the principal ideals].
+\item Divisibility is a reflexive and transitive relation in $A$.
+\item 0 is divisible by all elements of $A$.
+\item $a\mid 1$\; iff\; $a$ is a unit of $A$.
+\item All elements of $A$ are divisible by every unit of $A$.
+\item If\; $a\mid b$\; then\; $a^n\mid b^n \;\; (n = 1,\,2,\,\ldots)$. 
+\item If\; $a\mid b$\; then\; $a\mid bc$\; and\; $ac\mid bc$.
+\item If\; $a\mid b$\; and\; $a\mid c$\; then\; $a\mid b\!+\!c$.
+\item If\; $a\mid b$\; and\; $a\nmid c$\; then\; $a\nmid b\!+\!c$.
+\end{itemize}
+
+\textbf{Note.}\, The divisibility can be similarly defined if\, 
+$(A,\,+,\,\cdot)$\, is only a semiring; then it also has the 
+above properties except the first.\, This concerns especially 
+the case that we have a ring $R$ with non-zero unity and $A$ is 
+the set of the ideals of $R$ (see the ideal multiplication laws).\,
+Thus one may speak of the {\em divisibility of ideals} in 
+$R$:\, $\mathfrak{a\mid b\,\,\Leftrightarrow\,\, 
+(\exists q)\,(b = qa)}$.\, Cf. multiplication ring.
+
+%%%%%
+%%%%%
+\end{document}

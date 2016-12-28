@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FreeObjectsInTheCategoryOfCommutativeAlgebras}
+\pmcreated{2013-03-22 19:18:13}
+\pmmodified{2013-03-22 19:18:13}
+\pmowner{joking}{16130}
+\pmmodifier{joking}{16130}
+\pmtitle{free objects in the category of commutative algebras}
+\pmrecord{6}{42239}
+\pmprivacy{1}
+\pmauthor{joking}{16130}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13P05}
+\pmclassification{msc}{11C08}
+\pmclassification{msc}{12E05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\alg}{\mathcal{ALG}_{c}(R)}
+\newcommand{\X}{\mathbb{X}}
+\newcommand{\Y}{\mathbb{Y}}
+\begin{document}
+Let $R$ be a commutative ring and let $\alg$ be the category of all commutative algebras over $R$ and algebra homomorphisms. This category together with the forgetful functor is a construct (i.e. it is a concrete category over the category of sets $\mathcal{SET}$). Therefore we can talk about free objects in $\alg$ (see \PMlinkname{this entry}{FreeObjectsInConcreteCategories2} for definitions).
+
+\textbf{Theorem.} For any set $\X$ the polynomial algebra $R[\X]$ (see parent object) is a free object in $\alg$ with $\X$ being a basis. This means that for any commutative algebra $A$ and any function
+$$f:\X\to A$$
+there exists a unique algebra homomorphism $F:R[\X]\to A$ such that
+$$F(x)=f(x)$$
+for any $x\in \X$.
+
+\textit{Proof.} Assume that $f:\X\to A$ is a function. If $W\in R[\X]$, then there are finite subsets $A_1,\ldots,A_n\subseteq \X$ (not necessarily disjoint) and natural numbers $n(x,i)$, $i=1,\ldots,n$ such that $W$ can be uniquely expressed as
+$$W=\sum_{i=1}^n \bigg(\lambda_i\cdot\prod_{x\in A_i}x^{n(x,i)}\bigg)$$
+with $\lambda_i\in R$. Define $F(W)$ by putting
+$$F(W)=\sum_{i=1}^n \bigg(\lambda_i\cdot\prod_{x\in A_i}f(x)^{n(x,i)}\bigg).$$
+Of course $F$ is well defined and obviously $F(x)=f(x)$. We leave as a simple exercise that $F$ is an algebra homomorphism.
+The uniqueness of $F$ again follows from the explicit form of $W$. It is easily seen that $F(W)$ depends only on $F(x)$ for $x\in\X$. This completes the proof. $\square$
+
+\textbf{Corollary 1.} If $\X$ is a set and $\Y\subseteq\X$, then the inclusion $i:\Y\to\X$ induces an algebra monomorphism
+$$I:R[\Y]\to R[\X].$$
+In particular we can treat $R[\Y]$ as a subalgebra of $R[\X]$.
+
+\textit{Proof.} We have a well-defined function $i:\Y\to R[\X]$, $i(y)=y$. By the theorem we have an extension
+$$I:R[\Y]\to R[\X]$$
+such that $I(y)=y$. It remains to show, that $I$ is ,,1-1''. Indeed, assume that $I(W)=0$ for some polynomial $W\in R[\Y]$. But if we recall the expression of $W$ as in proof of the theorem and remember that $I$ is an algebra homomorphism, then it is easy to see that $I(y)=y$ implies that
+$$I(W)=W.$$
+In particular $W=0$, which completes the proof. $\square$
+
+\textbf{Corollary 2.} If $A$ is an $R$-algebra, then there exists a set $\X$ such that
+$$A\simeq R[\X]/I$$
+for some ideal $I$.
+
+\textit{Proof.} Let $\X=A$ as a set. Define
+$$f:\X\to A$$
+by $f(x)=x$. By the theorem we have an algebra homomorphism
+$$F:R[\X]\to A$$
+such that $F(x)=x$ for $x\in \X$. In particular $F$ is ,,onto'' and thus by the First Isomorphism Theorem for algebras we have
+$$A\simeq R[\X]/\mathrm{Ker}F$$
+which completes the proof. $\square$
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TeichmullerCharacter}
+\pmcreated{2013-03-22 15:09:04}
+\pmmodified{2013-03-22 15:09:04}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{Teichm\"uller character}
+\pmrecord{7}{36898}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13H99}
+\pmclassification{msc}{11S99}
+\pmclassification{msc}{12J99}
+\pmsynonym{Teichmuler character}{TeichmullerCharacter}
+\pmsynonym{Teichmuller lift}{TeichmullerCharacter}
+\pmsynonym{Teichm\"uller lift}{TeichmullerCharacter}
+%\pmkeywords{roots of unity}
+\pmrelated{PAdicIntegers}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem*{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem*{cor}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{exa}{Example}
+\newtheorem*{rem}{Remark}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\begin{document}
+Before we define the Teichm\"uller character, we begin with a corollary of Hensel's lemma.
+
+\begin{cor}
+Let $p$ be a prime number. The ring of \PMlinkname{$p$-adic integers}{PAdicIntegers} $\Ints_p$ contains exactly $p-1$ distinct $(p-1)$th roots of unity. Furthermore, every $(p-1)$th root of unity is distinct modulo $p$.
+\end{cor}
+\begin{proof}
+Notice that $\Rats_p$, the $p$-adic rationals, is a field. Therefore $f(x)=x^{p-1}-1$ has at most $p-1$ roots in $\Rats_p$ (see \PMlinkname{this entry}{APolynomialOfDegreeNOverAFieldHasAtMostNRoots}). Moreover, if we let $a\in \Ints$ with $1\leq a \leq p-1$ then $f(a)=a^{p-1}-1\equiv 0 \mod p$ by Fermat's little theorem. Since $f'(a)=(p-1)\cdot a^{p-2}$ is non-zero modulo $p$, the trivial case of Hensel's lemma implies that there exist a root of $x^{p-1}-1$ in $\Ints_p$ which is congruent to $a$ modulo $p$. Hence, there are at least $p-1$ roots in $\Ints_p$, and we can conclude that there are exactly $p-1$ roots.  
+\end{proof}
+
+\begin{defn}
+The Teichm\"uller character is a homomorphism of multiplicative groups:
+$$\omega \colon \mathbb{F}_p^\times \to \Ints_p^\times$$
+such that $\omega(a)$ is the unique $(p-1)$th root of unity in $\Ints_p$ which is congruent to $a$ modulo $p$ (which exists by the corollary above). The map $\omega$ is sometimes called the Teichm\"uller lift of $\mathbb{F}_p$ to $\Ints_p$ ($0\mod p$ would lift to $0\in \Ints_p$).
+\end{defn}
+
+\begin{rem}
+Some authors define the Teichm\"uller character to be the homomorphism:
+$$\hat{\omega}\colon \Ints_p^\times \to \Ints_p^\times$$
+defined by 
+$$\hat{\omega}(z)=\lim_{n\to \infty} z^{p^n}.$$
+Notice that for any $z\in \Ints_p^\times$, $\hat{\omega}(z)$ is a $(p-1)$th root of unity:
+$$(\hat{\omega}(z))^p=\left( \lim_{n\to \infty} z^{p^n} \right)^p= \lim_{n\to \infty} z^{p^{n+1}}=\hat{\omega}(z).$$
+Thus, the value $\hat{\omega}(z)$ is the same than $\omega(z \mod p)$.
+\end{rem}
+%%%%%
+%%%%%
+\end{document}

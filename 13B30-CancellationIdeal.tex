@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CancellationIdeal}
+\pmcreated{2015-05-06 14:49:08}
+\pmmodified{2015-05-06 14:49:08}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{cancellation ideal}
+\pmrecord{11}{37236}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13B30}
+\pmsynonym{cancellative ideal}{CancellationIdeal}
+\pmrelated{CancellativeSemigroup}
+\pmrelated{IdealDecompositionInDedekindDomain}
+\pmdefines{cancellative}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+Let $R$ be a commutative ring containing regular elements and $\mathfrak{S}$ be the multiplicative semigroup of the non-zero fractional ideals of $R$.\, A fractional ideal $\mathfrak{a}$ of $R$ is called a {\em cancellation ideal} or simply {\em cancellative}, if it is a cancellative element of $\mathfrak{S}$, i.e. if 
+$$\mathfrak{ab = ac}\, \Rightarrow\, \mathfrak{b = c}
+\quad\forall\,\,\mathfrak{b,\,c}\in\mathfrak{S}.$$
+
+\begin{itemize}
+ \item Each invertible ideal is cancellative.
+ \item A finite product $\mathfrak{a}_1\mathfrak{a}_2...\mathfrak{a}_m$ of fractional ideals is cancellative iff every $\mathfrak{a}_i$ is such.
+ \item The fractional ideal\,  
+$\mathfrak{a}/r := \{ar^{-1}\!:\,\,\,a\in\mathfrak{a}\}$,\, where $\mathfrak{a}$ is an integral ideal of $R$ and $r$ a regular element of $R$, is cancellative if and only if $\mathfrak{a}$ is cancellative in the multiplicative semigroup of the non-zero integral ideals of $R$.
+ \item If\, $r\in R$,\, then the principal ideal $(r)$ of $R$ is cancellative if  and only if $r$ is a regular element of the total ring of fractions of $R$.
+ \item If\, $\mathfrak{a}_1\!+\!\mathfrak{a}_2\!+\!...\!+\!\mathfrak{a}_m$\, is a cancellation ideal and $n$ a positive integer, then
+     $$(\mathfrak{a}_1\!+\!\mathfrak{a}_2\!+\!...\!+\!\mathfrak{a}_m)^n =
+      \mathfrak{a}_1^n\!+\!\mathfrak{a}_2^n\!+\!...\!+\!\mathfrak{a}_m^n.$$
+In particular, if the ideal\, $(a_1,\,a_2,\,...,\,a_m)$\, of $R$ is cancellative, then
+     $$(a_1,\,a_2,\,...,\,a_m)^n = (a_1^n,\,a_2^n,\,...,\,a_m^n).$$
+\end{itemize}
+
+\begin{thebibliography}{9}
+ \bibitem{RG}{\sc R. Gilmer:} {\em Multiplicative ideal theory}.\, Queens University Press. Kingston, Ontario (1968).
+ \bibitem{LM}{\sc M. Larsen \& P. McCarthy:} {\em Multiplicative theory of ideals}.\, Academic Press. New York (1971).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

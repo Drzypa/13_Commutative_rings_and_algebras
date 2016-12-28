@@ -1,0 +1,124 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofThatADomainIsDedekindIfItsIdealsAreInvertible}
+\pmcreated{2013-03-22 18:34:54}
+\pmmodified{2013-03-22 18:34:54}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{proof that a domain is Dedekind if its ideals are invertible}
+\pmrecord{5}{41306}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13A15}
+\pmclassification{msc}{13F05}
+%\pmkeywords{Dedekind domain}
+%\pmkeywords{integral domain}
+%\pmkeywords{fractional ideal}
+%\pmkeywords{Noetherian domain}
+\pmrelated{DedekindDomain}
+\pmrelated{FractionalIdeal}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+
+
+\begin{document}
+\PMlinkescapeword{Noetherian}
+\PMlinkescapeword{invertible}
+\PMlinkescapeword{integral}
+Let $R$ be an integral domain with field of fractions $k$. We show that the following are equivalent.
+\begin{enumerate}
+\item $R$ is Dedekind. That is, it is \PMlinkname{Noetherian}{Noetherian}, integrally closed, and every prime ideal is \PMlinkname{maximal}{MaximalIdeal}.
+\item Every nonzero (integral) ideal is invertible.\label{integral cond}
+\item Every fractional ideal is invertible.\label{fractional cond}
+\end{enumerate}
+As every fractional ideal is the product of an element of $k$ and an integral ideal, statements (\ref{integral cond}) and (\ref{fractional cond}) are equivalent.
+We start by proving that (\ref{fractional cond}) implies $R$ is Dedekind.
+
+\begin{lemma*}
+If every fractional ideal is invertible, then $R$ is Dedekind.
+\end{lemma*}
+\begin{proof}
+First, every invertible ideal is finitely generated, so $R$ is Noetherian.
+
+Now, let $\mathfrak{p}$ be a prime ideal, and $\mathfrak{m}$ be a maximal ideal containing $\mathfrak{p}$. As $\mathfrak{m}$ is invertible, there exists an ideal $\mathfrak{a}$ such that $\mathfrak{p}=\mathfrak{m}\mathfrak{a}$.
+That $\mathfrak{p}$ is a prime ideal implies $\mathfrak{a}\subseteq\mathfrak{p}$ or $\mathfrak{m}\subseteq\mathfrak{p}$. The first case gives $\mathfrak{p}\subseteq\mathfrak{m}\mathfrak{p}$ and, by cancelling the invertible ideal $\mathfrak{p}$ implies that $\mathfrak{m}=R$, a contradiction. So, the second case must be true and, by maximality of $\mathfrak{m}$, $\mathfrak{p}=\mathfrak{m}$, showing that all prime ideals are maximal.
+
+Now let $x$ be an element of the field of fractions $k$ and be integral over $R$.
+Then, we can write $x^n=c_0+c_1x+\cdots+c_{n-1}x^{n-1}$ for coefficients $c_k\in R$.
+Letting $\mathfrak{a}$ be the fractional ideal
+\begin{equation*}
+\mathfrak{a} = (1,x,x^2,\ldots,x^{n-1})
+\end{equation*}
+gives $x^n\in\mathfrak{a}$, so $x\mathfrak{a}\subseteq\mathfrak{a}$. As $\mathfrak{a}$ is invertible, it can be cancelled to give $x\in R$, showing that $R$ is integrally closed.
+\end{proof}
+
+It only remains to show the converse, that is if $R$ is Dedekind then every nonzero ideal is invertible. We start with the following lemmas.
+
+\begin{lemma*}
+Every nonzero ideal $\mathfrak{a}$ contains a product of prime ideals. That is, $\mathfrak{p}_1\cdots\mathfrak{p}_n\subseteq\mathfrak{a}$ for some nonzero prime ideals $\mathfrak{p}_k$.
+\end{lemma*}
+\begin{proof}
+We use proof by contradiction, so suppose this is not the case. As $R$ is Noetherian, the set of nonzero ideals which do not contain a product of nonzero primes has a maximal element (w.r.t. the partial order of set inclusion) say, $\mathfrak{a}$.
+
+In particular $\mathfrak{a}$ cannot be prime itself, so there exist $x,y\in R$ such that $xy\in \mathfrak{a}$ and $x,y\not\in \mathfrak{a}$.
+Therefore $\mathfrak{a}$ is strictly contained in $\mathfrak{a}+(x)$ and $\mathfrak{a}+(y)$ and, by the choice of $\mathfrak{a}$, these ideals must contain a product of primes. So,
+\begin{equation*}
+(\mathfrak{a}+(x))(\mathfrak{a}+(y))=\mathfrak{a}^2 +x\mathfrak{a} +y\mathfrak{a} +(xy)\subseteq\mathfrak{a}
+\end{equation*}
+contains a product of primes, which is the required contradiction.
+\end{proof}
+
+\begin{lemma*}
+For any nonzero proper ideal $\mathfrak{a}$ there is an element $x\in k\setminus R$ such that $x\mathfrak{a}\subseteq R$.
+\end{lemma*}
+\begin{proof}
+Let $\mathfrak{p}$ be a maximal ideal containing $\mathfrak{a}$ and $a$ be a nonzero element of $\mathfrak{a}$. By the previous lemma there are prime ideals $\mathfrak{p}_1,\ldots,\mathfrak{p}_n$ satisfying
+\begin{equation*}
+\mathfrak{p}_1\cdots\mathfrak{p}_n\subseteq(a)\subseteq \mathfrak{a}\subseteq\mathfrak{p}.
+\end{equation*}
+We choose $n$ as small as possible. As $\mathfrak{p}$ is prime, this gives $\mathfrak{p}_k\subseteq\mathfrak{p}$ for some $k$ and, as every prime ideal is maximal, this is an equality. Without loss of generality we may take $\mathfrak{p}=\mathfrak{p}_n$.
+As $n$ was assumed to be as small as possible, $\mathfrak{p}_1\cdots\mathfrak{p}_{n-1}$ is not a subset of $(a)$, so there exists $b\in\mathfrak{p}_1\cdots\mathfrak{p}_{n-1}\setminus(a)$. Then, $b\not\in(a)$ gives $x\equiv a^{-1}b\not\in R$ and
+\begin{equation*}
+x\mathfrak{a}\subseteq a^{-1}b\mathfrak{p}\subseteq a^{-1}\mathfrak{p}_1\cdots\mathfrak{p}_{n-1}\mathfrak{p}\subseteq a^{-1}(a)=R
+\end{equation*}
+as required.
+\end{proof}
+
+We finally show that every nonzero ideal $\mathfrak{a}$ is invertible. If its inverse exists then it should be the largest fractional ideal satisfying $\mathfrak{ba}\subseteq R$, so we set
+\begin{equation*}
+\mathfrak{b}=\left\{x\in k:x\mathfrak{a}\subseteq R\right\}.
+\end{equation*}
+Choosing any nonzero $a\in\mathfrak{a}$ gives $a\mathfrak{b}\subseteq\mathfrak{ba}\subseteq R$ so $\mathfrak{b}$ is indeed a fractional ideal. It only remains to be shown that $\mathfrak{ba}=R$, for which we use proof by contradiction. If this were not the case then the previous lemma gives an $x\in k\setminus R$ such that $x\mathfrak{ba}\subseteq R$.
+By the definition of $\mathfrak{b}$, this gives $x\mathfrak{b}\subseteq\mathfrak{b}$ and therefore $\mathfrak{b}$ is an $R[x]$-module. Furthermore, as $R$ is Noetherian, $\mathfrak{b}$ will be finitely generated as an $R$-module. This implies that $x$ is integral over the integrally closed ring $R$, so $x\in R$, giving the required contradiction.
+
+%%%%%
+%%%%%
+\end{document}

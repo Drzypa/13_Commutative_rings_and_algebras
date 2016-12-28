@@ -1,0 +1,107 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfArtinReesTheorem}
+\pmcreated{2013-03-22 14:28:43}
+\pmmodified{2013-03-22 14:28:43}
+\pmowner{mat_cross}{707}
+\pmmodifier{mat_cross}{707}
+\pmtitle{proof of Artin-Rees theorem}
+\pmrecord{4}{36010}
+\pmprivacy{1}
+\pmauthor{mat_cross}{707}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13C99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\def\Pow#1#2{\mathrm{Pow}_{#1}(#2)}
+\def\mfrac#1{{\mathfrak{#1}}}
+\def\bigsquare{\mathchoice\sqr76\sqr76\sqr{2.1}3\sqr{1.5}3}
+\begin{document}
+Define the graded ring $\Pow{\mfrac{A}}{A} \subseteq A[X]$,
+where $X$ is an indeterminate by
+\begin{eqnarray*}
+\Pow{\mfrac{A}}{A} & = & \coprod_{n\geq 0} \mfrac{A}^n X^n \\
+& = & \{z_0 + z_1 X + \cdots + z_r X^r \mid r\geq 0,\> z_j\in
+\mfrac{A}^j\}.
+\end{eqnarray*}
+Now, $M$ gives rise to a graded module, $M'$, over $\Pow{\mfrac{A}}{A}$,
+namely
+\begin{eqnarray*}
+M' & = &\coprod_{n \geq 0} \mfrac{A}^n M X^n \\
+  & = & \{z_0 + z_1 X + \cdots + z_r X^r \mid r\geq 0,\> z_j\in
+\mfrac{A}^j M\}.
+\end{eqnarray*}
+Observe that $\Pow{\mfrac{A}}{A}$ is a noetherian ring. For, if
+$\alpha_1, \ldots, \alpha_q$ generate $\mfrac{A}$ in $A$, then the
+elements of $\mfrac{A}^n$ are sums of degree $n$ monomials in the
+$\alpha_j$'s, i.e., if $Y_1, \ldots, Y_q$ are independent indeterminates
+the map
+\[
+A[Y_1, \ldots, Y_q] \longrightarrow \Pow{\mfrac{A}}{A}
+\]
+{\it via\/} $Y_j \mapsto \alpha_j X$ is surjective, and as
+$A[Y_1, \ldots, Y_q]$ is noetherian, so is $\Pow{\mfrac{A}}{A}$.
+
+\medskip
+Let $m_1, \ldots, m_t$ generate $M$ over $A$. Then, $m_1, \ldots,
+m_t$ generate $M'$ over  $\Pow{\mfrac{A}}{A}$. Therefore, $M'$ is
+a noetherian module. Set
+\[
+N' = \coprod_{n\geq 0} (\mfrac{A}^n M \cap N)X^n \subseteq M',
+\]
+a submodule of $M'$.
+%But, $N'$ is then f.g.
+Moreover, $N'$ is a homogeneous submodule of $M$ and it is f.g.
+as $M'$ is noetherian.
+Consequently, $N'$ possesses a finite number of homogeneous
+generators: $u_1 X^{n_1}, \ldots, u_s X^{n_s}$, where
+$u_j \in  \mfrac{A}^{n_j} M \cap N$. Let $k = \max\{n_1, \ldots, n_s\}$.
+Given any $n \geq k$ and any $z\in  \mfrac{A}^n M \cap N$, look at
+$zX^n \in N'_n$. We have
+\[
+zX^n = \sum_{l = 1}^s a_l X^{n - n_l} u_l X^{n_l},
+\]
+where $a_l X^{n - n_l} \in \bigl(\Pow{\mfrac{A}}{A}\bigr)_{n - n_l}$.
+Thus,
+\[
+a_l \in \mfrac{A}^{n - n_l} = \mfrac{A}^{n - k} \mfrac{A}^{k - n_l}
+\]
+and
+\[
+a_lu_l \in \mfrac{A}^{n - k} (\mfrac{A}^{k - n_l} u_l) \subseteq
+\mfrac{A}^{n - k} (\mfrac{A}^{k - n_l} (\mfrac{A}^{n_l} M \cap N))
+\subseteq \mfrac{A}^{n - k} (\mfrac{A}^{k} M \cap N).
+\]
+It follows that $z = \sum_{l = 1}^s a_l u_l \in
+\mfrac{A}^{n - k} (\mfrac{A}^{k} M \cap N)$, so
+\[
+\mfrac{A}^{n} M \cap N
+\subseteq \mfrac{A}^{n - k} (\mfrac{A}^{k} M \cap N).
+\]
+Now, it is clear that the righthand side is contained in
+$\mfrac{A}^{n} M \cap N$, as $\mfrac{A}^{n - k} N \subseteq N$.
+$\Box$
+%%%%%
+%%%%%
+\end{document}

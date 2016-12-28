@@ -1,0 +1,108 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DifferentialField}
+\pmcreated{2013-03-22 14:18:47}
+\pmmodified{2013-03-22 14:18:47}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{differential field}
+\pmrecord{10}{35778}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13N15}
+\pmclassification{msc}{12H05}
+\pmrelated{DifferentialPropositionalCalculus}
+\pmdefines{differential ring}
+\pmdefines{partial differential field}
+\pmdefines{partial differential ring}
+\pmdefines{field of constants}
+\pmdefines{ring of constants}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\def\sse{\subseteq}
+\def\bigtimes{\mathop{\mbox{\Huge $\times$}}}
+\def\impl{\Rightarrow}
+\def\del{\partial}
+\begin{document}
+\PMlinkescapeword{term}%
+\PMlinkescapeword{constant}%
+\PMlinkescapeword{inversion}%
+\PMlinkescapeword{place}%
+%
+Let $F$ be a field (ring) together with a derivation $(\cdot)' \colon F \to F$.
+The derivation must satisfy two properties:
+\begin{description}
+  \item[Additivity] $(a+b)' = a' + b'$;
+  \item[Leibniz' Rule] $(ab)' = a'b+ab'$.
+\end{description}
+A derivation is the algebraic abstraction of a derivative from ordinary
+calculus. Thus the terms \emph{derivation}, \emph{derivative}, and
+\emph{differential} are often used interchangeably.
+
+Together, $(F,{}')$ is referred to as a \emph{differential field (ring)}.
+The subfield (subring) of all elements with vanishing derivative,
+$K=\{ a\in F \mid a'=0 \}$,
+is called the \emph{field (ring) of constants}. Clearly, $(\cdot)'$ is $K$-linear.
+
+There are many notations for the derivation symbol, for example $a'$ may
+also be denoted as $da$, $\delta a$, $\del a$, etc. When there is more
+than one derivation $\del_i$, $(F,\{\del_i\})$ is referred to as a
+\emph{partial differential field (ring)}.
+
+\section{Examples}
+Differential fields and rings (together under the name of differential algebra)
+are a natural setting for the study of algebraic properties of derivatives
+and anti-derivatives (indefinite integrals), as well as ordinary and partial differential
+equations and their solutions. There is an abundance of examples drawn
+from these areas.
+
+\begin{itemize}
+\item
+  The trivial example is a field $F$ with $a'=0$ for each $a\in F$. Here,
+  nothing new is gained by introducing the derivation.
+\item
+  The most common example is the field of rational functions $\mathbb{R}(z)$
+  over an indeterminant satisfying $z'=1$. The field of constants is
+  $\mathbb{R}$. This is the setting for ordinary calculus.
+\item
+  Another example is $\mathbb{R}(x,y)$ with two derivations $\del_x$
+  and $\del_y$. The field of constants is $\mathbb{R}$ and the
+  derivations are extended to all elements from the properties $\del_x x=1$,
+  $\del_y y = 1$, and $\del_x y = \del_y x = 0$.
+\item
+  Consider the set of smooth functions $C^\infty(M)$ on a manifold $M$. They
+  form a ring (or a field if we allow formal inversion of functions
+  vanishing in some places). Vector fields on $M$ act naturally as
+  derivations on $C^\infty(M)$.
+\item
+  Let $A$ be an algebra and $U_t = \exp(tu)$ be a one-parameter subgroup of
+  automorphisms of $A$. Here $u$ is the infinitesimal generator of these
+  automorphisms. From the properties of $U_t$, $u$ must be a linear operator
+  on $A$ that satisfies the Leibniz rule $u(ab)=u(a)b+au(b)$. So
+  $(A,u)$ can be considered a differential ring.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

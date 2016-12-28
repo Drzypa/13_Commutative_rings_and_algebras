@@ -1,0 +1,88 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfResultant2}
+\pmcreated{2013-03-22 14:36:36}
+\pmmodified{2013-03-22 14:36:36}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{example of resultant (2)}
+\pmrecord{7}{36183}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13P10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+This example shows how resultants can be used to solve simultaneous algebraic equations in two variables.  We shall compute the intersection of two ellipses.
+
+Consider the system of equations $f(x,y) = 0, g(x,y) = 0$ where
+ $$f(x,y) = 3 x^2 + 2 x y + 3 y^2 - 2$$
+ $$g(x,y) = 3 x^2 - 2 x y + 3 y^2 - 2$$
+We will consider $f$ and $g$ as polynomials in $x$ whose coefficients are functions of $x$.  What this means can be seen by writing $f$ and $g$ as
+ $$(3) x^2 + (2 y) x + (3 y^2 - 2)$$
+ $$(3) x^2 + (- 2 y) x + (3 y^2 - 2)$$
+
+We will now construct the resultant by computing Sylvester's determinant.  In the notation of the main article, the coefficients of the various powers of $x$ may be notated as
+ $$a_0 = 3 \quad a_1 = 2y \quad a_2 = 3 y^2 -2$$
+ $$b_0 = 3 \quad b_1 = -2y \quad b_2 = 3 y^2 -2$$
+The determinant is
+ $$\left| \begin{matrix}
+3 & 2y & 3 y^2 -2 & 0  \cr
+0 & 3 & 2y & 3 y^2 -2  \cr
+3 & -2y & 3 y^2 -2 & 0 \cr
+0 & 3 & -2y & 3 y^2 -2 \cr
+\end{matrix} \right|$$
+This determinant evaluates to $144 y^4 - 96 y^2$.  Hence, in order for the system of equations to have a solution, $y$ must satisfy the equation
+ $$144 y^4 - 96 y^2 = 0$$
+We can factor the polynomial as
+ $$144 y^4 - 96 y^2 = 144 (y + {\sqrt{2} \over 3}) y^2 (y - {\sqrt{2} \over 3})$$
+Hence, the solutions are
+ $$y = -{\sqrt{2} \over 3}$$
+ $$y = 0$$
+ $$y = +{\sqrt{2} \over 3}$$
+Note that the solution $y=0$ occurs with multiplicity $2$.  We shall see what that means shortly.
+
+Having found the possible values of $y$, let us now find the corresponding values for $x$.  Substituting the possible value $y = -{\sqrt{2} \over 3}$ into the equation $f(x,y) = 0$, we obtain
+ $$3 x^2 - {2 \sqrt{2} \over 3} x = 0$$
+Hence, either $x = 0$ or $x = +{2 \sqrt{2} \over 3}$.  If we substitute $x = 0$ and $y = -{\sqrt{2} \over 3}$ into $g(x,y)$, we obtain zero so
+ $$x = 0 \quad y = -{\sqrt{2} \over 3}$$ is a solution of our system.  However, if we substitute $x = +{2 \sqrt{2} \over 3}$ and $y = -{\sqrt{2} \over 3}$ into $g(x,y)$, we obtain ${16 \over 9}$, so this root does not lead to a solution of the original system of equations.
+
+Substituting the possible value $y = +{\sqrt{2} \over 3}$ into the equation $f(x,y) = 0$, we obtain
+ $$3 x^2 + {2 \sqrt{2} \over 3} x = 0$$
+Hence, either $x = 0$ or $x = -{2 \sqrt{2} \over 3}$.  If we substitute $x = 0$ and $y = +{\sqrt{2} \over 3}$ into $g(x,y)$, we obtain zero so
+ $$x = 0 \quad y = +{\sqrt{2} \over 3}$$ is a solution of our system.  However, if we substitute $x = -{2 \sqrt{2} \over 3}$ and $y = +{\sqrt{2} \over 3}$ into $g(x,y)$, we obtain $-{16 \over 9}$, so this root does not lead to a solution of the original system of equations.
+
+Finally, let us consider the value $y = 0$.  Substituting this value into $f(x,y)$, we obtain the equation
+ $$3 x^2 - 2 = 0$$
+This equation has the solutions $x = -{\sqrt{2} / 3}$ and $x = +{\sqrt{2} / 3}$.  Substituting $y = 0$ and $x = -{\sqrt{2} / 3}$ into $g(x,y)$, we obtain $0$, so
+ $$y = 0 \qquad x = -{\sqrt{2} / 3}$$
+is a solution of the system of equations.  Likewise, substituting $y = 0$ and $x = +{\sqrt{2} / 3}$ into $g(x,y)$, we obtain $0$, so
+ $$y = 0 \qquad x = +{\sqrt{2} / 3}$$
+is a solution of the system of equations.  In this case, we obtained two solutions to the system of equations.
+
+At this point, recall the remark that $y = 0$ was a double root of the resultant.  This fact explains why both values of $x$ gave rise to solutions of the system when $y=0$.  In general, the number of solutions (counted with multiplicity) of the system of equations for a particular value of $y$ equals the mutiplicity of that value of $y$ as a root of the resultant.
+%%%%%
+%%%%%
+\end{document}

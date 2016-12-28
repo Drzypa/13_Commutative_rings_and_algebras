@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ValueGroupOfCompletion}
+\pmcreated{2013-03-22 14:58:14}
+\pmmodified{2013-03-22 14:58:14}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{value group of completion}
+\pmrecord{10}{36670}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13F30}
+\pmclassification{msc}{13J10}
+\pmclassification{msc}{13A18}
+\pmclassification{msc}{12J20}
+%\pmkeywords{rank one valuation}
+\pmrelated{KrullValuation}
+\pmrelated{ExtensionOfValuationFromCompleteBaseField}
+\pmdefines{value group of the completion}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+Let $k$ be a field and\, $|\cdot|$\, its non-archimedean valuation of \PMlinkname{rank one}{KrullValuation}.\, Then its value group\, $|k\!\smallsetminus\!\{0\}|$\, may be considered to be a subgroup of the multiplicative group of $\mathbb{R}$.\, In the completion $K$ of the valued field $k$, the extension of the valuation is defined by
+             $$|x| \;=:\; \lim_{n\to\infty}|x_n|,$$
+when the Cauchy sequence \,$x_1,\,x_2,\,\ldots,\,x_n,\,\ldots$\, of elements of $k$ determines the element $x$ of $K$.
+
+\begin{thmplain}
+\, \,The non-archimedean field $k$ and its completion $K$ have the same value group.
+\end{thmplain}
+
+{\em Proof.} \,Of course,\, $|k| \subseteq |K|$.\, Let\, 
+$x = \lim_{n\to\infty}x_n$\, be any non-zero element of $K$, where $x_j$'s form a Cauchy sequence in $k$.\, Then there exists a positive number $n_0$ such that
+           $$|x_n\!-\!x| \;<\; |x|$$
+for all\, $n > n_0$.\, For all these values of $n$ we have
+       $$|x_n| \;=\; |x\!+\!(x_n\!-\!x)| \;=\; |x|$$
+according to the ultrametric triangle inequality.\, Thus we see that\, 
+$|K|\subseteq |k|$.
+%%%%%
+%%%%%
+\end{document}

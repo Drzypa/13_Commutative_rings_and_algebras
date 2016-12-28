@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{VectorSpacesAreIsomorphicIffTheirBasesAreEquipollent}
+\pmcreated{2013-03-22 18:06:55}
+\pmmodified{2013-03-22 18:06:55}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{vector spaces are isomorphic iff their bases are equipollent}
+\pmrecord{7}{40661}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13C05}
+\pmclassification{msc}{15A03}
+\pmclassification{msc}{16D40}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+\begin{thm} Vector spaces $V$ and $W$ are isomorphic iff their bases are equipollent (have the same cardinality). \end{thm}
+
+\begin{proof}  ($\Longrightarrow$)  Let $\phi:V\to W$ be a linear isomorphism.  Let $A$ and $B$ be bases for $V$ and $W$ respectively.  The set $$\phi(A):=\lbrace \phi(a)\mid a\in A\rbrace$$ is a basis for $W$.  If $$r_1\phi(a_1)+\cdots +r_n\phi(a_n)=0,$$ with $a_i\in A$.  Then $$\phi(r_1a_1+\cdots +r_na_n)=0$$ since $\phi$ is linear.  Furthermore, since $\phi$ is one-to-one, we have $$r_1a_1+\cdots +r_na_n=0,$$ hence $r_i=0$ for $i=1,\ldots, n$, since $A$ is linearly independent.  This shows that $\phi(A)$ is linearly independent.  Next, pick any $w\in W$, then there is $v\in V$ such that $\phi(v)=w$ since $\phi$ is onto.  Since $A$ spans $V$, we can write $$v=r_1a_1+\cdots + r_na_n,$$ so that $$w=\phi(v)=r_1\phi(a_1)+\cdots +r_n\phi(a_n).$$  This shows that $\phi(A)$ spans $W$.  As a result, $\phi(A)$ is a basis for $W$.  $A$ and $\phi(A)$ are equipollent because $\phi$ is one-to-one.  But since $B$ is also a basis for $W$, $\phi(A)$ and $B$ are equipollent.  Therefore $$|A|=|\phi(A)| = |B|.$$
+
+($\Longleftarrow$)  Conversely, suppose $A$ is a basis for $V$, $B$ is a basis for $W$, and $|A|=|B|$.  Let $f$ be a bijection from $A$ to $B$.  We extend the domain of $f$ to all of $A$, and call this extension $\phi$, as follows: $\phi(a)=f(a)$ for any $a\in A$.  For $v\in V$, write $$v=r_1a_1+\cdots +r_na_n$$ with $a_i\in A$, set $$\phi(v)=r_1\phi(a_1)+\cdots +r_n\phi(a_n).$$  $\phi$ is a well-defined function since the expression of $v$ as a linear combination of elements of $A$ is unique.  It is a routine verification to check that $\phi$ is indeed a linear transformation.  To see that $\phi$ is one-to-one, let $\phi(v)=0$.  But this means that $v=0$, again by the uniqueness of expression of $0$ as a linear combination of elements of $A$.  If $w\in W$, write it as a linear combination of elements of $B$: $$w=s_1b_1+\cdots +s_mb_m.$$  Each $b_i\in B$ is the image of some $a\in A$ via $f$.  For simplicity, let $f(a_i)=b_i$.  Then $$w=s_1f(a_1)+\cdots + s_mf(a_m) = s_1\phi(a_1)+ \cdots + s_m \phi(a_m) = \phi(s_1a_1+\cdots +s_ma_m),$$ which shows that $\phi$ is onto.  Hence $\phi$ is a linear isomorphism between $V$ and $W$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

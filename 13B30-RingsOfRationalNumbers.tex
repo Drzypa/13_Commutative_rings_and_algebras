@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RingsOfRationalNumbers}
+\pmcreated{2014-03-18 15:35:06}
+\pmmodified{2014-03-18 15:35:06}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{rings of rational numbers}
+\pmrecord{17}{40600}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13B30}
+\pmclassification{msc}{11A99}
+\pmsynonym{subrings of rationals}{RingsOfRationalNumbers}
+\pmsynonym{subrings of $\mathbb{Q}$}{RingsOfRationalNumbers}
+\pmrelated{Localization}
+\pmrelated{ThereforeSign}
+\pmdefines{dyadic fraction}
+\pmdefines{p-integral rational numbers}
+\pmdefines{$p$-integral rational number}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The criterion for a non-empty subset $R$ of a given ring $Q$ for being a subring of $Q$, is that $R$ contains always along with its two elements also their difference and product.\, Since the field $\mathbb{Q}$ of the rational numbers is (isomorphic to) the total ring of quotients of the ring $\mathbb{Z}$ of the integers, any rational number is a quotient $\displaystyle\frac{m}{n}$ of two integers $m$ and $n$.\, If now $R$ is an arbitrary subring of $\mathbb{Q}$ and 
+$$\frac{m_1}{n_1},\, \frac{m_2}{n_2} \in R$$
+with\, $m_1,\,n_1,\,m_2,\,n_2 \in \mathbb{Z}$\, (and\, $n_1n_2 \neq 0$), then one must have
+$$\frac{m_1n_2-m_2n_1}{n_1n_2} \in R, \qquad \frac{m_1m_2}{n_1n_2} \in R.$$
+Therefore, the set of possible denominators of the elements of $R$ is closed under multiplication, i.e. it forms a multiplicative set.\, We can of course confine us to subsets $S$ containing only positive integers.\, But along with any positive integer $n_0$, the set $S$ has to contain also all positive \PMlinkname{divisors}{Divisibility}, inclusive 1 and the \PMlinkname{prime divisors}{FundamentalTheoremOfArithmetics} of the number $n_0$, since the factorisation\, $n_0 = uv$\, of the denominator of an element $\displaystyle\frac{m}{n_0}$ of $R$ implies that the \PMlinkname{multiple}{GeneralAssociativity}\, $\displaystyle u\cdot\frac{m}{uv} = \frac{m}{v}$\, belongs to $R$.\, Accordingly, $S$ consists of 1, a certain set of positive prime numbers and all finite products of these, thus being a free monoid on the set of those prime numbers.
+
+Since $R$ contains all \PMlinkescapetext{multiples} of each of its elements, it is apparent that the set of possible numerators form an ideal of $\mathbb{Z}$.
+
+$\therefore$\; \textbf{Theorem.}\, If $R$ is a subring of $\mathbb{Q}$, then there are a principal ideal $(k)$ of $\mathbb{Z}$ and a multiplicative subset $S$ of $\mathbb{Z}$ such that $S$ is a free monoid on certain set of prime numbers and any element $\displaystyle\frac{m}{n}$ of $R$ is characterised by 
+\begin{align*}
+\begin{cases}
+m \in (k),\\
+n \in S.
+\end{cases}
+\end{align*}
+The positive generator $k$ of $(k)$ does not belong to $S$ except when it is 1.\\
+
+\textbf{Note.}\, Since $k$ may be greater than 1, the ring $R$ is not necessarily the ring of quotients $S^{-1}\mathbb{Z}$, e.g. in the case
+$$R = \left\{\frac{2a}{3^s}\,\vdots\;\; a \in \mathbb{Z},\;\, s \in \mathbb{Z}_+\right\}.\\$$
+
+\textbf{Examples.}\\
+
+1.\, The ring\, $R := S^{-1}\mathbb{Z}$\, of the {\em \PMlinkname{p-integral rational numbers}{PAdicValuation}} where\\
+$S = \{\mathrm{the\;power\;products\;of\;all\;positive\;primes\;except\;} p\}$.\, E.g. the 2-integral rational numbers consist of fractions with arbitrary integer numerators and odd denominators, for example $\frac{1000}{1001}$.\\
+
+2.\, The ring\, $R := S^{-1}\mathbb{Z}$\, of the decimal fractions \,where\, 
+$S = \{\mathrm{the\;power\;products\;of\;2\;and\;5}\}$.\\
+
+3.\, The ring of the \PMlinkescapetext{{\em terminating binary}} or {\em dyadic fractions} with any integer numerators but denominators from the set\, $S = \{1,\,2,\,4,\,8,\,\ldots\}$.\\
+
+4.\, If\, $S = \{1\}$,\, the subring of $\mathbb{Q}$ is simply some ideal $(k)$ of the ring $\mathbb{Z}$.\\
+
+All the subrings of $\mathbb{Q}$ (except the trivial ring $\{0\}$) have $\mathbb{Q}$ as their total ring of quotients.
+
+%%%%%
+%%%%%
+\end{document}

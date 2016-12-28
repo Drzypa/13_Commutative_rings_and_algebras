@@ -1,0 +1,103 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RealRing}
+\pmcreated{2013-03-22 18:51:35}
+\pmmodified{2013-03-22 18:51:35}
+\pmowner{jocaps}{12118}
+\pmmodifier{jocaps}{12118}
+\pmtitle{real ring}
+\pmrecord{6}{41673}
+\pmprivacy{1}
+\pmauthor{jocaps}{12118}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13J30}
+\pmclassification{msc}{13J25}
+\pmrelated{FormallyRealField}
+
+\usepackage{amssymb, amsthm,amsmath}
+\usepackage{pictexwd, dcpic}
+\usepackage{pstricks}
+\usepackage[dvips]{graphicx}
+
+%%%%%%%%%% Theorems and Other Theoremstyles %%%%%%%%%%%%%%
+\theoremstyle{definition} 
+\newtheorem{theorem}{Theorem}
+\newtheorem{prop}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem*{defi}{Definition}
+\newtheorem*{exam}{Example}
+\newtheorem{example}[theorem]{Example}
+\newtheorem*{ack}{Acknowledgement}
+\newtheorem{cor}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{conj}[theorem]{Conjecture}
+\newtheorem{cons}[theorem]{Construction}
+\newtheorem*{defnot}{Definition and Notation}
+\theoremstyle{remark} 
+\newtheorem*{rem}{Remark} %%% * means no numbering
+\newtheorem*{nota}{Notation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\blacksq{\begin{flushright}$\blacksquare$\end{flushright}}
+\def\dotcup{\buildrel\textstyle.\over\cup}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% New Commands and Renew Commands %%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\ann{\mathrm{Ann}}
+\newcommand\rsa{\rightsquigarrow}
+\newcommand\brac[1]{\langle #1 \rangle}
+\newcommand\sep{\,:\,}
+%\newcommand\pair[1]{#1,#1^+}
+\newcommand\st {\mathrel{\ooalign{$\,\backepsilon$\cr\lower .7pt\hbox{\kern 1pt$-\,$}}}}
+\newcommand\qf[1]{\mathrm{Quot}(#1)}	
+\newcommand\spec{\mathrm{Spec}\,}	
+\newcommand\sper{\mathrm{Sper}\,}	
+\newcommand\supp{\mathrm{supp}}	
+\newcommand\id{\mathrm{id}}	
+\newcommand\basis{\mathcal{B}}
+%\renewcommand\P{\mathcal{P}}
+%\renewcommand\H{\mathcal{H}}
+\newcommand\minspec{\mathrm{MinSpec}\,}
+\newcommand\Hom{\mathrm{Hom}}
+\newcommand\Ccal{\mathcal{C}}
+\newcommand\Dcal{\mathcal{D}}
+\newcommand\Z{\mathbb{Z}}
+\newcommand\Q{\mathbb{Q}}
+\newcommand\R{\mathbb{R}}
+\newcommand\C{\mathbb{C}}
+\newcommand\alg{R_{alg}}
+%\newcommand\F{\mathcal F}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\p}{\mathfrak{p}}
+\newcommand\wo[1]{\backslash{\{#1\}}}
+\newcommand{\bij}{\rightarrowtail \hspace{-1.9ex} \rightarrow}
+\newcommand{\longbij}{\rightarrowtail \hspace{-1.9ex} \rightarrow}
+\newcommand*{\lhrarrow}{\ensuremath{\lhook\joinrel\relbar\joinrel\rightarrow}}
+\newcommand*{\thrarrow}{\twoheadrightarrow}
+\newcommand*{\lthrarrow}{\ensuremath{\relbar\joinrel\twoheadrightarrow}}
+%\renewcommand{\labelenumi}{\roman{enumi}.}
+\renewcommand\mod{\,\mathrm{mod}\,}
+\newcommand{\ic}{\mathrm{ic}}
+\renewcommand\thefootnote{\relax}
+\newcommand{\bigcupdot}{\mathop{\makebox[-.2em]{\hskip 1.3em $^{\boldsymbol\cdot}$}\bigcup}}
+\newcommand{\bigcupd}{\mathop{\makebox[0em]{\hskip 1.2em $^{\boldsymbol\cdot}$}\bigcup}}
+\newcommand{\Pcal}{\mathcal P}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+A ring $A$ is called real iff the following identity holds for all $n\in \N$ :
+$$a_1^2 + \dots + a_n^2 = 0 \Leftrightarrow a_1,\dots,a_n = 0  \qquad (\forall a_1,\dots,a_n\in A)$$
+
+\begin{rem} If $A$ is a ring then being real implies the following
+\begin{itemize}
+\item $A$ can have a partial ordering
+\item $A$ is reduced
+\end{itemize}
+Conversely, we note that if $A$ is reduced and can have a partial ordering then $A$ is a real ring.
+If $A$ is a field then we call it a \emph{real field}. Similarly we define \emph{real domains}, 
+\emph{real (von Neumann) regular rings}, $\dots$
+\end{rem}
+
+%%%%%
+%%%%%
+\end{document}

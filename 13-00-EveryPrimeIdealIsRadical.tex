@@ -1,0 +1,104 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EveryPrimeIdealIsRadical}
+\pmcreated{2013-03-22 13:56:54}
+\pmmodified{2013-03-22 13:56:54}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{every prime ideal is radical}
+\pmrecord{5}{34712}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13-00}
+\pmclassification{msc}{14A05}
+\pmsynonym{prime ideal is radical}{EveryPrimeIdealIsRadical}
+%\pmkeywords{prime ideal}
+%\pmkeywords{radical}
+\pmrelated{RadicalOfAnIdeal}
+\pmrelated{PrimeIdeal}
+\pmrelated{HilbertsNullstellensatz}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\begin{document}
+Let $\mathcal{R}$ be a commutative ring and let $\mathfrak{P}$ be
+a prime ideal of $\mathcal{R}$.
+
+\begin{prop}
+Every prime ideal $\mathfrak{P}$ of $\mathcal{R}$ is a radical
+ideal, i.e.
+$$\mathfrak{P}=\operatorname{Rad(\mathfrak{P})}$$
+\end{prop}
+\begin{proof}
+Recall that $\mathfrak{P}\subsetneq \mathcal{R} $ is a prime ideal
+if and only if for any $a,b\in \mathcal{R}$ $$a\cdot b\in
+\mathfrak{P} \Rightarrow a\in \mathfrak{P} \text{ or } b\in
+\mathfrak{P}$$ Also, recall that
+$$\operatorname{Rad}(\mathfrak{P})=\{ r\in \mathcal{R} \mid
+\exists n\in \Nats \text{ such that } r^n\in \mathfrak{P} \}$$
+
+Obviously, we have $\mathfrak{P}\subseteq
+\operatorname{Rad}(\mathfrak{P})$ (just take $n=1$), so it remains
+to show the reverse inclusion.
+
+Suppose $r\in \operatorname{Rad}(\mathfrak{P})$, so there exists
+some $n\in \Nats$ such that $r^n\in \mathfrak{P}$. We want to
+prove that $r$ must be an element of the prime ideal
+$\mathfrak{P}$. For this, we use induction on $n$ to prove the
+following proposition:
+
+For all $n\in\Nats$, for all $r\in \mathcal{R}$,
+$r^n\in\mathfrak{P} \Rightarrow r\in \mathfrak{P}$.
+
+{\bf Case $n=1$:} This is clear, $r\in \mathfrak{P}
+\Rightarrow r\in \mathfrak{P}$.
+
+{\bf Case $n$ $\Rightarrow$ Case $n+1$: } Suppose we have proved
+the proposition for the case $n$, so our induction hypothesis is
+$$\forall r\in\mathcal{R}, \quad r^n\in\mathfrak{P} \Rightarrow r\in
+\mathfrak{P}$$ and suppose $r^{n+1}\in \mathfrak{P}$. Then
+$$r\cdot r^n = r^{n+1} \in \mathfrak{P}$$
+and since $\mathfrak{P}$ is a prime ideal we have
+$$r\in \mathfrak{P} \text{ or } r^n\in \mathfrak{P}$$
+Thus we conclude, either directly or using the induction
+hypothesis, that $r\in \mathfrak{P}$ as desired.
+
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

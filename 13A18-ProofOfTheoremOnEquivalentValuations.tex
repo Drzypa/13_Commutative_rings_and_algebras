@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfTheoremOnEquivalentValuations}
+\pmcreated{2013-03-22 14:55:40}
+\pmmodified{2013-03-22 14:55:40}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{proof of theorem on equivalent valuations}
+\pmrecord{12}{36616}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13A18}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+It is easy to see that $| \cdot |$ and $| \cdot |^c$ are equivalent valuations for any constant $c > 0$ --- it follows from the fact that $0 \le x^c < 1$ if and only if $0 < x \le 1$.
+
+Assume that the valuations $| \cdot |_1$ and $| \cdot |_2$ are equivalent.  
+Let $b$ be an element of $K$ such that $0 < |b|_1 < 1$.  Because the valuations are assumed to be equivalent, it is also the case that $0 < |b|_2 < 1$.  Hence, there must exist positive constants $c_1$ and $c_2$ such that $|b|_1^{c_1} = {1 \over 2}$ and $|b|_2^{c_2} = {1 \over 2}$.  
+
+We will show that show that $| x |_1^{c_1} = | x |_2^{c_2}$ for all $a \in K$ by contradiction.
+
+Let $a$ be any element of $k$ such that $0 < |a|_1 < 1$.  Assume that $| a |_1^{c_1} \neq | a |_2^{c_2}$.  Then either $| a |_1^{c_1} < | a |_2^{c_2}$ or $| a |_1^{c_1} > | a |_2^{c_2}$.  We may assume that $| a |_1^{c_1} < | a |_2^{c_2}$ without loss of generality.
+
+Since $| a |_2^{c_2} / | a |_1^{c_1} > 1$, there exists an integer $m > 0$ such that $(| a |_2^{c_2} / | a |_1^{c_1})^m > 2$.  Let $n$ be the least integer such that $2^n |a|_2^{m c_2} > 1$.  Then we have
+ $$2^n |a|_1^{m c_1} < 2^{n-1} |a|_2^{m c_2} < 1 < 2^n |a|_2^{m c_2}.$$
+Since $2 = |b^{-1}|_1^{c_1} = |b^{-1}|_2^{c_2}$, this implies that
+ $$\left| {a^m \over b^n} \right|_1^{c_1} < 1 < \left| {a^m \over b^n} \right|_2^{c_2},$$
+but then
+ $$\left| {a^m \over b^n} \right|_1 < 1$$
+and
+ $$\left| {a^m \over b^n} \right|_2 > 1,$$
+which is impossible because the two valuations are assumed to be equivalent.
+\rightline{Q.E.D}
+%%%%%
+%%%%%
+\end{document}

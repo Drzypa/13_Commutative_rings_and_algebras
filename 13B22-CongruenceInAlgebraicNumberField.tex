@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CongruenceInAlgebraicNumberField}
+\pmcreated{2013-03-22 18:17:11}
+\pmmodified{2013-03-22 18:17:11}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{congruence in algebraic number field}
+\pmrecord{8}{40896}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13B22}
+\pmsynonym{congruence in number field}{CongruenceInAlgebraicNumberField}
+%\pmkeywords{congruence}
+\pmrelated{CongruenceRelationOnAnAlgebraicSystem}
+\pmrelated{ChineseRemainderTheoremInTermsOfDivisorTheory}
+\pmrelated{Congruences}
+\pmdefines{residue class}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{integer} \PMlinkescapeword{integers}
+\textbf{Definition.}\, Let $\alpha$, $\beta$ and $\kappa$ be \PMlinkname{integers}{AlgebraicInteger} of an algebraic number field $K$ and\, $\kappa \neq 0$.\, One defines
+\begin{align}
+\alpha \equiv \beta \pmod{\kappa}
+\end{align}
+if and only if\, $\kappa \mid \alpha\!-\!\beta$,\, i.e. iff there is an integer $\lambda$ of $K$ with\, 
+$\alpha\!-\!\beta = \lambda\kappa$.\\
+
+\textbf{Theorem.}\, The congruence ``$\equiv$'' modulo $\kappa$ defined above is an equivalence relation in the maximal order of $K$.\, There are only a finite amount of the equivalence classes, the {\em residue classes modulo $\kappa$}.\\
+
+{\em Proof.}\, For justifying the transitivity of ``$\equiv$'', suppose (1) and\, $\beta \equiv \gamma \pmod{\kappa}$; then there are the integers $\lambda$ and $\mu$ of $K$ such that\, $\alpha\!-\!\beta = \lambda\kappa$,\, 
+$\beta\!-\!\gamma = \mu\kappa$.\, Adding these equations we see that\, $\alpha\!-\!\gamma = (\lambda\!+\!\mu)\kappa$\, with the integer $\lambda\!+\!\mu$ of $K$.\, Accordingly, \,$\alpha \equiv \gamma \pmod{\kappa}$.\\
+Let $\omega$ be an arbitrary integer of $K$ and\, $\{\omega_1,\,\omega_2,\,\ldots,\,\omega_n\}$\, a minimal basis of the field.\, Then we can write
+$$\omega = a_1\omega_1+a_2\omega_2+\ldots+a_n\omega_n,$$
+where the $a_i$'s are rational integers.\, For\, $i = 1,\,2,\,\ldots,\,n$, the division algorithm determines the rational integers $q_i$ and $r_i$ with
+$$a_i = \mbox{N}(\kappa)q_i+r_i, \quad 0 \leqq r_i < |\mbox{N}(\kappa)|,$$
+whence
+$$\omega = \mbox{N}(\kappa)(\underbrace{q_1\omega_1+q_2\omega_2+\ldots+q_n\omega_n}_{=\,\pi})
++(\underbrace{r_1\omega_1+r_2\omega_2+\ldots+r_n\omega_n}_{=\,\varrho}).$$
+So we have
+\begin{align}
+\omega = \mbox{N}(\kappa)\pi\!+\!\varrho,
+\end{align}
+where $\pi$ and $\varrho$ are some integers of the field.\, If\, $\kappa^{(1)},\,\kappa^{(2)},\,\ldots,\,\kappa^{(n)}$\, are the algebraic conjugates of\, $\kappa = \kappa^{(1)}$,\, then 
+$$\mbox{N}(\kappa) = \underbrace{\kappa^{(1)}}_{\mbox{integer}}\underbrace{\kappa^{(2)}\cdots\kappa^{(n)}}_{\mbox{integer}} = \kappa\kappa' \in \mathbb{Z}.$$
+Hence, $\kappa$ divides $\mbox{N}(\kappa)$ in the ring of integers of $K$, and (2) implies
+$$\omega \equiv \varrho \pmod\kappa.$$
+Since any number $r_i$ has $|\mbox{N}(\kappa)|$ different possible values $0,\,1,\,\ldots,\,|\mbox{N}(\kappa)|\!-\!1$, there exist $|\mbox{N}(\kappa)|^n$ different ordered tuplets \,$(r_1,\,r_2,\,\ldots,\,r_n)$.\, Therefore there exist at most 
+$|\mbox{N}(\kappa)|^n$ different residues and residue classes in the ring.
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

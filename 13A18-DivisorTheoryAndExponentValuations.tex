@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DivisorTheoryAndExponentValuations}
+\pmcreated{2013-03-22 17:59:34}
+\pmmodified{2013-03-22 17:59:34}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{divisor theory and exponent valuations}
+\pmrecord{7}{40504}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13A18}
+\pmclassification{msc}{12J20}
+\pmclassification{msc}{13A05}
+\pmsynonym{divisors and exponents}{DivisorTheoryAndExponentValuations}
+\pmrelated{ExponentValuation2}
+\pmrelated{ImplicationsOfHavingDivisorTheory}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{exponents} \PMlinkescapeword{exponent}
+
+A divisor theory \,$\mathcal{O}^* \to \mathfrak{D}$\, of an integral domain $\mathcal{O}$ determines via its prime divisors a certain set $N$ of exponent valuations on the quotient field of $\mathcal{O}$.\, Assume to be known this set of \PMlinkname{exponents}{ExponentValuation2} $\nu_{\mathfrak{p}}$ corresponding the prime divisors $\mathfrak{p}$.\, There is a bijective correspondence between the elements of $N$ and of the set of all prime divisors.\, The set of the prime divisors determines completely the \PMlinkescapetext{structure} of the free monoid $\mathfrak{D}$ of all divisors in question.  The homomorphism \,$\mathcal{O}^* \to \mathfrak{D}$\, is then defined by the condition
+\begin{align}
+\alpha\; \mapsto\; \prod_i\mathfrak{p_i}^{\nu_{\mathfrak{p}_i}(\alpha)} = (\alpha),Â´
+\end{align}
+since for any element $\alpha$ of $\mathcal{O}^*$ there exists only a finite number of exponents $\nu_{\mathfrak{p}_i}$ which do not vanish on $\alpha$ (corresponding the different prime divisor \PMlinkname{factors}{DivisibilityInRings} of the principal divisor $(\alpha)$).\\
+
+One can take the concept of exponent as foundation for divisor theory:\\
+
+\textbf{Theorem.}\, Let $\mathcal{O}$ be an integral domain with quotient field $K$ and $N$ a given set of \PMlinkname{exponents}{ExponentValuation2} of $K$.\, The exponents in $N$ determine, as in (1), a divisor theory of $\mathcal{O}$ iff the following three conditions are in \PMlinkescapetext{force}:
+\begin{itemize}
+\item For every\, $\alpha \in \mathcal{O}$\, there is at most a finite number of exponents\, $\nu \in N$\, such that\, $\nu(\alpha) \neq 0$.
+\item An element\, $\alpha \in K$\, belongs to $\mathcal{O}$ if and only if\, $\nu(\alpha) \geqq 0$\, for each\, 
+$\nu \in N$.
+\item For any finite set \,$\nu_1,\,\ldots,\,\nu_n$\, of distinct exponents in $N$ and for the arbitrary set\, $k_1,\,\ldots,\,k_n$ of non-negative integers, there exists an element $\alpha$ of $\mathcal{O}$ such that
+$$\nu_1(\alpha) = k_1,\,\;\ldots,\,\;\nu_n(\alpha) = k_n.$$
+\end{itemize}
+
+For the proof of the theorem, we mention only how to construct the divisors when we have the exponent set $N$ fulfilling the three conditions of the theorem.\, We choose a commutative monoid $\mathfrak{D}$ that allows unique prime factorisation and that may be mapped bijectively onto $N$.\, The exponent in $N$ which corresponds to arbitrary prime element $\mathfrak{p}$ is denoted by $\nu_\mathfrak{p}$.\, Then we obtain the homomorphism
+$$\alpha \mapsto \prod_\nu \mathfrak{p}^{\nu_\mathfrak{p}(\alpha)} := (\alpha)$$
+which can be seen to satisfy all required properties for a divisor theory\, $\mathcal{O}^* \to \mathfrak{D}$.
+
+\begin{thebibliography}{9}
+\bibitem{BS}{\sc S. Borewicz \& I. Safarevic}: {\em Zahlentheorie}.\, Birkh\"auser Verlag. Basel und Stuttgart (1966).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

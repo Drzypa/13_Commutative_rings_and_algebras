@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MultiplicationRing}
+\pmcreated{2013-03-22 14:27:02}
+\pmmodified{2013-03-22 14:27:02}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{multiplication ring}
+\pmrecord{17}{35967}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13A15}
+%\pmkeywords{ideal multiplication}
+\pmrelated{PruferRing}
+\pmrelated{DedekindDomain}
+\pmrelated{DivisibilityInRings}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+Let $R$ be a commutative ring with non-zero unity.\, If $\mathfrak{a}$ and $\mathfrak{b}$ are two \PMlinkname{\em fractional ideals}{FractionalIdealOfCommutativeRing} of $R$ with\, $\mathfrak{a} \subseteq \mathfrak{b}$\, and if $\mathfrak{b}$ is \PMlinkname{invertible}{FractionalIdealOfCommutativeRing}, then there is a \PMlinkescapetext{fractional ideal} $\mathfrak{c}$ of $R$ such that\, $\mathfrak{a} = \mathfrak{bc}$\, (one can choose\, $\mathfrak{c} = \mathfrak{b}^{-1}\mathfrak{a}$).
+
+\textbf{Definition.}\, Let $R$ be a commutative ring with non-zero unity and let $\mathfrak{a}$ and $\mathfrak{b}$ be ideals of $R$.\, The ring $R$ is a {\em multiplication ring} if\, $\mathfrak{a} \subseteq \mathfrak{b}$\, always implies that there exists a \PMlinkescapetext{fractional ideal} $\mathfrak{c}$ of $R$ such that\, $\mathfrak{a} = \mathfrak{bc}$.
+
+\begin{thmplain}
+ \, Every Dedekind domain is a multiplication ring.\, If a multiplication ring has no zero divisors, it is a Dedekind domain.
+\end{thmplain}
+
+\begin{thebibliography}{9}
+\bibitem{LM}{\sc M. Larsen \& P. McCarthy:} {\em Multiplicative theory of ideals}.\, Academic Press. New York (1971).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

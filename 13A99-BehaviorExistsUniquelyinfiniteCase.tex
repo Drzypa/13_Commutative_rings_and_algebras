@@ -1,0 +1,38 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BehaviorExistsUniquelyinfiniteCase}
+\pmcreated{2013-03-22 16:02:32}
+\pmmodified{2013-03-22 16:02:32}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{behavior exists uniquely (infinite case)}
+\pmrecord{11}{38092}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13A99}
+\pmclassification{msc}{16U99}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+\begin{document}
+\PMlinkescapeword{generator}
+\PMlinkescapeword{generators}
+
+The following is a proof that behavior exists uniquely for any infinite \PMlinkname{cyclic ring}{CyclicRing3} $R$.
+
+\begin{proof}
+Let $r$ be a \PMlinkname{generator}{Generator} of the additive group of $R$.  Then there exists $z \in \mathbb{Z}$ with $r^2=zr$.  If $z \ge 0$, then $z$ is a behavior of $R$.  Assume $z<0$.  Note that $-z>0$ and $-r$ is also a generator of the additive group of $R$.  Since $(-r)^2=(-1)^2r^2=(-1)^2(zr)=(-z)(-r)$, it follows that $-z$ is a behavior of $R$.  Thus, existence of behavior has been proven.
+
+Let $a$ and $b$ be behaviors of $R$.  Then there exist generators $s$ and $t$ of the additive group of $R$ such that $s^2=as$ and $t^2=bt$.  If $s=t$, then $as=s^2=t^2=bt=bs$, causing $a=b$.  If $s \neq t$, then it must be the case that $t=-s$.  (This follows from the fact that 1 and -1 are the only generators of $\mathbb{Z}$.)  Thus, $as=s^2=(-1)^2s^2=(-s)^2=t^2=bt=b(-s)=-bs$, causing $a=-b$.  Since $a$ and $b$ are nonnegative, it follows that $a=b=0$.  Thus, uniqueness of behavior has been proven.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

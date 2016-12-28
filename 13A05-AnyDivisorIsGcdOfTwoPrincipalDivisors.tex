@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AnyDivisorIsGcdOfTwoPrincipalDivisors}
+\pmcreated{2013-03-22 17:59:37}
+\pmmodified{2013-03-22 17:59:37}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{any divisor is gcd of two principal divisors}
+\pmrecord{5}{40505}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13A05}
+\pmclassification{msc}{13A18}
+\pmclassification{msc}{12J20}
+\pmrelated{TwoGeneratorProperty}
+\pmrelated{SumOfIdeals}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Using the exponent valuations, one can easily prove the
+
+\textbf{Theorem.}\, In any divisor theory, each divisor is the greatest common divisor of two principal divisors.
+
+{\em Proof.}\, Let\, $\mathcal{O}^* \to \mathfrak{D}$\, be a divisor theory and $\mathfrak{d}$ an arbitrary divisor in $\mathfrak{D}$.\, We may suppose that $\mathfrak{d}$ is not a principal divisor (if $\mathfrak{D}$ contains exclusively principal divisors, then\, $\mathfrak{d} = \gcd(\mathfrak{d},\,\mathfrak{d})$\, and the proof is ready).\, Let 
+$$\mathfrak{d} = \prod_{i=1}^r\mathfrak{p}_i^{k_i}$$
+where the $\mathfrak{p}_i$'s are pairwise distinct prime divisors and every $k_i > 0$.\, Then third condition in the theorem concerning divisors and exponents allows to choose an element $\alpha$ of the ring $\mathcal{O}$ such that
+$$\nu_{\mathfrak{p}_1}(\alpha) = k_1,\;\;\ldots,\;\;\nu_{\mathfrak{p}_r}(\alpha) = k_r.$$
+Let the principal divisor corresponding to $\alpha$ be
+$$(\alpha) = \prod_{i=1}^r\mathfrak{p}_i^{k_i}\prod_{j=1}^s\mathfrak{q}_j^{l_j} = \mathfrak{dd}',$$
+where the prime divisors $\mathfrak{q}_j$ are pairwise different among themselves and with the divisors $\mathfrak{p}_i$.\, We can then choose another element $\beta$ of $\mathcal{O}$ such that
+$$\nu_{\mathfrak{p}_1}(\beta) = k_1,\;\;\ldots,\;\;\nu_{\mathfrak{p}_r}(\beta) = k_r,\;\; 
+\nu_{\mathfrak{q}_1}(\beta) = \ldots = \nu_{\mathfrak{q}_s}(\beta) = 0.$$
+Then we have\; $(\beta) = \mathfrak{dd}''$,\, where\, $\mathfrak{d}'' \in \mathfrak{D}$\, and
+$$\gcd(\mathfrak{d}',\,\mathfrak{d}'') = \mathfrak{q}^0\cdots\mathfrak{q}^0 = \mathfrak{e} = (1).$$
+The gcd of the principal divisors $(\alpha)$ and $(\beta)$ is apparently $\mathfrak{d}$, whence the proof is settled.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AlgebraWithoutOrder}
+\pmcreated{2013-03-22 14:46:01}
+\pmmodified{2013-03-22 14:46:01}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{algebra without order}
+\pmrecord{11}{36411}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+An \PMlinkname{algebra}{Algebra} $A$ is said to be \PMlinkescapephrase{order} {\em without order} if it is commutative and \\for each $a \in A$, there exists $b \in A$ such that $ab \ne 0$.\\
+
+The phrase algebra without order seems first in the book ``Multipliers of Banach algebras'' by Ronald Larsen. In noncommutative case, the concept is divied into two parts -- without left/right order. However, in the noncommutative case, it is defined in terms of the injectivity of the left (right) regular representation given by $x \in A \mapsto L_x \in L(A)$. 
+
+Note that for an algebra $A$ and an element $x \in A$, $L_x : A \to A$ is the map defined by $L_x(y) = xy$. Then $L_x$ is a linear operator on $A$. It is easy to see that $A$ is without left order if and only if the map $x \in A \mapsto L_x \in L(A)$ is one-one; equivalently, the left ideal $\{x \in A : x \in A\} = \{0\}$. This ideal is is called the left annihilator of $A$. 
+
+Every commutative algebra with identity is without order.\\
+
+Example: $\mathbb{R}^2$ with multiplication defined by $(x_1,x_2) * (y_1,y_2) = (x_1y_1,0)$, ($(x_1,x_2), (y_1,y_2) \in \mathbb{R}^2$) is not an algebra without order as multiplication of (0,1) with any other element gives (0,0).
+%%%%%
+%%%%%
+\end{document}

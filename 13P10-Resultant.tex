@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Resultant}
+\pmcreated{2013-03-22 14:36:30}
+\pmmodified{2013-03-22 14:36:30}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{resultant}
+\pmrecord{18}{36181}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13P10}
+\pmsynonym{eliminant}{Resultant}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+\begin{document}
+If $p$ and $q$ are two polynomials over a commutative ring with identity which can be factored into linear factors
+ $$p(x) = a_0 (x - r_1) (x - r_2) \cdots (x - r_m)$$
+ $$q(x) = b_0 (x - s_1) (x - s_2) \cdots (x - s_n)$$
+then the \emph{resultant} $R(f,g)$ of $f$ and $g$ is defined as
+ $$R(p,q) = a_0^n b_0^m \prod_{i=1}^m \prod_{j=1}^n (r_i - s_j)$$
+
+From the definition, it is clear that the resultant will equal zero if and only if $p$ and $q$ have at least one common root.  By grouping together factors, we may also rewrite the resultant as
+ $$R(p,q) = a_0^n \prod_{i=1}^m q(r_i)$$
+or
+ $$R(p,q) = (-1)^{mn} b_0^m \prod_{j=1}^n p(s_j)$$
+
+Since the resultant is a symmetric function of the roots of the polynomials $p$ and $q$, it can be expressed as a polynomial in the coefficients of $p$ and $q$.  This allows one to extend the definition to the case where $p$ and $q$ do not factor.  An explicit formula for the resultant as a determinant was given by Sylvester.  Suppose that
+ $$p(x) = a_0 x^m + a_1 x^{m-1} + \cdots + a_{m-1} x + a_m$$
+and
+ $$q(x) = b_0 x^n + b_1 x^{n-1} + \cdots + b_{n-1} x + b_n$$
+Then $R(p,q)$ can be expressd as an $(m+n) \times (m+n)$ determinant:
+$$\left| \begin {matrix}
+a_0 & a_1 & a_2 & \ldots & a_m & 0 & \ldots & 0 \cr
+0 & a_0 & a_1 & \ldots & a_{m-1} & a_m & \ldots & 0 \cr
+& & \ddots & . & . & . & . & . \cr
+0 & 0 & . & . & . & . & . & a_m \cr
+b_0 & b_1 & b_2 & \ldots & b_n & 0 & \ldots & 0 \cr
+0 & b_0 & b_1 & \ldots & b_{n-1} & b_n & \ldots & 0 \cr
+& & \ddots & . & . & . & . & . \cr
+0 & 0 & . & . & . & . & . &  b_n \cr
+\end{matrix} \right| = R(p,q)$$
+To construct this determinant, one first lists the coefficients of $p$, padded with zeros at the end, then constructs subsequent rows by shifting one column to the right each time until one runs out of zeros at the end, then one repeats the same procedure with $q$.
+
+Resultants are very useful for solving simultaneous systems of polynomial equations.  Suppose that one has a system of two equations $f(x,y) = 0, g(x,y) = 0$.  Then $f$  and $g$ can be regarded as polynomials in $x$ whose coefficients are functions of $y$.  One can then form the resultant by computing the determinant of a matrix as above.  Since the coefficients were polynomials in $y$, the resultant will be a polynomial in $y$.  In \PMlinkescapetext{order} for the two equations to have a solution, the resultant must equal zero; hence setting the resultant equal to zero gives an equation for the $y$ values of solutions of the system.  Once one solves for these $y$ values, one can substitute them back in to the original equations and solve for the corresponding $x$ values.  In other \PMlinkescapetext{words}, the resultant allows one to eliminate a variable from a system of equations.  For this reason, resultants are also known as eliminants.
+
+By using resultants to eliminate variables repeatedly one variable at a time, one solve systems of equations in more than two unknowns.
+
+\begin{thebibliography}{1}
+\bibitem[S]{S}
+{\scshape Sylvester, J.J},
+\emph{A Method of Determining By Mere Inspection the Derivatives from Two Equations of Any Degree},
+Phil.\ Mag. 16 (1840) pp. 132--135.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

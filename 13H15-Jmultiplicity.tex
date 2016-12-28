@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Jmultiplicity}
+\pmcreated{2013-03-22 18:15:26}
+\pmmodified{2013-03-22 18:15:26}
+\pmowner{yshen}{21076}
+\pmmodifier{yshen}{21076}
+\pmtitle{j-multiplicity}
+\pmrecord{6}{40853}
+\pmprivacy{1}
+\pmauthor{yshen}{21076}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13H15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\def\length{\operatorname{length}}
+\def\frakm{\mathfrak{m}}
+
+
+\begin{document}
+Let $(R,\frakm)$ be a Noetherian local ring with proper ideal $I$. Define
+\[
+j(I)=\lim_{n\to \infty} \frac{(d-1)!}{n^{d-1}} \length_R(H_\frakm^0(I^n/I^{n+1})) 
+\]
+and call it the j-multiplicity of $I$. Here $H_\frakm^0(\bullet)$ is the 0-th local cohomology functor. When $I$ is $\frakm$-primary, it is same as the Hilbert-Samuel multiplicity $e_I(R)$.
+%%%%%
+%%%%%
+\end{document}

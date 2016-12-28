@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CharacterizationOfPrimaryIdeals}
+\pmcreated{2013-03-22 19:04:29}
+\pmmodified{2013-03-22 19:04:29}
+\pmowner{joking}{16130}
+\pmmodifier{joking}{16130}
+\pmtitle{characterization of primary ideals}
+\pmrecord{5}{41960}
+\pmprivacy{1}
+\pmauthor{joking}{16130}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13C99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\textbf{Proposition.} Let $R$ be a commutative ring and $I\subseteq R$ an ideal. Then $I$ is primary if and only if every zero divisor in $R/I$ is nilpotent.
+
+\textit{Proof.} ,,$\Rightarrow$'' Assume, that we have $x\in R$ such that $x+I$ is a zero divisor in $R/I$. In particular $x+I\neq 0+I$ and there is $y\in R$, $y+I\neq 0+I$ such that
+$$0+I=(x+I)(y+I)=xy+I.$$
+This is if and only if $xy\in I$. Thus either $y\in I$ or $x^n\in I$ for some $n\in\mathbb{N}$. Of course $y\not\in I$, because $y+I\neq 0+I$ and thus $x^n\in I$. Therefore $x^n+I=0+I$, which means that $x+I$ is nilpotent in $R/I$.
+
+,,$\Leftarrow$'' Assume that for some $x,y\in R$ we have $xy\in I$ and $x,y\not\in I$. Then
+$$(x+I)(y+I)=xy+I=0+I,$$
+so both $x+I$ and $y+I$ are zero divisors in $R/I$. By our assumption both are nilpotent, and therefore there is $n,m\in\mathbb{N}$ such that $x^n+I=y^m+I=0+I$. This shows, that $x^n\in I$ and $y^m\in I$, which completes the proof. $\square$
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DivisorsInBaseFieldAndFiniteExtensionField}
+\pmcreated{2013-03-22 18:01:35}
+\pmmodified{2013-03-22 18:01:35}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{divisors in base field and finite extension field}
+\pmrecord{6}{40544}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13F05}
+\pmclassification{msc}{13A18}
+\pmclassification{msc}{13A05}
+\pmrelated{DivisorTheory}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+%\usepackage{amscd}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{factor}
+Let $k$ be the quotient field of an integral domain $\mathfrak{o}$ which has the divisor theory \,$\mathfrak{o}^* \to \mathfrak{D}_0$.\, Let $K/k$ a finite extension, $\mathfrak{O}$ be the integral closure of $\mathfrak{o}$ in $K$ and\, $\mathfrak{O}^* \to \mathfrak{D}$\, the uniquely determined divisor theory of $\mathfrak{O}$ (see the \PMlinkname{parent entry}{DivisorTheoryInFiniteExtension}).\, We will study the \PMlinkescapetext{connection} of the divisor monoids $\mathfrak{D}_0$ and $\mathfrak{D}$.
+
+Any element $a$ of $\mathfrak{o}^*$, which is a part of $\mathfrak{O}^*$, determines a principal divisor \,$(a)_k \in \mathfrak{D}_0$\, and another\, $(a)_K \in \mathfrak{D}$.\, The (multiplicative) monoid $\mathfrak{o}^*$ is isomorphically embedded (via $\iota$) in the monoid $\mathfrak{O}^*$.\, Because the units of the ring $\mathfrak{O}$, which belong to $\mathfrak{o}$, are all units of $\mathfrak{o}$ and because associates always determine the same principal divisor, the mentioned embedding defines an isomorphic mapping
+\begin{align}
+(a)_k \mapsto (a)_K
+\end{align}
+from the monoid of the principal divisors of $\mathfrak{o}$ into the monoid of the principal divisors of $\mathfrak{O}$.\, One has the
+
+\textbf{Theorem.}\, There is one and only one isomorphism $\varphi$ from the divisor monoid $\mathfrak{D}_0$ into the divisor monoid $\mathfrak{D}$ such that its restriction to the principal divisors of $\mathfrak{o}$ coincides with (1).\, Then there is the following commutative diagram:
+$$\xymatrix{
+\mathfrak{o}^* \ar[r]^\iota \ar[d] & \mathfrak{O}^* \ar[d] \\
+\mathfrak{D}_0 \ar[r]_\varphi & \mathfrak{D}}
+$$
+
+
+The isomorphism\, $\varphi\!:\,\mathfrak{D}_o \to \mathfrak{D}$\, is determined as follows.\, Let $\mathfrak{p}$ be an arbitrary prime divisor in $\mathfrak{D}_0$ and $\nu_\mathfrak{p}$ the corresponding exponent valuation of the field $k$.\, Let\, $\nu_{\mathfrak{P}_1},\,\ldots,\,\nu_{\mathfrak{P}_m}$\, be the continuations of the exponent $\nu_\mathfrak{p}$ to $K$, which correspond to the prime divisors\, $\mathfrak{P}_1,\,\ldots,\,\mathfrak{P}_m$ in $\mathfrak{D}$.\, If\, $e_1,\,\ldots,\,e_m$\, are the ramification indices of the exponents \,$\nu_{\mathfrak{P}_1},\,\ldots,\,\nu_{\mathfrak{P}_m}$\, with respect to $\nu_\mathfrak{p}$, then we have
+$$\nu_{\mathfrak{P}_i}(a) = e_i\nu_\mathfrak{p}(a) \quad \forall a \in \mathfrak{o}^*.$$
+Thus apparently, the factor of the principal divisor \,$(a)_K \in \mathfrak{D}$,\, which corresponds to the factor $\mathfrak{p}^{\nu_\mathfrak{p}(a)}$ of the principal divisor \,$(a)_k \in \mathfrak{D}_0$, is\, $(\mathfrak{P}_1^{e_1}\cdots\mathfrak{P}_m^{e_m})^{\nu_\mathfrak{p}(a)}$.\, Then $\varphi$ is settled by
+$$\mathfrak{p} \mapsto \mathfrak{P}_1^{e_1}\cdots\mathfrak{P}_m^{e_m}.$$
+
+
+When one identifies $\mathfrak{D}_0$ with its isomorphic image $\varphi(\mathfrak{D}_0)$, we can write
+$$\mathfrak{p} = \mathfrak{P}_1^{e_1}\cdots\mathfrak{P}_m^{e_m} \in \mathfrak{D},$$
+i.e. the prime divisors in $\mathfrak{D}_0$ don't in general remain as prime divisors in $\mathfrak{D}$.\, On grounds of the identification one may speak of the divisibility of the divisors of $\mathfrak{o}$ by the divisors of $\mathfrak{O}$.\, The coprime divisors of $\mathfrak{o}$ are coprime also as divisors of $\mathfrak{O}$.
+
+
+
+\begin{thebibliography}{9}
+\bibitem{BS}{\sc S. Borewicz \& I. Safarevic}: {\em Zahlentheorie}.\, Birkh\"auser Verlag. Basel und Stuttgart (1966).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

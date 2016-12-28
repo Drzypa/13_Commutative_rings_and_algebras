@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfUsingEisensteinCriterion}
+\pmcreated{2013-03-22 19:10:14}
+\pmmodified{2013-03-22 19:10:14}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{example of using Eisenstein criterion}
+\pmrecord{5}{42077}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13A05}
+\pmclassification{msc}{11C08}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+For showing the \PMlinkname{irreducibility}{IrreduciblePolynomial2} of the polynomial
+$$P(x) \;:=\; x^5\!+\!5x\!+\!11$$
+one would need a prime number dividing its other coefficients except the first one, but there is no such prime.\, However, a suitable \PMlinkescapetext{substitution} \,$x := y\!+\!a$\, may change the situation.\, Since\, the binomial coefficients of 
+$(y\!-\!1)^5$ except the first and the last one are divisible by 5 and $11 \equiv 1 \pmod{5}$,\, we try
+$$x \;:=\; y-1.$$
+Then
+$$P(y\!-\!1) \;=\; y^5\!-\!5y^4\!+\!10y^3\!-\!10y^2\!+\!10y\!+\!5.$$
+Thus the prime 5 divides other coefficients except the first one and the square of 5 does not divide the constant term of this polynomial in $y$, whence the Eisenstein criterion says that $P(y\!-\!1)$ is irreducible (in the field $\mathbb{Q}$ of its coefficients).\, Apparently, also $P(x)$ must be irreducible.\\
+
+It would be easy also to see that $P(x)$ does not have \PMlinkname{rational zeroes}{RationalRootTheorem}.
+%%%%%
+%%%%%
+\end{document}

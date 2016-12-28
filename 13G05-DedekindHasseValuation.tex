@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DedekindHasseValuation}
+\pmcreated{2013-03-22 12:51:16}
+\pmmodified{2013-03-22 12:51:16}
+\pmowner{Henry}{455}
+\pmmodifier{Henry}{455}
+\pmtitle{Dedekind-Hasse valuation}
+\pmrecord{5}{33188}
+\pmprivacy{1}
+\pmauthor{Henry}{455}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13G05}
+\pmrelated{EuclideanValuation}
+\pmdefines{Dedekind-Hasse norm}
+\pmdefines{Dedekind-Hasse valuation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+If $D$ is an integral domain then it is a PID iff it has a \emph{Dedekind-Hasse valuation}, that is, a function $\nu:D-\{0\}\rightarrow \mathbb{Z}^+$ such that for any $a,b\in D-\{0\}$ either 
+
+\begin{itemize}
+\item $a\in (b)$
+
+or
+
+\item $\exists \alpha\in(a)\exists\beta\in(b)\left[0<\nu(\alpha+\beta)<\nu(b)\right]$
+\end{itemize}
+
+{\em Proof:} First, let $\nu$ be a Dedekind-Hasse valuation and let $I$ be an ideal of an integral domain $D$.  Take some $b\in I$ with $\nu(b)$ minimal (this exists because the integers are well-ordered) and some $a\in I$ such that $a\neq 0$.  $I$ must contain both $(a)$ and $(b)$, and since it is closed under addition, $\alpha+\beta\in I$ for any $\alpha\in(a),\beta\in(b)$.
+
+Since $\nu(b)$ is minimal, the second possibility above is ruled out, so it follows that $a\in (b)$.  But this holds for any $a\in I$, so $I=(b)$, and therefore every ideal is princple.
+
+For the converse, let $D$ be a PID.  Then define $\nu(u)=1$ for any unit.  Any non-zero, non-unit can be factored into a finite product of irreducibles (since \PMlinkid{every PID is a UFD}{PIDsareUFDs}), and every such factorization of $a$ is of the same length, $r$.  So for $a\in D$, a non-zero non-unit, let $\nu(a)=r+1$.  Obviously $r\in\mathbb{Z}^+$.
+
+Then take any $a,b\in D-\{0\}$ and suppose $a\notin (b)$.  Then take the ideal of elements of the form $\{\alpha+\beta|\alpha\in (a), \beta\in(b)\}$.  Since this is a PID, it is a principal ideal $(c)$ for some $r\in D-\{0\}$, and since  $0+b=b\in(c)$, there is some non-unit $x\in D$ such that $xc=b$.  Then $N(b)=N(xr)$.  But since $x$ is not a unit, the factorization of $b$ must be longer than the factorization of $c$, so $\nu(b)>\nu(c)$, so $\nu$ is a Dedekind-Hasse valuation.
+%%%%%
+%%%%%
+\end{document}

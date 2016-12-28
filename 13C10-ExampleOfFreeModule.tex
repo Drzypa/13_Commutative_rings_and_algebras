@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfFreeModule}
+\pmcreated{2013-03-22 13:48:41}
+\pmmodified{2013-03-22 13:48:41}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{example of free module}
+\pmrecord{5}{34534}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13C10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{Theo}{Theorem}
+\newcommand{\mc}{\mathcal}
+\newcommand{\mb}{\mathbb}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\ol}{\overline}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\la}{\leftarrow}
+\newcommand{\La}{\Leftarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\nor}{\vartriangleleft}
+\newcommand{\Gal}{\text{Gal}}
+\newcommand{\GL}{\text{GL}}
+\newcommand{\Z}{\mb{Z}}
+\newcommand{\R}{\mb{R}}
+\newcommand{\Q}{\mb{Q}}
+\newcommand{\C}{\mb{C}}
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+\begin{document}
+\PMlinkescapetext{Clearly} from the definition, $\Z^n$ is \PMlinkid{free}{FreeModule} as a $\Z$-module for any positive integer $n$.
+
+A more interesting example is the following:
+
+\begin{Theo}
+The set of rational numbers $\Q$ do \emph{not} form a \PMlinkid{free}{FreeModule} $\Z$-module.
+\end{Theo}
+
+\begin{proof}
+First note that any two elements in $\Q$
+are $\Z$-linearly dependent.  If $x=\frac{p_1}{q_1}$ and
+$y=\frac{p_2}{q_2}$, then $q_1p_2x-q_2p_1y=0$.  Since \PMlinkname{basis}{Basis} elements
+must be linearly independent, this shows that any basis must consist
+of only one element, say $\frac{p}{q}$, with $p$ and $q$ relatively prime, and without loss of generality, $q>0$.  The $\Z$-span of $\{\frac{p}{q}\}$ is the
+set of rational numbers of the form $\frac{np}{q}$.  I claim that
+$\frac{1}{q+1}$ is not in the set.  If it were, then we would have
+$\frac{np}{q}=\frac{1}{q+1}$ for some $n$, but this implies that
+$np=\frac{q}{q+1}$ which has no solutions for $n,p\in\Z$ ,$q\in\Z^+$, giving us
+a contradiction.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

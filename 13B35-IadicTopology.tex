@@ -1,0 +1,39 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IadicTopology}
+\pmcreated{2013-03-22 14:36:59}
+\pmmodified{2013-03-22 14:36:59}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{$I$-adic topology}
+\pmrecord{7}{36193}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13B35}
+\pmsynonym{I-adic topology}{IadicTopology}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\begin{document}
+Let $R$ be a ring and $I$ an ideal in $R$ such that
+\begin{equation*}
+\bigcap_{k=1}^\infty I^k=\{0\}.
+\end{equation*}
+
+Though not usually explicitly done, we can define a metric on $R$ by defining $ord_I(r)$ for a $r\in R$ by $ord_I(r)=k$ where $k$ is the largest integer such that $r\in I^k$ (well-defined by the intersection assumption, and $I^0$ is taken to be the entire ring) and by $ord_I(0)=\infty$, and then defining for any $r_1,r_2\in R$,
+\begin{equation*}
+d_I(r_1,r_2)=2^{-ord_I(r_1-r_s)}.
+\end{equation*}
+
+The topology induced by this metric is called the $I$-adic topology.  Note that the number 2 was chosen rather arbitrarily.  Any other real number greater than 1 will induce an equivalent topology.
+
+Except in the case of the similarly-defined $p$-adic topology, it is rare that reference is made to the actual $I$-adic metric.  Instead, we usually refer to the $I$-adic topology.
+
+In particular, a sequence of elements in $\{r_i\}\in R$ is Cauchy with respect to this topology if for any $k$ there exists an $N$ such that for all $m,n\geq N$ we have $(a_m-a_n)\in I^k$.  (Note the parallel with the metric version of Cauchy, where $k$ plays the part analogous to an arbitrary $\epsilon$).  The ring $R$ is complete with respect to the $I$-adic topology if every such Cauchy sequence converges to an element of $R$.
+%%%%%
+%%%%%
+\end{document}

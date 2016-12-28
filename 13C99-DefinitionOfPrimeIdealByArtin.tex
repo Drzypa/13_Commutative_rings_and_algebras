@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DefinitionOfPrimeIdealByArtin}
+\pmcreated{2013-03-22 18:44:31}
+\pmmodified{2013-03-22 18:44:31}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{definition of prime ideal by Artin}
+\pmrecord{9}{41515}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13C99}
+\pmclassification{msc}{06A06}
+\pmrelated{EveryRingHasAMaximalIdeal}
+\pmdefines{prime ideal}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{ideals} \PMlinkescapeword{ideal}
+
+\textbf{Lemma.}\, Let $R$ be a commutative ring and $S$ a multiplicative semigroup consisting of a subset of $R$.\, If there exist \PMlinkid{ideals}{371} of $R$ which are disjoint with $S$, then the set $\mathfrak{S}$ of all such ideals has a maximal element with respect to the set inclusion.
+
+{\em Proof.}\, Let $C$ be an arbitrary chain in $\mathfrak{S}$.\, Then the union
+$$\mathfrak{b} \;:=\; \bigcup_{\mathfrak{a} \in C}\mathfrak{a},$$
+which belongs to $\mathfrak{S}$, may be taken for the upper bound of $C$, since it clearly is an ideal of $R$ and disjoint with $S$.\, Because $\mathfrak{S}$ thus is inductively ordered with respect to ``$\subseteq$'', our assertion follows from Zorn's lemma.\\
+
+\textbf{Definition.}\, The maximal elements in the Lemma are {\em prime ideals} of the commutative ring.\\
+
+The ring $R$ itself is always a prime ideal ($S = \varnothing$).\, If $R$ has no zero divisors, the zero ideal $(0)$ is a prime ideal ($S = R\!\smallsetminus\!\{0\}$).
+
+If the ring $R$ has a non-zero unity element 1, the prime ideals corresponding the semigroup \,$S = \{1\}$\, are the maximal ideals of $R$.
+
+
+\begin{thebibliography}{9}
+\bibitem{Artin} {\sc Emil Artin}: {\em Theory of Algebraic Numbers}.\, Lecture notes.\, Mathematisches Institut, G\"ottingen (1959).
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

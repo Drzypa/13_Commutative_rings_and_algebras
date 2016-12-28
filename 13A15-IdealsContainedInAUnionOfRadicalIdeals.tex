@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IdealsContainedInAUnionOfRadicalIdeals}
+\pmcreated{2013-03-22 19:04:23}
+\pmmodified{2013-03-22 19:04:23}
+\pmowner{joking}{16130}
+\pmmodifier{joking}{16130}
+\pmtitle{ideals contained in a union of radical ideals}
+\pmrecord{4}{41958}
+\pmprivacy{1}
+\pmauthor{joking}{16130}
+\pmtype{Corollary}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13A15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $R$ be a commutative ring and $I\subseteq R$ an ideal. Recall that \textit{the radical of} $I$ is defined as
+$$r(I)=\{x\in R\ |\ \exists_{n\in\mathbb{N}}\ x^n\in I\}.$$
+It can be shown, that $r(I)$ is again an ideal and $I\subseteq r(I)$. Let 
+$$V(I)=\{P\subseteq R\ |\ P\mbox{ is a prime ideal and }I\subseteq P\}.$$
+Of course $V(I)\neq\emptyset$ (because $I$ is contained in at least one maximal ideal) and it can be shown, that
+$$r(I)=\bigcap_{P\in V(I)} P.$$
+Finaly, recall that an ideal $I$ is called \textit{radical}, if $I=r(I)$.
+
+\textbf{Proposition.} Let $I,R_1,\ldots,R_n$ be ideals in $R$, such that each $R_i$ is radical. If $$I\subseteq R_1\cup\cdots\cup R_n,$$ then there exists $i\in\{1,\ldots,n\}$ such that $I\subseteq R_i$.
+
+\textit{Proof.} Assume that this not true, i.e. for every $i$ we have $I\not\subseteq R_i$. Then for any $i\in\{1,\ldots,n\}$ there exists $P_i\in V(R_i)$ such that $I\not\subseteq P_i$ (this follows from the fact, that $R_i=r(R_i)$ and the characterization of radicals via prime ideals). But for any $i$ we have $R_i\subseteq P_i$ and thus
+$$I\subseteq P_1\cup\cdots\cup P_n.$$
+Contradiction, since each $P_i$ is prime (see the parent object for details). $\square$
+%%%%%
+%%%%%
+\end{document}

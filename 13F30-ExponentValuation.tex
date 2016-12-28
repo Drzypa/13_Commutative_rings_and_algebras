@@ -1,0 +1,98 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExponentValuation}
+\pmcreated{2013-03-22 17:59:31}
+\pmmodified{2013-03-22 17:59:31}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{exponent valuation}
+\pmrecord{12}{40503}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13F30}
+\pmclassification{msc}{13A18}
+\pmclassification{msc}{12J20}
+\pmclassification{msc}{11R99}
+\pmsynonym{exponent of field}{ExponentValuation}
+%\pmkeywords{exponent}
+\pmrelated{DiscreteValuation}
+\pmrelated{OrderValuation}
+\pmrelated{UltrametricTriangleInequality}
+\pmrelated{DivisorTheoryAndExponentValuations}
+\pmrelated{DivisorTheory}
+\pmdefines{exponent of a field}
+\pmdefines{exponent of the field}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Definition}.\, A function $\nu$ defined in a field $K$ is called an {\em exponent valuation} or shortly an {\em exponent} of the field, if it satisfies the following conditions:
+\begin{enumerate}
+\item \,$\nu(0) \,=\, \infty$\, and $\nu(\alpha)$ runs all rational integers when $\alpha$ runs the nonzero elements of $K$.
+\item \,$\nu(\alpha\beta) \;=\; \nu(\alpha)\!+\!\nu(\beta)$.
+\item \,$\nu(\alpha\!+\!\beta) \;\geqq\; \min\{\nu(\alpha),\,\nu(\beta)\}$.\\
+\end{enumerate}
+Note that because of the discrete value set $\mathbb{Z}$, an exponent valuation belongs to the discrete valuations, and 
+because of notational causes, to the order valuations.\\
+
+\textbf{Properties.}\\
+$\nu(1) = 0$\\
+$\nu(-\alpha) = \nu(\alpha)$\\
+$\displaystyle\nu\left(\frac{\alpha}{\beta}\right) = \nu(\alpha)\!-\!\nu(\beta)$\\
+$\nu(\alpha^n) = n\,\nu(\alpha)$\\
+$\nu(\alpha_1+\ldots+\alpha_n) \geqq \min\{\nu(\alpha),\,\ldots,\,\nu(\alpha_n)\}$\\
+$\nu(\alpha\!+\!\beta) = \min\{\nu(\alpha),\,\nu(\beta)\} \quad \mbox{if}\;\;\;\nu(\alpha) \neq \nu(\beta)$\\
+
+
+\textbf{Example.}\, If an integral domain $\mathcal{O}$ has a divisor theory \,$\mathcal{O}^* \to \mathfrak{D}$, then for each prime divisor $\mathfrak{p}$ there is an exponent valuation $\nu_{\mathfrak{p}}$ of the quotient field $K$ of $\mathcal{O}$.\, It is given by
+\[
+\nu_{\mathfrak{p}}(\alpha) \;=:\;  
+\begin{cases}
+& \infty \quad \mbox{when  } \alpha = 0,\\
+& \max\;\{k \in \mathbb{Z}\,\vdots\;\; \mathfrak{p}^k \mid (\alpha)\} \;\; \mbox{   when  } \,\alpha \neq 0;
+\end{cases} 
+\]
+$$\nu_{\mathfrak{p}}(\xi) \;=:\; 
+\nu_{\mathfrak{p}}(\alpha)-\nu_{\mathfrak{p}}(\beta) \; \mbox{ when }\; 
+\xi = \frac{\alpha}{\beta}\mbox{ with }\,\alpha,\,\beta \in \mathcal{O}^*.$$
+Hence, $\mathfrak{p}^{\nu_{\mathfrak{p}}(\alpha)}$ exactly divides $\alpha$.\, Apparently, $\nu_{\mathfrak{p}}(\xi)$ does not depend on the quotient form $\frac{\alpha}{\beta}$ for $\xi$.\, It is not hard to show that $\nu_{\mathfrak{p}}$ defined above is an exponent of the field $K$.
+
+Different prime divisors $\mathfrak{p}$ and $\mathfrak{q}$ determine different exponents $\nu_{\mathfrak{p}}$ and $\nu_{\mathfrak{q}}$, since the condition 3 of the \PMlinkname{definition of divisor theory}{DivisorTheory} guarantees such an element $\gamma$ of $\mathcal{O}$ which in divisible by $\mathfrak{p}$ but not by $\mathfrak{q}$; then\, $\nu_{\mathfrak{p}}(\gamma) \geqq 1$,\, $\nu_{\mathfrak{q}}(\gamma) = 0$.\\
+
+
+\textbf{Theorem.}\, Let\, $\nu_1,\,\ldots,\,\nu_r$\, be different exponents of a field $K$.\, Then for arbitrary set \,$n_1,\,\ldots,\,n_r$\, of integers, there exists in $K$ an element $\xi$ such that
+$$\nu_1(\xi) \;=\; n_1,\;\;\ldots,\;\;\nu_r(\xi) \;=\; n_r.$$
+
+The proof of this theorem is found in [1].
+
+\begin{thebibliography}{9}
+\bibitem{BS}{\sc S. Borewicz \& I. Safarevic}: {\em Zahlentheorie}.\, Birkh\"auser Verlag. Basel und Stuttgart (1966).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfOstrowskisValuationTheorem}
+\pmcreated{2013-03-22 17:58:26}
+\pmmodified{2013-03-22 17:58:26}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{proof of Ostrowski's valuation theorem}
+\pmrecord{4}{40482}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13A18}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\suchthat}{\ \mid\ }
+\newcommand{\smm}{\mathfrak{m}}
+\newcommand{\U}[1]{#1^{\star}}
+\newcommand{\Order}[1]{\lvert #1\rvert}
+\newcommand{\Abs}[1]{\left\lvert #1\right\rvert}
+% \theoremstyle{plain} %% This is the default
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}[thm]{Lemma}
+
+\begin{document}
+This article proves Ostrowski's theorem on valuations of $\Rats$, which states:
+\begin{thm} (Ostrowski) Over $\Rats$, every nontrivial absolute value is equivalent either to $\Abs{\cdot}_p$ for some prime $p$, or to the usual absolute value $\Abs{\cdot}_{\infty}$.
+\end{thm}
+
+We start with an estimation lemma:
+\begin{lem} If $m,n>1$ are integers and $\Abs{\cdot}$ any nontrivial absolute value on $\Rats$, then $\Abs{m}\leq\max(1,\Abs n)^{\log m/\log n}$.
+\end{lem}
+\textbf{Proof. } Write $m=a_0+a_1n+\cdots+a_rn^r$ for $a_i\in\Ints, 0\leq a_i\leq n-1$, and with $a_r\neq 0$. Then clearly
+\[
+\Abs{a_i} = \Abs{\underset{a_i}{\underbrace{1+\cdots+1}}}\leq a_i\Abs 1 = a_i\leq n
+\]
+by the triangle inequality; also, $r < \frac{\log m}{\log n}$.
+
+Thus
+\begin{align*}
+\Abs m &= \Abs{a_0+a_1n+\cdots+a_rn^r}\leq (r+1)n\max(1,\Abs n)^r\\
+&\leq \left(1+\frac{\log m}{\log n}\right)n\max(1,\Abs n)^{\log m/\log n}
+\end{align*}
+Replace $m$ by $m^t$ for $t$ a positive integer, and take $t^{\mathrm{th}}$ roots of the resulting inequality, to get
+\[\Abs m \leq \left(1+t\frac{\log m}{\log n}\right)^{1/t}n^{1/t}\max(1,\Abs n)^{\log m/\log n}\]
+Now let $t\to\infty$; the first two factors each approach $1$, and the lemma follows.
+
+\textbf{Proof of Ostrowski's theorem: }
+\newline
+First assume that for every $n>1$ we have $\Abs n>1$. Then by the lemma, $\Abs m\leq \Abs{n}^{\log m/\log n}$, so that for every $m,n$ we have
+\[\Abs{m}^{1/\log m} \leq \Abs{n}^{1/\log n}\]
+Since this holds for every $m,n>0$, after reversing the roles of $m,n$, we see that in fact equality holds, so that for every $m$, $\Abs{m}^{1/\log m}=c$ and $\Abs m=c^{\log m}$ for some constant $c$; this absolute value is obviously equivalent to $\Abs{m}_{\infty}=e^{\log m}$.
+
+If instead, for some $n>1$ we have $\Abs n<1$, then by the lemma, for every $m$, $\Abs m \leq 1$. Thus the absolute value is nonarchimedean. Define $A=\{x\in \Rats\suchthat \Abs x\leq 1\}$ and let $\smm\subset A$ be the (unique) maximal ideal defined by $\smm = \{x\in\Rats\suchthat \Abs x<1\}$. Then $\Ints\subset A$ since $\Abs m \leq 1$ for every $m$, and $\smm\cap\Ints$ is nonzero since otherwise the valuation would be trivial (we would have $\Abs m = 1$ for every $m$). Thus $\smm\cap\Ints$ is prime since $\smm$ is, so is equal to $(p)$ for some rational prime $p$. Now, if $p\nmid a$ for an integer $a$, then $\Abs a$ cannot be strictly less than $1$ (else it would be in $(p)$), so $\Abs a =1$ and $a\in\U{A}$. But given any $x\in\Rats$, we can write $x=\frac{ap^t}{b}$ with $a,b$ prime to $p$, so that
+\[\Abs x = \frac{\Abs a \cdot \Abs{p}^t}{\Abs b} = \Abs{p}^t\]
+so that the valuation is obviously equivalent to the $p$-adic valuation.
+%%%%%
+%%%%%
+\end{document}

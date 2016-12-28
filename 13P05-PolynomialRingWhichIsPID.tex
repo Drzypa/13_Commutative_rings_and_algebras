@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PolynomialRingWhichIsPID}
+\pmcreated{2013-03-22 17:53:04}
+\pmmodified{2013-03-22 17:53:04}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{polynomial ring which is PID}
+\pmrecord{8}{40367}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13P05}
+\pmrelated{PolynomialRingOverFieldIsEuclideanDomain}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Theorem.}\, If a polynomial ring $D[X]$ over an integral domain $D$ is a principal ideal domain, then coefficient ring $D$ is a field. (Cf. the corollary 4 in the entry polynomial ring over a field.)\\
+
+{\em Proof.}\, Let $a$ be any non-zero element of $D$.\, Then the ideal \,$(a,\,X)$\, of $D[X]$ is a principal ideal $(f(X))$ with $f(X)$ a \PMlinkname{non-zero polynomial}{ZeroPolynomial2}.\, Therefore, 
+$$a \;=\; f(X)g(X), \quad X \;=\; f(X)h(X)$$
+with $g(X)$ and $h(X)$ certain polynomials in $D[X]$.\, From these equations one infers that $f(X)$ is a \PMlinkescapetext{constant} polynomial $c$ and $h(X)$ is a first degree polynomial $b_0\!+\!b_1X$ ($b_1 \neq 0$).\, Thus we obtain the equation
+$$cb_0+cb_1X \;=\; X,$$
+which shows that $cb_1$ is the unity 1 of $D$.\, Thus\, $c = f(X)$\, is a unit of $D$, whence
+$$(a,\,X) \;=\; (f(X)) \;=\; (1) \;=\; D[X].$$
+So we can write 
+$$1 \;=\; a\!\cdot\!u(X)+X\!\cdot\!v(X),$$
+where\, $u(X),\,v(X) \in D[X]$.\, This equation cannot be possible without that $a$ times the constant term of $u(X)$ is the unity.\, Accordingly, $a$ has a multiplicative inverse in $D$.\, Because $a$ was arbitrary non-zero elenent of the integral domain $D$, $D$ is a field.
+
+\begin{thebibliography}{9}
+\bibitem{D.B.}{\sc David M. Burton}: {\em A first course in rings and ideals}. Addison-Wesley Publishing Company. Reading, Menlo Park, London, Don Mills (1970).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

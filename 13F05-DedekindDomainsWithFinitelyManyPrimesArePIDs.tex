@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DedekindDomainsWithFinitelyManyPrimesArePIDs}
+\pmcreated{2013-03-22 18:35:18}
+\pmmodified{2013-03-22 18:35:18}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{Dedekind domains with finitely many primes are PIDs}
+\pmrecord{6}{41315}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13F05}
+\pmclassification{msc}{11R04}
+%\pmkeywords{Dedekind domain}
+%\pmkeywords{prime ideal}
+%\pmkeywords{principal ideal domain}
+\pmrelated{DivisorTheory}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+
+
+\begin{document}
+A commutative ring in which there are only finitely many maximal ideals is known as a semi-local ring. For such rings, the property of being a Dedekind domain and of being a principal ideal domain coincide.
+
+\begin{theorem*}
+A Dedekind domain in which there are only finitely many prime ideals is a principal ideal domain.
+\end{theorem*}
+
+This result is sometimes proven using the chinese remainder theorem or, alternatively, it follows directly from the fact that invertible ideals in semi-local rings are principal.
+
+Suppose that $R$ is a Dedekind domain such as the ring of algebraic integers in a number field. Although there are infinitely many prime ideals in such a ring, we can use the result that localizations of Dedekind domains are Dedekind and apply the above theorem to localizations of $R$.
+
+In particular, if $\mathfrak{p}$ is a nonzero prime ideal, then $R_\mathfrak{p}\equiv(R\setminus\mathfrak{p})^{-1}R$ is a Dedekind domain with a unique nonzero prime ideal, so the theorem shows that it is a principal ideal domain.
+
+%%%%%
+%%%%%
+\end{document}

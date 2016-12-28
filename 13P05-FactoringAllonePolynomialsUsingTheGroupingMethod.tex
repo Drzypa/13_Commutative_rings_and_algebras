@@ -1,0 +1,101 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FactoringAllonePolynomialsUsingTheGroupingMethod}
+\pmcreated{2013-03-22 15:06:52}
+\pmmodified{2013-03-22 15:06:52}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{factoring all-one polynomials using the grouping method}
+\pmrecord{13}{36851}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13P05}
+\pmrelated{AllOnePolynomial}
+\pmrelated{CyclotomicPolynomial}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The method of grouping terms can be used to factor all-one polynomials, i.e. polynomials of the form
+\[
+\sum_{m=0}^{n-1} x^m
+\]
+when $n$ is composite. (When $n$ is prime, these polynomials are irreducible, so there is nothing to do in that case.)
+
+Let us consider a few examples:
+
+$n = 4$:
+\begin{eqnarray*}
+1 + x + x^2 + x^3 = \\
+(1 + x) + (x^2 + x^3) = \\
+(1 + x) + x^2 (1 + x) = \\
+(1 + x) (1 + x^2)
+\end{eqnarray*}
+
+$n = 6$:
+\begin{eqnarray*}
+1 + x + x^2 + x^3 + x^4 + x^5 = \\
+(1 + x + x^2) + (x^3 + x^4 + x^5) = \\
+(1 + x + x^2) + x^3 (1 + x + x^2) = \\
+(1 + x^3) (1 + x + x^2)
+\end{eqnarray*}
+
+$n = 8$:
+\begin{eqnarray*}
+1 + x + x^2 + x^3 + x^4 + x^5 + x^6 + x^7 = \\
+(1 + x + x^2 + x^3) + (x^4 + (x^5 + x^6 + x^7) = \\
+(1 + x + x^2 + x^3) + x^4 (1 + x + x^2 + x^3) =\\
+(1 + x^4) (1 + x + x^2 + x^3)
+\end{eqnarray*}
+Combining this result with the factorization we have for the case $n=4$, we obtain the following:
+\begin{eqnarray*}
+1 + x + x^2 + x^3 + x^4 + x^5 + x^6 + x^7 = \\
+(1 + x) (1 + x^2) (1 + x^4)
+\end{eqnarray*}
+
+$n = 9$:
+\begin{eqnarray*}
+1 + x + x^2 + x^3 + x^4 + x^5 + x^6 + x^7 + x^8 = \\
+(1 + x + x^2) + (x^3 + x^4 + x^5) + (x^6 + x^7  + x^8) = \\
+(1 + x + x^2) + x^3 (1 + x + x^2) + x^6 (1 + x + x^2) = \\
+(1 + x + x^2) (1 + x^3 + x^6)
+\end{eqnarray*}
+
+$n = 12$:
+\begin{eqnarray*}
+1 + x + x^2 + x^3 + x^4 + x^5 + x^6 + x^7 + x^8 + x^9 + x^{10} + x^{11} = \\
+(1 + x + x^2) + (x^3 + x^4 + x^5) + (x^6 + x^7 + x^8) + (x^9 + x^{10} + x^{11}) = \\
+(1 + x + x^2) + x^3 (1 + x + x^2) + x^6 (1 + x + x^2) + x^9 (1 + x + x^2) = \\
+(1 + x + x^2) (1 + x^3 + x^6 + x^9) = \\
+(1 + x + x^2) ((1 + x^3) + (x^6 + x^9)) = \\
+(1 + x + x^2) ((1 + x^3) + x^6 (1 + x^3)) = \\
+(1 + x + x^2) (1 + x^3) (1 + x^6)
+\end{eqnarray*}
+
+It might be worth pointing out that the polynomials produced by this factorization are not all irreducible.  For instance,
+\[ 1 + x^3 = (1 + x) (1 - x + x^2). \]
+However, to obtain this factorization, one needs to use some techique other than the grouping method.  Likewise. the polynomial $1 + x^6$ is also reducible.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HalffactorialRing}
+\pmcreated{2013-03-22 18:31:14}
+\pmmodified{2013-03-22 18:31:14}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{half-factorial ring}
+\pmrecord{7}{41213}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13G05}
+\pmsynonym{half-factorial domain}{HalffactorialRing}
+\pmdefines{HFD}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+An integral domain $D$ is called a {\em half-factorial ring} (HFD) if it satisfies the following conditions:
+\begin{itemize}
+\item Every nonzero element of $D$ that is not a unit can be factored into a product of a finite number of irreducibles.
+\item If\, $p_1p_2\cdots p_m$\, and\, $q_1q_2\cdots q_n$\, are two factorizations of the same element $a$ into irreducibles, then\, $m = n$.
+\end{itemize}
+
+If, in \PMlinkescapetext{addition}, the irreducibles $p_i$ and $q_j$ are always pairwise associates, then $D$ is a factorial ring (UFD).\\
+
+For example, many \PMlinkname{orders}{OrderInAnAlgebra} in the maximal order of an algebraic number field are half-factorial rings, e.g. $\mathbb{Z}[3\sqrt{2}]$ is a HFD but not a UFD (see \PMlinkexternal{this paper}{http://www.math.ndsu.nodak.edu/faculty/coykenda/paper6b.pdf}).
+
+%%%%%
+%%%%%
+\end{document}

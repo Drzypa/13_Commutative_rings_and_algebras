@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PrimalElement}
+\pmcreated{2013-03-22 14:50:21}
+\pmmodified{2013-03-22 14:50:21}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{primal element}
+\pmrecord{8}{36508}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13A05}
+\pmdefines{primal}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+An element $r$ in a commutative ring $R$ is called \emph{primal} if whenever $r\mid ab$, with $a,b\in R$, then there 
+exist elements $s,t\in R$ such that
+\begin{enumerate}
+\item $r=st$,
+\item $s\mid a$ and $t\mid b$.
+\end{enumerate}
+
+\textbf{Lemma}.  In a commutative ring, an element that is both irreducible and primal is a prime element.
+\begin{proof}
+Suppose $a$ is irreducible and primal, and $a\mid bc$.  Since $a$ is primal, there is $x,y\in R$ such that $a=xy$, with $x\mid b$ and $y\mid c$.  Since $a$ is irreducible, either $x$ or $y$ is a unit.  If $x$ is a unit, with $z$ as its inverse, then $za=zxy=y$, so that $a\mid y$.  But $y\mid c$, we have that $a\mid c$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

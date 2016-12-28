@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GradedRing}
+\pmcreated{2013-03-22 11:45:03}
+\pmmodified{2013-03-22 11:45:03}
+\pmowner{aplant}{12431}
+\pmmodifier{aplant}{12431}
+\pmtitle{graded ring}
+\pmrecord{19}{30192}
+\pmprivacy{1}
+\pmauthor{aplant}{12431}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13A02}
+\pmclassification{msc}{16W30}
+\pmclassification{msc}{14L15}
+\pmclassification{msc}{14L05}
+\pmclassification{msc}{12F10}
+\pmclassification{msc}{11S31}
+\pmclassification{msc}{11S15}
+\pmclassification{msc}{11R33}
+\pmsynonym{S-graded ring}{GradedRing}
+\pmsynonym{G-graded ring}{GradedRing}
+%\pmkeywords{algebra ring groupoid homogeneous}
+\pmrelated{HomogeneousIdeal}
+\pmrelated{SupportGradedRing}
+\pmdefines{groupoid graded ring}
+\pmdefines{semigroup graded ring}
+\pmdefines{group graded ring}
+\pmdefines{homogeneous element}
+\pmdefines{strongly graded}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+%%%%\usepackage{xypic}
+
+\newcommand{\supp}{\,{\rm supp}\,}
+\begin{document}
+Let $S$ be a groupoid (semigroup,group) and let $R$ be a ring (not necessarily with unity) which can be expressed as a \PMlinkescapetext{direct sum} $R = {\bigoplus}_{s \in S} R_{s}$ of additive subgroups $R_{s}$ of $R$ with $s \in S$.  If $R_{s} R_{t} \subseteq R_{st}$ for all $s,t \in S$ then we say that $R$ is {\em groupoid graded} (semigroup-graded, group-graded) ring.
+
+We refer to $R = \bigoplus_{s\in S} R_{s}$ as an $S$-grading of
+$R$ and the subgroups $R_{s}$ as the
+$s$-components of $R$. If we have the stronger
+condition that $R_{s}R_{t} = R_{st}$ for all $s,t \in S$, then we say that the ring $R$ is {\em
+strongly} graded by
+$S$. 
+
+Any element $r_{s}$ in $R_{s}$ (where $s\in S$) is said to be {\em homogeneous of degree
+$s$}. Each element $r \in R$ can be expressed as a unique and finite sum $r =
+\sum_{s \in S} r_{s}$ of homogeneous elements $r_{s} \in R_{s}$. 
+
+%%We define the {\em
+%%support} of $r$ to be the set $\supp(r) = \{ s \in S \st
+%%r_{s} \neq 0 \}$. We can extend this definition to 
+%%$\supp(R) = \bigcup \supp(r) = \{ s \in S \st
+%%R_{s} \neq 0 \}$.  If $\supp(R)$ is a finite set then we say that the ring 
+%%$R$ has {\em finite
+%%support}.
+
+For any subset $G \subseteq S$ we have $R_{G} = \sum_{g \in G} R_{g}$.
+Similarly $r_{G} = \sum_{g \in G} r_{g}$.  If $G$ is a subsemigroup of $S$ then
+$R_{G}$ is a subring of $R$.  If $G$ is a left (right, two-sided) ideal of $S$
+then $R_{G}$ is a left (right, two-sided) ideal of $R$.
+
+Some examples of graded rings include:\\
+Polynomial rings\\
+Ring of symmetric functions\\
+Generalised matrix rings\\
+Morita contexts\\
+Ring of Hirota derivatives\\
+group rings\\
+filtered algebras\\
+
+
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+\end{document}

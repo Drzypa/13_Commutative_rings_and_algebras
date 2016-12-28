@@ -1,0 +1,95 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OrderValuation}
+\pmcreated{2013-03-22 16:53:28}
+\pmmodified{2013-03-22 16:53:28}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{order valuation}
+\pmrecord{19}{39147}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13F30}
+\pmclassification{msc}{13A18}
+\pmclassification{msc}{12J20}
+\pmclassification{msc}{11R99}
+\pmsynonym{additive valuation}{OrderValuation}
+\pmrelated{KrullValuation}
+\pmrelated{Valuation}
+\pmrelated{PAdicValuation}
+\pmrelated{DiscreteValuation}
+\pmrelated{ZerosAndPolesOfRationalFunction}
+\pmrelated{AlternativeDefinitionOfValuation2}
+\pmrelated{StrictDivisibility}
+\pmrelated{ExponentValuation2}
+\pmrelated{DivisibilityOfPrimePowerBinomialCoefficients}
+\pmdefines{exponent of field}
+\pmdefines{zero}
+\pmdefines{zero of an element}
+\pmdefines{pole}
+\pmdefines{pole of an element}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Given a Krull valuation $|.|$ of a field $K$ as a mapping of $K$ to an ordered group $G$ (with operation ``$\cdot$'') equipped with $0$, one may use for the \PMlinkescapetext{valuation} an alternative notation ``ord'':
+
+The \PMlinkescapetext{order} ``$<$'' of $G$ is reversed and the operation of $G$ is denoted by ``$+$''.\,  The element $0$ of $G$ is denoted as $\infty$, thus $\infty$ is greater than any other element of $G$.\, When we still call the valuation the {\em order} of $K$ and instead of 
+$|x|$ write\, $\mathrm{ord}\,x$, the valuation postulates read as follows.
+\begin{enumerate}
+\item $\mathrm{ord}\,x \,=\, \infty$\,\, iff\,\, $x = 0$;
+\item $\mathrm{ord}\,xy \,=\, \mathrm{ord}\,x+\mathrm{ord}\,y$;
+\item $\mathrm{ord}(x+y) \,\geqq\, \min\{\mathrm{ord}\,x,\,\mathrm{ord}\,y\}$.
+\end{enumerate}
+
+We must emphasize that the order valuation is nothing else than a Krull valuation.\, The name {\em order} comes from complex analysis, where the ``places'' \PMlinkname{zero}{ZeroOfAFunction} and \PMlinkname{pole}{Pole} of a meromorphic function with their orders have a fully analogous meaning as have the corresponding concepts \PMlinkname{place}{PlaceOfField} and order valuation in the valuation theory.\, Thus also a place $\varphi$ of a field is called a {\em zero} of an element $a$ of the field, if\, $\varphi(a) = 0$,\, and a {\em pole} of an element $b$ of the field, if\, $\varphi(b) = \infty$;\, then e.g. the equation\, $\varphi(a) = 0$\, implies always that\, $\mathrm{ord}\,a > 0$.\\
+
+\textbf{Example.}\, Let $p$ be a given positive prime number.\, Any non-zero rational number $x$ can be uniquely expressed in the form
+$$x = p^nu,$$
+in which $n$ is an integer and the rational number $u$ is by $p$ indivisible, i.e. when reduced to lowest terms, $p$ divides neither its numerator nor its denominator.\, If we define
+\begin{align*}
+\mathrm{ord}_px \;=\; 
+\begin{cases}
+\infty\,\,\, \mathrm{for}\,\,\, x = 0,\\
+ n\,\,\, \mathrm{for}\,\,\, x = p^nu \neq 0,
+\end{cases}
+\end{align*}
+then the function $\mathrm{ord}_p$, defined in $\mathbb{Q}$, clearly satisfies the above postulates of the order valuation.
+
+
+In [2], an order valuation having only integer values is called the {\em exponent of the field} ({\em der Exponent des K\"orpers}); this name apparently motivated by the exponent $n$ of $p$.\, Such an order valuation is a special case of the discrete valuation.\, Note, that an arbitrary order valuation need not be a discrete valuation, since the values need not be real numbers.
+
+
+\begin{thebibliography}{9}
+\bibitem{Artin} {\sc E. Artin}: {\em Theory of Algebraic Numbers}.\, Lecture notes.\, Mathematisches Institut, G\"ottingen (1959).
+\bibitem{BS}{\sc S. Borewicz \& I. Safarevic}: {\em Zahlentheorie}.\, Birkh\"auser Verlag. Basel und Stuttgart (1966).
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

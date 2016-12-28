@@ -1,0 +1,146 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FormalPowerSeriesAsInverseLimits}
+\pmcreated{2013-03-22 18:22:41}
+\pmmodified{2013-03-22 18:22:41}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{formal power series as inverse limits}
+\pmrecord{9}{41020}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13F25}
+\pmclassification{msc}{13B35}
+\pmclassification{msc}{13J05}
+\pmclassification{msc}{13H05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+\newtheorem{dfn}{Definition}
+\begin{document}
+\section{Motivation and Overview}
+
+The ring of formal power series can be described as an inverse
+limit.\footnote{It is worth pointing out that, since we are
+dealing with formal series, the concept of limit used here has 
+nothing to do with convergence but is purely algebraic.}  The
+fundamental idea behind this approach is that of truncation ---
+given a formal power series $a_0 + a_1 t + a_2 t^2 + a_3 t^3 + 
+\cdots$ and an integer $n \ge 0$, we can truncate the series to
+order $n$ to obtain $a_0 + a_1 t + \cdots + a_n t^n + 
+O(t^{n+1})$.\footnote{Here, the symbol ``$O(t^{n+1})$'' is not
+used in the sense of Landau notation but merely as an indicator 
+that the power series has been truncated to order $n$.}
+(Indeed, we must do this in practical computation since it is
+only possible to write down a finite number of terms at a time;
+thus the approach taken here has the advantage of being close
+to actual practice.)  Furthermore, this procedure of truncation
+commutes with ring operations --- given two formal power series,
+the truncation of their sum is the sum of their truncations and
+the truncation of their product is the product of their 
+truncations.  Thus, for every integer $n$ the set of power 
+series truncated to order $n$ forms a ring and truncation is a
+morphism from the ring of formal power series to this ring.
+
+To obtain our definition, we will proceed in the opposite
+direction.  We will begin by defining rings of truncated 
+power series and exhibiting truncation morphisms between
+different truncations.  Then we will show that these rings 
+and morphisms form an inverse system which has a limit which
+we will take as the definition of the ring of formal power
+series.  Finally, we will complete the circle by demonstrating
+that the object so constructed is isomorphic with the usual
+definition for ring of formal power series.
+
+\section{Formal Development}
+
+In this section, we will carry out the develpment outlined
+above in rigorous detail.  We begin by formalizing this
+notion of truncation.
+
+\begin{thm}
+Let $A$ be a commutative ring and let $n$ be a positive 
+integer.  Then $A[[x]] / \langle x^n \rangle$ is isomorphic
+to $A[x] / \langle x^n \rangle$.
+\end{thm}
+
+\begin{proof}
+We may identify $A[x]$ with the subring of $A[[x]]$ consisting
+of series which have all but a finite number of coeficients
+equal to zero.  Consider an element $f = \sum_{k=0}^\infty c_n 
+x^n$ of $A[[x]]$.  We may write $f = \sum_{k=0}^{n-1} c_n x^k 
++ x^n \sum_{k=0}^\infty c_{k+n} x^k$.  Thus, every element of
+$A[[x]]$ is equivalent to an element of the subring $A[x]$
+modulo $x^k$.  Hence, if follows rather immediately from the
+definition of quotient ring that $A[[x]] \langle x^n \rangle$  
+is isomorphic to $A[x] / \langle x^n \rangle$.
+\end{proof}
+
+Let us call the isomorphism between 
+$A[[x]] / \langle x^n \rangle$ and $A[x] / \langle x^n \rangle$
+which is described above $I_n$.  We now define a few more morphisms.
+
+\begin{dfn}
+Suppose $m,n$ are integers satifying the inequalities 
+$m > n \ge 0$.  Then define the morphisms $t_{mn}, T_{mn},
+p_n, P_n$ as follows:
+\begin{itemize}
+\item Define
+$t_{nm} \colon A[x] / \langle x^{m} \rangle \to A[x] / 
+\langle x^{n} \rangle$ as the map which sends each
+equivalence class $a$ modulo $x^{n}$ to the unique equivalence 
+class $b$ modulo $x^{m}$ such that $a \subset b$.
+\item Define
+$T_{nm} \colon A[[x]] / \langle x^{m} \rangle \to A[[x]] / 
+\langle x^{n+1} \rangle$ as the map which sends each
+equivalence class $a$ modulo $x^{n}$ to the unique equivalence 
+class $b$ modulo $x^{m}$ such that $a \subset b$.
+\item For every integer $n > 0$, let $Q_n$ be the quotient
+map from $A[[x]]$ to $A[[x]] / \langle x^n \rangle$.
+\item For every integer $n > 0$, let $q_n$ be the quotient
+map from $A[x]$ to $A[x] / \langle x^n \rangle$.
+\end{itemize}
+\end{dfn}
+
+These morphisms commute with each other in ways which are
+described by the next theorem:
+
+\begin{thm}
+Suppose $m,n,k$ are integers satifying the inequalities 
+$m > n > k \ge 0$.  Then we have the following relations:
+\begin{enumerate}
+\item $t_{nk} \circ t_{mn} = t_{mk}$
+\item $I_n \circ T_{mn} = t_{mn} \circ I_m$
+\item $T_{nk} \circ T_{mn} = T_{mk}$
+\item $t_{mn} \circ q_m = q_n$
+\item $T_{mn} \circ Q_m = Q_n$
+\end{enumerate}
+\end{thm}
+[More to come]
+
+
+%%%%%
+%%%%%
+\end{document}

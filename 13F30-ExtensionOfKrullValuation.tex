@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExtensionOfKrullValuation}
+\pmcreated{2013-03-22 14:55:57}
+\pmmodified{2013-03-22 14:55:57}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{extension of Krull valuation}
+\pmrecord{13}{36621}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13F30}
+\pmclassification{msc}{13A18}
+\pmclassification{msc}{12J20}
+\pmclassification{msc}{11R99}
+\pmrelated{GelfandTornheimTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{definition}
+\newtheorem{thmplain}{Theorem}
+\begin{document}
+The Krull valuation\, $|\cdot|_K$\, of the field $K$ is called the {\em \PMlinkescapetext{extension} of the Krull valuation} \,$|\cdot|_k$\, of the field $k$, if $k$ is a subfield of $K$ and\, $|\cdot|_k$\, is the restriction of\, $|\cdot|_K$\, on $k$.
+
+\begin{thmplain}\, The trivial valuation is the only \PMlinkescapetext{extension} of the trivial valuation of $k$ to an algebraic extension field $K$ of $k$.
+\end{thmplain}
+
+{\em Proof.}\, Let's denote by\, $|\cdot|$\, the trivial valuation of $k$ and also its arbitrary Krull \PMlinkescapetext{extension valuation} to $K$.\, Suppose that there is an element $\alpha$ of $K$ such that\, $|\alpha| > 1$.\, This element satisfies an algebraic equation
+     $$\alpha^n+a_1\alpha^{n-1}+...+a_n = 0,$$
+where\, $a_1,\, ..., \,a_n\, \in k$.\, Since\, $|a_j| \leqq 1$\, for all $j$'s, we get the impossibility
+ $$0 = |\alpha^n+a_1\alpha^{n-1}+...+a_n| =
+\max\{|\alpha|^n,\,|a_1|\!\cdot|\!\alpha|^{n-1},\, ...,\, |a_n|\} = 
+|\alpha|^n > 1$$
+(cf. the sharpening of the ultrametric triangle inequality).\, Therefore we must have\, $|\xi| \leqq 1$\, for all\, $\xi\in K$, \,and because the condition\, $0 < |\xi| < 1$\, would imply that\, $|\xi^{-1}| > 1$,\, we see that 
+              $$|\xi| = 1 \quad \forall\xi\in K\!\setminus\!\{0\},$$
+which \PMlinkescapetext{means} that the valuation is trivial.
+
+The proof (in [1]) of the next ``extension theorem'' is much longer (one must utilize the extension theorem concerning the place of field):
+
+\begin{thmplain}\, Every Krull valuation of a field $k$ can be extended to a Krull valuation of any \PMlinkescapetext{extension} field of $k$.
+\end{thmplain}
+
+\subsection*{References}
+[1] Emil Artin: \PMlinkescapetext{{\em Theory of Algebraic Numbers}}. \, Lecture notes.\, Mathematisches Institut, G\"ottingen (1959).
+%%%%%
+%%%%%
+\end{document}

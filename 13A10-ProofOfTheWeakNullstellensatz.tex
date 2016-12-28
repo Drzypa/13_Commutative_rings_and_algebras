@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfTheWeakNullstellensatz}
+\pmcreated{2013-03-22 15:27:43}
+\pmmodified{2013-03-22 15:27:43}
+\pmowner{pbruin}{1001}
+\pmmodifier{pbruin}{1001}
+\pmtitle{proof of the weak Nullstellensatz}
+\pmrecord{4}{37313}
+\pmprivacy{1}
+\pmauthor{pbruin}{1001}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13A10}
+\pmclassification{msc}{13A15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $K$ be an algebraically closed field, let $n\ge 0$, and let $I$ be
+an ideal in the polynomial ring $K[x_1,\ldots,x_n]$.  Suppose $I$ is
+strictly smaller than $K[x_1,\ldots,x_n]$.  Then $I$ is contained in a
+maximal ideal $M$ of $K[x_1,\ldots,x_n]$ (note that we don't have to
+accept Zorn's lemma to find such an $M$, since $K[x_1,\ldots,x_n]$ is
+Noetherian by Hilbert's basis theorem), and the quotient ring
+$$
+L=K[x_1,\ldots,x_n]/M
+$$
+is a field.  We view $K$ as a subfield of $L$ via the natural
+homomorphism $K\hookrightarrow L$, and we denote the images of
+$x_1,\ldots,x_n$ in $L$ by $\bar x_1,\ldots,\bar x_n$.  Let
+$\{t_1,\ldots,t_m\}$ be a transcendence basis of $L$ over $K$; it is
+finite since $L$ is finitely generated as a $K$-algebra.  Now $L$ is
+an algebraic extension of $K(t_1,\ldots,t_m)$.  By multiplying the
+minimal polynomial of $\bar x_i$ over $K(t_1,\ldots,t_m)$ by a
+suitable element of $K[t_1,\ldots,t_m]$ for each $i$, we obtain
+non-zero polynomials $f_i\in K[t_1,\ldots,t_m][X]$ with the
+property that $f_i(\bar x_i)=0$ in $L$:
+$$
+f_i=c_{i,0}+c_{i,1}X+\cdots+c_{i,d_i}X^{d_i}
+\qquad(1\le i\le n)
+$$
+for certain integers $d_i>0$ and polynomials $c_{i,j}\in                                  
+K[t_1,\ldots,t_m]$ with $c_{i,d_i}\ne 0$.  Since $K$ is algebraically
+closed (hence infinite), we can choose $u_1,\ldots,u_n\in K$ such that
+$c_{i,d_i}(u_1,\ldots,u_m)\ne 0$ for all $i$.  We define a homomorphism
+$$
+\phi\colon K[t_1,\ldots,t_m] \longrightarrow K
+$$
+by taking $\phi$ to be the identity on $K$ and sending $t_j$ to $u_j$.
+Let $N$ be the kernel of this homomorphism.  Then $\phi$ can be
+extended to the localization $K[t_1,\ldots,t_m]_N$ of
+$K[t_1,\ldots,t_m]$.  Since $c_{i,d_i}\not\in N$ for all $i$, the
+$\bar x_i$ are integral over this ring.  Since $K$ is algebraically
+closed, the extension theorem for ring homomorphisms implies that
+$\phi$ can be extended to a homomorphism
+$$
+\phi\colon(K[t_1,\ldots,t_m]_N)[\bar x_1,\ldots,\bar x_n]=L
+\longrightarrow K.
+$$
+Because $L$ is an extension field of $K$ and $\phi$ is the identity on
+$K$, we see that $\phi$ is actually an isomorphism, that $m=0$, and
+that $N$ is the zero ideal of $K$.  Now let $a_1=\phi(\bar                                
+x_1),\ldots,a_n=\phi(\bar x_n)$.  Then for all polynomials $f$ in the
+ideal $I$ we started with, the fact that $f\in M$ implies
+$$
+f(a_1,\ldots,a_n)=\phi(f(x_1,\ldots,x_n)+M)=0.
+$$
+We conclude that the zero set $V(I)$ of $I$ is not empty.
+%%%%%
+%%%%%
+\end{document}

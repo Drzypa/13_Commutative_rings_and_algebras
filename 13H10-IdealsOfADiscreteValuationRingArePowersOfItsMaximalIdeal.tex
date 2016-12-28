@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IdealsOfADiscreteValuationRingArePowersOfItsMaximalIdeal}
+\pmcreated{2013-03-22 18:00:47}
+\pmmodified{2013-03-22 18:00:47}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{ideals of a discrete valuation ring are powers of its maximal ideal}
+\pmrecord{9}{40528}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13H10}
+\pmclassification{msc}{13F30}
+\pmrelated{PAdicCanonicalForm}
+\pmrelated{IdealDecompositionInDedekindDomain}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\smm}{\mathfrak{m}}
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}{Corollary}
+\begin{document}
+\begin{thm} Let $R$ be a discrete valuation ring. Then all nonzero ideals of $R$ are powers of its maximal ideal $\smm$.
+\end{thm}
+
+\textbf{Proof. } Let $\smm = (\pi)$ (that is, $\pi$ is a uniformizer for $R$). Assume that $R$ is not a field (in which case the result is trivial), so that $\pi\neq 0$. 
+Let $I=(\alpha)\subset R$ be any ideal; claim $(\alpha)=\smm^k$ for some $k$. By the Krull intersection theorem, we have
+\[\bigcap_{n\geq 0}\smm^n=(0)\]
+so that we may choose $k\geq 0$ with $\alpha\in \smm^k-\smm^{k+1}$. Since $\alpha\in\smm^k$, we have $\alpha = u\pi^k$ for $u\in R$. $u\notin \smm$, since otherwise $\alpha\in\smm^{k+1}$, so that $\alpha$ is a unit (in a DVR, the maximal ideal consists precisely of the nonunits). Thus $(\alpha)=(\pi)^k$.
+
+\begin{cor} Let $R$ be a Noetherian local ring with a principal maximal ideal. Then all nonzero ideals are powers of the maximal ideal $\smm$.
+\end{cor}
+
+\textbf{Proof. } Let $I=(\alpha_1,\ldots,\alpha_n)$ be an ideal of $R$. Then by the above argument, for each $i$, $\alpha_i = u_i\pi^{k_i}$ for $u_i$ a unit, and thus $I=(\pi^{k_1},\ldots,\pi^{k_n}) = (\pi^k)$ for $k=\min(k_1,\ldots,k_n)$.
+%%%%%
+%%%%%
+\end{document}

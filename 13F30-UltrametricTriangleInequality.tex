@@ -1,0 +1,92 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UltrametricTriangleInequality}
+\pmcreated{2013-03-22 14:54:15}
+\pmmodified{2013-03-22 14:54:15}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{ultrametric triangle inequality}
+\pmrecord{25}{36587}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13F30}
+\pmclassification{msc}{13A18}
+\pmclassification{msc}{12J20}
+\pmclassification{msc}{11R99}
+\pmrelated{MaximalNumber}
+\pmrelated{PAdicCanonicalForm}
+\pmrelated{UltrametricSpace}
+\pmrelated{MinimalAndMaximalNumber}
+\pmrelated{ExponentValuation2}
+\pmdefines{non-archimedean triangle inequality}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem{thmplain}{Theorem}
+\begin{document}
+\begin{thmplain}
+ \, Let $K$ be a field and $G$ an ordered group equipped with zero.\, Suppose that the function \,$|\cdot|\!:\; K\to G$\, satisfies the postulates 1 and 2 of Krull valuation.\, Then the {\em non-archimedean} or {\em ultrametric triangle inequality}
+
+3. \quad\quad\quad\quad $|x\!+\!y| \;\leqq\; \max\{|x|,\,|y|\}$
+
+in the field is \PMlinkescapetext{equivalent} with the condition
+
+(*) $\quad\quad\quad |x|\leqq 1 \,\,\,\, \Rightarrow \,\,\,\, |x\!+\!1|\leqq 1.$
+\end{thmplain}
+
+{\em Proof.}\, The value \,$y = 1$\, in the ultrametric triangle inequality gives the (*) as result.\, Secondly, let's assume the condition (*).\, Let $x$ and $y$ be non-zero elements of the field $K$ (if\, $xy =0$\, then 3 is at once verified), and let e.g.\, $|x| \leqq |y|$.\, Then we get\, 
+$\displaystyle|\frac{x}{y}| = |x|\cdot|y|^{-1}\leqq 1$,\, and thus according to (*),
+      $$|x\!+\!y|\cdot|y|^{-1} \;=\; \left|\frac{x\!+\!y}{y}\right| \;=\;
+ \left|\frac{x}{y}+1\right|\leqq 1.$$ 
+So we see that\, $|x\!+\!y|\leqq |y| = \max\{|x|,\,|y|\}$.\\
+
+\begin{thmplain}
+ \, The Krull valuation (and any \PMlinkname{non-archimedean valuation}{Valuation})\, $|\cdot|$\, of the field $K$ satisfies the sharpening
+    $$|x\!+\!y| \;=\; \max\{|x|,\,|y|\}\quad\mathrm{for}\,\,\,|x| \neq |y|$$
+of the ultrametric triangle inequality.
+\end{thmplain}
+
+{\em Proof.}\, Let e.g.\, $|x| > |y|$.\, Surely\, $|x\!+\!y| \leqq |x|$,\, but also\, $|x| = |(x\!+\!y)\!-\!y| \leqq \max\{|x\!+\!y|,\,|y|\}$;\, this maximum is $|x\!+\!y|$ since otherwise one would have\, $|x| \leqq |y|$.\, Thus the result is:\, $|x\!+\!y| = |x|$.\\
+
+\textbf{Note.}\, The metric defined by a non-archimedean valuation of the field $K$ is the {\em ultrametric} of $K$.\, Theorem 2 implies, that every triangle of $K$ with vertices $A$, $B$, $C$ ($\in K$) is isosceles:\, if\, $|B\!-\!C| \neq |C\!-\!A|$,\, then\, $|A\!-\!B| = \max\{|B\!-\!C|,\,|C\!-\!A|\}$.\\
+
+\begin{thmplain}
+ \, The \PMlinkname{valuation}{Valuation}\, $|\cdot|: K\to \mathbb{R}$\, of the field $K$ is archimedean if and only if the set          
+      $$\{|1|,\,|1\!+\!1|,\,|1\!+\!1\!+\!1|,\,\ldots\}$$
+of the ``values'' of the multiples of the unity is not bounded.
+\end{thmplain}
+
+{\em Proof.}\, If $|\cdot|$ is non-archimedean, then\, $|n\cdot 1| = |1\!+\ldots+\!1| \leqq\max\{|1|\} = 1$,\, and the multiples are bounded.\, Conversely, let\, 
+$|n\cdot1| < M \,\, \forall n\in\mathbb{Z}_+$.\,  Now one obtains, when\, $|x|\leqq 1$:
+$$|x\!+\!1|^n \;\leqq\; \sum_{j = 0}^n \left|{n\choose j}\right|\cdot|x|^j \;<\; (n+1)M,$$
+or\, $|x\!+\!1| < \sqrt[n]{(n\!+\!1)M}$\,\, for all $n$.\, As $n$ tends to infinity, this $n^\mathrm{th}$ root has the limit 1.\, Therefore one gets the limit inequality\, $|x\!+\!1| \leqq 1$,\, i.e. the valuation is non-archimedean.
+
+\begin{thebibliography}{9}
+\bibitem{Artin} {\sc Emil Artin}: {\em Theory of Algebraic Numbers}.\, Lecture notes.\, Mathematisches Institut, G\"ottingen (1959).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

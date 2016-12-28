@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Nsystem}
+\pmcreated{2013-03-22 17:29:29}
+\pmmodified{2013-03-22 17:29:29}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{$n$-system}
+\pmrecord{8}{39879}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13B30}
+\pmclassification{msc}{16U20}
+\pmsynonym{n-system}{Nsystem}
+\pmrelated{MSystem}
+\pmrelated{SemiprimeIdeal}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Let $R$ be a ring.  A subset $S$ of $R$ is said to be an $n$-system if 
+\begin{itemize}
+\item $S\ne \varnothing$, and
+\item for every $x\in S$, there is an $r\in R$, such that $xrx\in S$.
+\end{itemize}
+
+$n$-systems are a generalization of \PMlinkname{$m$-systems}{MSystem} in a ring.  Every $m$-system is an $n$-system, but not conversely.  For example, for any distinct $x,y\in R$, inductively define the elements $$a_0=x,\ \mbox{ and }\ a_{i+1}=a_i y^i a_i\ \ \mbox{ for }i=0,1,2,\ldots.$$  Form the set $A=\lbrace a_n\mid n\mbox{ is a non-negative integer}\rbrace$.  In addition, inductively define $$b_0=y,\ \mbox{ and }\ b_{j+1}=b_j x^j b_j\ \ \mbox{ for }j=0,1,2\ldots,$$ and form $B=\lbrace b_m\mid m\mbox{ is a non-negative integer}\rbrace$.  Then both $A$ and $B$ are $m$-systems (as well as $n$-systems).  Furthermore, $S=A\cup B$ is an $n$-system which is not an $m$-system.
+
+The example above suggests that, given an $n$-system $S$ and any $x\in S$, we can ``construct'' an $m$-system $T\subseteq S$ such that $x\in T$.  Start with $a_0=x$, inductively define $a_{i+1}=a_iy_ia_i$, where the existence of $y_i\in R$ such that $a_{i+1}\in S$ is guaranteed by the fact that $S$ is an $n$-system.  Then the collection $T:=\lbrace a_i\mid i\mbox{ is a non-negative integer}\rbrace$ is a subset of $S$ that is an $m$-system.  For if we pick any $a_i$ and $a_j$, if $i\le j$, then $a_i$ is both the left and right sections of $a_j$, meaning that there are $r,s\in R$ such that $a_j=ra_i=a_is$ (this can be easily proved inductively).  As a result, $a_i(sy_j)a_j=a_jy_ja_j\in S$, and $a_j(y_jr)a_i=a_jy_ja_j\in S$.
+
+\textbf{Remark} $n$-systems provide another characterization of a semiprime ideal: an ideal $I\subseteq R$ is semiprime iff $R-I$ is an $n$-system.
+\begin{proof}
+Suppose $I$ is semiprime.  Let $x\in R-I$.  Then $xRx\nsubseteq I$, which means there is an element $y\in R$ such that $xyx\notin I$.  So $R-I$ is an $n$-system.  Now suppose that $R-I$ is an $n$-system.  Let $x\in R$ with the condition that $xRx\subseteq I$.  This means $xyx\in I$ for all $y\in R$.  If $x\in R-I$, then there is some $y\in R$ with $xyx\in R-I$, contradicting condition on $x$.  Therefore, $x\in I$, and $I$ is semiprime.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

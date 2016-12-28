@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{InvertibleIdealIsFinitelyGenerated}
+\pmcreated{2015-05-06 14:44:03}
+\pmmodified{2015-05-06 14:44:03}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{invertible ideal is finitely generated}
+\pmrecord{10}{37239}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13B30}
+\pmrelated{InvertibilityOfRegularlyGeneratedIdeal}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+\textbf{Theorem.}\, Let $R$ be a commutative ring containing regular elements.\, Every \PMlinkname{invertible}{FractionalIdealOfCommutativeRing} fractional ideal $\mathfrak{a}$ of $R$ is finitely generated and \PMlinkname{regular}{RegularIdeal}, i.e. \PMlinkescapetext{contains} regular elements.
+
+
+{\it Proof.}\, Let $T$ be the total ring of fractions of $R$ and $e$ the unity of $T$.\,We first show that the inverse ideal of $\mathfrak{a}$ has the unique \PMlinkname{quotient presentation}{QuotientOfIdeals}\, $[R':\mathfrak{a}]$\, where\, $R' := R+\mathbb{Z}e$.\, If $\mathfrak{a}^{-1}$ is an inverse ideal of $\mathfrak{a}$, it means that\, $\mathfrak{aa}^{-1} = R'$.\, Therefore we have
+  $$\mathfrak{a}^{-1} \subseteq \{t\in T\,\vdots \,\,\, t\mathfrak{a}\subseteq R'\} = [R'\!:\!\mathfrak{a}],$$
+so that
+  $$R' = \mathfrak{aa}^{-1} \subseteq \mathfrak{a}[R'\!:\!\mathfrak{a}]
+         \subseteq R'.$$
+This implies that\, $\mathfrak{aa}^{-1} = \mathfrak{a}[R'\!:\!\mathfrak{a}]$,\, and because $\mathfrak{a}$ is a cancellation ideal, it must \PMlinkescapetext{mean} that\, $\mathfrak{a}^{-1} = [R'\!:\!\mathfrak{a}]$, i.e. $[R'\!:\!\mathfrak{a}]$ is the unique inverse of the ideal $\mathfrak{a}$.\, 
+
+Since\, $\mathfrak{a}[R'\!:\!\mathfrak{a}] = R'$,\, there exist some elements $a_1,\,\ldots,\,a_n$ of $\mathfrak{a}$ and the elements $b_1,\,\ldots,\,b_n$ of\, $[R'\!:\!\mathfrak{a}]$\, such that\, $a_1b_1\!+\cdots+\!a_nb_n = e$.\, Then an arbitrary element $a$ of $\mathfrak{a}$ satisfies
+  $$a = a_1(b_1a)\!+\cdots+\!a_n(b_na) \in (a_1,\,\ldots,\,a_n)$$
+because every $b_ia$ belongs to the ring $R'$.\, Accordingly,\, 
+$\mathfrak{a} \subseteq (a_1,\,\ldots,\,a_n)$.\, Since the converse inclusion is apparent, we have seen that\, $\{a_1,\,\ldots,\,a_n\}$\, is a finite \PMlinkescapetext{generator system} of the invertible ideal $\mathfrak{a}$.
+
+Since the elements $b_i$ belong to the total ring of fractions of $R$, we can choose such a regular element $d$ of $R$ that each of the products $b_id$ belongs to $R$.\, Then
+ $$d = a_1(b_1d)\!+\cdots+\!a_n(b_nd) \in (a_1,\,\ldots,\,a_n) = \mathfrak{a},$$
+and thus the fractional ideal $\mathfrak{a}$ contains a regular element of $R$, which obviously is regular in $T$, too.
+
+\begin{thebibliography}{9}
+ \bibitem{RG}{\sc R. Gilmer:} {\em Multiplicative ideal theory}.\, Queens University Press. Kingston, Ontario (1968).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

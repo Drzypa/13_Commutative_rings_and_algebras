@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UFDsAreIntegrallyClosed}
+\pmcreated{2013-03-22 15:49:25}
+\pmmodified{2013-03-22 15:49:25}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{UFD's are integrally closed}
+\pmrecord{6}{37790}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13G05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\textbf{Theorem:} Every UFD is integrally closed.
+
+\textbf{Proof:} Let $R$ be a UFD, $K$ its field of fractions, $u\in K, u$ integral over $R$. Then for some $c_0,\ldots,c_{n-1}\in R$,
+\[u^n+c_{n-1}u^{n-1}+\ldots+c_0=0\]
+Write $u=\frac{a}{b}, a,b\in R$, where $a,b$ have no non-unit common divisor (which we can assume since $R$ is a UFD). Multiply the above equation by $b^n$ to get
+\[a^n+c_{n-1}ba^{n-1}+\ldots+c_0b^n=0\]
+Let $d$ be an irreducible divisor of $b$. Then $d$ is prime since $R$ is a UFD. Now, $d\lvert a^n$ since it divides all the other terms and thus (since $d$ is prime) $d\lvert a$. But $a, b$ have no non-unit common divisors, so $d$ is a unit. Thus $b$ is a unit and hence $u\in R$.
+%%%%%
+%%%%%
+\end{document}

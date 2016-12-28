@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ChineseRemainderTheoremForRingsNoncommutativeCase}
+\pmcreated{2013-03-22 16:53:45}
+\pmmodified{2013-03-22 16:53:45}
+\pmowner{polarbear}{3475}
+\pmmodifier{polarbear}{3475}
+\pmtitle{Chinese remainder theorem for rings, noncommutative case}
+\pmrecord{16}{39152}
+\pmprivacy{1}
+\pmauthor{polarbear}{3475}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13A15}
+\pmclassification{msc}{11D79}
+\pmsynonym{chinese remainder theorem}{ChineseRemainderTheoremForRingsNoncommutativeCase}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{theorem}{Theorem}
+\begin{document}
+ \begin{theorem}(\textbf{Chinese Remainder Theorem}) Let $R$ be a ring and $I_1,I_2, ..., I_n$ \PMlinkname{pairwise comaximal}{Comaximal} ideals such that $R =I_j +R^2 $ for all $j$. The homomorphism:\begin{align*}
+f: R \rightarrow R/I_1 \times R/I_2 \times ... \times R/I_n \\
+f(a) = (a+I_1, a+I_2, ...,a+I_n)\end{align*}
+ is surjective and $ker f = I_1 \cap I_2\cap \cdots \cap I_n$.\end{theorem}\begin{proof}
+  Clearly $f$ is a homomorphism with kernel $I_1\cap I_2\cap \cdots \cap I_n$. It remains to show the surjectivity.\newline
+ We have: \begin{align*}R = I_1 + R^2 = I_1 + (I_1 + I_2)(I_1 + I_3) \\
+\subseteq I_1 + I_1^2 + I_1I_3 + I_2I_1 + I_2I_3  \\ \subseteq I_1+(I_2\cap I_3).\end{align*}
+ Moreover,\begin{align*} R = I_1 + R^2 = I_1 + (I_1 + I_2\cap I_3)(I_1+I_4)
+ \\ = I_1 + I_1I_4 + (I_2\cap I_3)I_1 + (I_2\cap I_3)I_4  \\ \subseteq I_1 + (I_2\cap I_3\cap I_4).\end{align*}
+ Continuing, we obtain that $R = I_1 + \bigcap_{j\ne 1}I_j$. We show similarly that:\begin{equation*}
+R = I_2 + \bigcap_{j\ne 2}I_j = I_3 +\bigcap_{j\ne 3}I_j = \cdots = I_n + \bigcap_{j\ne n} I_j.\end{equation*}
+ Given elements $a_1, a_2, ..., a_n$, we can find $x_j\in I_j$ and $y_j\in \bigcap_{j\ne k} I_k$ such that $a_j = x_j + y_j$.\newline
+Take $a:=\sum_{i=1}^n x_i = a_j\pmod{I_j}$.\newline
+ Hence\begin{equation*}
+f(a) = (a_1 +I_1, a_2+I_2, ..., a_n+I_n),\end{equation*}
+and we conclude that $f$ is surjective as required.\end{proof}
+\textbf{Notes} 1.The relation $R = I_j +R^2$ is satisfied when $R$ is ring with unity. In that case $R^2 = R$.\newline
+2. The \PMlinkname{Chinese Remainder Theorem}{ChineseRemainderTheorem} case for integers is obtained from the above result. For this, take $R = \mathbb{Z}$ and $I_j = (p_j) = p_j\mathbb{Z}$. The fact that two solutions of the set of congruences must \PMlinkescapetext{satisfy} $x = x_0 \pmod{p_1 ... p_n}$ is a consequence of:\begin{equation*}
+I_1\cap I_2 \cap \cdots \cap I_n = (p_1)\cap (p_2)\cap \cdots \cap (p_n) =(p_1p_2 ... p_n)\mathbb{Z}.\end{equation*}
+
+
+%%%%%
+%%%%%
+\end{document}

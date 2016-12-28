@@ -1,0 +1,96 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{WeakestExtensionOfAPartialOrdering}
+\pmcreated{2013-03-22 18:51:40}
+\pmmodified{2013-03-22 18:51:40}
+\pmowner{jocaps}{12118}
+\pmmodifier{jocaps}{12118}
+\pmtitle{weakest extension of a partial ordering}
+\pmrecord{9}{41675}
+\pmprivacy{1}
+\pmauthor{jocaps}{12118}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13J30}
+\pmclassification{msc}{13J25}
+\pmdefines{weakest extension of a partial ordering}
+
+\usepackage{amssymb, amsthm,amsmath}
+\usepackage{pictexwd, dcpic}
+\usepackage{pstricks}
+\usepackage[dvips]{graphicx}
+
+%%%%%%%%%% Theorems and Other Theoremstyles %%%%%%%%%%%%%%
+\theoremstyle{definition} 
+\newtheorem{theorem}{Theorem}
+\newtheorem{prop}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem*{defi}{Definition}
+\newtheorem*{exam}{Example}
+\newtheorem{example}[theorem]{Example}
+\newtheorem*{ack}{Acknowledgement}
+\newtheorem{cor}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{conj}[theorem]{Conjecture}
+\newtheorem{cons}[theorem]{Construction}
+\newtheorem*{defnot}{Definition and Notation}
+\theoremstyle{remark} 
+\newtheorem*{rem}{Remark} %%% * means no numbering
+\newtheorem*{nota}{Notation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\blacksq{\begin{flushright}$\blacksquare$\end{flushright}}
+\def\dotcup{\buildrel\textstyle.\over\cup}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% New Commands and Renew Commands %%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\ann{\mathrm{Ann}}
+\newcommand\rsa{\rightsquigarrow}
+\newcommand\brac[1]{\langle #1 \rangle}
+\newcommand\sep{\,:\,}
+%\newcommand\pair[1]{#1,#1^+}
+\newcommand\st {\mathrel{\ooalign{$\,\backepsilon$\cr\lower .7pt\hbox{\kern 1pt$-\,$}}}}
+\newcommand\qf[1]{\mathrm{Quot}(#1)}	
+\newcommand\spec{\mathrm{Spec}\,}	
+\newcommand\sper{\mathrm{Sper}\,}	
+\newcommand\supp{\mathrm{supp}}	
+\newcommand\id{\mathrm{id}}	
+\newcommand\basis{\mathcal{B}}
+%\renewcommand\P{\mathcal{P}}
+%\renewcommand\H{\mathcal{H}}
+\newcommand\minspec{\mathrm{MinSpec}\,}
+\newcommand\Hom{\mathrm{Hom}}
+\newcommand\Ccal{\mathcal{C}}
+\newcommand\Dcal{\mathcal{D}}
+\newcommand\Z{\mathbb{Z}}
+\newcommand\Q{\mathbb{Q}}
+\newcommand\R{\mathbb{R}}
+\newcommand\C{\mathbb{C}}
+\newcommand\alg{R_{alg}}
+%\newcommand\F{\mathcal F}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\p}{\mathfrak{p}}
+\newcommand\wo[1]{\backslash{\{#1\}}}
+\newcommand{\bij}{\rightarrowtail \hspace{-1.9ex} \rightarrow}
+\newcommand{\longbij}{\rightarrowtail \hspace{-1.9ex} \rightarrow}
+\newcommand*{\lhrarrow}{\ensuremath{\lhook\joinrel\relbar\joinrel\rightarrow}}
+\newcommand*{\thrarrow}{\twoheadrightarrow}
+\newcommand*{\lthrarrow}{\ensuremath{\relbar\joinrel\twoheadrightarrow}}
+%\renewcommand{\labelenumi}{\roman{enumi}.}
+\renewcommand\mod{\,\mathrm{mod}\,}
+\newcommand{\ic}{\mathrm{ic}}
+\renewcommand\thefootnote{\relax}
+\newcommand{\bigcupdot}{\mathop{\makebox[-.2em]{\hskip 1.3em $^{\boldsymbol\cdot}$}\bigcup}}
+\newcommand{\bigcupd}{\mathop{\makebox[0em]{\hskip 1.2em $^{\boldsymbol\cdot}$}\bigcup}}
+\newcommand{\Pcal}{\mathcal P}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+Let $A$ be a commutative ring with partial ordering $A^+$ and suppose that $B$ is a ring that admits a partial ordering.  
+If $f:A \rightarrow B$ is a ring monomorphism (thus we regard $B$ as an over-ring of $A$), 
+then any partial ordering of $B$ that can contain $f(A^+)$ will also contain the set $B^+\subset B$ defined by 
+$$B^+ :=\{\sum_{i=1}^n f(a_i)b_i^2  : n\in \N,a_1,\dots,a_n\in A^+\}$$
+$B^+$ is itself a partial ordering and it is called the 
+\emph{weakest partial ordering of $B$ that extends $A^+$ (through $f$)}. It is called "weakest" because this is the smallest partial ordering $B^+$ of $B$ that will transform $f$ into a poring monomorphism (i.e. a monomorphism in the category of partially ordered rings) $f:(A,A^+)\rightarrow (B,B^+)$ (for simplicity, we abuse the symbol $f$ here).
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofThatAGcdDomainIsIntegrallyClosed}
+\pmcreated{2013-03-22 18:19:27}
+\pmmodified{2013-03-22 18:19:27}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{proof that a gcd domain is integrally closed}
+\pmrecord{6}{40955}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13G05}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+
+\newcommand{\GCD}{\operatorname{GCD}}
+\begin{document}
+\begin{prop} Every gcd domain is integrally closed. \end{prop}
+
+\begin{proof}  Let $D$ be a gcd domain.  For any $a,b\in D$, let $\GCD(a,b)$ be the collection of all gcd's of $a$ and $b$.  For this proof, we need two facts:
+\begin{enumerate}
+\item $\GCD(ma,mb)=m\GCD(a,b)$.
+\item If $\GCD(a,b)=[1]$ and $\GCD(a,c)=[1]$, then $\GCD(a,bc)=[1]$.
+\end{enumerate}
+
+The proof of the two properties above can be found \PMlinkname{here}{PropertiesOfAGcdDomain}.  For convenience, we let $\gcd(a,b)$ be any one of the representatives in $\GCD(a,b)$.
+
+Let $K$ be the field of fraction of $D$, and $a/b \in K$ ($a,b\in D$ and $b\ne 0$) is a root of a monic polynomial $p(x)\in D[x]$.  We may, from property (1) above, assume that $\gcd(a,b)=1$.  
+
+Write $$f(x)=x^n+c_{n-1}x^{n-1}+\cdots+c_0.$$ So we have
+$$0=(a/b)^n+c_{n-1}(a/b)^{n-1}+\cdots+c_0.$$  Multiply the equation by $b^n$ then rearrange, and we get
+$$-a^n=c_{n-1}ba^{n-1}+\cdots+c_0b^n=b(c_{n-1}a^{n-1}+\cdots+c_0b^{n-1}).$$
+Therefore, $b\mid a^n$.  Since $\gcd(a,b)=1$, $1=\gcd(a^n,b)=b$, by repeated applications of property (2), and one application of property (1) above.  Therefore $b$ is an associate of 1, hence a unit and we have $a/b\in D$.
+
+\end{proof}
+
+Together with the additional property (call it property 3)
+\begin{quote} if $\GCD(a,b)=[1]$ and $a\mid bc$, then $a\mid c$ (proof found \PMlinkname{here}{PropertiesOfAGcdDomain}), \end{quote}
+we have the following
+
+\begin{prop} Every gcd domain is a Schreier domain. \end{prop}
+
+\begin{proof}  
+That a gcd domain is integrally closed is clear from the previous paragraph.  We need to show that $D$ is pre-Schreier, that is, every non-zero element is primal.  Suppose $c$ is non-zero in $D$, and $c\mid ab$ with $a,b\in D$.
+Let $r=\gcd(a,c)$ and $rt=a$, $rs=c$.  Then $1=\gcd(s,t)$ by property (1) above.  Next, since $c\mid ab$, write $cd=ab$ so that $rsd=rtb$.  This implies that $sd=tb$.  So $s\mid tb$ together with $\gcd(s,t)=1$ show that $s\mid b$ by property (3).  So we have just shown the existence of $r,s\in D$ with $c=rs$, $r\mid a$ and $s\mid b$.  Therefore, $c$ is primal and $D$ is a Schreier domain.  
+
+\end{proof}
+
+%%%%%
+%%%%%
+\end{document}

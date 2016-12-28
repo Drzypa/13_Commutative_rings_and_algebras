@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfResultant1}
+\pmcreated{2013-03-22 14:36:33}
+\pmmodified{2013-03-22 14:36:33}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{example of resultant (1)}
+\pmrecord{5}{36182}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13P10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+To illustrate the concept of resultant, consider a simple example. Let
+ $$p(x) = x^2 - 1 = (x+1)(x-1)$$
+ $$q(x) = x^3 - 4 x = (x+2) x (x-2)$$
+Then, in the notation used in the main entry,
+ $$r_1 = -1 \quad r_2 = +1$$
+ $$s_1 = -2 \quad s_2 = 0 \quad s_3 = +2$$
+Hence,
+ $$R(p,q) = (-1-(-2)) (-1-0) (-1-2) (1-(-2)) (1-0) (1-2) =$$
+ $$\qquad 1 \times (-1) \times (-3) \times 3 \times 1 \times (-1) = -9$$
+
+In the notation of the main entry,
+ $$a_0 = 1 \quad a_1 = 0 \quad a_2 = -1$$
+ $$b_0 = 1 \quad b_1 = 0 \quad b_2 = -4 \quad b_3 = 0$$
+The determinant for computing the resultant is
+ $$\left| \begin{matrix}
+1 &  0 & -1 &  0 &  0 \cr
+0 &  1 &  0 & -1 &  0 \cr
+0 &  0 &  1 &  0 & -1 \cr
+1 &  0 & -4 &  0 &  0 \cr
+0 &  1 &  0 & -4 &  0 \cr
+\end{matrix} \right|$$
+Since the matrix is quite sparse, its determinant is easy to compute, especially if one first simplifies it by performing some row operations such as subtracting the first row from the fourth row and the second row form the fifth row to make it even sparser.  The determinat works out to be $-9$, in agreement with the earlier answer for the resultant.
+%%%%%
+%%%%%
+\end{document}

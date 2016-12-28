@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PolynomialFunction}
+\pmcreated{2013-03-22 15:40:34}
+\pmmodified{2013-03-22 15:40:34}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{polynomial function}
+\pmrecord{13}{37617}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13A99}
+\pmsynonym{ring of polynomial functions}{PolynomialFunction}
+\pmrelated{NotationInSetTheory}
+\pmrelated{ProductAndQuotientOfFunctionsSum}
+\pmrelated{ZeroOfPolynomial}
+\pmrelated{PolynomialFunctionIsAProperMap}
+\pmrelated{DerivativeOfPolynomial}
+\pmdefines{polynomial function}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+\textbf{Definition.}\, Let $R$ be a commutative ring.\, A function \,$f: R\to R$\, is called a {\em polynomial function of $R$}, if there are some elements \,$a_0,\,a_1,\,\ldots,\,a_m$ of $R$ such that
+   $$f(x) \;=\; a_0\!+\!a_1x\!+\cdots+\!a_mx^m \,\,\,\, \forall x\in R.$$
+
+\textbf{Remark.}\, The coefficients $a_i$ in a polynomial function need not be unique; e.g. if\, $R = \{0,\,1\}$\, is the ring (and field) of two elements, then the polynomials $X$ and $X^2$ both may be used for the same polynomial function.\, However, if we stipulate that $R$ is an infinite integral domain, the coefficients are guaranteed to be unique.
+
+The set of all polynomial functions of $R$, being a subset of the set $R^R$ of all functions from $R$ to $R$, is here denoted by\, $R/^R$.
+
+\begin{thmplain}
+If $R$ is a commutative ring, then the set $R/^R$ of all polynomial functions of $R$, equipped with the operations 
+\begin{align}
+(f\!+\!g)(x) \;:=\; f(x)\!+\!g(x), \quad (f\!\cdot\!g)(x) \;:=\; f(x)g(x) \quad \forall x\in R,
+\end{align}
+is a commutative ring.
+\end{thmplain}
+
+{\em Proof.}\, It's straightforward to show that the function set $R^R$ forms a commutative ring when equipped with the operations ``$+$'' and ``$\cdot$'' defined as (1).\, We show now that $R/^R$ forms a subring of $R^R$.\, Let $f$ and $g$ be any two polynomial functions given by
+$$f(x) \;=\; a_0\!+\!a_1x\!+\cdots+\!a_mx^m, \,\,\, g(x) \;=\; b_0\!+\!b_1x\!+\cdots+\!b_nx^n.$$
+Then we can give $f\!+\!g$ by
+  $$(f\!+\!g)(x) \;=\; \sum_{i=0}^k(a_i\!+\!b_i)x^i$$
+where\, $k = \max\{m,\,n\}$\, and\, $a_i = 0$ (resp.\, $b_i = 0$) for\, $i > m$ (resp.\, $i > n$).\, This means that\, $f\!+\!g \in R/^R$.\, Secondly, the equation
+$$(f\!\cdot\!g)(x) \;=\; a_0b_0+(a_0b_1\!+\!a_1b_0)x+(a_0b_2\!+\!a_1b_1\!+\!a_2b_0)x^2\!+\cdots+\!a_mb_nx^{m+n}$$
+signifies that\, $f\!\cdot\!g \in R/^R$.\, Because also the function $-\!f$ given by
+  $$(-\!f)(x) \;=\; -\!a_0\!-\!a_1x\!-\cdots-\!a_mx^m$$
+and satisfying\, $-\!f\!+\!f = 0:x\mapsto 0$\, belongs to $R/^R$, the subset 
+$R/^R$ is a subring of $R^R$.
+%%%%%
+%%%%%
+\end{document}

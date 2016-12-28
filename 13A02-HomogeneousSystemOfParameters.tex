@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HomogeneousSystemOfParameters}
+\pmcreated{2013-03-22 14:14:55}
+\pmmodified{2013-03-22 14:14:55}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{homogeneous system of parameters}
+\pmrecord{5}{35695}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13A02}
+\pmdefines{partial homogeneous system of parameters}
+\pmdefines{complete homogeneous system of parameters}
+\pmdefines{homogeneous $M$-sequence}
+\pmdefines{depth}
+\pmdefines{depth of a module}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\mc}{\mathcal}
+\newcommand{\mb}{\mathbb}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\ol}{\overline}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\la}{\leftarrow}
+\newcommand{\La}{\Leftarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\nor}{\vartriangleleft}
+\newcommand{\Gal}{\text{Gal}}
+\newcommand{\GL}{\text{GL}}
+\newcommand{\Z}{\mb{Z}}
+\newcommand{\R}{\mb{R}}
+\newcommand{\Q}{\mb{Q}}
+\newcommand{\C}{\mb{C}}
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+\begin{document}
+Let $k$ be a field, let $R$ be an $\mb{N}^m$-\PMlinkname{graded}{GradedAlgebra} $k$-algebra, and let $M$ be a $\Z^m$-graded $R$-module.
+
+Let $\mathcal{H}(R_+)$ be the homogeneous union of the irrelevant ideal of $R$.
+
+A \emph{partial homogeneous system of parameters} for $M$ is a finite sequence of elements $\theta_1, \theta_2, \ldots, \theta_r\in\mathcal{H}(R_+)$ such that 
+
+\begin{align*}
+\dim\left(M/\left(\sum_{i=1}^r \theta_iM\right)\right)=\dim(M)-r,
+\end{align*}
+
+where $\dim$ gives the Krull dimension.
+
+A (\PMlinkescapetext{complete}) \emph{homogeneous system of parameters} is a partial homogeneous system of parameters such that $r=\dim(M)$.
+
+A sequence $\theta_1,\ldots,\theta_r\in\mathcal{H}(R_+)$ is a \emph{\PMlinkescapetext{homogeneous} $M$-sequence} if for all $i$ with $0\leq i<r$, we have that $\theta_{i+1}$ is not a zero-divisor in 
+
+\begin{align*}
+M/\left(\sum_{j=1}^i \theta_iM\right).
+\end{align*}
+
+Finally, view $M$ as being $\Z$-graded by using any specialization of the above $\Z^m$-grading.  Then we define the \emph{depth} of $M$ to be the length of the longest homogeneous $M$-sequence.
+
+\begin{thebibliography}{9}
+\bibitem{Stan} Richard P. Stanley, {\em Combinatorics and Commutative Algebra}, Second edition, Birkhauser Press.  Boston, MA.  1986.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

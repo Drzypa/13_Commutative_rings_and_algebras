@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PrimeIdealFactorizationIsUnique}
+\pmcreated{2013-03-22 18:34:24}
+\pmmodified{2013-03-22 18:34:24}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{prime ideal factorization is unique}
+\pmrecord{9}{41297}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13A15}
+\pmclassification{msc}{13F05}
+%\pmkeywords{prime ideal}
+%\pmkeywords{invertible ideal}
+\pmrelated{DedekindDomain}
+\pmrelated{FractionalIdeal}
+\pmrelated{PrimeIdeal}
+\pmrelated{FundamentalTheoremOfIdealTheory}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+
+
+\begin{document}
+\PMlinkescapeword{invertible}
+\PMlinkescapeword{integral}
+\PMlinkescapeword{prime factors}
+The following theorem shows that the decomposition of an (integral) invertible ideal into its prime factors is unique, if it exists. This applies to the ring of integers in a number field or, more generally, to any Dedekind domain, in which every nonzero ideal is invertible.
+
+\begin{theorem*}
+Let $I$ be an invertible ideal in an integral domain $R$, and that
+\begin{equation*}
+I=\mathfrak{p}_1\mathfrak{p}_2\cdots\mathfrak{p}_m=\mathfrak{q}_1\mathfrak{q}_2\cdots\mathfrak{q}_n
+\end{equation*}
+are two factorizations of $I$ into a product of prime ideals. Then $m=n$ and, up to reordering of the factors, $\mathfrak{p}_k=\mathfrak{q}_k$ ($k=1,2,\ldots,n$).
+\end{theorem*}
+
+Here we allow the case where $m$ or $n$ is zero, in which case such an empty product is taken to be the full ring $R$.
+
+\begin{proof}
+We use induction on $m+n$. First, the case with $m+n=0$ is trivial, so suppose that $m+n>0$.
+As the set of prime ideals $\mathfrak{p}_k$, $\mathfrak{q}_k$ is partially ordered by inclusion, there must be a minimal element. After reordering, without loss of generality we may suppose that it is $\mathfrak{p}_1$. Then
+\begin{equation*}
+\mathfrak{q}_1\mathfrak{q}_2\cdots\mathfrak{q}_n\subseteq\mathfrak{p}_1,
+\end{equation*}
+so $n\ge 1$. Furthermore, as $\mathfrak{p}_1$ is prime, this implies that $\mathfrak{q}_k\subseteq\mathfrak{p}_1$ for some $k$. After reordering the factors, we can take $k=1$, so that $\mathfrak{q}_1\subseteq\mathfrak{p}_1$.
+
+As $\mathfrak{p}_1$ is minimal among the prime factors, we have $\mathfrak{q}_1=\mathfrak{p}_1$. Also, $\mathfrak{p}_1$ is a factor of the invertible ideal $I$ and so is itself invertible. Therefore, it can be cancelled from the products,
+\begin{equation*}
+\mathfrak{p}_2\cdots\mathfrak{p}_m=\mathfrak{q}_2\cdots\mathfrak{q}_n.
+\end{equation*}
+The induction hypothesis gives $m=n$ and, after reordering, $\mathfrak{p}_k=\mathfrak{q}_k$ for $k=2,\ldots,n$.
+\end{proof}
+
+%%%%%
+%%%%%
+\end{document}

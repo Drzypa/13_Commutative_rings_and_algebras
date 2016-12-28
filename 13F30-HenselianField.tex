@@ -1,0 +1,181 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HenselianField}
+\pmcreated{2013-03-22 13:28:37}
+\pmmodified{2013-03-22 13:28:37}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{henselian field}
+\pmrecord{9}{34047}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13F30}
+\pmclassification{msc}{13A18}
+\pmclassification{msc}{11R99}
+\pmclassification{msc}{12J20}
+%\pmkeywords{hensel}
+%\pmkeywords{valuation}
+%\pmkeywords{non archimedean}
+\pmrelated{Valuation}
+\pmrelated{ValuationDomainIsLocal}
+\pmrelated{ValuationRingOfAField}
+\pmdefines{valuation ring}
+\pmdefines{residue field}
+\pmdefines{residue class field}
+\pmdefines{Hensel property}
+\pmdefines{henselian}
+\pmdefines{henselisation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\usepackage{amssymb}
+\usepackage{eufrak}
+\usepackage[dvips]{epsfig,graphics}
+\usepackage{graphicx,psfrag}
+
+% Theorems
+
+\newtheorem{df}{Definition}[section] 
+\newtheorem{tm}[df]{Theorem} 
+\newtheorem{lm}[df]{Lemma} 
+\newtheorem{crl}[df]{Corollary} 
+\newtheorem{pp}[df]{Proposition}
+
+% Spelling issues
+
+\def\centre{\center}
+
+% Textrm commands
+% \def\bugger{{\rm bugger}}
+
+\def\Int{{\rm Int}_{k,C}}
+\def\Intn{{\rm Int}_{k,C}^{n}}
+\def\acl{{\rm acl}}
+\def\ch{{\rm char}}
+\def\dcl{{\rm dcl}}
+\def\dom{{\rm dom}}
+\def\elt{{\rm elt}}
+\def\eut{{\rm eut}}
+\def\fiber{{\rm fib}}
+\def\germ{{\rm germ}}
+\def\graph{{\rm graph}}
+\def\gr{{\rm grd}}
+\def\ilt{{\rm ilt}}
+\def\lit{{\rm ilt}}
+\def\iut{{\rm iut}}
+\def\lex{{\rm lex}}
+\def\mo{{\rm m.o.}}
+\def\rad{{\rm rad}}
+
+\def\red{{\rm red}}
+\def\rex{{\rm rex}}
+\def\rcl{{\rm rcl}}
+\def\tp{{\rm tp}}
+
+\def\Aff{{\rm Aff}}
+\def\Hom{{\rm Hom}}
+\def\Res{{\rm Res}}
+\def\Gl{{\rm Gl}}
+
+% Math frac commands
+
+\newcommand{\ma}{\mathfrak{A}}
+\newcommand{\mb}{\mathfrak{B}}
+\newcommand{\mc}{\mathfrak{C}}
+\newcommand{\md}{\mathfrak{D}}
+
+% Other commands
+
+\newcommand{\acf}{ACF_{val}}
+\newcommand{\bm}{\begin{displaymath}}
+\newcommand{\cl}{\bf{d}}
+\newcommand{\fp}{f^{\prime}}
+\newcommand{\gda}{G_{D}^{A}}
+\newcommand{\gind}{\downarrow^{g}}
+\newcommand{\op}{\bf{o}}
+\newcommand{\half}{{\tiny \begin{array}{l}1 \\ \overline{2}\end{array}}}
+\def\isom{\simeq}
+\newcommand{\mgb}{\mathbf{M}}
+\newcommand{\nin}{\not\in}
+\def\nom{\vartriangleleft}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\rcf}{RCVF_{G}}
+\newcommand{\real}{\textrm{real}}
+\newcommand{\rk}{{\bf Remark:}}
+\newcommand{\sequ}{\left< x_{n}:x<\omega \right>}
+\newcommand{\sq}{ $\square$}
+\newcommand{\xb}{\overline{x}}
+
+\newcommand{\Aut}{\textrm{Aut}}
+\newcommand{\PR}{^{\prime}} 
+\newcommand{\RS}{\mathbf{R}^{\star}} 
+\newcommand{\LG}{L_{4}}
+\newcommand{\RR}{\mathbf{R}}  
+\newcommand{\RA}{\rightarrow}
+
+\newcommand{\cla}[1]{\lceil #1 \rceil}
+
+%%
+\DeclareMathOperator{\res}{res}
+\newcommand{\val}{|\!\cdot\!|}
+\begin{document}
+Let $\val$ be a non-archimedean valuation on a field $K$.  Let
+$V=\{x:|x|\le 1\}$.  Since $\val$ is ultrametric, $V$ is closed under
+addition and in fact an additive group.  The other valuation axioms
+ensure that $V$ is a ring.  We call $V$ the \emph{valuation ring} of
+$K$ with respect to the valuation $\val$.  Note that the field of
+fractions of $V$ is $K$.
+
+The set $\mu=\{x:|x|<1\}$ is a maximal ideal of $V$.  The factor
+$R:=V/\mu$ is called the \emph{residue field} or the \emph{residue
+class field}.
+
+The map $\res:V \to V/\mu$ given by $x \mapsto x+\mu$ is called the
+\emph{residue map}. We extend the definition of the residue map to
+sequences of elements from $V$, and hence to $V[X]$ so that if $f(X)
+\in V[X]$ is given by $\sum_{i \leq n} a_{i}X^{i}$ then $\res(f) \in
+R[X]$ is given by $\sum_{i \leq n} \res(a{i})X^{i}$.
+
+\bigskip
+
+\par\noindent{\bf Hensel property:} Let $f(x) \in V[x]$. Suppose
+$\res(f)(x)$ has a simple root $e \in k$. Then $f(x)$ has a root $e\PR
+\in V$ and $\res(e\PR)=e$.
+
+\medskip
+
+Any valued field satisfying the Hensel property is called
+\emph{henselian}. The completion of a non-archimedean valued field $K$
+with respect to the valuation (cf. constructing the reals from the
+rationals as the completion with respect to the standard metric) is a
+henselian field.
+
+Every non-archimedean valued field $K$ has a unique (up to
+isomorphism) smallest henselian field $K^h$ containing it. We call
+$K^h$ the \emph{henselisation} of $K$.
+
+%%%%%
+%%%%%
+\end{document}

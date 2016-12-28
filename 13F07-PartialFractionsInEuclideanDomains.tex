@@ -1,0 +1,144 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PartialFractionsInEuclideanDomains}
+\pmcreated{2013-03-22 15:40:18}
+\pmmodified{2013-03-22 15:40:18}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{partial fractions in Euclidean domains}
+\pmrecord{4}{37612}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13F07}
+\pmsynonym{partial fraction decomposition in Euclidean domains}{PartialFractionsInEuclideanDomains}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{enumerate}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\defnterm}[1]{\emph{#1}}
+
+\newtheorem{thm}{Theorem}
+\begin{document}
+This entry states and proves the existence of partial fraction decompositions
+on an Euclidean domain.
+
+In the following, we use $\nu$ to denote the Euclidean valuation function
+of an Euclidean domain $E$, with the convention that $\nu(0) = -\infty$.
+
+For a gentle introduction:
+\begin{enumerate}
+\item
+See \PMlinkname{partial fractions of fractional numbers}{PartialFractions} for the case when $E$ consists of the
+integers and $\nu(k) = \abs{k}$
+for $k \neq 0$.
+\item
+See partial fractions of expressions for the case when $E$ 
+consists of polynomials over the complex field,
+with $\nu(p)$ being the degree of the polynomial $p$.
+\item
+See partial fractions for polynomials for the case when $E$ is
+the ring of polynomials over any field, and $\nu$ is the degree
+of polynomials.
+\end{enumerate}
+
+\begin{thm}
+\label{thm:rel-prime}
+Let $p$, $q_1 \neq 0$ and $q_2 \neq 0$ be elements of an Euclidean domain $E$,
+with $q_1$ and $q_2$ be relatively prime.
+Then there exist $\alpha_1$ and $\alpha_2$ in $E$
+such
+that
+\[
+\frac{p}{q_1 \, q_2} = \frac{\alpha_1}{q_1} + \frac{\alpha_2}{q_2}\,.
+\]
+\begin{proof}
+By the Euclidean algorithm, we can obtain elements $s_1$ and $s_2$ in $E$
+such that
+\[
+1 = s_1 \, q_1 + s_2 \, q_2\,.
+\]
+Then
+\[
+\frac{p}{q_1 \, q_2} = \frac{p \, s_2 }{q_1} + \frac{p \, s_1 }{q_2}\,,
+\]
+so we can take $\alpha_1 = p \, s_2$ and $\alpha_2 = p \, s_1$.
+\end{proof}
+\end{thm}
+
+\begin{thm}
+\label{thm:powers}
+Let $p$ and $q \neq 0$ be elements of an Euclidean domain $E$,
+and $n$ be any positive integer.
+Then there exist elements
+$\alpha_1, \dotsc, \alpha_n, \beta$ in $E$ such that
+\begin{equation*}
+\frac{p}{q^n} = \beta + \frac{\alpha_1}{q} + \frac{\alpha_2}{q^2} + \dotsb + \frac{\alpha_n}{q^n}\,, \quad
+\nu (\alpha_j) < \nu (q)\,.
+\end{equation*}
+
+\begin{proof}
+Let $r_0 = p$.
+Iterating through $k = 1, \dotsc, n$ in order, 
+using the division algorithm, 
+we can find elements $r_k$ and $s_k$
+such that
+\[
+r_{k-1} = r_k \, q + s_k\,, \quad \nu (s_k) < \nu (q)\,.
+\]
+Then
+\begin{align*}
+p = r_0 &= r_1 \, q + s_1 \\
+&= (r_2 q + s_2) \, q + s_1 \\
+&= \hdots \\
+&= r_n \, q^n + s_n \, q^{n-1} + s_{n-1} \, q^{n-2} + \dotsb + s_2 \, q + s_1 \\
+\frac{p}{q^n} &= r_n + \frac{s_n}{q} + \frac{s_{n-1}}{q^2} + \dotsb + \frac{s_2}{q^{n-1}} + \frac{s_1}{q^n}\,.
+\end{align*}
+So set $\beta = r_n$ and $\alpha_j = s_{n-j + 1}$.
+\end{proof}
+\end{thm}
+
+\begin{thm}
+\label{thm:partial-fractions}
+Let $p$ and $q \neq 0$ be elements of an Euclidean domain $E$.
+Let $q = \phi_1^{n_1} \, \phi_2^{n_2} \, \dotsb \, \phi_k^{n_k}$
+be a factorization of $q$ to prime factors $\phi_i$.
+Then there exist elements $\alpha_{ij}, \beta$ in $E$
+such
+that
+\begin{equation*}
+\frac{p}{q} = \beta + \sum_{i=1}^k \sum_{j=1}^{n_i} \frac{\alpha_{ij}}{\phi_i^j}\,, \quad 
+\nu (\alpha_{ij}) < \nu (\phi_i)\,.
+\end{equation*}
+
+\begin{proof}
+Apply Theorem \ref{thm:rel-prime} inductively to obtain
+elements $s_i$ in $E$ such that
+\[
+\frac{p}{q} = \sum_{i=1}^k \frac{s_i}{\phi_i^{n_i}}
+\]
+(the factors $\phi_i$ are relatively prime).
+Then apply Theorem \ref{thm:powers} to obtain elements
+$\alpha_{ij}$ and $\beta_i$ in $E$ such that
+\[
+\frac{s_i}{\phi_i^{n_i}} = \beta_i + \sum_{j=1}^{n_i} \frac{\alpha_{ij}}{\phi_i^j}
+\]
+with $\nu (\alpha_{ij}) < \nu (\phi_i)$.
+Take $\beta = \beta_1 + \dotsb + \beta_k$.
+\end{proof}
+\end{thm}
+%%%%%
+%%%%%
+\end{document}

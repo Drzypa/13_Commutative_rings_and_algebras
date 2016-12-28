@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfFiniteExtensionsOfDedekindDomainsAreDedekind}
+\pmcreated{2013-03-22 18:35:44}
+\pmmodified{2013-03-22 18:35:44}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{proof of finite extensions of Dedekind domains are Dedekind}
+\pmrecord{4}{41325}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13A15}
+\pmclassification{msc}{13F05}
+%\pmkeywords{Dedekind domain}
+%\pmkeywords{finite extension}
+%\pmkeywords{separable}
+%\pmkeywords{purely inseparable}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+
+
+\begin{document}
+Let $R$ be a Dedekind domain with field of fractions $K$. If $L/K$ is a finite extension of fields and $A$ is the integral closure of $R$ in $L$, then we show that $A$ is also a Dedekind domain.
+
+We procede by splitting the proof up into the separable and purely inseparable cases. Letting $F$ consist of all elements of $L$ which are separable over $K$, then $F/K$ is a separable extension and $L/F$ is a purely inseparable extension.
+
+First, the integral closure $B$ of $R$ in $F$ is a Dedekind domain (see proof of finite separable extensions of Dedekind domains are Dedekind). Then, as $A$ is integrally closed and contains $B$, it is  equal to the integral closure of $B$ in $L$ and, therefore, is a Dedekind domain (see proof of finite inseparable extensions of Dedekind domains are Dedekind).
+%%%%%
+%%%%%
+\end{document}

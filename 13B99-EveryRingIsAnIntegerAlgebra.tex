@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EveryRingIsAnIntegerAlgebra}
+\pmcreated{2013-03-22 14:47:47}
+\pmmodified{2013-03-22 14:47:47}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{every ring is an integer algebra}
+\pmrecord{5}{36449}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13B99}
+\pmclassification{msc}{20C99}
+\pmclassification{msc}{16S99}
+\pmrelated{GeneralAssociativity}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $R$ be a ring.  Then $R$ is also an algebra over the ring of integers if we define the action of $\mathbb{Z}$ on $R$ by the following rules:
+ \[0 \cdot x = 0\]
+ \[(n + 1) \cdot x = n \cdot x + x\]
+ \[(-n) \cdot x = -(n \cdot x)\]
+In other words, the action of a positive integer $n$ on $x$ is to add $x$ to itself $n$ times and the action of a negative integer $n$ on $x$ is to subtract $x$ to itself $n$ times.
+%%%%%
+%%%%%
+\end{document}

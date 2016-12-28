@@ -1,0 +1,95 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PositiveCone}
+\pmcreated{2013-03-22 14:46:54}
+\pmmodified{2013-03-22 14:46:54}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{positive cone}
+\pmrecord{10}{36430}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13J25}
+\pmclassification{msc}{12D15}
+\pmrelated{PositivityInOrderedRing}
+\pmrelated{FormallyRealField}
+\pmdefines{pre-positive cone}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+%\newcommand{\qed}{\nobreak \ifvmode \relax \else
+%      \ifdim\lastskip<1.5em \hskip-\lastskip
+%     \hskip1.5em plus0em minus0.5em \fi \nobreak
+%     \vrule height0.75em width0.5em depth0.25em\fi}
+\begin{document}
+\PMlinkescapeword{closed}
+
+Let $R$ be a commutative ring with 1.  A subset $P$ of $R$ is called a \emph{pre-positive cone} of $R$ provided that 
+\begin{enumerate}
+\item
+$P+P\subseteq P$ ($P$ is additively closed)
+\item
+$P\cdot P\subseteq P$ ($P$ is multiplicatively closed)
+\item
+$-1\notin P$
+\item
+$\operatorname{sqr}(R):=\lbrace r^2\mid r\in R\rbrace \subseteq P.$
+\end{enumerate}
+As it turns out, a field endowed with a pre-positive cone has an order structure.  The field is called a \PMlinkname{formally real}{FormallyRealField}, orderable, or ordered field.  Before defining what this ``order'' is, let's do some preliminary work.  Let $P_0$ be a pre-positive cone of a field $F$.  By Zorn's Lemma, the set of pre-positive cones extending $P_0$ has a maximal element $P$.  It can be shown that $P$ has two additional properties:
+\begin{enumerate}
+\item[5.]
+$P\cup (-P)=F$
+\item[6.]
+$P\cap (-P)=(0).$
+\end{enumerate}
+\begin{proof}  First, suppose there is $a\in F-(P\cup (-P))$.  Let $\overline{P}=P+Pa$.  Then $a\in\overline{P}$ and so $P$ is strictly contained in $\overline{P}$.  Clearly, $\operatorname{sqr}(F)\subseteq \overline{P}$ and $\overline{P}$ is easily seen to be additively closed.  Also, $\overline{P}$ is multiplicatively closed as the equation $(p_1+q_1a)(p_2+q_2a)=(p_1p_2+q_1q_2a^2)+(p_1q_2+q_1p_2)a$ demonstrates.  Since $P$ is a maximal and $\overline{P}$ properly contains $P$, $\overline{P}$ is not a pre-positive cone, which means $-1\in \overline{P}$.  Write $-1=p+qa$.  Then $q(-a)=p+1\in P$.  Since $q\in P$, $1/q=q(1/q)^2\in P$, $-a=(1/q)(p+1)\in P$, contradicting the assumption that $a\notin -P$.  Therefore, $P\cup (-P)=F$.
+
+For the second part, suppose $a\in P\cap (-P)$.  Since $a\in -P$, $-a\in P$.  If $a\neq 0$, then $-1=a(-a)(1/a)^2\in P$, a contradiction. 
+\end{proof}
+
+A subset $P$ of a field $F$ satisfying conditions 1, 2, 5 and 6 is called a \emph{positive cone} of $F$.  
+A positive cone is a pre-positive cone.  If $a\in F$, then either $a\in P$ or $-a\in P$.  In either case, $a^2\in P$.  
+Next, if $-1\in P$, then $1\in -P$.  But $1=1^2\in P$, we have $1\in P\cap (-P)$, contradicting Condition 6 of $P$. 
+
+Now, define a binary relation $\leq$, on $F$ by: $$a\leq b\Longleftrightarrow b-a\in P$$
+It is not hard to see that $\leq$ is a total order on $F$.  In addition, with the additive and multiplicative structures on $F$, we also have the 
+following two rules:
+\begin{enumerate}
+\item
+$a\leq b \Rightarrow a+c\leq b+c$
+\item
+$0\leq a$ and $0\leq b\Rightarrow 0\leq ab$.
+\end{enumerate}
+Thus, $F$ is a field ordered by $\leq$.
+
+\textbf{Remark}.  Positive cones may be defined for more general ordered algebraic structures, such as partially ordered groups, or partially ordered rings.
+
+
+\begin{thebibliography}{99}
+\bibitem{ap} A. Prestel, \emph{Lectures on Formally Real Fields}, Springer, 1984
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

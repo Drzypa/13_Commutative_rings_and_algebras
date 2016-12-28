@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ZeroOfPolynomial}
+\pmcreated{2013-03-22 18:19:50}
+\pmmodified{2013-03-22 18:19:50}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{zero of polynomial}
+\pmrecord{8}{40962}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13P05}
+\pmclassification{msc}{11C08}
+\pmclassification{msc}{12E05}
+%\pmkeywords{zero}
+%\pmkeywords{order}
+%\pmkeywords{simple}
+\pmrelated{PolynomialFunction}
+\pmrelated{ZerosAndPolesOfRationalFunction}
+\pmdefines{zero of polynomial}
+\pmdefines{order of zero}
+\pmdefines{order}
+\pmdefines{simple zero}
+\pmdefines{simple}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Let $R$ be a subring of a commutative ring $S$.\, If $f$ is a polynomial in $R[X]$, it defines an evaluation homomorphism from $S$ to $S$.\, Any element $\alpha$ of $S$ satisfying
+$$f(\alpha) \;=\; 0$$
+is a {\em zero of the polynomial} $f$.
+
+If $R$ also is equipped with a non-zero unity, then the polynomial $f$ is in $S[X]$ divisible by the binomial 
+\,$X\!-\!\alpha$ (cf. the factor theorem).\, In this case, if $f$ is divisible by $(X\!-\!\alpha)^n$ but not by 
+$(X\!-\!\alpha)^{n+1}$, then $\alpha$ is a zero of the \emph{order} $n$ of the polynomial $f$.\, If this order is 1, then $\alpha$ is a \emph{simple zero} of $f$.
+
+For example, the real number $\sqrt{2}$ ($\in \mathbb{R}$) is a zero of the polynomial $X^2\!-\!2$ of the polynomial ring $\mathbb{Q}[X]$.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BilinearMap}
+\pmcreated{2013-03-22 15:35:47}
+\pmmodified{2013-03-22 15:35:47}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{bilinear map}
+\pmrecord{11}{37510}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13C99}
+\pmsynonym{bilinear function}{BilinearMap}
+\pmsynonym{bilinear operation}{BilinearMap}
+\pmsynonym{bilinear mapping}{BilinearMap}
+\pmsynonym{bilinear operator}{BilinearMap}
+\pmsynonym{bilinear pairing}{BilinearMap}
+\pmsynonym{pairing}{BilinearMap}
+\pmrelated{Multilinear}
+\pmrelated{BilinearForm}
+\pmrelated{ScalarMap}
+\pmdefines{bilinear}
+
+
+\begin{document}
+\PMlinkescapeword{operation}
+
+Let $R$ be a ring, and let $M$, $N$ and $P$ be modules over $R$.
+A function $f\colon M\times N\to P$
+is said to be a \emph{bilinear map}
+if for each $b\in M$ the function $h\colon N\to P$
+defined by $h(y)=f(b,y)$ for all $y\in N$ is \PMlinkname{linear}{LinearTransformation}
+(that is, an $R$-module homomorphism),
+and for each $c\in N$ the function $g\colon M\to P$
+defined by $g(x)=f(x,c)$ for all $x\in M$ is linear.
+Sometimes we may say that the function is \emph{$R$-bilinear},
+\PMlinkescapetext{in order to make the base ring clear}.
+
+A common case is a bilinear map $V\times V\to V$,
+where $V$ is a vector space over a field $K$;
+the vector space with this operation then forms an algebra over $K$.
+
+If $R$ is a commutative ring, then every $R$-bilinear map $M\times N\to P$
+corresponds in a natural way to a linear map $M\otimes N\to P$,
+where $M\otimes N$ is the tensor product of $M$ and $N$ (over $R$).
+%%%%%
+%%%%%
+\end{document}

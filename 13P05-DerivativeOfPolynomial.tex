@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivativeOfPolynomial}
+\pmcreated{2013-03-22 18:20:02}
+\pmmodified{2013-03-22 18:20:02}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{derivative of polynomial}
+\pmrecord{12}{40966}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13P05}
+\pmclassification{msc}{11C08}
+\pmclassification{msc}{12E05}
+\pmrelated{DerivativesByPureAlgebra}
+\pmrelated{PolynomialFunction}
+\pmrelated{Multiplicity}
+\pmrelated{DiscriminantOfAlgebraicNumber}
+\pmdefines{derivative of the polynomial}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Let $R$ be an arbitrary commutative ring.\, If
+$$f(X) \,:=\, \sum_{i=1}^na_iX^i$$
+is a polynomial in the ring $R[X]$, one can form in a polynomial ring \,$R[X,\,Y]$\, the polynomial
+$$f(X\!+\!Y) \,=\, \sum_{i=1}^na_i(X\!+\!Y)^i.$$
+Expanding this by the \PMlinkname{powers}{GeneralAssociativity} of $Y$ yields uniquely the form
+\begin{align}
+f(X\!+\!Y) \,:=\, f(X)+f_1(X)\,Y+f_2(X,\,Y)\,Y^2,
+\end{align}
+where\, $f_1(X) \in R[X]$\, and\, $f_2(X,\,Y) \in R[X,\,Y]$.
+
+We define the polynomial $f_1(X)$ in (1) the {\em derivative of the polynomial} $f(X)$ and denote it by $f'(X)$ or 
+$\displaystyle\frac{df}{dX}$.\\
+
+It is apparent that this algebraic definition of derivative of polynomial is in harmony with the definition of \PMlinkname{derivative}{Derivative2} of analysis when $R$ is $\mathbb{R}$ or $\mathbb{C}$; then we identify substitution homomorphism and polynomial function.\\
+
+It is easily shown the linearity of the derivative of polynomial and the product rule
+$$(fg)' = f'g+g'f$$
+with its generalisations.\, Especially:
+$$(X^n)' = nX^{n-1} \quad\mbox{for}\;\; n = 1,\,2,\,3,\,\ldots$$\\
+
+\textbf{Remark.}\; The polynomial ring $R[X]$ may be thought to be a subring of $R[[X]]$, the ring of formal power series in $X$.\, The \PMlinkname{derivatives defined in}{FormalPowerSeries} $R[[X]]$ extend the concept of derivative of polynomial and obey \PMlinkescapetext{similar} laws.\\
+
+If we have a polynomial\, $f \in R\,[X_1,\,X_2,\,\ldots,\,X_m]$,\, we can analogically define the {\em partial derivatives} of $f$, denoting them by $\displaystyle\frac{\partial f}{\partial X_i}$.\, Then, e.g. the ``\PMlinkname{Euler's theorem on homogeneous functions}{EulersTheoremOnHomogeneousFunctions}'' 
+$$X_1\frac{\partial f}{\partial X_1}+X_2\frac{\partial f}{\partial X_2}+\ldots+X_m\frac{\partial f}{\partial X_m}
+\;=\; nf$$
+is true for a homogeneous polynomial $f$ of degree $n$.
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

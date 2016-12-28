@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ZeroDivisor}
+\pmcreated{2013-03-22 12:49:59}
+\pmmodified{2013-03-22 12:49:59}
+\pmowner{cvalente}{11260}
+\pmmodifier{cvalente}{11260}
+\pmtitle{zero divisor}
+\pmrecord{9}{33157}
+\pmprivacy{1}
+\pmauthor{cvalente}{11260}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13G05}
+\pmrelated{CancellationRing}
+\pmrelated{IntegralDomain}
+\pmrelated{Unity}
+\pmdefines{left zero divisor}
+\pmdefines{right zero divisor}
+\pmdefines{regular element}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $a$ be a nonzero element of a ring $R$.
+
+The element $a$ is a {\em left zero divisor} if there exists a nonzero element $b \in R$ such that $a \cdot b = 0$.  Similarly, $a$ is a {\em right zero divisor} if there exists a nonzero element $c \in R$ such that $c \cdot a = 0$.
+
+The element $a$ is said to be a {\em zero divisor} if it is both a left and right zero divisor.  A nonzero element $a \in R$ is said to be a {\em regular element} if it is neither a left nor a right zero divisor.
+
+{\bf Example:}
+Let $R = \mathbb{Z}_6$.  Then the elements $2$ and $3$ are zero divisors, since $2 \cdot 3 \equiv 6 \equiv 0 \pmod 6$.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IntegralClosuresInSeparableExtensionsAreFinitelyGenerated}
+\pmcreated{2013-03-22 17:02:12}
+\pmmodified{2013-03-22 17:02:12}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{integral closures in separable extensions are finitely generated}
+\pmrecord{5}{39323}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13B21}
+\pmclassification{msc}{12F05}
+\pmrelated{IntegralClosureIsRing}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Proj}{\mathbb{P}}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\newcommand{\Alg}{\mathcal{O}}
+\newcommand{\ol}{\overline}
+\newcommand{\Leg}[2]{\left(\frac{#1}{#2}\right)}
+\newcommand{\Spec}[1]{\text{Spec }#1}
+\newcommand{\Pic}[1]{\text{Pic }#1}
+\newcommand{\kx}{k[x_1,\ldots,x_n]}
+\newcommand{\Order}[1]{\left\lvert #1 \right\rvert}
+\renewcommand{\frak}[1]{\mathfrak{#1}}
+\newcommand{\ip}[2]{(#1,#2)}
+\newcommand{\conv}[2]{(#1*#2)}
+\newcommand{\Hom}{\mathrm{Hom}}
+
+%% \theoremstyle{plain} %% This is the default
+\newtheorem{thm}{Theorem}
+
+\begin{document}
+The theorem below generalizes to arbitrary integral ring extensions (under certain conditions) the fact that the ring of integers of a number field is finitely generated over $\Ints$. The proof parallels the proof of the number field result.
+
+\begin{thm} Let $B$ be an integrally closed Noetherian domain with field of fractions $K$. Let $L$ be a finite separable extension of $K$, and let $A$ be the integral closure of $B$ in $L$. Then $A$ is a finitely generated $B$-module.
+\end{thm}
+
+\begin{proof}
+We first show that the \PMlinkname{trace}{Trace2} $Tr^L_K$ maps $A$ to $B$. Choose $u\in A$ and let $f=Irr(u,K)\in K[x]$ be the minimal polynomial for $u$ over $K$; assume $f$ is of degree $d$. Let the conjugates of $u$ in some splitting field be $u=a_1,\ldots,a_d$. Then the $a_i$ are all integral over $B$ since they satisfy $u$'s monic polynomial in $B[x]$. Since the coefficients of $F$ are polynomials in the $a_i$, they too are integral over $B$. But the coefficients are in $K$, and $B$ is integrally closed (in $K$), so the coefficients are in $B$. But $Tr^L_K(u)$ is just the coefficient of $x^{d-1}$ in $f$, and thus $Tr^L_K(u)\in B$. This proves the claim.
+
+Now, choose a basis $\omega_1,\ldots,\omega_d$ of $L/K$. We may assume $\omega_i\in A$ by multiplying each by an appropriate element of $B$. (To see this, let $Irr(\omega_i,K)\in K[x] = x^d+k_1x^{d-1}+\ldots+k_d$. Choose $b\in B$ such that $bk_i\in B\ \forall i$. Then $(b\omega)^d+bk_1(b\omega)^{d-1}+\ldots+b^dk_d=0$ and thus $b\omega\in A$). Define a linear map $\varphi:L\rightarrow K^d:a\mapsto(Tr^L_K (a\omega_1),\ldots,Tr^L_K (a\omega_d))$. 
+
+$\varphi$ is 1-1, since if $u\in\ker\varphi, u\neq 0$, then $Tr(uL)=0$. But $uL=L$, so $Tr^L_K$ is identically zero, which cannot be since $L$ is separable over $K$ (it is a standard result that separability is equivalent to nonvanishing of the trace map; see for example \cite{bib:morandi}, Chapter 8). 
+
+But $Tr^L_K:A\rightarrow B$ by the above, so $\varphi:A\hookrightarrow B^d$. Since $B$ is Noetherian, any submodule of a finitely generated module is also finitely generated, so $A$ is finitely generated as a $B$-module.
+\end{proof}
+
+\begin{thebibliography}{10}
+\bibitem{bib:morandi}
+P.~Morandi, \emph{Field and Galois Theory}, Springer, 2006.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

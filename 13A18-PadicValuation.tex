@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PadicValuation}
+\pmcreated{2013-03-22 14:55:50}
+\pmmodified{2013-03-22 14:55:50}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{p-adic valuation}
+\pmrecord{14}{36619}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13A18}
+\pmsynonym{$p$-adic valuation}{PadicValuation}
+\pmrelated{IndependenceOfPAdicValuations}
+\pmrelated{IntegralElement}
+\pmrelated{OrderValuation}
+\pmrelated{StrictDivisibility}
+\pmdefines{$p$-integral rational number}
+\pmdefines{normed $p$-adic valuation}
+\pmdefines{normed archimedean valuation}
+\pmdefines{dyadic valuation}
+\pmdefines{triadic valuation}
+\pmdefines{pentadic valuation}
+\pmdefines{heptadic valuation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $p$ be a positive prime number.\, For every non-zero rational number $x$ there exists a unique integer $n$ such that 
+             $$x = p^n\cdot\frac{u}{v}$$
+with some integers $u$ and $v$ indivisible by $p$.\, We define
+$$|x|_p :=
+ \begin{cases}
+   (\frac{1}{p})^n \quad \mathrm{when} \,\, x \neq 0, \\
+   0 \quad \mathrm{when} \,\, x=0,
+ \end{cases}
+$$
+obtaining a \PMlinkname{non-trivial}{TrivialValuation} non-archimedean valuation, the so-called $p$-{\em adic valuation}
+               $$|\cdot|_p:\,\mathbb{Q} \to \mathbb{R}$$
+of the field $\mathbb{Q}$.
+
+The value group of the $p$-adic valuation consists of all integer-powers of the prime number $p$.\, The valuation ring of the valuation is called the ring of the {\em p-integral rational numbers}; their denominators, when \PMlinkname{reduced}{Fraction} to lowest terms, are not divisible by $p$.
+
+The field of rationals has the {\em 2-adic, 3-adic, 5-adic, 7-adic} and so on valuations (which may be called, according to Greek, {\em dyadic, triadic, pentadic, heptadic} and so on).\, They all are \PMlinkname{non-equivalent}{EquivalentValuations} with each other.
+
+If one replaces the \PMlinkescapetext{base} number $\frac{1}{p}$ by any positive \PMlinkescapetext{constant} $\varrho$ less than 1, one obtains an \PMlinkname{equivalent}{EquivalentValuations} $p$-adic valuation; among these the valuation with\, $\varrho = \frac{1}{p}$\, is sometimes called the {\em normed $p$-adic valuation}.\, Analogously we can say that the absolute value is the normed archimedean valuation of $\mathbb{Q}$ which corresponds the infinite prime $\infty$ of $\mathbb{Z}$.
+
+The product of all normed valuations of $\mathbb{Q}$ is the trivial valuation\, $|\cdot|_\mathrm{tr}$,\, i.e.
+        $$\prod_{p\,\mathrm{prime}}|x|_p = |x|_\mathrm{tr} \quad 
+                            \forall x\in\mathbb{Q}.$$
+%%%%%
+%%%%%
+\end{document}

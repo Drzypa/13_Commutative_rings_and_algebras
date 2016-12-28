@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BoundOnTheKrullDimensionOfPolynomialRings}
+\pmcreated{2013-03-22 15:22:11}
+\pmmodified{2013-03-22 15:22:11}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{bound on the Krull dimension of polynomial rings}
+\pmrecord{9}{37196}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13C15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\mc}{\mathcal}
+\newcommand{\mb}{\mathbb}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\ol}{\overline}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\la}{\leftarrow}
+\newcommand{\La}{\Leftarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\nor}{\vartriangleleft}
+\newcommand{\Gal}{\text{Gal}}
+\newcommand{\GL}{\text{GL}}
+\newcommand{\Z}{\mb{Z}}
+\newcommand{\R}{\mb{R}}
+\newcommand{\Q}{\mb{Q}}
+\newcommand{\C}{\mb{C}}
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+\begin{document}
+If $A$ is a commutative ring, and $\operatorname{dim}$ denotes Krull dimension, then
+\begin{align*}
+\operatorname{dim}(A)+1\leq \operatorname{dim}(A[x])\leq 2\operatorname{dim}(A)+1.
+\end{align*}
+
+It is known (see \cite{Seid},\cite{Seid2}) that for any $k\geq 0$ and $n$ with $k+1\leq n\leq 2k+1$, there exists a ring $A$ such that $\dim A=k$ and $\dim A[x]=n$.
+
+\begin{thebibliography}{9}
+\bibitem[Seid]{Seid} A. Seidenberg, \emph{A note on the dimension theory of rings.} Pacific J. of Mathematics, Volume 3 (1953), 505-512.
+\bibitem[Seid2]{Seid2} A. Seidenberg, \emph{On the dimension theory of rings (II).} Pacific J. of Mathematics, Volume 4 (1954), 603-614.
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

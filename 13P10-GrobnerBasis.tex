@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GrobnerBasis}
+\pmcreated{2013-03-22 13:03:47}
+\pmmodified{2013-03-22 13:03:47}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{Gr\"obner basis}
+\pmrecord{28}{33470}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13P10}
+\pmdefines{monomial ordering}
+\pmdefines{Gr\"obner basis}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\supp}{\operatorname{supp}}
+\begin{document}
+{\bf Definition of monomial orderings and support}:\\
+Let $F$ be a field, and let $S$ be the set of monomials in $F[x_1,\ldots,x_n]$, the polynomial ring in $n$ indeterminates.
+A {\em monomial ordering} is a total ordering $\leq$ on $S$ which satisfies
+\begin{enumerate}
+\item $a \leq b$ implies that $ac \leq bc$ for all $a,b,c \in S$.
+\item $1 \leq a$ for all $a \in S$.
+\end{enumerate}
+
+In practice, for any $a=x_1^{a_1}x_2^{a_2}\cdots x_n^{a_n} \in F[x_1,\ldots,x_n]$, we associate to $a$ the string $(a_1,a_2,\ldots,a_n)$ and compare monomials by looking at orderings on these $n$-tuples.
+
+\textbf{Example.}
+An extremely prevalent example of a monomial ordering is given by the standard lexicographical ordering of strings.  Other examples include graded lexicographic ordering and graded reverse lexicographic ordering.
+
+Henceforth, assume that we have fixed a monomial ordering.    Define the {\em support} of $a$, denoted $\supp(a)$, to be the set of terms $x_i$ with $a_i\neq 0$.  Then define $M(a)=\max(\supp(a))$.
+
+{\bf A partial order on $F[x_1,\ldots,x_n]$}:\\
+We can extend our monomial ordering to a partial ordering on $F[x_1,\ldots,x_n]$ as follows:
+Let $a,b \in F[x_1,\ldots,x_n]$.  If $\supp(a) \neq \supp(b)$, we say that
+$a < b$ if $\max(\supp(a)-\supp(b)) < \max(\supp(b)-\supp(a))$.
+
+It can be shown that:
+\begin{enumerate}
+\item The relation defined above is indeed a partial order on $F[x_1,\ldots,x_n]$
+\item Every descending chain $p_1(x_1,\ldots,x_n) > p_2(x_1,\ldots,x_n) > \ldots$ with $p_i \in [x_1,\ldots,x_n]$ is finite.
+\end{enumerate}
+
+{\bf A division algorithm for $F[x_1,\ldots,x_n]$}:\\
+We can then formulate a division algorithm for $F[x_1,\ldots,x_n]$:\\
+Let $(f_1,\ldots,f_s)$ be an ordered $s$-tuple of polynomials, with $f_i \in F[x_1,\ldots,x_n]$.  Then for each $f \in F[x_1,\ldots,x_n]$, there exist $a_1,\ldots,a_s, r \in F[x_1,\ldots,x_n]$ with $r$ unique, such that
+\begin{enumerate}
+\item $f=a_1f_1+\cdots+a_sf_s+r$
+\item For each $i=1,\ldots,s$, $M(a_i)$ does not divide any monomial in $\supp(r)$.
+\end{enumerate}
+Furthermore, if $a_if_i \neq 0$ for some $i$, then $M(a_if_i) \leq M(f)$.\\
+%We denote the unique $r$ such that $b=aq+r$ by $R(b,a)$.\\
+
+{\bf Definition of Gr\"obner basis}:\\
+Let $I$ be a nonzero ideal of $F[x_1,\ldots,x_n]$.  A finite set $T \subset I$ of polynomials is a {\em Gr\"obner basis} for $I$ if for all $b \in I$ with $b \neq 0$ there exists $p \in T$ such that $M(p) \mid M(b)$.\\
+
+{\bf Existence of Gr\"obner bases}:\\
+Every ideal $I \subset k[x_1,\ldots,x_n]$ other than the zero ideal has a Gr\"obner basis.  Additionally, any Gr\"obner basis for $I$ is also a basis of $I$.
+%%%%%
+%%%%%
+\end{document}

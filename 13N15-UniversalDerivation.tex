@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UniversalDerivation}
+\pmcreated{2013-03-22 15:27:57}
+\pmmodified{2013-03-22 15:27:57}
+\pmowner{pbruin}{1001}
+\pmmodifier{pbruin}{1001}
+\pmtitle{universal derivation}
+\pmrecord{9}{37318}
+\pmprivacy{1}
+\pmauthor{pbruin}{1001}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13N15}
+\pmclassification{msc}{13N05}
+\pmsynonym{K\"ahler differentials}{UniversalDerivation}
+%\pmkeywords{derivation}
+\pmrelated{Derivation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+%\usepackage{amssymb}
+%\usepackage{amsmath}
+%\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $R$ be a commutative ring, and let $A$ be a commutative $R$-algebra.  A
+\emph{universal derivation} of $A$ over $R$ is defined to be an
+$A$-module $\Omega_{A/R}$ together with an $R$-linear derivation $d\colon                              
+A\to\Omega_{A/R}$, such that the following universal property holds:
+for every $A$-module $M$ and every $R$-linear derivation
+$\delta\colon A\to M$ there exists a unique $A$-linear map $f\colon\Omega_{A/R}\to M$ such that $\delta=f\circ d$.
+
+The universal property can be illustrated by a commutative diagram:
+$$
+\xymatrix{
+A \ar[r]^{d\ \ } \ar[dr]_\delta & \Omega_{A/R} \ar@![d]^f \cr
+& M
+}
+$$
+An $A$-module with this property can be constructed explicitly, so
+$\Omega_{A/R}$ always exists.  It is generated as an $A$-module by
+the set $\{dx:x\in A\}$, with the relations
+\begin{eqnarray*}
+d(ax+by)&=&a\,dx+b\,dy \\
+d(xy)&=&x\cdot dy+y\,dx
+\end{eqnarray*}
+for all $a,b\in R$ and $x,y\in A$.
+
+The universal property implies that $\Omega_{A/R}$ is unique up to
+a unique isomorphism.  The $A$-module $\Omega_{A/R}$ is often called
+the \emph{module of K\"ahler differentials}.
+%%%%%
+%%%%%
+\end{document}

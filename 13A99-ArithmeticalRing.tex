@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ArithmeticalRing}
+\pmcreated{2013-03-22 15:23:58}
+\pmmodified{2013-03-22 15:23:58}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{arithmetical ring}
+\pmrecord{8}{37237}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13A99}
+\pmrelated{QuotientOfIdeals}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+\begin{thmplain}
+If $R$ is a commutative ring, then the following three conditions are equivalent:
+\begin{itemize}
+ \item For all ideals $\mathfrak{a}$, $\mathfrak{b}$ and $\mathfrak{c}$ of $R$, one has\, $\mathfrak{a\cap(b+c) = (a\cap b)+(a\cap c)}$.
+ \item For all ideals $\mathfrak{a}$, $\mathfrak{b}$ and $\mathfrak{c}$ of $R$, one has\, $\mathfrak{a+(b\cap c) = (a+b)\cap(a+c)}$.
+ \item For each maximal ideal $\mathfrak{p}$ of $R$ the set of all ideals of $R_{\mathfrak{p}}$, the \PMlinkname{localisation}{Localization} of $R$ at\, $R\!\setminus\!\mathfrak{p}$,\, is totally ordered by set inclusion.
+\end{itemize}
+\end{thmplain}
+
+The ring $R$ satisfying the conditions of the theorem is called an {\em arithmetical ring}.
+%%%%%
+%%%%%
+\end{document}

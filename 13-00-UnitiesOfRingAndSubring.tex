@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UnitiesOfRingAndSubring}
+\pmcreated{2013-03-22 14:49:37}
+\pmmodified{2013-03-22 14:49:37}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{unities of ring and subring}
+\pmrecord{5}{36491}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13-00}
+\pmclassification{msc}{16-00}
+\pmclassification{msc}{20-00}
+\pmrelated{UnityOfSubring}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $R$ be a ring and $S$ a proper subring of it. \,Then there exists five cases in all concerning the possible unities of $R$ and $S$.
+\begin{enumerate}
+ \item $R$ and $S$ have a common unity.
+ \item $R$ has a unity but $S$ does not.
+ \item $R$ and $S$ both have their own non-zero unities but these are distinct.
+ \item $R$ has no unity but $S$ has a non-zero unity.
+ \item Neither $R$ nor $S$ have unity.
+\end{enumerate}
+\textbf{Note:} \, In the cases 3 and 4, the unity of the subring $S$ must be a zero divisor of $R$.
+
+\textbf{Examples}
+\begin{enumerate}
+ \item The ring $\mathbb{Q}$ and its subring $\mathbb{Z}$ have the common 
+unity 1.
+ \item The subring $S$ of even integers of the ring $\mathbb{Z}$ has no unity.
+ \item Let $S$ be the subring of all pairs $(a,\,0)$ of the ring 
+\,$R = \mathbb{Z}\times\mathbb{Z}$\, for which the operations ``$+$'' and ``$\cdot$'' are defined componentwise (i.e. \,$(a,\,b)+(c,\,d) = (a+c,\,b+d)$\, etc.). \,Then $S$ and $R$ have the unities $(1,\,0)$ and $(1,\,1)$, respectively.
+ \item Let $S$ be the subring of all pairs $(a,\,0)$ of the ring \,$R = \{(a,\,2b)|\,\,\,a\in\mathbb{Z}\,\land \,b\in\mathbb{Z}\}$ (operations componentwise). \,Now $S$ has the unity $(1,\,0)$ but $R$ has no unity.
+ \item Neither the ring $\{(2a,\,2b)|\,\,\,a,\,b\in\mathbb{Z}\}$ (operations componentwise) nor its subring consisting of the pairs $(2a,\,0)$ have unity.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

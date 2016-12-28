@@ -1,0 +1,153 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SchurPolynomial}
+\pmcreated{2013-03-22 16:56:17}
+\pmmodified{2013-03-22 16:56:17}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{Schur polynomial}
+\pmrecord{5}{39205}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13B25}
+\pmclassification{msc}{05E05}
+\pmdefines{Schur function}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\DeclareMathOperator{\sst}{sst}
+
+\usepackage[all,web]{xypic}
+
+% define commands here
+\def\drawsqlat{%
+\begin{xy}{
+0;<1.7pc,0pc>:<0pc,1.7pc>::
+\xylattice{0}{9}{0}{9}}
+\end{xy}}
+\def\drawsq{\ar@{-}c;c+(1,0)\ar@{-}c;c+(0,1)\ar@{-}c+(1,0);c+(1,1)\ar@{-}c+(0,1);c+(1,1)}
+\def\drawsqlabel#1{\save c+(0.5,0.5)*\txt<2pc>{#1} \restore}
+
+\newcommand{\ferrers}[9]{%
+\begin{renewcommand}{\latticebody}{%
+\ifnum\latticeA<#1 \ifnum\latticeB=9 \drawsq\fi\fi
+\ifnum\latticeA<#2 \ifnum\latticeB=8 \drawsq\fi\fi
+\ifnum\latticeA<#3 \ifnum\latticeB=7 \drawsq\fi\fi
+\ifnum\latticeA<#4 \ifnum\latticeB=6 \drawsq\fi\fi
+\ifnum\latticeA<#5 \ifnum\latticeB=5 \drawsq\fi\fi
+\ifnum\latticeA<#6 \ifnum\latticeB=4 \drawsq\fi\fi
+\ifnum\latticeA<#7 \ifnum\latticeB=3 \drawsq\fi\fi
+\ifnum\latticeA<#8 \ifnum\latticeB=2 \drawsq\fi\fi
+\ifnum\latticeA<#9 \ifnum\latticeB=1 \drawsq\fi\fi
+}
+\drawsqlat
+\end{renewcommand}
+}
+\begin{document}
+A \emph{Schur polynomial} is a special symmetric polynomial associated
+to a partition of an integer, or equivalently to a Young diagram.
+Schur polynomials also have a power series generalization, the
+\emph{Schur functions}.
+
+First we define some notation.  Let $\lambda$ be a partition of $n$,
+and let $T$ be a filling of the Young diagram for $\lambda$.  Then by
+$x^T$ we mean the monomial
+\[
+x^T = \prod_{i=1}^{\infty} x_i^{c_i(T)},
+\]
+where $c_i(T)$ is the number of times the number $i$ appears in the
+filling $T$.  Since $T$ only has finitely many boxes, the product is
+finite.  For example, let $\lambda = (3,3,2,2)$, and let $T$ be the
+filling
+\begin{center}
+\begin{renewcommand}{\latticebody}{%
+\ifnum\latticeA=1 \ifnum\latticeB=4 \drawsq\drawsqlabel{2} \fi\fi
+\ifnum\latticeA=2 \ifnum\latticeB=4 \drawsq\drawsqlabel{4} \fi\fi
+\ifnum\latticeA=3 \ifnum\latticeB=4 \drawsq\drawsqlabel{1} \fi\fi
+\ifnum\latticeA=1 \ifnum\latticeB=3 \drawsq\drawsqlabel{5} \fi\fi
+\ifnum\latticeA=2 \ifnum\latticeB=3 \drawsq\drawsqlabel{2} \fi\fi
+\ifnum\latticeA=3 \ifnum\latticeB=3 \drawsq\drawsqlabel{3} \fi\fi
+\ifnum\latticeA=1 \ifnum\latticeB=2 \drawsq\drawsqlabel{1} \fi\fi
+\ifnum\latticeA=2 \ifnum\latticeB=2 \drawsq\drawsqlabel{4} \fi\fi
+\ifnum\latticeA=1 \ifnum\latticeB=1 \drawsq\drawsqlabel{1} \fi\fi
+\ifnum\latticeA=2 \ifnum\latticeB=1 \drawsq\drawsqlabel{2} \fi\fi
+}
+\drawsqlat
+\end{renewcommand}
+\end{center}
+Notice that $1$ and $2$ each appear three times in the filling, while
+$3$, $4$, and $5$ each appear only once.  Thus $x^T = x_1^3 x_2^3 x_3
+x_4 x_5$.
+
+For convenience let us use $\sst(\lambda, n)$ to denote the collection
+of fillings of semi-standard tableaux with shape $\lambda$ by positive
+integers from $1$ to $n$.  Then we can define the \emph{Schur
+polynomial} $s_{\lambda}(x_1,\dots,x_n)$ to be the polynomial
+\[
+s_{\lambda}(x_1,\dots,x_n) = \sum_{T\in\sst(\lambda, n)} x^T.
+\]
+
+For example, take $n=5$ and consider the partition $\lambda = (1, 1,
+1)$ of $3$.  Then the Schur polynomial $s_{\lambda}(x_1,\dots, x_5)$
+is
+\[
+s_{(1,1,1)}(x_1,\dots,x_5) = \sum_{1\le i < j < k\le 5} x_i x_j x_k.
+\]
+Note that this is the elementary symmetric polynomial of degree 3 in
+the variables $x_1,\dots,x_5$.  In fact, $s_{(1^k)}(x_1,\dots,x_n)$ is
+always the elementary symmetric polynomial of degree $k$ in the
+variables $x_1,\dots,x_n$.  The polynomial $s_{(k)}(x_1,\dots,x_n)$ is 
+the complete symmetric polynomial of degree $k$ in $x_1,\dots,x_n$.
+
+To define Schur functions, we consider the set $\sst(\lambda)$ of all
+fillings of semi-standard tableaux with shape $\lambda$:
+\[
+\sst(\lambda) := \bigcup_{n\ge 1} \sst(\lambda, n).
+\]
+The \emph{Schur function} associated to the partition $\lambda$ is
+\[
+s_{\lambda}(\mathbf{x}) = \sum_{x\in\sst(\lambda)} x^T
+\]
+Thus the Schur functions are power series in infinitely many
+variables.  For example,
+\[
+s_{(1,1,1)}(\mathbf{x}) = \sum_{1\le i < j < k} x_i x_j x_k = x_1 x_2 x_3 + \dots + x_{14} x_{42} x_{132} + \dots.
+\]
+All Schur polynomials and Schur functions are symmetric functions.  In
+fact, the Schur polynomials of degree $n$ form a basis for the vector space of
+symmetric polynomials of degree $n$.
+
+\begin{thebibliography}{99}
+\bibitem{Fu1997}
+William~Fulton. \emph{Young tableaux: with applications to
+representation theory and geometry}. Cambridge University Press, 1997.
+
+\bibitem{Sa2001}
+Bruce~E.~Sagan. \emph{The symmetric group: representations,
+combinatorial algorithms, and symmetric functions}, 2nd ed. Springer,
+2001.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,31 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AlternativeProofThatAFiniteIntegralDomainIsAField}
+\pmcreated{2013-03-22 16:21:54}
+\pmmodified{2013-03-22 16:21:54}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{alternative proof that a finite integral domain is a field}
+\pmrecord{6}{38502}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13G05}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\begin{document}
+\begin{proof}
+Let $R$ be a finite integral domain and $a \in R$ with $a \neq 0$.  Since $R$ is finite, there exist positive integers $j$ and $k$ with $j<k$ such that $a^j=a^k$.  Thus, $a^k-a^j=0$.  Since $j<k$ and $j$ and $k$ are positive integers, $k-j$ is a positive integer.  Therefore, $a^j(a^{k-j}-1)=0$.  Since $a \neq 0$ and $R$ is an integral domain, $a^j \neq 0$.  Thus, $a^{k-j}-1=0$.  Hence, $a^{k-j}=1$.  Since $k-j$ is a positive integer, $k-j-1$ is a nonnegative integer.  Thus, $a^{k-j-1} \in R$.  Note that $a \cdot a^{k-j-1}=a^{k-j}=1$.  Hence, $a$ has a multiplicative inverse in $R$.  It follows that $R$ is a field.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

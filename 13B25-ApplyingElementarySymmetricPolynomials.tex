@@ -1,0 +1,108 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ApplyingElementarySymmetricPolynomials}
+\pmcreated{2013-03-22 19:10:07}
+\pmmodified{2013-03-22 19:10:07}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{applying elementary symmetric polynomials}
+\pmrecord{16}{42075}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Application}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13B25}
+\pmclassification{msc}{12E10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{exponent combinations}
+
+
+The method used in the proof of fundamental theorem of symmetric polynomials may be applied to concrete instances as follows.
+
+We assume the given a symmetric polynomial \,$P(x_1,\,x_2,\,\ldots,\,x_n) = P$\, of degree $d$ be \PMlinkname{homogeneous}{HomogeneousPolynomial}.\, Starting from the highest term of $P$ we form all products
+$$x_1^{\lambda_1}x_2^{\lambda_2}\cdots x_n^{\lambda_n}$$
+where 
+$$\lambda_1\;\ge\;\lambda_2\;\ge\;\ldots\ge\;\lambda_n\;\ge\;0 \quad \mbox{and} \quad
+  \lambda_1\!+\!\lambda_2\!+\ldots+\!\lambda_n \;=\; d.$$
+Then 
+\begin{align}
+P \;=\; Q(p_1,\,p_2,\,\ldots,\,p_n) \;=\; 
+\sum_im_ip_1^{\lambda_1-\lambda_2}p_2^{\lambda_2-\lambda_3}\cdots p_{n-1}^{\lambda_{n-1}-\lambda_n}p_n^{\lambda_n},
+\end{align}
+in which the coefficients $m_i$ are determined by giving some suitable values to the indeterminates $x_j$.\\
+
+\textbf{Example 1.}\, Express the polynomial \,$P = x_1^3x_2\!+\!x_1^3x_3\!+\!x_2^3x_1\!+\!x_2^3x_3\!+\!x_3^3x_1\!+\!x_3^3x_2$\, in the elementary symmetric polynomials
+\begin{align}
+p_1 \;=\; x_1\!+\!x_2\!+\!x_3, \quad p_2 \;=\; x_2x_3\!+\!x_3x_1\!+\!x_1x_2, \quad p_3 \;=\; x_1x_2x_3.
+\end{align}
+We have four \PMlinkescapetext{exponent combinations}
+$$4,\,0,\,0; \quad 3,\,1,\,0; \quad 2,\,2,\,0; \quad 2,\,1,\,1,$$
+for which the corresponding $p$-products of the sum (1) are
+$$p_1^4, \quad p_1^2p_2, \quad p_2^2, \quad p_1p_3,$$
+respectively.\, Apparently, the first one is out of the question.\, Therefore, clearly
+$$P \;=\; p_1^2p_2\!+\!ap_2^2\!+\!bp_1p_3.$$
+Using\, $x_1 = x_2 = 1$\, and\, $x_3 = 0$\, makes\, $p_1 = 2$,\, $p_2 = 1$\, and\, $p_3 = 0$, when
+$$P \;=\; 2 \;=\; 4\!+\!a\!+\!0,$$
+implying\, $a = -2$.\, Using similarly\, $x_1 = x_2 = x_3 = 1$\, we get\, $p_1 = p_2 = 3$,\, $p_3 = 1$, which give
+$$P \;=\; 6 \;=\; 27\!+\!9a\!+\!3b \;=\; 9\!+\!3b,$$
+yielding\, $b = -1$.\, Hence we have the result
+$$P \;=\; p_1^2p_2-2p_2^2-p_1p_3,$$
+i.e.
+$$x_1^3x_2\!+\!x_1^3x_3\!+\!x_2^3x_1\!+\!x_2^3x_3\!+\!x_3^3x_1\!+\!x_3^3x_2 
+\;=\; (x_1\!+\!x_2\!+\!x_3)^2(x_2x_3\!+\!x_3x_1\!+\!x_1x_2)-2(x_2x_3\!+\!x_3x_1\!+\!x_1x_2)^2
+-(x_1\!+\!x_2\!+\!x_3)x_1x_2x_3.$$\\
+
+
+\textbf{Example 2.}\, Let \,$P = x_1^4\!+\!x_2^4\!+\ldots+\!x_n^4$.\, If we suppose that\, $n \geqq 4$,\, the possible highest terms are
+$$x_1^4, \quad x_1^3x_2, \quad x_1^2x_2^2, \quad x_1^2x_2x_3, \quad x_1x_2x_3x_4$$
+whence we may write
+\begin{align}
+P \;=\; p_1^4\!+\!ap_1^2p_2\!+\!bp_2^2\!+\!cp_1p_3\!+\!dp_4.
+\end{align}
+For determining the coefficients, evidently we can put\, $x_5 = x_6 = \ldots = x_n = 0$\, and in \PMlinkescapetext{addition} as follows.\\
+$1^\circ$.\; $x_1 =1$,\, $x_2 = -1$,\, $x_3 = x_4 = 0$.\, Then we have\, $P = 2$,\, $p_1 = 0$,\, $p_2 = -1$,\, 
+$p_3 = p_4 = 0$.\, Thus (3) gives\, $b = 2$.\\
+$2^\circ$.\; $x_1 = x_2 = 1$,\, $x_3 = x_4 = -1$.\, Now\, $P = 4$,\, $p_1 = 0$,\, $p_2 = -2$,\, $p_3 =0$,\, $p_4 = 1$,\, whence (3) reads\, $4 = 4b\!+\!d = 8\!+\!d$,\, giving\, $d = -4$.\\
+$3^\circ$.\; $x_1 = x_2 = 1$,\, $x_3 = x_4 = 0$.\, We get\, $P = 2$,\, $p_1 = 2$,\, $p_2 = 1$,\, $p_3 = p_4 = 0$ .\, These yield\, $2 = 16\!+\!4a\!+\!b = 18\!+\!4a$,\, i.e.\, $a = -4$.\\
+$4^\circ$.\; $x_1 = x_2 = 2$,\, $x_3 = -1$,\, $x_4 = 0$.\, In this case,\, $P = 33$,\, $p_1 = 3$,\, $p_2 = 0$,\, 
+$p_3 = -4$,\, $p_4 = 0$,\, whence\, $33 = 81-12c$,\, or\, $c = 4$.\; Consequently, we obtain from (3) the result
+\begin{align}
+P \;=\; p_1^4\!-\!4p_1^2p_2\!+\!2p_2^2\!+\!4p_1p_3\!-\!4p_4.
+\end{align}
+Although it has been derived by supposing\, $n \geqq 4$ (= the degree of $P$), it holds without this supposition.\, One has only to see that e.g. in the case\, $n = 2$,\, one must substitute to (4) the values\, $p_3 = p_4 = 0$,\, which changes the \PMlinkescapetext{formula} to the form\, $P \;=\; p_1^4\!-\!4p_1^2p_2\!+\!2p_2^2.$
+
+
+
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

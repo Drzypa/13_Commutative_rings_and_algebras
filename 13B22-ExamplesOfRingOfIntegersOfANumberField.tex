@@ -1,0 +1,102 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExamplesOfRingOfIntegersOfANumberField}
+\pmcreated{2013-03-22 15:08:09}
+\pmmodified{2013-03-22 15:08:09}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{examples of ring of integers of a number field}
+\pmrecord{7}{36879}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13B22}
+\pmrelated{NumberField}
+\pmrelated{AlgebraicNumberTheory}
+\pmrelated{CanonicalBasis}
+\pmrelated{IntegralBasisOfQuadraticField}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{exa}{Example}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\begin{document}
+\begin{defn}
+Let $K$ be a number field. The ring of integers of $K$, usually denoted by $\mathcal{O}_K$, is the set of all elements $\alpha\in K$ which are roots of some monic polynomial with coefficients in $\Ints$, i.e. those $\alpha\in K$ which are integral over $\Ints$. In other words, $\mathcal{O}_K$ is the integral closure of $\Ints$ in $K$.
+\end{defn}
+
+\begin{exa}
+Notice that the only rational numbers which are roots of monic polynomials with integer coefficients are the integers themselves. Thus, the ring of integers of $\Rats$ is $\Ints$.
+\end{exa}
+
+\begin{exa}
+Let $\mathcal{O}_K$ denote the ring of integers of $K=\Rats(\sqrt{d})$, where $d$ is a square-free integer. Then:
+$$\mathcal{O}_K\cong \begin{cases}
+\Ints\oplus \frac{1+\sqrt{d}}{2}\Ints, \text{ if } d\equiv 1 \ \operatorname{mod}\ 4,\\
+\Ints\oplus \sqrt{d}\ \Ints, \text{ if } d\equiv 2,3
+\operatorname{mod}\ 4. \end{cases}
+$$
+In other words, if we let 
+$$\alpha = \begin{cases}
+\frac{1+\sqrt{d}}{2}, \text{ if } d\equiv 1 \ \operatorname{mod}\ 4,\\
+\sqrt{d}, \text{ if } d\equiv 2,3
+\operatorname{mod}\ 4. \end{cases}
+$$
+then
+$$\mathcal{O}_K=\{ n+m\alpha : n,m \in \Ints \}.$$
+\end{exa}
+
+\begin{exa}
+Let $K=\Rats(\zeta_n)$ be a cyclotomic extension of $\Rats$, where $\zeta_n$ is a primitive $n$th root of unity. Then the ring of integers of $K$ is $\mathcal{O}_K=\Ints[\zeta_n]$, i.e.
+$$\mathcal{O}_K=\{ a_0 +a_1\zeta_n +a_2\zeta_n^2+\ldots+a_{n-1}\zeta_n^{n-1} : a_i \in \Ints\}.$$
+\end{exa}
+
+\begin{exa}
+Let $\alpha$ be an algebraic integer and let $K=\Rats(\alpha)$. It is {\it not true in general} that $\mathcal{O}_K=\Ints[\alpha]$ (as we saw in Example $2$, for $d\equiv 1 \mod 4$).
+\end{exa}
+
+\begin{exa}
+Let $p$ be a prime number and let $F=\Rats(\zeta_p)$ be a cyclotomic extension of $\Rats$, where $\zeta_p$ is a primitive $p$th root of unity. Let $F^+$ be the maximal real subfield of $F$. It can be shown that:
+$$F^+=\Rats(\zeta_p+\zeta_p^{-1}).$$
+Moreover, it can also be shown that the ring of integers of $F^+$ is $\mathcal{O}_{F^+}=\Ints[\zeta_p+\zeta_p^{-1}]$. 
+\end{exa}
+%%%%%
+%%%%%
+\end{document}

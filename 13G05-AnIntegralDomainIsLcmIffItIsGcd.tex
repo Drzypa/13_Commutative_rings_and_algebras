@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AnIntegralDomainIsLcmIffItIsGcd}
+\pmcreated{2013-03-22 18:19:38}
+\pmmodified{2013-03-22 18:19:38}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{an integral domain is lcm iff it is gcd}
+\pmrecord{10}{40958}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13G05}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\newcommand{\GCD}{\operatorname{GCD}}
+\newcommand{\LCM}{\operatorname{LCM}}
+\begin{document}
+\begin{prop} Let $D$ be an integral domain.  Then $D$ is a lcm domain iff it is a gcd domain. \end{prop}
+
+This is an immediate consequence of the following
+
+\begin{prop} Let $D$ be an integral domain and $a,b\in D$.  Then the following are equivalent:
+\begin{enumerate}
+\item $a,b$ have an lcm,
+\item for any $r\in D$, $ra,rb$ have a gcd. 
+\end{enumerate}
+\end{prop}
+
+\begin{proof}  For arbitrary $x,y \in D$, denote $\LCM(x,y)$ and $\GCD(x,y)$ the sets of all lcm's and all gcd's of $x$ and $y$, respectively.
+
+$(1\Rightarrow 2)$.  Let $c\in \LCM(a,b)$.  Then $c=ax=by$, for some $x,y\in D$.  For any $r\in D$, since $rab$ is a multiple of $a$ and $b$, there is a $d\in D$ such that $rab=cd$.  We claim that $d\in \GCD(ra,rb)$.  There are two steps: showing that $d$ is a common divisor of $ra$ and $rb$, and that any common divisor of $ra$ and $rb$ is a divisor of $d$.
+\begin{enumerate}
+\item 
+Since $c=ax$, the equation $rab=cd=axd$ reduces to $rb=xd$, so $d$ divides $rb$.  Similarly, $ra=yd$, so $d$ is a common divisor of $ra$ and $rb$.  
+\item
+Next, let $t$ be any common divisor of $ra$ and $rb$, say $ra=ut$ and $rb=vt$ for some $u,v\in D$.  Then $uvt=rav=rbu$, so that $z:=av=bu$ is a multiple of both $a$ and $b$, and hence is a multiple of $c$, say $z=cw$ for some $w\in D$.  Then the equation $axw=cw=z=av$ reduces to $xw=v$.  Multiplying both sides by $t$ gives $xwt=vt$.  Since $vt=rb=xd$, we have $xd=xwt$, or $d=wt$, so that $d$ is a multiple of $t$.
+\end{enumerate}
+As a result, $d\in GCD(ra,rb)$.
+
+$(2\Rightarrow 1)$.  Suppose $k\in \GCD(a,b)$.  Write $ki=a$, $kj=b$ for some $i,j\in D$.  Set $\ell = kij$, so that $ab=k\ell$.  We want to show that $\ell \in \LCM(a,b)$.  First, notice that $\ell = aj=bi$, so that $a\mid \ell$ and $b\mid \ell$.  Now, suppose $a\mid t$ and $b\mid t$, we want to show that $\ell \mid t$ as well.  Write $t=ax=by$.  Then $ta=aby$ and $tb=abx$, so that $ab\mid ta$ and $ab\mid tb$.  Since $\GCD(ta,tb)\ne \varnothing$, we have $tk\in \GCD(ta,tb)$ (see \PMlinkname{proof of this here}{PropertiesOfAGCDDomain}), implying $ab\mid tk$.  In other words $tk=abz$ for some $z\in D$.  As a result, $tk=abz=k\ell z$, or $t=\ell z$.  In other words, $\ell \mid t$, as desired.
+\end{proof}
+
+Since the first statement is equivalent to $D$ being an lcm domain, and the second statement is equivalent to $D$ being a gcd domain, Proposition 1 follows.
+
+Another way of stating Proposition 1 is the following: let $L$ be the set of equivalence classes on the integral domain $D$, where $a\sim b$ iff $a$ and $b$ are associates.  Partial order $L$ so that $[a]\le [b]$ iff $ac=b$ for some $c\in D$.  Then $L$ is a semilattice (upper or lower) implies that $L$ is a lattice.
+
+% \textbf{Remark}.  In fact, in the proof above, we have shown that $$\LCM(a,b)\GCD(a,b)=[ab],$$ where the product $ST$ of two subsets $S,T$ of $D$ is defined to be the set $\lbrace st\mid s\in S\mbox{ and }t\in T\rbrace$.  This equation basically says that the product of any lcm and any gcd of $a,b$ is an associate of $ab$.  Another fact is that $\GCD(a,b)$ and $\LCM(a,b)$ have the same cardinality.  Of course, the equation makes sense only if $\GCD(a,b)$ (or equivalently $\LCM(a,b)$) is non-empty.
+%%%%%
+%%%%%
+\end{document}

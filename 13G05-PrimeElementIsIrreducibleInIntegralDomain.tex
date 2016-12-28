@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PrimeElementIsIrreducibleInIntegralDomain}
+\pmcreated{2013-03-22 17:15:29}
+\pmmodified{2013-03-22 17:15:29}
+\pmowner{me_and}{17092}
+\pmmodifier{me_and}{17092}
+\pmtitle{prime element is irreducible in integral domain}
+\pmrecord{7}{39594}
+\pmprivacy{1}
+\pmauthor{me_and}{17092}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13G05}
+\pmrelated{IrreducibleOfAUFDIsPrime}
+
+%\usepackage{amssymb}
+%\usepackage{amsmath}
+%\usepackage{amsfonts}
+\usepackage{amsthm}
+
+%Named sets
+%\newcommand{\R}{\mathbb{R}} %Real numbers (amssymb or amsfonts)
+%\newcommand{\C}{\mathbb{C}} %Complex numbers (amssymb or amsfonts)
+
+%Functions & operators
+%\newcommand{\modulus}[1]{\left|{#1}\right|} %|z|
+\newcommand{\divs}[2]{{#1}\mid{#2}}
+
+%Numbers
+%\newcommand{\I}{\mathrm{i}} %sqrt{-1}
+%\newcommand{\e}{\mathrm{e}} $exponential
+
+%Greek
+%\newcommand{\ve}{\varepsilon} %nice epsilon
+\begin{document}
+\newtheorem*{thm}{Theorem}
+
+\begin{thm}
+Every prime element of an integral domain is irreducible.
+\end{thm}
+
+\begin{proof}
+Let $D$ be an integral domain, and let $a\in D$ be a prime element. Assume $a=bc$ for some $b,c\in D$.
+
+Clearly $\divs{a}{bc}$, so since $a$ is prime, $\divs{a}{b}$ or $\divs{a}{c}$. Without loss of generality, assume $\divs{a}{b}$, and say $at=b$ for some $t\in D$.
+
+If $1$ is the unity of $D$, then
+\[
+  1b=b=at=(bc)t=b(ct)
+.\]
+Since $D$ is an integral domain, $b$ can be cancelled, giving $1=ct$, so $c$ is a unit.
+\end{proof}
+
+
+%%%%%
+%%%%%
+\end{document}

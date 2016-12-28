@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GlobalDimensionOfASubring}
+\pmcreated{2013-03-22 19:05:09}
+\pmmodified{2013-03-22 19:05:09}
+\pmowner{joking}{16130}
+\pmmodifier{joking}{16130}
+\pmtitle{global dimension of a subring}
+\pmrecord{4}{41974}
+\pmprivacy{1}
+\pmauthor{joking}{16130}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13D05}
+\pmclassification{msc}{16E10}
+\pmclassification{msc}{18G20}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $S$ be a ring with identity and $R\subset S$ a subring, such that $R$ is contained in the center of $S$. In this case $S$ is a (left) $R$-module via multiplication. Throughout by modules we will understand left modules and by global dimension we will understand left global dimension (we will denote it by $\mbox{gl dim}(S)$).
+
+\textbf{Proposition.} Assume that $\mbox{gl dim}(S)=n<\infty$. If $S$ is free as a $R$-module, then $\mbox{gl dim}(R)\leq n+1$.
+
+\textit{Proof.} Let $M$ be a $R$-module. Then, there exists exact sequence
+$$0\rightarrow K\rightarrow P_n\rightarrow\cdots\rightarrow P_0\rightarrow M\rightarrow 0,$$
+of $R$-modules, where each $P_i$ is projective (module $K$ is just a kernel of a map $P_n\to P_{n-1}$). We will show, that $K$ is also projective (and since $M$ is arbitrary, it will show that $\mbox{gl dim}(R)\leq n+1$).
+
+Since $S$ is free as a $R$-module, then the extension of scalars $(-\otimes_{R} S)$ is an exact functor from the cateogry of $R$-modules to the category of $S$-modules. Furthermore for any projective $R$-module $M$, the $S$-module $M\otimes_{R} S$ is projective (in the category of $S$-modules). Thus we have following exact sequence of $S$-modules
+$$0\rightarrow K\otimes_{R} S\rightarrow P_n\otimes_{R} S\rightarrow\cdots\rightarrow P_0\otimes_{R} S\rightarrow M\otimes_{R} S\rightarrow 0,$$
+where each $P_i\otimes_{R} S$ is a projective $S$-module. But projective dimension of $M\otimes_{R} S$ is at most $n$ (since $\mbox{gl dim}(S)=n$). Thus $K\otimes_{R} S$ is a projective $S$-module (please, see \PMlinkname{this entry}{ExactSequencesForModulesWithFiniteProjectiveDimension} for more details).
+
+Note that the restriction of scalars functor also maps projective $S$-modules into projective $R$-modules. Thus $K\otimes_{R} S$ is a projective $R$-module. But $S$ is free $R$-module, so 
+$$S\simeq \bigoplus_{i\in I} R,$$
+for some index set $I$. Finally we have
+$$K\otimes_{R} S\simeq K\otimes_{R} \big(\bigoplus_{i\in I} R\big)\simeq \bigoplus_{i\in I} \big(K\otimes_{R}R\big)\simeq \bigoplus_{i\in I} K.$$
+This shows, that $K$ is a direct summand of a projective $R$-module $K\otimes_{R} R$ and therefore $K$ is projective, which completes the proof. $\square$
+%%%%%
+%%%%%
+\end{document}

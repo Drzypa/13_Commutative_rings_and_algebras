@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FinitelyGeneratedTorsionfreeModulesOverPruferDomains}
+\pmcreated{2013-03-22 18:36:11}
+\pmmodified{2013-03-22 18:36:11}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{finitely generated torsion-free modules over Pr\"ufer domains}
+\pmrecord{4}{41334}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13F05}
+\pmclassification{msc}{13C10}
+%\pmkeywords{Pr\"ufer domain}
+%\pmkeywords{projective module}
+\pmrelated{EquivalentCharacterizationsOfDedekindDomains}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+
+
+\begin{document}
+\begin{theorem*}
+Let $M$ be a finitely generated torsion-free module over a Pr\"ufer domain $R$. Then, $M$ is isomorphic to a \PMlinkname{direct sum}{DirectSum}
+\begin{equation*}
+M\cong \mathfrak{a}_1\oplus\cdots\oplus\mathfrak{a}_n
+\end{equation*}
+of finitely generated ideals $\mathfrak{a}_1,\ldots,\mathfrak{a}_n$.
+\end{theorem*}
+
+As invertible ideals are projective and direct sums of projective modules are themselves projective, this theorem shows that $M$ is also a projective module. Conversely, if every finitely generated torsion-free module over an integral domain $R$ is projective then, in particular, every finitely generated nonzero ideal of $R$ will be projective and hence invertible. So, we get the following characterization of Pr\"ufer domains.
+
+\begin{corollary*}
+An integral domain $R$ is Pr\"ufer if and only if every finitely generated torsion-free $R$-module is \PMlinkname{projective}{ProjectiveModule}.
+\end{corollary*}
+
+%%%%%
+%%%%%
+\end{document}

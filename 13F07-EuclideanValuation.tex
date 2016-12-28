@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EuclideanValuation}
+\pmcreated{2013-03-22 12:40:45}
+\pmmodified{2013-03-22 12:40:45}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{Euclidean valuation}
+\pmrecord{15}{32956}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13F07}
+\pmsynonym{degree function}{EuclideanValuation}
+\pmrelated{PID}
+\pmrelated{UFD}
+\pmrelated{Ring}
+\pmrelated{IntegralDomain}
+\pmrelated{EuclideanRing}
+\pmrelated{ProofThatAnEuclideanDomainIsAPID}
+\pmrelated{DedekindHasseValuation}
+\pmrelated{EuclideanNumberField}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+
+\begin{document}
+\PMlinkescapeword{acting}
+\PMlinkescapeword{inverse}
+
+Let $D$ be an integral domain.  A \emph{Euclidean valuation} is a function from the nonzero elements of $D$ to the nonnegative integers $\nu \colon D \setminus \{0_D\} \to \{ x \in \mathbb{Z} : x \ge 0 \}$ such that the following hold:
+
+\begin{itemize}
+\item For any $a,b\in D$ with $b\neq 0_D$, there exist $q,r\in D$ such that $a=bq+r$ with $\nu(r)<\nu(b)$ or $r=0_D$.
+\item For any $a,b\in D \setminus \{0_D\}$, we have $\nu(a)\leq\nu(ab)$.
+\end{itemize}
+
+Euclidean valuations are important because they let us define greatest common divisors and use Euclid's algorithm. Some facts about Euclidean valuations include:
+
+\begin{itemize}
+\item The \PMlinkname{minimal}{MinimalElement} value of $\nu$ is $\nu(1_D)$. That is, $\nu(1_D)\leq\nu(a)$ for any $a\in D \setminus \{0_D\}$.
+\item $u\in D$ is a unit if and only if $\nu(u)=\nu(1_D)$.
+\item For any $a\in D \setminus \{0_D\}$ and any unit $u$ of $D$, we have $\nu(a)=\nu(au)$.
+\end{itemize}
+
+These facts can be proven as follows:
+
+\begin{itemize}
+\item If $a\in D \setminus \{0_D\}$, then
+\[
+\nu(1_D)\leq\nu(1_D\cdot a)=\nu(a).
+\]
+\item If $u\in D$ is a unit, then let $v\in D$ be its \PMlinkname{inverse}{MultiplicativeInverse}.  Thus,
+\[
+\nu(1_D)\leq\nu(u)\leq\nu(uv)=\nu(1_D).
+\]
+Conversely, if $\nu(u)=\nu(1_D)$, then there exist $q,r\in D$ with $\nu(r)<\nu(u)=\nu(1_D)$ or $r=0_D$ such that
+\[
+1_D=qu+r.
+\]
+Since $\nu(r)<\nu(1_D)$ is impossible, we must have $r=0_D$.  Hence, $q$ is the inverse of $u$.
+\item Let $v\in D$ be the inverse of $u$.  Then
+\[
+\nu(a)\leq\nu(au)\leq\nu(auv)=\nu(a).
+\]
+\end{itemize}
+
+Note that an integral domain is a Euclidean domain if and only if it has a Euclidean valuation.
+
+Below are some examples of Euclidean domains and their Euclidean valuations:
+
+\begin{itemize}
+\item Any field $F$ is a Euclidean domain under the Euclidean valuation $\nu(a)=0$ for all $a\in F \setminus \{0_F\}$.
+\item $\mathbb{Z}$ is a Euclidean domain with absolute value acting as its Euclidean valuation.
+\item If $F$ is a field, then $F[x]$, the ring of polynomials over $F$, is a Euclidean domain with degree acting as its Euclidean valuation:  If $n$ is a nonnegative integer and $a_0,\dots,a_n\in F$ with $a_n\neq 0_F$, then
+\[
+\nu\left(\sum_{j=0}^n a_jx^j\right)=n.
+\]
+\end{itemize}
+
+Due to the fact that the ring of polynomials over any field is always  a Euclidean domain with degree acting as its Euclidean valuation, some refer to a Euclidean valuation as a \emph{degree function}.  This is done, for example, in Joseph J. Rotman's \emph{\PMlinkescapetext{A First Course in Abstract Algebra}}.
+%%%%%
+%%%%%
+\end{document}

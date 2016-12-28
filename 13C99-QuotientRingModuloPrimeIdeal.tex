@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{QuotientRingModuloPrimeIdeal}
+\pmcreated{2013-03-22 17:37:09}
+\pmmodified{2013-03-22 17:37:09}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{quotient ring modulo prime ideal}
+\pmrecord{7}{40038}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13C99}
+\pmrelated{CharacterisationOfPrimeIdeals}
+\pmrelated{QuotientRing}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Theorem.}  Let $R$ be a commutative ring with non-zero unity 1 and $\mathfrak{p}$ an ideal of $R$.  The quotient ring $R/\mathfrak{p}$ is an integral domain if and only if $\mathfrak{p}$ is a prime ideal.\\
+
+{\em Proof.} $1^{\underline{o}}$.  First, let $\mathfrak{p}$ be a prime ideal of $R$.  Then $R/\mathfrak{p}$ is of course a commutative ring and has the unity $1+\mathfrak{p}$.  If the product\, $(r+\mathfrak{p})(s+\mathfrak{p})$ of two residue classes vanishes, i.e. equals $\mathfrak{p}$, then we have\, $rs+\mathfrak{p}= \mathfrak{p}$,\, and therefore $rs$ must belong to $\mathfrak{p}$.  Since $\mathfrak{p}$ is \PMlinkescapetext{prime}, either $r$ or $s$ belongs to $\mathfrak{p}$, i.e.\, $r+\mathfrak{p}= \mathfrak{p}$\, or\, $s+\mathfrak{p}= \mathfrak{p}$.\, Accordingly, 
+$R/\mathfrak{p}$ has no zero divisors and is an integral domain. 
+
+$2^{\underline{o}}$.  Conversely, let $R/\mathfrak{p}$ be an integral domain and let the product $rs$ of two elements of $R$ belong to $\mathfrak{p}$.  It follows that\, $(r+\mathfrak{p})(s+\mathfrak{p}) = rs+\mathfrak{p} = \mathfrak{p}$.  Since $R/\mathfrak{p}$ has no zero divisors,\, $r+\mathfrak{p} = \mathfrak{p}$\, or\, $s+\mathfrak{p} =\mathfrak{p} $.  Thus, $r$ or $s$ belongs to $\mathfrak{p}$, i.e. $\mathfrak{p}$ is a prime ideal. 
+
+%%%%%
+%%%%%
+\end{document}

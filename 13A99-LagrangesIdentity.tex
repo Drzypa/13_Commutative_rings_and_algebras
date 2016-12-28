@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LagrangesIdentity}
+\pmcreated{2013-03-22 13:18:01}
+\pmmodified{2013-03-22 13:18:01}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{Lagrange's identity}
+\pmrecord{21}{33802}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $R$ be a commutative ring, and let
+$x_1, \ldots, x_n, y_1, \ldots, y_n$ be arbitrary elements in $R$. Then
+\[\left(\sum_{k=1}^n x_ky_k\right)^2 =\left(\sum_{k=1}^n x_k^2\right)\left(\sum_{k=1}^n
+y_k^2\right)
+- \sum_{1 \le k < i \le n} (x_ky_i -x_iy_k)^2\mbox{.}\]
+
+\begin{proof}
+Since $R$ is commutative, we can apply the binomial formula.We start out with
+\begin{equation}
+\left(\sum_{i=1}^n x_iy_i\right)^2 =\sum_{i=1}^n (x_i^2y_i^2) +\sum_{1
+\leq i< j\leq n} 2 x_iy_jx_jy_i
+\end{equation}
+Using the binomial formula, we see that
+\[(x_iy_j -x_jy_i)^2 =x_i^2y_j^2 -2x_ix_jy_iy_j +x_j^2y_i^2.\]
+So we get
+
+\begin{eqnarray}
+\left(\sum\limits_{i=1}^n x_iy_i\right)^2 +\sum\limits_{1
+\leq i< j\leq n}^n(x_iy_j -x_jy_i)^2
+&=&\sum\limits_{i=1}^n \left(x_i^2y_i^2\right) +\sum\limits_{1
+\leq i< j\leq n}^n \left(x_i^2y_j^2
++x_j^2y_i^2\right)  \\
+&=&\left(\sum\limits_{i=1}^n x_i^2\right)\left(\sum\limits_{i=1}^n y_i^2\right)
+\end{eqnarray}
+Note that changing the roles of $i$ and $j$ in $x_iy_j -x_jy_i$, we get
+\[x_jy_i -x_iy_j =-(x_iy_j -x_jy_i),\]
+but the negative sign will disappear when we square. So we can rewrite the last equation to
+\begin{equation}
+\left(\sum\limits_{i=1}^n x_iy_i\right)^2 +\sum\limits_{1 \le i <j \le n} (x_iy_j -x_jy_i)^2
+=\left(\sum_{i=1}^n x_i^2\right)\left(\sum_{i=1}^n y_i^2\right).
+\end{equation}
+This is equivalent to the stated identity.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

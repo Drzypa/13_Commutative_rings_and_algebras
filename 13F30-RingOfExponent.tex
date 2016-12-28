@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RingOfExponent}
+\pmcreated{2013-03-22 17:59:43}
+\pmmodified{2013-03-22 17:59:43}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{ring of exponent}
+\pmrecord{13}{40507}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13F30}
+\pmclassification{msc}{13A18}
+\pmclassification{msc}{12J20}
+\pmclassification{msc}{11R99}
+\pmrelated{DiscreteValuationRing}
+\pmrelated{ValuationRingOfAField}
+\pmrelated{LocalRing}
+\pmdefines{ring of an exponent}
+\pmdefines{ring of the exponent}
+\pmdefines{integral with respect to an exponent}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{exponents} \PMlinkescapeword{exponent}
+
+\textbf{Definition.}\, Let $\nu$ be an exponent valuation of the field $K$.\,
+The subring
+$$\mathcal{O}_\nu \;:=\; \{\alpha \in K\,\vdots\;\; \nu(\alpha) \geqq 0\}$$
+of $K$ is called the \PMlinkescapetext{{\em ring of the exponent}} $\nu$.\, It is, naturally, an integral domain.\, Its elements are called \PMlinkescapetext{{\em integral with respect to}} $\nu$.\\
+
+\textbf{Theorem 1.}\, The ring of the exponent $\nu$ of the field $K$ is integrally closed in $K$.\\
+
+\textbf{Theorem 2.}\, The ring $\mathcal{O}_\nu$ \PMlinkescapetext{contains} only one prime element $\pi$, when one does not regard associated elements as different.\, Any non-zero element $\alpha$ can be represented uniquely with a \PMlinkescapetext{fixed} $\pi$ in the form
+$$\alpha \;=\; \varepsilon\pi^m,$$
+where $\varepsilon$ is a unit of $\mathcal{O}_\nu$ and\, $m = \nu(\alpha) \geqq 0$.\, This means that $\mathcal{O}$ is a UFD.\\
+
+\textbf{Remark 1.}\, The prime elements $\pi$ of the ring $\mathcal{O}_\nu$ are characterised by the equation \,$\nu(\pi) = 1$\, and the units \,$\varepsilon$ the equation \,$\nu(\varepsilon) = 0$.
+
+\textbf{Remark 2.}\, In an algebraically closed field $\Omega$, there are no \PMlinkname{exponents}{ExponentValuation}.\, In fact, if there were an exponent $\nu$ of $\Omega$ and if $\pi$ were a prime element of the ring of the exponent, then, since the equation\, $x^2\!-\!\pi = 0$\, would have a \PMlinkname{root}{Equation} $\varrho$ in $\Omega$, we would obtain\; $2\nu(\varrho) = \nu(\varrho^2) =  \nu(\pi) = 1$;\; this is however impossible, because an exponent attains only integer values.\\
+
+\textbf{Theorem 3.}\, Let\, $\mathfrak{O}_1,\,\ldots,\,\mathfrak{O}_r$ be the rings of the different exponent valuations $\nu_1,\,\ldots,\,\nu_r$ of the field $K$.\, Then also the intersection
+$$\mathfrak{O} \;:=\; \bigcap_{i=1}^r\mathfrak{O}_i$$
+is a subring of $K$ with \PMlinkname{unique factorisation}{UFD}.\, To be precise, any non-zero element $\alpha$ of $\mathfrak{O}$ may be uniquely represented in the form
+$$\alpha \;=\; \varepsilon\pi_1^{n_1}\cdots\pi_r^{n_r},$$
+in which $\varepsilon$ is a unit of $\mathfrak{O}$,\, the integers $n_1,\,\ldots,\,n_r$ are nonnegative and 
+$\pi_1,\,\ldots,\,\pi_r$ are \PMlinkescapetext{fixed} coprime prime elements of $\mathfrak{O}$ satisfying
+\[
+\nu_i(\pi_j) \;=\; \delta_{ij} \;=\;  
+\begin{cases}
+& 1 \;\;\mbox{for  }\, i = j,\\
+& 0 \;\;\mbox{for  }\, i \neq j.
+\end{cases} 
+\]
+
+%%%%%
+%%%%%
+\end{document}

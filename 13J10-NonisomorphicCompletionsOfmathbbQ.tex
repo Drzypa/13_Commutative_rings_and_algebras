@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NonisomorphicCompletionsOfmathbbQ}
+\pmcreated{2013-03-22 14:58:17}
+\pmmodified{2013-03-22 14:58:17}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{non-isomorphic completions of $\mathbb{Q}$}
+\pmrecord{9}{36671}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13J10}
+\pmclassification{msc}{13A18}
+\pmclassification{msc}{12J20}
+\pmclassification{msc}{13F30}
+\pmrelated{PAdicCanonicalForm}
+\pmdefines{$p$-adic numbers}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+No field $\mathbb{Q}_p$ of the {\em $p$-adic numbers} (\PMlinkname{$p$-adic rationals}{PAdicIntegers}) is isomorphic with the field $\mathbb{R}$ of the real numbers.
+
+{\em Proof.} \,Let's assume the existence of a field isomorphism \,$f:\,\mathbb{R}\to \mathbb{Q}_p$\, for some positive prime number $p$. \,If we denote \,$f(\sqrt{p}) = a$, \,then we obtain 
+         $$a^2 = (f(\sqrt{p}))^2 = f((\sqrt{p})^2) = f(p) = p,$$
+because the isomorphism maps the elements of the prime subfield on themselves. \,Thus, if \,$|\cdot|_p$\, is the \PMlinkname{normed $p$-adic valuation}{PAdicValuation} of $\mathbb{Q}$ and of $\mathbb{Q}_p$, we get 
+ $$|a|_p = \sqrt{|a^2|_p} = \sqrt{|p|_p} = \sqrt{\frac{1}{p}},$$
+which value is an irrational number as a \PMlinkname{square root of a non-square}{SquareRootOf2IsIrrationalProof} rational. \,But this is impossible, since the value group of the completion $\mathbb{Q}_p$ must be the same as the value group $|\mathbb{Q}\setminus\{0\}|_p$ which consists of all integer powers of $p$. \,So we conclude that there can not exist such an isomorphism.
+%%%%%
+%%%%%
+\end{document}

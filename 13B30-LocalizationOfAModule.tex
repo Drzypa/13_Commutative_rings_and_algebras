@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LocalizationOfAModule}
+\pmcreated{2013-03-22 17:26:59}
+\pmmodified{2013-03-22 17:26:59}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{localization of a module}
+\pmrecord{7}{39831}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13B30}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Let $R$ be a commutative ring and $M$ an $R$-module.  Let $S\subset R$ be a non-empty multiplicative set.  Form the Cartesian product $M\times S$, and define a binary relation $\sim$ on $M\times S$ as follows: 
+\begin{quote}
+$(m_1,s_1)\sim (m_2,s_2)$ if and only if  there is some $t\in S$ such that $t(s_2m_1-s_1m_2)=0$
+\end{quote}
+
+\begin{prop} $\sim$ on $M\times S$ is an equivalence relation. \end{prop}
+\begin{proof}  Clearly $(m,s)\sim (m,s)$ as $t(sm-sm)=0$ for any $t\in S$, where $S\ne \varnothing$.  Also, $(m_1,s_1)\sim (m_2,s_2)$ implies that $(m_2,s_2)\sim (m_1,s_1)$, since $t(s_2m_1-s_1m_2)=0$ implies that $t(s_1m_2-s_2m_1)=0$.  Finally, given $(m_1,s_1)\sim (m_2,s_2)$ and $(m_2,s_2)\sim (m_3,s_3)$, we are led to two equations $t(s_2m_1-s_1m_2)=0$ and $u(s_3m_2-s_2m_3)=0$ for some $t,u\in S$.  Expanding and rearranging these, then multiplying the first equation by $us_3$ and the second by $ts_1$, we get $tus_2(s_3m_1-s_1m_3)=0$.  Since $tus_2\in S$, $(m_1,s_1)\sim (m_3,s_3)$ as required.
+\end{proof}
+
+Let $M_S$ be the set of equivalence classes in $M\times S$ under $\sim$.  For each $(m,s)\in M\times S$, write $$[(m,s)]\mbox{ or more commonly }\frac{m}{s}$$ the equivalence class in $M_S$ containing $(m,s)$.  Next, 
+\begin{itemize}
+\item define a binary operation $+$ on $M_S$ as follows: $$\frac{m_1}{s_1}+\frac{m_2}{s_2}:=\frac{s_2m_1+s_1m_2}{s_1s_2}.$$
+\item define a function $\cdot: R_S\times M_S\to M_S$ as follows:
+$$\frac{r}{s}\cdot \frac{m}{t}:=\frac{rm}{st}$$
+where $R_S$ is the localization of $R$ over $S$.
+\end{itemize}
+
+\begin{prop} $M_S$ together with $+$ and $\cdot$ defined above is a unital module over $R_S$. \end{prop}
+\begin{proof} That $+$ and $\cdot$ are well-defined is based on the following: if $(m_1,s_1)\sim (m_2,s_2)$, then 
+$$\frac{m}{s}+\frac{m_1}{s_1}=\frac{m}{s}+\frac{m_2}{s_2},\qquad \frac{m_1}{s_1}+\frac{m}{s}=\frac{m_2}{s_2}+\frac{m}{s},\quad\mbox{and}\quad \frac{r}{s}\cdot \frac{m_1}{s_1}=\frac{r}{s}\cdot \frac{m_2}{s_2},$$
+which are clear by Proposition $1$.  Furthermore $+$ is commutative and associative and that $\cdot$ distributes over $+$ on both sides, which are all properties inherited from $M$.  Next, $\displaystyle{\frac{0}{s}}$ is the additive identity in $M_S$ and $\displaystyle{\frac{-m}{s}}\in M_S$ is the additive inverse of $\displaystyle{\frac{m}{s}}$.  So $M_S$ is a module over $R_S$.  Finally, since $(mt,st)\sim (m,s)$ for any $t\in S$, $\displaystyle{\frac{t}{t}\cdot \frac{m}{s}=\frac{m}{s}}$ so that $M_S$ is unital.  \end{proof}
+
+\textbf{Definition}.  $M_S$, as an $R_S$-module, is called the \emph{localization} of $M$ at $S$.  $M_S$ is also written $S^{-1}M$.
+
+\textbf{Remarks}.  
+\begin{itemize}
+\item
+The notion of the localization of a module generalizes that of a ring in the sense that $R_S$ is the localization of $R$ at $S$ as an $R_S$-module.
+\item
+If $S=R-\mathfrak{p}$, where $\mathfrak{p}$ is a prime ideal in $R$, then $M_S$ is usually written $M_{\mathfrak{p}}$.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BasicAlgebra}
+\pmcreated{2013-03-22 19:17:10}
+\pmmodified{2013-03-22 19:17:10}
+\pmowner{joking}{16130}
+\pmmodifier{joking}{16130}
+\pmtitle{basic algebra}
+\pmrecord{5}{42219}
+\pmprivacy{1}
+\pmauthor{joking}{16130}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13B99}
+\pmclassification{msc}{20C99}
+\pmclassification{msc}{16S99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $A$ be a finite dimensional, unital algebra over a field $k$. By Krull-Schmidt Theorem $A$ can be decomposed as a (right) $A$-module as follows:
+$$A\simeq P_1\oplus\cdots\oplus P_k$$
+where each $P_i$ is an indecomposable module and this decomposition is unique. 
+
+\textbf{Definition.} The algebra $A$ is called \textbf{(right) basic} if $P_i$ is not isomorphic to $P_j$ when $i\neq j$.
+
+Of course we may easily define what does it mean for algebra to be left basic. Fortunetly these properties coincide. Let as state some known facts (originally can be found in \cite{ASS}):
+
+\textbf{Proposition.}
+\begin{enumerate}
+\item A finite algebra $A$ over a field $k$ is basic if and only if the algebra $A/\mathrm{rad}A$ is isomorphic to a product of fields $k\times\cdots\times k$. Thus $A$ is right basic iff it is left basic;
+\item Every simple module over a basic algebra is one-dimensional;
+\item For any finite-dimensional, unital algebra $A$ over $k$ there exists finite-dimensional, unital, basic algebra $B$ over $k$ such that the category of finite-dimensional modules over $A$ is $k$-linear equivalent to the category of finite-dimensional modules over $B$;
+\item Let $A$ be a finite-dimensional, basic and connected (i.e. cannot be written as a product of nontrivial algebras) algebra over a field $k$. Then there exists a bound quiver $(Q,I)$ such that $A\simeq kQ/I$;
+\item If $(Q,I)$ is a bound quiver over a field $k$, then both $kQ$ and $kQ/I$ are basic algebras.
+\end{enumerate}
+
+\begin{thebibliography}{99}
+\bibitem{ASS} I. Assem, D. Simson, A. Skowronski, \textit{Elements of the Representation Theory of Associative Algebras, vol 1.}, Cambridge University Press 2006, 2007
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

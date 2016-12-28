@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofThatADomainIsDedekindIfItsIdealsAreProductsOfMaximals}
+\pmcreated{2013-03-22 18:35:04}
+\pmmodified{2013-03-22 18:35:04}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{proof that a domain is Dedekind if its ideals are products of maximals}
+\pmrecord{5}{41310}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13F05}
+\pmclassification{msc}{13A15}
+%\pmkeywords{Dedekind domain}
+%\pmkeywords{maximal ideal}
+%\pmkeywords{invertible ideal}
+\pmrelated{DedekindDomain}
+\pmrelated{MaximalIdeal}
+\pmrelated{FractionalIdeal}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+
+
+\begin{document}
+\PMlinkescapeword{Noetherian}
+\PMlinkescapeword{invertible}
+\PMlinkescapeword{maximal}
+\PMlinkescapeword{maximals}
+Let $R$ be an integral domain. We show that it is a Dedekind domain if and only if every nonzero proper ideal can be expressed as a product of maximal ideals.
+To do this, we make use of the characterization of Dedekind domains as integral domains in which every nonzero integral ideal is invertible (proof that a domain is Dedekind if its ideals are invertible).
+
+First, let us suppose that every nonzero proper ideal in $R$ is a product of maximal ideals.
+Let $\mathfrak{m}$ be a maximal ideal and choose a nonzero $x\in\mathfrak{m}$. Then, by assumption,
+\begin{equation*}
+(x)=\mathfrak{m}_1\cdots\mathfrak{m_n}
+\end{equation*}
+for some $n\ge 0$ and maximal ideals $\mathfrak{m}_k$. As $(x)$ is a principal ideal, each of the factors $\mathfrak{m}_k$ is invertible.
+Also,
+\begin{equation*}
+\mathfrak{m}_1\cdots\mathfrak{m_n}\subseteq\mathfrak{m}.
+\end{equation*}
+As $\mathfrak{m}$ is prime, this gives $\mathfrak{m}_k\subseteq\mathfrak{m}$ for some $k$. However, $\mathfrak{m}_k$ is maximal so must equal $\mathfrak{m}$, showing that $\mathfrak{m}$ is indeed invertible.
+Then, every nonzero proper ideal is a product of maximal, and hence invertible, ideals and so is invertible, and it follows that $R$ is Dedekind.
+
+
+We now show the reverse direction, so suppose that $R$ is Dedekind.
+Proof by contradiction will be used to show that every nonzero ideal is a product of maximals, so suppose that this is not the case.
+Then, as $R$ is defined to be \PMlinkname{Noetherian}{Noetherian}, there is an ideal $\mathfrak{a}$ \PMlinkname{maximal}{MaximalElement} (w.r.t. the partial order of set inclusion) among those proper ideals which are not a product of maximal ideals.
+Then $\mathfrak{a}$ cannot be a maximal ideal itself, so is strictly contained in a maximal ideal $\mathfrak{m}$ and, as $\mathfrak{m}$ is invertible, we can write $\mathfrak{a}=\mathfrak{mb}$ for an ideal $\mathfrak{b}$.
+
+Therefore $\mathfrak{a}\subseteq\mathfrak{b}$ and we cannot have equality, otherwise cancelling $\mathfrak{a}$ from $\mathfrak{a}=\mathfrak{ma}$ would give $\mathfrak{m}=R$. So, $\mathfrak{b}$ is strictly larger than $\mathfrak{a}$ and, by the choice of $\mathfrak{a}$, is therefore a product of maximal ideals. Finally, $\mathfrak{a}=\mathfrak{mb}$ is then also a product of maximal ideals.
+
+%%%%%
+%%%%%
+\end{document}

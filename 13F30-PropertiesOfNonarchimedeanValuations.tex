@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PropertiesOfNonarchimedeanValuations}
+\pmcreated{2013-03-22 18:01:11}
+\pmmodified{2013-03-22 18:01:11}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{properties of non-archimedean valuations}
+\pmrecord{6}{40536}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13F30}
+\pmclassification{msc}{13A18}
+\pmclassification{msc}{12J20}
+\pmclassification{msc}{11R99}
+\pmrelated{CompleteUltrametricField}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+\newcommand{\Abs}[1]{\left\lvert #1\right\rvert}
+
+\begin{document}
+If $K$ is a field, and $\Abs{\cdot}$ a nontrivial non-archimedean valuation (or absolute value) on $K$, then $\Abs{\cdot}$ has some properties that are counterintuitive (and that are false for archimedean valuations).
+\begin{thm}
+Let $K$ be a field with a non-archimedean absolute value $\Abs{\cdot}$. For $r>0$ a real number, $x\in K$, define
+\begin{gather*}
+B(x,r) = \{y\in K\ \mid\ \Abs{x-y}<r\},\ \text{the open ball of radius $r$ at $x$}\\
+\bar{B}(x,r) = \{y\in K\ \mid\ \Abs{x-y}\leq r\},\ \text{the closed ball of radius $r$ at $x$}
+\end{gather*}
+Then
+\begin{enumerate}
+\item $B(x,r)$ is both open and closed;
+\item $\bar{B}(x,r)$ is both open and closed;
+\item If $y\in B(x,r)$ (resp. $\bar{B}(x,r)$) then $B(x,r)=B(y,r)$ (resp. $\bar{B}(x,r)=\bar{B}(y,r)$);
+\item $B(x,r)$ and $B(y,r)$ (resp. $\bar{B}(x,r)$ and $\bar{B}(y,r)$) are either identical or disjoint;
+\item If $B_1 = B(x,r)$ and $B_2 = B(y,s)$ are not disjoint, then either $B_1\subset B_2$ or $B_2\subset B_1$;
+\item If $(x_n)$ is a sequence of elements of $K$ with $\lim_{n\to\infty} x_n=0$, then $\sum_{n=1}^{\infty} x_n$ is Cauchy (and thus if $K$ is complete, a sufficient condition for convergence of a series is that the terms tend to zero)
+\end{enumerate}
+\end{thm}
+
+\textbf{Proof. }\ We start by proving (3). Suppose $y\in B(x,r)$. If $z\in B(x,r)$, then since the absolute value is non-archimedean, we have
+\[\Abs{z-y} =\Abs{(z-x)+(x-y)} \leq \max(\Abs{z-x},\Abs{x-y}) < r\]
+so that $z\in B(y,r)$. Clearly $x\in B(y,r)$, so reversing the roles of $x$ and $y$, we see that $B(x,r) = B(y,r)$. Finally, replacing $B$ by $\bar{B}$ and $<$ by $\leq$, we get equality of closed balls as well.
+
+(4) is now trivial: If $B(x,r)\cap B(y,r)\neq\emptyset$, choose $z\in B(x,r)\cap B(y,r)$; then by (3), $B(x,r) = B(z,r) = B(y,r)$. An identical argument proves the result for closed balls.
+
+To prove (5), choose $z\in B_1\cap B_2$. Assume first that $r\leq s$; then $B(z,r) = B_1$, and $B(z,r)\subset B(z,s) = B_2$, so that $B_1\subset B_2$. If $s\leq r$, then we have identically that $B_2\subset B_1$. (Note that (4) is a special case when $r=s$).
+
+(1) and (2) now follow: for (1), note that $B(x,r)$ is obviously open; its complement consists of a union of open balls of radius $r$ disjoint with $B(x,r)$ and its complement is therefore open. Thus $B(x,r)$ is closed. For (2), $\bar{B}(x,r)$ is obviously closed; to see that it is open, take any $y\in \bar{B}(x,r)$; then $\bar{B}(x,r)=\bar{B}(y,r)$ and thus $B(y,s)\subset \bar{B}(y,r)$ for $s<r$ is an open neighborhood of $y$ contained in $\bar{B}(x,r)$, which is therefore open.
+
+Finally, to prove (6), we must show that given $\epsilon$, we can find $N>0$ sufficiently large such that $\Abs{\sum_{i=m}^n x_i}<\epsilon$ whenever $m,n>N$. Simply choose $N$ such that $\Abs{x_i}<\epsilon$ for $i>N$; then
+\[\Abs{\sum_{i=m}^n x_i}\leq \max(\Abs{x_m},\ldots,\Abs{x_n}) < \epsilon\]
+%%%%%
+%%%%%
+\end{document}

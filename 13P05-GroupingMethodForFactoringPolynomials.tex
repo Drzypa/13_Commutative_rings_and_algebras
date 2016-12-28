@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GroupingMethodForFactoringPolynomials}
+\pmcreated{2013-03-22 15:06:49}
+\pmmodified{2013-03-22 15:06:49}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{grouping method for factoring polynomials}
+\pmrecord{12}{36850}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Algorithm}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13P05}
+\pmrelated{DifferenceOfSquares}
+\pmrelated{ExampleOfGcd}
+\pmrelated{ZeroRuleOfProduct}
+\pmdefines{grouping method}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Factoring a given polynomial may in certain special cases \PMlinkescapetext{succeed} by using the following {\em grouping method}:
+\begin{enumerate}
+\item \PMlinkescapetext{Group the terms of the polynomial in two (or sometimes more) suitable groups}.
+\item Factorize the \PMlinkescapetext{groups} separately.
+\item The whole polynomial may then possibly be written in form of a product.
+\end{enumerate}
+
+\textbf{Examples}
+
+a) \,\,$x^3-x^2-x+1 = \{x^3-x^2\}+\{-x+1\} = x^2(x-1)-1(x-1) = (x-1)(x^2-1)\\ = (x-1)^2(x+1)$
+
+b) \,\,$x^4+3x^3-3x-1 = \{x^4-1\}+\{3x^3-3x\} = (x^2+1)(x^2-1)+3x(x^2-1)\\ = 
+(x^2-1)(x^2+1+3x) = (x-1)(x+1)(x^2+3x+1)$
+
+c) \,\,$x^4+4 = \{x^4+4x^2+4\}-4x^2 = (x^2+2)^2-(2x)^2 = (x^2+2+2x)(x^2+2-2x)\\ = (x^2+2x+2)(x^2-2x+2)$ 
+
+d) \,\,$x^4+x^2+1 = \{x^4+2x^2+1\}-x^2 = (x^2+1)^2-x^2 = (x^2+1+x)(x^2+1-x)\\
+= (x^2+x+1)(x^2-x+1)$
+
+The trinomials $x^2\!+\!3x\!+\!1$, $x^2\!\pm\!2x\!+\!2$ and $x^2\!\pm\!x\!+\!1$ are irreducible polynomials.
+%%%%%
+%%%%%
+\end{document}

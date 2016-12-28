@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfFiniteSeparableExtensionsOfDedekindDomainsAreDedekind}
+\pmcreated{2013-03-22 18:35:36}
+\pmmodified{2013-03-22 18:35:36}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{proof of finite separable extensions of Dedekind domains are Dedekind}
+\pmrecord{4}{41321}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13F05}
+\pmclassification{msc}{13A15}
+%\pmkeywords{Dedekind domain}
+%\pmkeywords{integral closure}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+
+
+\begin{document}
+\PMlinkescapeword{finite}
+\PMlinkescapeword{Noetherian}
+\PMlinkescapeword{maximal}
+Let $R$ be a Dedekind domain with field of fractions $K$ and $L/K$ be a \PMlinkname{finite}{FiniteExtension} separable extension of fields. We show that the integral closure $A$ of $R$ in $L$ is also a Dedekind domain. That is, $A$ is \PMlinkname{Noetherian}{Noetherian}, integrally closed and every nonzero prime ideal is \PMlinkname{maximal}{MaximalIdeal}.
+
+First, as integral closures are themselves integrally closed, $A$ is integrally closed. Second, as integral closures in separable extensions are finitely generated, $A$ is finitely generated as an $R$-module. Then, any ideal $\mathfrak{a}$ of $A$ is a submodule of $A$, so is finitely generated as an $R$-module and therefore as an $A$-module. So, $A$ is Noetherian.
+
+It only remains to show that a nonzero prime ideal $\mathfrak{p}$ of $A$ is maximal. Choosing any $p\in\mathfrak{p}\setminus\{0\}$ there is a nonzero polynomial
+\begin{equation*}
+f=\sum_{k=0}^{n}c_kX^k
+\end{equation*}
+for $c_k\in R$, $c_0\not=0$ and such that $f(p)=0$. Then
+\begin{equation*}
+c_0=-p\sum_{k=1}^{n}c_kp^{k-1}\in\mathfrak{p}\cap R,
+\end{equation*}
+so $\mathfrak{p}\cap R$ is a nonzero prime ideal in $R$ and is therefore a maximal ideal. So,
+\begin{equation*}
+R/(\mathfrak{p}\cap R)\rightarrow A/\mathfrak{p}
+\end{equation*}
+gives an algebraic extension of the field $R/(\mathfrak{p}\cap R)$ to the integral domain $A/\mathfrak{p}$. Therefore, $A/\mathfrak{p}$ is a field (see a condition of algebraic extension) and $\mathfrak{p}$ is a maximal ideal.
+%%%%%
+%%%%%
+\end{document}

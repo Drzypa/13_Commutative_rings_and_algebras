@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Valuation}
+\pmcreated{2013-03-22 12:35:07}
+\pmmodified{2013-03-22 12:35:07}
+\pmowner{djao}{24}
+\pmmodifier{djao}{24}
+\pmtitle{valuation}
+\pmrecord{17}{32835}
+\pmprivacy{1}
+\pmauthor{djao}{24}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13F30}
+\pmclassification{msc}{13A18}
+\pmclassification{msc}{12J20}
+\pmclassification{msc}{11R99}
+\pmsynonym{absolute value}{Valuation}
+\pmrelated{DiscreteValuationRing}
+\pmrelated{DiscreteValuation}
+\pmrelated{Ultrametric}
+\pmrelated{HenselianField}
+\pmdefines{infinite prime}
+\pmdefines{finite prime}
+\pmdefines{archimedean}
+\pmdefines{non-archimedean}
+\pmdefines{real prime}
+\pmdefines{complex prime}
+\pmdefines{prime}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\lra}{\longrightarrow}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\p}{\mathfrak{p}}
+\begin{document}
+Let $K$ be a field. A \emph{valuation} or \emph{absolute value} on $K$ is a function $|\cdot|\colon K \to \R$ satisfying the properties:
+\begin{enumerate}
+\item $|x| \geq 0$ for all $x \in K$, with equality if and only if $x=0$
+\item $|xy| = |x|\cdot |y|$ for all $x,y \in K$
+\item $|x+y| \leq |x| + |y|$
+\end{enumerate}
+If a valuation satisfies $|x+y| \leq \max(|x|, |y|)$, then we say that it is a \emph{non-archimedean valuation}. Otherwise we say that it is an \emph{archimedean valuation}.
+
+Every valuation on $K$ defines a metric on $K$, given by $d(x,y) := |x-y|$. This metric is an ultrametric if and only if the valuation is non-archimedean. Two valuations are \emph{equivalent} if their corresponding metrics induce the same topology on $K$. An equivalence class $v$ of valuations on $K$ is called a \emph{prime} of $K$. If $v$ consists of archimedean valuations, we say that $v$ is an \emph{infinite prime}, or \emph{archimedean prime}. Otherwise, we say that $v$ is a \emph{finite prime}, or \emph{non-archimedean prime}.
+
+In the case where $K$ is a number field, primes as defined above generalize the notion of prime ideals in the following way. Let $\p \subset K$ be a nonzero prime ideal\footnote{By ``prime ideal'' we mean ``prime fractional ideal of $K$'' or equivalently ``prime ideal of the ring of integers of $K$''. We do not mean literally a prime ideal of the ring $K$, which would be the zero ideal.}, considered as a fractional ideal. For every nonzero element $x \in K$, let $r$ be the unique integer such that $x \in \p^r$ but $x \notin \p^{r+1}$. Define
+$$
+|x|_\p :=
+\begin{cases}
+1/N(\p)^r & x \neq 0, \\
+0 & x=0,
+\end{cases}
+$$
+where $N(\p)$ denotes the absolute norm of $\p$. Then $|\cdot|_\p$ is a non--archimedean valuation on $K$, and furthermore every non-archimedean valuation on $K$ is equivalent to $|\cdot|_\p$ for some prime ideal $\p$. Hence, the prime ideals of $K$ correspond bijectively with the finite primes of $K$, and it is in this sense that the notion of primes as valuations generalizes that of a prime ideal.
+
+As for the archimedean valuations, when $K$ is a number field every embedding of $K$ into $\R$ or $\C$ yields a valuation of $K$ by way of the standard absolute value on $\R$ or $\C$, and one can show that every archimedean valuation of $K$ is equivalent to one arising in this way. Thus the infinite primes of $K$ correspond to embeddings of $K$ into $\R$ or $\C$.  Such a prime is called real or complex according to whether the valuations comprising it arise from real or complex embeddings.
+%%%%%
+%%%%%
+\end{document}

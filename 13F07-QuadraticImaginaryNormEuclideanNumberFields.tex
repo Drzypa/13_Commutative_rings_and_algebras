@@ -1,0 +1,98 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{QuadraticImaginaryNormEuclideanNumberFields}
+\pmcreated{2013-03-22 16:52:32}
+\pmmodified{2013-03-22 16:52:32}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{quadratic imaginary norm-Euclidean number fields}
+\pmrecord{14}{39126}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13F07}
+\pmclassification{msc}{11R21}
+\pmclassification{msc}{11R04}
+\pmsynonym{imaginary quadratic Euclidean number fields}{QuadraticImaginaryNormEuclideanNumberFields}
+\pmsynonym{imaginary Euclidean quadratic fields}{QuadraticImaginaryNormEuclideanNumberFields}
+%\pmkeywords{imaginary quadratic field}
+\pmrelated{EuclideanNumberField}
+\pmrelated{ImaginaryQuadraticField}
+\pmrelated{ClassNumbersOfImaginaryQuadraticFields}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Theorem 1.}\, The imaginary quadratic fields $\mathbb{Q}(\sqrt{d})$ with\, $d = -1,\,-2,\,-3,\,-7,\,-11$\, are norm-Euclidean number fields.
+
+{\em Proof.}\, $1^\circ.$\; $d \not\equiv 1\;(\mbox{mod}\;4)$,\, i.e.\, $d = -1$\, or\, $d = -2$.\, Any element $\gamma$ of the field $\mathbb{Q}(\sqrt{d})$ has the canonical form\, $\gamma = c_0+c_1\sqrt{d}$\, where\, $c_0,\,c_1\in\mathbb{Q}$.\, We may write\, $\gamma = (p+r)+(q+s)\sqrt{d}$, where $p$ is the rational integer nearest to $c_0$ and $q$ the one nearest to $c_1$.\, So\, $|r| \le 
+\frac{1}{2}$,\, $|s| \le \frac{1}{2}$.\, Thus we may write
+$$\gamma = \underbrace{(p+q\sqrt{d})}_\varkappa+
+           \underbrace{(r+s\sqrt{d})}_\delta,$$
+where $\varkappa$ is an integer of the field.\, We then can \PMlinkescapetext{estimate}
+$$0 \le \mbox{N}(\delta) = (r+s\sqrt{d})(r-s\sqrt{d}) = r^2-s^2d = 
+r^2+s^2|d| \le \left(\frac{1}{2}\right)^2\!+2\left(\frac{1}{2}\right)^2 = \frac{3}{4} < 1,$$
+and therefore\, $|\mbox{N}(\delta)| < 1$.\, According to the \PMlinkname{theorem 1 in the parent entry}{EuclideanNumberField}, $\mathbb{Q}(\sqrt{-1})$ and $\mathbb{Q}(\sqrt{-2})$ are norm-Euclidean number fields.
+
+$2^\circ.$\; $d \equiv 1\;(\mbox{mod}\;4)$,\, i.e.\, $d\in\{-3,\,-7,\,-11\}$.\, The algebraic integers of $\mathbb{Q}(\sqrt{d})$ have now the canonical form\, 
+$\frac{a+b\sqrt{d}}{2}$ with\, $2\,|\,a\!-\!b$.\, Let\, $\gamma = c_0+c_1\sqrt{d}$\, where\, $c_0,\,c_1\in\mathbb{Q}$\, be an arbitrary element of the field.\, Choose the rational integer $q$ such that $\frac{q}{2}$ is as close to $c_1$ as possible, i.e.\, $c_1 = \frac{q}{2}+s$\, with\, $|s| \le \frac{1}{4}$,\, and the rational integer $t$ such that $\frac{q}{2}+t$ is as close to $c_0$ as possible; then\, $c_0 = \frac{q+2t}{2}+r = \frac{p}{2}+r$\, with\, $|r| \le \frac{1}{2}$.\, Then we can write
+$$\gamma = \frac{p}{2}+r+(\frac{q}{2}+s)\sqrt{d} = 
+\underbrace{\frac{p+q\sqrt{d}}{2}}_\varkappa+
+\underbrace{(r+s\sqrt{d})}_\delta.$$
+The number $\varkappa$ is an integer of the field, since\, $p-q = 2t \equiv 0\,\,(\mbox{mod}\,2)$.\, We get the estimation
+$$0 \le \mbox{N}(\delta) = r^2+s^2|d| \le 
+\left(\frac{1}{2}\right)^2\!+11\left(\frac{1}{4}\right)^2 = \frac{15}{16} < 1,$$
+so\, $|\mbox{N}(\delta)| < 1$.\, Thus the fields in question are norm-Euclidean number fields.\\
+
+\textbf{Theorem 2.}\, The only quadratic imaginary norm-Euclidean number fields  $\mathbb{Q}(\sqrt{d})$ are the ones in which\, $d = -1,\,-2,\,-3,\,-7,\,-11$.
+
+{\em Proof.}\, Let $d$ be any other negative (square-free) rational integer than the above mentioned ones.
+
+$1^\circ.$\; $d \not\equiv 1\;(\mbox{mod}\;4)$.\, The integers of $\mathbb{Q}(\sqrt{d})$ are\, $a+b\sqrt{d}$ where\, $a,\,b\in\mathbb{Z}$.\, We show that there is a number $\gamma$ that can not be expressed in the form\, 
+$\gamma = \varkappa+\delta$\, with $\varkappa$ an integer of the field and\, $|\mbox{N}(\delta)| < 1$.\,  Assume that\, $\gamma := \frac{1}{2}\sqrt{d} = \varkappa+\delta$\, where\, $\varkappa = a+b\sqrt{d}$\, is an integer of the field ($a,\,b\in\mathbb{Z}$).\, Then\, $\delta = \gamma-\varkappa = 
+-a+(\frac{1}{2}-b)\sqrt{d}$\, and\, $\mbox{N}(\delta) = 
+|a|^2+|d|\cdot|\frac{1}{2}-b|^2$.\, Because $b$ cannot be 0, we have\, 
+$|\frac{1}{2}-b| \ge \frac{1}{2}$\, and thus
+$$|\mbox{N}(\delta)| \ge 0+|d|\left(\frac{1}{2}\right)^2 = \frac{|d|}{4}\ge \frac{5}{4} > 1.$$
+Therefore $\mathbb{Q}(\sqrt{d})$ can not be a norm-Euclidean number field 
+($d = -5,\,-6,\,-10$\, and so on).
+
+$2^\circ.$\; $d \equiv 1\;(\mbox{mod}\;4)$.\, Now\, $|d| \ge 15$.\, The integers of $\mathbb{Q}(\sqrt{d})$ have the form 
+$\varkappa = \frac{a+b\sqrt{d}}{2}$ with\, $2\,|\,a-b$.\, Suppose that\, 
+$\gamma = \frac{1}{4}+\frac{1}{4}\sqrt{d} = \varkappa+\delta$.\, Then\, 
+$\delta = \gamma-\varkappa = (\frac{1}{4}-\frac{a}{2})+
+(\frac{1}{4}-\frac{b}{2})\sqrt{d}$\, and
+ $$|\mbox{N}(\delta)| \ge 
+\left|\frac{1}{4}-\frac{a}{2}\right|^2+|d|\cdot\left|\frac{1}{4}-\frac{b}{2}\right|^2 \ge 
+\left(\frac{1}{4}\right)^2\!+15\left(\frac{1}{4}\right)^2 = 1.$$
+So also these fields $\mathbb{Q}(\sqrt{d})$ are not norm-Euclidean number fields.\\
+
+
+\textbf{Remark.}\, The rings of integers of the imaginary quadratic fields of the above theorems are thus PID's.\, There are, in addition, four other imaginary quadratic fields which are not norm-Euclidean but anyway their rings of integers are PID's (see lemma for imaginary quadratic fields, class numbers of imaginary quadratic fields, unique factorization and ideals in ring of integers, divisor theory).
+%%%%%
+%%%%%
+\end{document}

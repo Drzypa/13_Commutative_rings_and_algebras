@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CriteriaForCyclicRingsToBeIsomorphic}
+\pmcreated{2013-03-22 16:02:39}
+\pmmodified{2013-03-22 16:02:39}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{criteria for cyclic rings to be isomorphic}
+\pmrecord{14}{38094}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13A99}
+\pmclassification{msc}{16U99}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\newtheorem*{thm*}{Theorem}
+\begin{document}
+\PMlinkescapeword{generator}
+
+\begin{thm*}
+Two cyclic rings are isomorphic if and only if they have the same order and the same behavior.
+\end{thm*}
+
+\begin{proof}
+Let $R$ be a cyclic ring with behavior $k$ and $r$ be a \PMlinkname{generator}{Generator} of the additive group of $R$ with $r^2=kr$.  Also, let $S$ be a cyclic ring.
+
+If $R$ and $S$ have the same order and the same behavior, then let $s$ be a generator of the additive group of $S$ with $s^2=ks$.  Define $\varphi \colon R \to S$ by $\varphi(cr)=cs$ for every $c \in \mathbb{Z}$.  This map is clearly well defined and surjective.  Since $R$ and $S$ have the same order, $\varphi$ is injective.  Since, for every $a,b \in \mathbb{Z}$, $\varphi(ar)+\varphi(br)=as+bs=(a+b)s=\varphi((a+b)r)=\varphi(ar+br)$ and
+
+\begin{center}
+$\begin{array}{rl}
+\varphi(ar)\varphi(br) & =(as)(bs) \\
+& =(ab)s^2 \\
+& =(ab)(ks) \\
+& =(abk)s \\
+& =\varphi((abk)r) \\
+& =\varphi((ab)(kr)) \\
+& =\varphi((ab)r^2) \\
+& =\varphi((ar)(br)), \end{array}$
+\end{center}
+
+it follows that $\varphi$ is an isomorphism.
+
+Conversely, let $\psi \colon R \to S$ be an isomorphism.  Then $R$ and $S$ must have the same order.  If $R$ is infinite, then $S$ is infinite, and $k$ is a nonnegative integer.  If $R$ is finite, then $k$ \PMlinkname{divides}{Divisibility} $|R|$, which equals $|S|$.  In either case, $k$ is a candidate for the behavior of $S$.  Since $r$ is a generator of the additive group of $R$ and $\psi$ is an isomorphism, $\psi(r)$ is a generator of the additive group of $S$.  Since $(\psi(r))^2=\psi(r^2)=\psi(kr)=k\psi(r)$, it follows that $S$ has behavior $k$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

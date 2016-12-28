@@ -1,0 +1,46 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IntegralityIsTransitive}
+\pmcreated{2013-03-22 17:01:25}
+\pmmodified{2013-03-22 17:01:25}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{integrality is transitive}
+\pmrecord{6}{39309}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13B21}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $C\subset B\subset A$ be rings. If $B$ is integral over $C$ and $A$ is integral over $B$, then $A$ is integral over $C$.
+
+\textbf{Proof. }
+Choose $u\in A$. Then $u^n+b_1 u^{n-1}+\cdots+b_n=0, b_i\in B$. Thus $C[b_1,\ldots,b_n,u]$ is integral and thus module-finite over $C[b_1,\ldots,b_n]$. Each $b_i$ is integral over $C$, so $C[b_1,\ldots,b_n]$ is integral hence module-finite over $C$. Thus $C[b_1,\ldots,b_n,u]$ is module-finite, hence integral, over $C$, so $u$ is integral over $C$.
+
+%%%%%
+%%%%%
+\end{document}

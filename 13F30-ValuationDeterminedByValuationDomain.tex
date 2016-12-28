@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ValuationDeterminedByValuationDomain}
+\pmcreated{2013-03-22 14:54:58}
+\pmmodified{2013-03-22 14:54:58}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{valuation determined by valuation domain}
+\pmrecord{10}{36602}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13F30}
+\pmclassification{msc}{13A18}
+\pmclassification{msc}{12J20}
+\pmclassification{msc}{11R99}
+\pmrelated{ValuationDomainIsLocal}
+\pmrelated{KrullValuationDomain}
+\pmrelated{PlaceOfField}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+\begin{thmplain}
+\, Every valuation domain determines a Krull valuation of the field of fractions.
+\end{thmplain}
+
+{\em Proof.} \,Let $R$ be a valuation domain, $K$ its field of fractions and $E$ the group of units of $R$.  Then $E$ is a normal subgroup of the multiplicative group\, $K^* = K\!\smallsetminus\!\{0\}$.\, So we can form the factor group\, $K^*/E$, consisting of all cosets $aE$ where\, $a\in K^*$,\, and attach to it the additional ``coset'' $0E$ getting thus a multiplicative group\, $K/E$\, equipped with zero.\, If\, $\mathfrak{m} = R\!\smallsetminus\!E$\, is the maximal ideal of $R$ (any valuation domain has a unique maximal ideal 
+--- cf. valuation domain is local), then we denote\, $\mathfrak{m}^* = \mathfrak{m}\!\smallsetminus\!\{0\}$\, and\, $S = \mathfrak{m}^*/E = \{aE:\,\,a\in \mathfrak{m}^*\}$.\, Then the subsemigroup $S$ of $K/E$ makes $K/E$ an ordered group equipped with zero.\, It is not hard to check that the mapping
+                         $$x\mapsto |x| := xE$$
+from $K$ to\, $K/E$\, is a Krull valuation of the field $K$.
+%%%%%
+%%%%%
+\end{document}

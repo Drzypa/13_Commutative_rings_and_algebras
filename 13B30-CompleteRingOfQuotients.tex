@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CompleteRingOfQuotients}
+\pmcreated{2013-03-22 16:20:29}
+\pmmodified{2013-03-22 16:20:29}
+\pmowner{jocaps}{12118}
+\pmmodifier{jocaps}{12118}
+\pmtitle{complete ring of quotients}
+\pmrecord{17}{38473}
+\pmprivacy{1}
+\pmauthor{jocaps}{12118}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13B30}
+\pmrelated{CompleteRingOfQuotientsOfReducedCommutativeRings}
+\pmrelated{EpimorphicHull}
+\pmdefines{fraction of rings}
+\pmdefines{complete ring of quotients}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+\newtheorem*{rem}{Remark}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Consider a commutative unitary ring $R$ and set 
+$$\mathcal S:=\{ \mathrm{Hom}_R(I,R) : I \textrm{ is dense in } R \}$$
+(here $\mathrm{Hom}_R(I,R)$ is the set of $R$-module morphisms from $I$ to $R$) and define $A:=\bigcup_{B\in\mathcal S} B$.
+
+Now we shall assign a ring structure to $A$ by defining its addition and multiplication. Given two dense ideals $I_1,I_2\subset R$ and two elements 
+$f_i\in\mathrm{Hom}_R(I_i,R)$ for $i\in\{1,2\}$, one can easily check that $I_1\cap I_2$ and $f_2^{-1} (I_1)$ are nontrivial (i.e. they aren't $\{0\}$) and in fact also dense ideals so we define
+
+$f_1+f_2\in\mathrm{Hom}_R(I_1\cap I_2,R)$ by $(f_1+f_2)(x)=f_1(x)+f_2(x)$
+
+$f_1*f_2\in\mathrm{Hom}_R(f_2^{-1}(I_1),R)$ by $(f_1*f_2)(x)=f_1(f_2(x))$
+
+It is easy to check that $A$ is in fact a commutative ring with unity.
+The elements of $A$ are called \PMlinkescapetext{\emph{fractions}}.
+
+There is also an equivalence relation that one can define on $A$.
+Given $f_i\in \mathrm{Hom}_R(I_i,R)$ for $i\in\{1,2\}$, we write
+$$f_1\sim f_2 \Leftrightarrow f_1|I_1\cap I_2 = f_2|I_1\cap I_2$$
+(i.e. $f_1$ and $f_2$ belong to the same equivalence class iff they agree on the intersection of the dense ideal where they are defined). 
+
+The factor ring $Q(R):=A/\sim$ is then called the \emph{complete ring of quotients}.
+
+\begin{rem}
+$R\subset T(R)\subset Q(R)$, where $T(R)$ is the total quotient ring. One can also in general define complete ring of quotients on noncommutative rings.
+\end{rem}
+
+\begin{thebibliography}{99}
+
+\bibitem[Huckaba]{Huckaba}
+\textbf{J.A. Huckaba},
+"Commutative rings with zero divisors",
+Marcel Dekker 1988
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

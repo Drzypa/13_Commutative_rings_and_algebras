@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CyclicRingsAndZeroRings}
+\pmcreated{2013-03-22 17:14:43}
+\pmmodified{2013-03-22 17:14:43}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{cyclic rings and zero rings}
+\pmrecord{9}{39576}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13M05}
+\pmclassification{msc}{13A99}
+\pmclassification{msc}{16U99}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+\newtheorem{lemma}{Lemma}
+\begin{document}
+\PMlinkescapeword{generator}
+\PMlinkescapeword{order}
+
+\begin{lemma}
+Let $n$ be a positive integer and $R$ be a cyclic ring of \PMlinkname{order}{OrderRing} $R$.  Then the following are equivalent:
+
+\begin{enumerate}
+\item $R$ is a zero ring;
+\item $R$ has behavior $n$;
+\item $R \cong n\mathbb{Z}_{n^2}$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+To show that 1 implies 2, let $R$ have behavior $k$.  Then there exists a \PMlinkname{generator}{Generator} $r$ of the additive group of $R$ such that $r^2=kr$.  Since $R$ is a zero ring, $r^2=0_R$.  Since $kr=r^2=0_R=nr$, it must be the case that $k \equiv n \mod n$.  By definition of behavior, $k$ \PMlinkname{divides}{Divides} $n$.  Hence, $k=n$.
+
+The fact that 2 implies 3 follows immediately from the theorem that is stated and proven at \PMlinkname{cyclic rings that are isomorphic to $k\mathbb{Z}_{kn}$}{CyclicRingsThatAreIsomorphicToKmathbbZ_kn}.
+
+The fact that 3 implies 1 follows immediately since $n\mathbb{Z}_{n^2}$ is a zero ring.
+\end{proof}
+
+\begin{lemma}
+Let $R$ be an infinite \PMlinkescapetext{cyclic ring}.  Then the following are equivalent:
+
+\begin{enumerate}
+\item $R$ is a zero ring;
+\item $R$ has behavior $0$;
+\item $R$ is \PMlinkname{isomorphic}{Isomorphism7} to the subring $\mathbf{B}$ of $\mathbf{M}_{2\operatorname{x}2}(\mathbb{Z})$:
+
+$$\mathbf{B}=\left\{ \left. \left( \begin{array}{cc}
+n & -n \\
+n & -n \end{array} \right) \right\vert n \in \mathbb{Z} \right\}.$$
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+To show that 1 implies 2, the contrapositive of the theorem that is stated and proven at \PMlinkname{cyclic rings that are isomorphic to $k\mathbb{Z}$}{CyclicRingsThatAreIsomorphicToKmathbbZ} can be used.  If $R$ does not have behavior $0$, then its behavior $k$ must be positive by definition, in which case $R \cong k\mathbb{Z}$.  It is clear that $k\mathbb{Z}$ is not a zero ring.
+
+To show that 2 implies 3, let $r$ be a generator of the additive group of $R$.  It can be easily verified that $\varphi \colon R \to \mathbf{B}$ defined by $\displaystyle \varphi(nr)=\left( \begin{array}{cc}
+n & -n \\
+n & -n \end{array} \right)$ is a ring isomorphism.
+
+The fact that 3 implies 1 follows immediately since $\mathbf{B}$ is a zero ring.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

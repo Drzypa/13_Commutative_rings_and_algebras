@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{QuotientOfIdeals}
+\pmcreated{2013-03-22 14:48:36}
+\pmmodified{2013-03-22 14:48:36}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{quotient of ideals}
+\pmrecord{20}{36468}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13B30}
+\pmsynonym{residual}{QuotientOfIdeals}
+\pmsynonym{quotient ideal}{QuotientOfIdeals}
+%\pmkeywords{fractional ideal}
+\pmrelated{SumOfIdeals}
+\pmrelated{ProductOfIdeals}
+\pmrelated{Submodule}
+\pmrelated{ArithmeticalRing}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $R$ be a commutative ring having regular elements and let $T$ be its total ring of fractions.\, If $\mathfrak{a}$ and $\mathfrak{b}$ are fractional ideals of $R$, then one can define two different \PMlinkescapetext{{\em quotients}} or {\em residuals} of $\mathfrak{a}$ by $\mathfrak{b}$:
+\begin{itemize}
+ \item \, $\mathfrak{a\!:\!b}\, \;:=\; 
+     \{r\in R|\quad r\mathfrak{b} \subseteq \mathfrak{a}\}$
+ \item $[\mathfrak{a\!:\!b}] \;:=\; 
+     \{t\in T|\quad t\mathfrak{b} \subseteq \mathfrak{a}\}$
+\end{itemize}
+
+They both are fractional ideals of $R$, and the former in fact an integral ideal of $R$.\, It is clear that 
+$$\mathfrak{a\!:\!b} \;=\; [\mathfrak{a\!:\!b}]\cap\!R.$$
+In the special case that $R$ has non-zero unity and $\mathfrak{b}$ has the inverse ideal $\mathfrak{b}^{-1}$, we have
+$$[\mathfrak{a\!:\!b}] \;=\; \mathfrak{a}\mathfrak{b}^{-1},$$
+in particular
+$$[R\!:\!\mathfrak{b}] \;=\; \mathfrak{b}^{-1}.$$
+
+Some rules concerning the former \PMlinkescapetext{type} of quotient (the corresponding rules are valid also for the latter \PMlinkescapetext{type}):
+\begin{enumerate}
+ \item $\mathfrak{a}\subseteq\mathfrak{b}\,\,\,\,\Rightarrow\,\,\,
+\mathfrak{a}:\mathfrak{c}\subseteq\mathfrak{b}:\mathfrak{c}\,\,
+\land\,\,\mathfrak{c}:\mathfrak{a}\supseteq\mathfrak{c}:\mathfrak{b}$
+ \item $\mathfrak{a}:(\mathfrak{b}\mathfrak{c}) =    (\mathfrak{a}:\mathfrak{b}):\mathfrak{c}$ 
+\item $\mathfrak{a}:(\mathfrak{b}+\mathfrak{c})= (\mathfrak{a}:\mathfrak{b})\cap(\mathfrak{a}:\mathfrak{c})$
+ \item $(\mathfrak{a}\cap\mathfrak{b}):\mathfrak{c} = (\mathfrak{a}:\mathfrak{c})\cap(\mathfrak{b}:\mathfrak{c})$
+\end{enumerate}
+
+
+\textbf{Remark.} \,In a Pr\"ufer ring $R$ the \PMlinkname{addition}{SumOfIdeals} and intersection of ideals are dual operations of each other in the sense that there we have the duals
+
+$\quad\quad \mathfrak{a}:(\mathfrak{b}\cap\mathfrak{c}) = (\mathfrak{a}:\mathfrak{b})+(\mathfrak{a}:\mathfrak{c})$
+
+$\quad\quad (\mathfrak{a}+\mathfrak{b}):\mathfrak{c} = (\mathfrak{a}:\mathfrak{c})+(\mathfrak{b}:\mathfrak{c})$
+
+of the two last rules if the \PMlinkescapetext{divisor ideals} are finitely generated.
+%%%%%
+%%%%%
+\end{document}

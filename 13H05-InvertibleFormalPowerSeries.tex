@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{InvertibleFormalPowerSeries}
+\pmcreated{2016-04-27 10:47:14}
+\pmmodified{2016-04-27 10:47:14}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{invertible formal power series}
+\pmrecord{8}{42086}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13H05}
+\pmclassification{msc}{13F25}
+\pmclassification{msc}{13J05}
+\pmrelated{RulesOfCalculusForDerivativeOfFormalPowerSeries}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{invertible} \PMlinkescapeword{element}
+
+\textbf{Theorem.}\, Let $R$ be a commutative ring with non-zero unity.\, A formal power series 
+\begin{align}
+f(X) \;:=\; \sum_{i=0}^\infty a_iX^i
+\end{align}
+is invertible in the ring $R[[X]]$\, iff\, $a_0$ is invertible in the ring $R$.\\
+
+
+\emph{Proof.}\, $1^\circ$.\, Let $f(X)$ have the multiplicative inverse \,$g(X) := \sum_{i=0}^\infty b_iX^i$.\, Since
+$$f(X)g(X) \;=\; \sum_{i=0}^\infty\sum_{j=0}^ia_jb_{i-j}X^i \;=\; 1,$$ 
+we see that\, $a_0b_0 = 1$, i.e. $a_0$ is an invertible element (unit) of $R$.\\
+
+$2^\circ$.\, Assume conversely that $a_0$ is invertible in $R$.\, For making from a formal power series
+\begin{align}
+g(X) := \sum_{i=0}^\infty b_iX^i
+\end{align}
+the inverse of $f(X) = \sum_{i=0}^\infty a_iX^i$, we first choose\, $b_0 := a_0^{-1}$.\, For all already defined coefficients $b_0,\,b_1,\,\ldots,\,b_{i-1}$ let the next coefficient be defined as
+$$b_i \;:=\; -a_0^{-1}(a_1b_{i-1}\!+\!a_2b_{i-2}\!+\ldots+\!a_ib_0).$$
+This equation means that 
+$$\sum_{j=0}^ia_jb_{i-j} \;=\; a_0b_i\!+\!a_1b_{i-1}\!+\!a_2b_{i-2}\!+\ldots+\!a_ib_0$$
+vanishes for all\, $i = 1,\,2,\,\ldots$;\, since\, $a_0b_0 = 1$,\, the product of the formal power series (1) and (2) becomes simply equal to 1.\, Accordingly, $f(x)$ is invertible.
+%%%%%
+%%%%%
+\end{document}

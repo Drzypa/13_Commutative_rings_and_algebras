@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PolynomialRingOverIntegralDomain}
+\pmcreated{2013-03-22 15:10:06}
+\pmmodified{2013-03-22 15:10:06}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{polynomial ring over integral domain}
+\pmrecord{10}{36918}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13P05}
+\pmrelated{RingAdjunction}
+\pmrelated{FormalPowerSeries}
+\pmrelated{ZeroPolynomial2}
+\pmrelated{PolynomialRingOverFieldIsEuclideanDomain}
+\pmdefines{coefficient ring}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+\begin{thmplain}
+\, If the {\em coefficient ring} $R$  is an integral domain, then so is also its polynomial ring $R[X]$.
+\end{thmplain}
+
+{\em Proof.}\, Let $f(X)$ and $g(X)$ be two non-zero polynomials in $R[X]$ and let $a_f$ and $b_g$ be their leading coefficients, respectively.\, Thus\, $a_f \neq 0$,\, $b_g \neq 0$,\, and because $R$ has no zero divisors,\, $a_fb_g \neq 0$.\, But the product $a_fb_g$ is the leading coefficient of $f(X)g(X)$ and so $f(X)g(X)$ cannot be the zero polynomial.\, Consequently, $R[X]$ has no zero divisors, Q.E.D.\\
+
+\textbf{Remark.}\, The theorem may by induction be generalized for the polynomial ring\, $R[X_1,\,X_2,\,\ldots,\,X_n]$.
+%%%%%
+%%%%%
+\end{document}

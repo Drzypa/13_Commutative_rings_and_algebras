@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PrimaryDecompositionTheorem1}
+\pmcreated{2013-03-22 18:19:56}
+\pmmodified{2013-03-22 18:19:56}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{primary decomposition theorem}
+\pmrecord{9}{40964}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13C99}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+The primary decomposition theorem for ideals in a given commutative ring (with 1) is a generalization of the fundamental theorem of arithmetic.  The full statement of the theorem is as follows:
+
+\begin{thm} Every decomposable ideal in a commutative ring $R$ with 1 has a unique minimal primary decomposition.  In other words, if $I$ is an ideal of $R$ with two minimal primary decompositions
+$$I=J_1\cap J_2 \cap \cdots \cap J_m = K_1 \cap K_2 \cap \cdots \cap K_n,$$
+then $m=n$, and after some rearrangement, $\operatorname{rad}(J_i)=\operatorname{rad}(K_i)$.
+\end{thm}
+
+The theorem says, that, the number of primary components of a minimal primary decomposition of an ideal, as well as the set of prime radicals associated with the primary components, are unique.  This is not to say, however, that the ideal has a unique minimal primary decomposition.  For example, let $k$ be a field.  Consider the ring $k[x,y]$ of polynomials over $k$ in two variables.  The ideal $(x^2,xy)$ has minimal primary decompositions $(x)\cap (x^2,y+rx)$ for every $r\in k$.
+
+\textbf{Remark}.  To tie the fundamental theorem of arithmetic with this theorem, we observe that every natural number $n$ greater than $1$ can be uniquely expressed as a product of prime powers: $$n=p_1^{a_1}p_2^{a_2} \cdots p_n^{a_n},$$ where each $p_i$ is a prime number.  This is the same as saying that $$(n)=(p_1^{a_1}) \cap (p_2^{a_2}) \cap  \cdots \cap (p_n^{a_n}),$$
+as every $(p^a)$ is a $(p)$-primary ideal of $\mathbb{Z}$ for every prime $p\in \mathbb{N}$.  The decomposition is minimal, as $(p_1^{a_1})=(p_2^{a_2})$ iff $p_1=p_2$ and $a_1=a_2$.
+
+\begin{thebibliography}{9}
+\bibitem{DGN}
+D.G. Northcott, \emph{Ideal Theory}, Cambridge University Press, 1953.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

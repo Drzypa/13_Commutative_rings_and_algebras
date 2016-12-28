@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EquivalentCharacterizationsOfDedekindDomains}
+\pmcreated{2013-03-22 18:34:27}
+\pmmodified{2013-03-22 18:34:27}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{equivalent characterizations of Dedekind domains}
+\pmrecord{10}{41298}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13A15}
+\pmclassification{msc}{13F05}
+%\pmkeywords{Dedekind domain}
+%\pmkeywords{Noetherian domain}
+%\pmkeywords{invertible ideal}
+%\pmkeywords{projective module}
+%\pmkeywords{local ring}
+\pmrelated{DedekindDomain}
+\pmrelated{FinitelyGeneratedTorsionFreeModulesOverPruferDomains}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+
+
+\begin{document}
+\PMlinkescapeword{Noetherian}
+\PMlinkescapeword{invertible}
+Dedekind domains can be defined as integrally closed \PMlinkname{Noetherian}{Noetherian} domains in which every nonzero prime ideal is maximal. However, there are several alternative characterizations which can be used, and are listed in the following theorem.
+
+\begin{theorem*}
+Let $R$ be an integral domain. Then, the following are equivalent.
+\begin{enumerate}
+\item $R$ is Noetherian, integrally closed, and every prime ideal is maximal.\label{dedekind}
+\item Every nonzero proper ideal is a product of maximal ideals.\label{maximals}
+\item Every nonzero proper ideal is product of prime ideals.\label{primes}
+\item Every nonzero ideal is \PMlinkname{invertible}{FractionalIdeal}.\label{invertible}
+\item Every ideal is \PMlinkname{projective}{ProjectiveModule} as an $R$-module.\label{projective}
+\item $R$ is Noetherian and every finitely generated torsion-free $R$-module is projective.\label{projective mod}
+\item $R$ is Noetherian and the localization $R_\mathfrak{m}$ is a principal ideal domain for each maximal ideal $\mathfrak{m}$.\label{local}
+\end{enumerate}
+Furthermore, if these properties are satisfied then the decomposition into primes in (\ref{maximals}) and (\ref{primes}) is unique up to reordering of the factors.
+\end{theorem*}
+
+For example, if $R$ is a principal ideal domain then ideals are clearly invertible and, by condition \ref{invertible} it is Dedekind, so is integrally closed. In this case, factorization of ideals coincides with prime factorization in the ring. For the equivalence of \ref{invertible} and \ref{dedekind} see proof that a domain is Dedekind if its ideals are invertible.
+
+Once it is known that a ring is Dedekind then conditions \ref{maximals} and \ref{primes} show that we get unique factorization of ideals in terms of prime or, equivalently, maximal ideals and conversely, Dedekind domains are are the only integral domains in which such decompositions exist (see proof that a domain is Dedekind if its ideals are products of maximals and proof that a domain is Dedekind if its ideals are products of primes).
+
+The equivalence of \ref{invertible} and \ref{projective} is immediate once it is known that invertible ideals are projective. For rings which are not integral domains, the property that ideals are projective still makes sense. Such rings are called \PMlinkname{hereditary}{HereditaryRing}, and give one possible generalization of the concept of Dedekind domains.
+
+As ideals in a Noetherian domain are finitely generated torsion-free submodules of $R$, condition \ref{projective mod} clearly implies \ref{projective}. Domains which are not necessarily Noetherian, but for which every finitely generated torsion-free module is projective are known as Pr\"ufer domains. The equivalence of \ref{projective mod} and \ref{projective} then follows from the alternative characterization of Pr\"ufer domains as integral domains in which every finitely generated ideal is projective.
+
+Condition \ref{local} (see proof that a Noetherian domain is Dedekind if it is locally a PID) shows that for Noetherian rings, being a Dedekind domain is a \PMlinkname{local property}{Localization} and therefore the notion generalizes to apply to \PMlinkname{algebraic varieties}{Variety} and \PMlinkname{schemes}{Scheme}.
+
+ 
+\begin{thebibliography}{9}
+\bibitem{cohn}
+P.M. Cohn, \emph{Algebra. Vol 2}, Second edition. John Wiley \& Sons Ltd, 1989.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,187 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{YoungTableau}
+\pmcreated{2013-03-22 16:48:19}
+\pmmodified{2013-03-22 16:48:19}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{Young tableau}
+\pmrecord{10}{39039}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13B25}
+\pmclassification{msc}{11P99}
+\pmclassification{msc}{05A17}
+\pmclassification{msc}{05E05}
+\pmclassification{msc}{20C30}
+\pmsynonym{Young tableaux}{YoungTableau}
+\pmdefines{semi-standard tableau}
+\pmdefines{semi-standard tableaux}
+\pmdefines{standard Young tableau}
+\pmdefines{standard Young tableaux}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+\usepackage[all,web]{xypic}
+
+% define commands here
+\def\drawsqlat{%
+\begin{xy}{
+0;<1.7pc,0pc>:<0pc,1.7pc>::
+\xylattice{0}{9}{0}{9}}
+\end{xy}}
+\def\drawsq{\ar@{-}c;c+(1,0)\ar@{-}c;c+(0,1)\ar@{-}c+(1,0);c+(1,1)\ar@{-}c+(0,1);c+(1,1)}
+\def\drawsqlabel#1{\save c+(0.5,0.5)*\txt<2pc>{#1} \restore}
+
+\newcommand{\ferrers}[9]{%
+\begin{renewcommand}{\latticebody}{%
+\ifnum\latticeA<#1 \ifnum\latticeB=9 \drawsq\fi\fi
+\ifnum\latticeA<#2 \ifnum\latticeB=8 \drawsq\fi\fi
+\ifnum\latticeA<#3 \ifnum\latticeB=7 \drawsq\fi\fi
+\ifnum\latticeA<#4 \ifnum\latticeB=6 \drawsq\fi\fi
+\ifnum\latticeA<#5 \ifnum\latticeB=5 \drawsq\fi\fi
+\ifnum\latticeA<#6 \ifnum\latticeB=4 \drawsq\fi\fi
+\ifnum\latticeA<#7 \ifnum\latticeB=3 \drawsq\fi\fi
+\ifnum\latticeA<#8 \ifnum\latticeB=2 \drawsq\fi\fi
+\ifnum\latticeA<#9 \ifnum\latticeB=1 \drawsq\fi\fi
+}
+\drawsqlat
+\end{renewcommand}
+}
+\begin{document}
+Let $Y$ be a Young diagram.  A \emph{filling} of $Y$ is a labelling of the boxes in $Y$ by positive integers.  For example, consider the Young diagram with shape $\lambda = (4,4,2,1)\vdash 11$.
+
+\begin{center}
+\ferrers{4}{4}{2}{1}{0}{0}{0}{0}{0}
+\end{center}
+
+One filling of this Young diagram is
+
+\begin{center}
+\begin{renewcommand}{\latticebody}{%
+\ifnum\latticeA=1 \ifnum\latticeB=4 \drawsq\drawsqlabel{2} \fi\fi
+\ifnum\latticeA=2 \ifnum\latticeB=4 \drawsq\drawsqlabel{4} \fi\fi
+\ifnum\latticeA=3 \ifnum\latticeB=4 \drawsq\drawsqlabel{1} \fi\fi
+\ifnum\latticeA=4 \ifnum\latticeB=4 \drawsq\drawsqlabel{1} \fi\fi
+\ifnum\latticeA=1 \ifnum\latticeB=3 \drawsq\drawsqlabel{5} \fi\fi
+\ifnum\latticeA=2 \ifnum\latticeB=3 \drawsq\drawsqlabel{2} \fi\fi
+\ifnum\latticeA=3 \ifnum\latticeB=3 \drawsq\drawsqlabel{3} \fi\fi
+\ifnum\latticeA=4 \ifnum\latticeB=3 \drawsq\drawsqlabel{7} \fi\fi
+\ifnum\latticeA=1 \ifnum\latticeB=2 \drawsq\drawsqlabel{1} \fi\fi
+\ifnum\latticeA=2 \ifnum\latticeB=2 \drawsq\drawsqlabel{4} \fi\fi
+\ifnum\latticeA=1 \ifnum\latticeB=1 \drawsq\drawsqlabel{1} \fi\fi
+}
+\drawsqlat
+\end{renewcommand}
+\end{center}
+
+A filling is a \emph{Young tableau} if it includes each label from $1$ to $n$ exactly once.  One Young tableau with shape $\lambda$ is
+
+\begin{center}
+\begin{renewcommand}{\latticebody}{%
+\ifnum\latticeA=1 \ifnum\latticeB=4 \drawsq\drawsqlabel{5} \fi\fi
+\ifnum\latticeA=2 \ifnum\latticeB=4 \drawsq\drawsqlabel{11} \fi\fi
+\ifnum\latticeA=3 \ifnum\latticeB=4 \drawsq\drawsqlabel{8} \fi\fi
+\ifnum\latticeA=4 \ifnum\latticeB=4 \drawsq\drawsqlabel{10} \fi\fi
+\ifnum\latticeA=1 \ifnum\latticeB=3 \drawsq\drawsqlabel{2} \fi\fi
+\ifnum\latticeA=2 \ifnum\latticeB=3 \drawsq\drawsqlabel{3} \fi\fi
+\ifnum\latticeA=3 \ifnum\latticeB=3 \drawsq\drawsqlabel{7} \fi\fi
+\ifnum\latticeA=4 \ifnum\latticeB=3 \drawsq\drawsqlabel{6} \fi\fi
+\ifnum\latticeA=1 \ifnum\latticeB=2 \drawsq\drawsqlabel{9} \fi\fi
+\ifnum\latticeA=2 \ifnum\latticeB=2 \drawsq\drawsqlabel{4} \fi\fi
+\ifnum\latticeA=1 \ifnum\latticeB=1 \drawsq\drawsqlabel{1} \fi\fi
+}
+\drawsqlat
+\end{renewcommand}
+\end{center}
+
+Each Young tableau with shape $\lambda\vdash n$ corresponds to a \PMlinkname{set partition}{Partition} of $[n]=\{1,\dots,n\}$.  
+%Moreover, Young tableaux with a fixed size but arbitrary shape are in bijective %correspondence with $\Pi_n$, the lattice of partitions of $[n]$, and the %lattice structure has meaning for Young tableaux.
+
+A filling is a \emph{semi-standard tableau} if the labels
+monotonically increase in each row and strictly increase in each
+column.  One semi-standard tableau with shape $\lambda$ is
+
+\begin{center}
+\begin{renewcommand}{\latticebody}{%
+\ifnum\latticeA=1 \ifnum\latticeB=4 \drawsq\drawsqlabel{1} \fi\fi
+\ifnum\latticeA=2 \ifnum\latticeB=4 \drawsq\drawsqlabel{1} \fi\fi
+\ifnum\latticeA=3 \ifnum\latticeB=4 \drawsq\drawsqlabel{2} \fi\fi
+\ifnum\latticeA=4 \ifnum\latticeB=4 \drawsq\drawsqlabel{3} \fi\fi
+\ifnum\latticeA=1 \ifnum\latticeB=3 \drawsq\drawsqlabel{2} \fi\fi
+\ifnum\latticeA=2 \ifnum\latticeB=3 \drawsq\drawsqlabel{4} \fi\fi
+\ifnum\latticeA=3 \ifnum\latticeB=3 \drawsq\drawsqlabel{4} \fi\fi
+\ifnum\latticeA=4 \ifnum\latticeB=3 \drawsq\drawsqlabel{5} \fi\fi
+\ifnum\latticeA=1 \ifnum\latticeB=2 \drawsq\drawsqlabel{5} \fi\fi
+\ifnum\latticeA=2 \ifnum\latticeB=2 \drawsq\drawsqlabel{6} \fi\fi
+\ifnum\latticeA=1 \ifnum\latticeB=1 \drawsq\drawsqlabel{8} \fi\fi
+}
+\drawsqlat
+\end{renewcommand}
+\end{center}
+
+Finally, a semi-standard tableau is a \emph{standard Young tableau} if it includes each label from $1$ to $n$ exactly once.  Hence a standard Young tableau is both a semi-standard tableau and a Young tableau.  One standard Young tableau with shape $\lambda$ is
+
+\begin{center}
+\begin{renewcommand}{\latticebody}{%
+\ifnum\latticeA=1 \ifnum\latticeB=4 \drawsq\drawsqlabel{1} \fi\fi
+\ifnum\latticeA=2 \ifnum\latticeB=4 \drawsq\drawsqlabel{3} \fi\fi
+\ifnum\latticeA=3 \ifnum\latticeB=4 \drawsq\drawsqlabel{6} \fi\fi
+\ifnum\latticeA=4 \ifnum\latticeB=4 \drawsq\drawsqlabel{8} \fi\fi
+\ifnum\latticeA=1 \ifnum\latticeB=3 \drawsq\drawsqlabel{2} \fi\fi
+\ifnum\latticeA=2 \ifnum\latticeB=3 \drawsq\drawsqlabel{4} \fi\fi
+\ifnum\latticeA=3 \ifnum\latticeB=3 \drawsq\drawsqlabel{7} \fi\fi
+\ifnum\latticeA=4 \ifnum\latticeB=3 \drawsq\drawsqlabel{9} \fi\fi
+\ifnum\latticeA=1 \ifnum\latticeB=2 \drawsq\drawsqlabel{5} \fi\fi
+\ifnum\latticeA=2 \ifnum\latticeB=2 \drawsq\drawsqlabel{10} \fi\fi
+\ifnum\latticeA=1 \ifnum\latticeB=1 \drawsq\drawsqlabel{11} \fi\fi
+}
+\drawsqlat
+\end{renewcommand}
+\end{center}
+
+There is some variation in this terminology.  For example, Fulton uses the terms tableau and Young tableau interchangeably for what we call a semi-standard Young tableau.
+
+\begin{thebibliography}{99}
+\bibitem{Fu1997}
+William~Fulton. \emph{Young tableaux: with applications to representation theory and geometry}.  Cambridge University Press, 1997.
+
+\bibitem{Sa2001}
+Bruce~E.~Sagan. \emph{The symmetric group: representations, combinatorial algorithms, and symmetric functions}, 2nd ed.  Springer, 2001.
+
+\bibitem{St1999}
+Richard~P.~Stanley. \emph{Enumerative combinatorics, volume 2}.  Cambridge University Press, 1999.
+\end{thebibliography}
+
+\PMlinkescapeword{column}
+\PMlinkescapeword{fixed}
+\PMlinkescapeword{label}
+\PMlinkescapeword{labels}
+\PMlinkescapeword{row}
+\PMlinkescapeword{partitions}
+\PMlinkescapeword{size}
+\PMlinkescapeword{structure}
+\PMlinkescapeword{terms}
+\PMlinkescapeword{variation}
+%%%%%
+%%%%%
+\end{document}

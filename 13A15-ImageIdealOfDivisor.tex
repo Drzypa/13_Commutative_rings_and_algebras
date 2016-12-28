@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ImageIdealOfDivisor}
+\pmcreated{2013-03-22 18:02:40}
+\pmmodified{2013-03-22 18:02:40}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{image ideal of divisor}
+\pmrecord{9}{40568}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13A15}
+\pmclassification{msc}{13A05}
+\pmclassification{msc}{11A51}
+\pmdefines{image ideal}
+\pmdefines{ideal determined by the divisor}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+ \usepackage[T2A]{fontenc}
+ \usepackage[russian, english]{babel}
+
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+\textbf{Theorem.}\, If an integral domain $\mathcal{O}$ has a divisor theory \,$\mathcal{O}^* \to \mathfrak{D}$,\, then the subset $[\mathfrak{a}]$ of $\mathcal{O}$, consisting of 0 and all elements divisible by a divisor $\mathfrak{a}$, is an ideal of $\mathcal{O}$.\, The mapping
+$$\mathfrak{a} \mapsto [\mathfrak{a}]$$
+from the set $\mathfrak{D}$ of divisors into the set of ideals of $\mathcal{O}$ is injective and maps any principal divisor $(\alpha)$ to the principal ideal $(\alpha)$.\\
+
+{\em Proof.}\, Let\, $\alpha,\,\beta \in [\mathfrak{a}]$\, and\, $\lambda \in \mathcal{O}$.\, Then, by the postulate 2 of \PMlinkname{divisor theory}{DivisorTheory}, $\alpha\!-\!\beta$ is divisible by $\mathfrak{a}$ or is 0, and in both cases belongs to $[\mathfrak{a}]$.\, When\, $\lambda\alpha \neq 0$,\, we can write\, $(\alpha) = \mathfrak{ac}$\, with $\mathfrak{c}$ a divisor.\, According to the homomorphicity of the mapping \,$\mathcal{O}^* \to \mathfrak{D}$,\, we have
+$$(\lambda\alpha) = (\lambda)(\alpha) = (\lambda)\mathfrak{ac},$$
+and therefore the element $\lambda\alpha$ is divisible by $\mathfrak{a}$, i.e. $\lambda\alpha \in [\mathfrak{a}]$.\, Thus, $[\mathfrak{a}]$ is an ideal of $\mathcal{O}$.
+
+The injectivity of the mapping\, $\mathfrak{a} \mapsto [\mathfrak{a}]$\, follows from the postulate 3 of \PMlinkname{divisor theory}{DivisorTheory}.\\
+
+
+
+The ideal $[\mathfrak{a}]$ may be called the {\em image ideal} of $\mathfrak{a}$ or the {\em ideal determined by the divisor} $\mathfrak{a}$.\\
+
+\textbf{Remark.}\, There are integral domains $\mathcal{O}$ having a divisor theory but also having ideals which are not of the form $[\mathfrak{a}]$ (for example a polynomial ring in two indeterminates and its ideal formed by the polynomials without constant term).\, Such rings have ``too many ideals''.\; On the other hand, in some integral domains the monoid of principal ideals cannot be embedded into a free monoid; thus those rings cannot have a divisor theory.
+
+\begin{thebibliography}{9}
+\bibitem{MMP} \CYRM. \CYRM. \CYRP\cyro\cyrs\cyrt\cyrn\cyri\cyrk\cyro\cyrv: 
+{\em \CYRV\cyrv\cyre\cyrd\cyre\cyrn\cyri\cyre\, \cyrv\, \cyrt\cyre\cyro\cyrr\cyri\cyryu\, \cyra\cyrl\cyrg\cyre\cyrb\cyrr\cyra\cyri\cyrch\cyre\cyrs\cyrk\cyri\cyrh \,
+\cyrch\cyri\cyrs\cyre\cyrl}. \,\CYRI\cyrz\cyrd\cyra\cyrt\cyre\cyrl\cyrsftsn\cyrs\cyrt\cyrv\cyro \,
+``\CYRN\cyra\cyru\cyrk\cyra''. \CYRM\cyro\cyrs\cyrk\cyrv\cyra \,(1982).
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EisensteinCriterionInTermsOfDivisorTheory}
+\pmcreated{2013-03-22 18:00:45}
+\pmmodified{2013-03-22 18:00:45}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Eisenstein criterion in terms of divisor theory}
+\pmrecord{6}{40527}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13A05}
+\pmrelated{DivisorTheory}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{index} \PMlinkescapeword{divide}
+The below theorem generalises Eisenstein criterion of irreducibility from UFD's to domains with divisor theory.\\
+
+\newtheorem*{thm}{Theorem}
+\begin{thm}
+Let\; $f(x) := a_0\!+\!a_1x\!+\ldots+\!a_nx^n$\; be a primitive polynomial over an integral domain $\mathcal{O}$ with \PMlinkname{divisor theory}{DivisorTheory} \,$\mathcal{O}^* \to \mathfrak{D}$.\, If there is a prime divisor\, $\mathfrak{p \in D}$\, such that
+\begin{itemize}
+\item $\mathfrak{p} \mid a_0,\,a_1,\,\ldots,\,a_{n-1},$
+\item $\mathfrak{p} \nmid a_n,$
+\item $\mathfrak{p}^2 \nmid a_0,$
+\end{itemize}
+then the polynomial is irreducible.\\
+\end{thm}
+
+{\em Proof.}\,
+Suppose that we have in $\mathcal{O}[x]$ the factorisation
+$$f(x) = (b_0+b_1x+\ldots+b_sx^s)(c_0+c_1x+\ldots+c_tx^t)$$
+with\, $s > 0$\, and\, $t > 0$.\, Because the principal divisor $(a_0)$, i.e. $(b_0)(c_0)$ is divisible by the prime divisor $\mathfrak{p}$ and there is a unique factorisation in the monoid $\mathfrak{D}$, $\mathfrak{p}$ must divide $(b_0)$ or $(c_0)$ but, by $\mathfrak{p}^2 \nmid (a_0)$, not both of $(b_0)$ and $(c_0)$; suppose e.g. that 
+$\mathfrak{p} \mid c_0$.\, If $\mathfrak{p}$ would divide all the coefficients $c_j$, then it would divide also the product \,$b_sc_t = a_n$.\, So, there is a certain smallest index $k$ such that\, $p \nmid c_k$.\, Accordingly, in the sum $b_0c_k+b_1c_{k-1}+\ldots+b_kc_0$, the prime divisor $\mathfrak{p}$ \PMlinkname{divides}{DivisibilityInRings} every summand except the first (see the definition of \PMlinkname{divisor theory}{DivisorTheory}); therefore it cannot divide the sum.\, But the value of the sum is $a_k$ which by hypothesis is divisible by the prime divisor.\, This contradiction shows that the polynomial $f(x)$ is irreducible.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OrdersOfElementsInIntegralDomain}
+\pmcreated{2013-03-22 15:40:28}
+\pmmodified{2013-03-22 15:40:28}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{orders of elements in integral domain}
+\pmrecord{9}{37615}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13G05}
+\pmrelated{OrderGroup}
+\pmrelated{IdealOfElementsWithFiniteOrder}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+\begin{thmplain}
+Let\, $(D,\,+,\,\cdot)$\, be an integral domain, i.e. a commutative ring with non-zero unity 1 and no zero divisors.\, All non-zero elements of $D$ have the same \PMlinkname{order}{OrderGroup} in the additive group\, $(D,\,+)$.
+\end{thmplain}
+
+{\em Proof.}\, Let $a$ be arbitrary non-zero element.\, Any \PMlinkname{multiple}{GeneralAssociativity} $na$ may be  written as
+  $$na = n(1a) = \underbrace{1a+1a+\cdots+1a}_{n} = (\underbrace{1+1+\cdots+1}_{n})a = (n1)a.$$
+Thus, because\, $a \ne 0$\, and there are no zero divisors, an equation\, $na = 0$\, is \PMlinkname{equivalent}{Equivalent3} with the equation\, $n1 = 0$.\, So $a$ must have the same \PMlinkescapetext{order} as the unity of $D$.
+
+\textbf{Note.}\, The \PMlinkescapetext{order} of the unity element is the \PMlinkname{characteristic}{Characteristic} of the integral domain, which is 0 or a positive prime number.
+%%%%%
+%%%%%
+\end{document}

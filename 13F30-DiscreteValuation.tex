@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DiscreteValuation}
+\pmcreated{2013-03-22 13:59:14}
+\pmmodified{2013-03-22 13:59:14}
+\pmowner{djao}{24}
+\pmmodifier{djao}{24}
+\pmtitle{discrete valuation}
+\pmrecord{6}{34761}
+\pmprivacy{1}
+\pmauthor{djao}{24}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13F30}
+\pmclassification{msc}{12J20}
+\pmsynonym{rank one valuations}{DiscreteValuation}
+\pmsynonym{rank-one valuations}{DiscreteValuation}
+\pmrelated{DiscreteValuationRing}
+\pmrelated{Valuation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\R}{\mathbb{R}}
+\begin{document}
+A {\em discrete valuation} on a field $K$ is a valuation $|\cdot|: K \to \R$ whose image is a discrete subset of $\R$.
+
+For any field $K$ with a discrete valuation $|\cdot|$, the set
+$$
+R := \{x \in K : |x| \leq 1\}
+$$
+is a subring of $K$ with sole maximal ideal
+$$
+M := \{x \in K : |x| < 1\},
+$$
+and hence $R$ is a discrete valuation ring. Conversely, given any discrete valuation ring $R$, the field of fractions $K$ of $R$ admits a discrete valuation sending each element $x \in R$ to $c^n$, where $0 < c < 1$ is some arbitrary fixed constant and $n$ is the order of $x$, and extending multiplicatively to $K$.
+
+{\bf Note:} Discrete valuations are often written additively instead of multiplicatively; under this alternate viewpoint, the element $x$ maps to $\log_c|x|$ (in the above notation) instead of just $|x|$. This transformation reverses the order of the absolute values (since $c < 1$), and sends the element $0 \in K$ to $\infty$. It has the advantage that every valuation can be normalized by a suitable scalar multiple to take values in the integers.
+%%%%%
+%%%%%
+\end{document}

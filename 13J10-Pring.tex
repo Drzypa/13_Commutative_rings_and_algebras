@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Pring}
+\pmcreated{2013-03-22 15:14:28}
+\pmmodified{2013-03-22 15:14:28}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{p-ring}
+\pmrecord{4}{37016}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13J10}
+\pmclassification{msc}{13K05}
+\pmsynonym{$p$-ring}{Pring}
+\pmsynonym{p-adic ring}{Pring}
+\pmsynonym{$p$-adic ring}{Pring}
+\pmsynonym{strict $p$-ring}{Pring}
+\pmdefines{strict p-ring}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{exa}{Example}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\newcommand{\mA}{\mathfrak{A}}
+\begin{document}
+\begin{defn}
+Let $R$ be a commutative ring with identity element equipped with a topology defined by a decreasing sequence:
+$$\ldots \subset \mA_3 \subset \mA_2 \subset \mA_1$$
+of ideals such that $\mA_n\cdot \mA_m \subset \mA_{n+m}$. We say that $R$ is a $p$-ring if the following conditions are satisfied:
+\begin{enumerate}
+\item The residue ring $\overline{k}=R/\mA_1$ is a perfect ring of characteristic $p$.
+
+\item The ring $R$ is Hausdorff and complete for its topology.
+\end{enumerate}
+\end{defn}
+
+\begin{defn}
+A $p$-ring $R$ is said to be strict (or a $p$-adic ring) if the topology is defined by the $p$-adic filtration $\mA_n=p^nR$, and $p$ is not a zero-divisor of $R$.
+\end{defn}
+
+\begin{exa}
+The prototype of strict $p$-ring is the ring of \PMlinkname{$p$-adic integers}{PAdicIntegers} $\Ints_p$ with the usual profinite topology.
+\end{exa}
+
+\begin{thebibliography}{9}
+\bibitem{serre} J. P. Serre, {\em Local Fields},
+Springer-Verlag, New York.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

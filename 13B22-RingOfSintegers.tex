@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RingOfSintegers}
+\pmcreated{2013-03-22 15:57:27}
+\pmmodified{2013-03-22 15:57:27}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{ring of $S$-integers}
+\pmrecord{4}{37970}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13B22}
+\pmsynonym{ring of S-integers}{RingOfSintegers}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem*{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem*{exa}{Example}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\begin{document}
+\begin{defn}
+Let $K$ be a number field and let $S$ be a finite set of absolute values of $K$, containing all archimedean valuations. The ring of $S$-integers of $K$, usually denoted by $R_S$, is the ring:
+$$R_S=\{ k\in K : \nu(k)\geq 0 \text{ for all valuations } \nu \notin S \}.$$
+\end{defn}
+
+Notice that, for any set $S$ as above, the ring of integers of $K$, $\mathcal{O}_K$, is always contained in $R_S$.
+
+\begin{exa}
+Let $K=\Rats$ and let $S=\{\nu_p,|\cdot|\}$ where $p$ is a prime and $\nu_p$ is the usual $p$-adic valuation, and $|\cdot|$ is the usual absolute value. Then
+$$R_S=\Ints\left[\frac{1}{p}\right]$$
+, i.e. $R_S$ is the result of adjoining (as a new ring element) $1/p$ to $\Ints$ (i.e. we allow to invert $p$).  
+\end{exa}
+%%%%%
+%%%%%
+\end{document}

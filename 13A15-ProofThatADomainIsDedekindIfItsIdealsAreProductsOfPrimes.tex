@@ -1,0 +1,101 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofThatADomainIsDedekindIfItsIdealsAreProductsOfPrimes}
+\pmcreated{2013-03-22 18:35:07}
+\pmmodified{2013-03-22 18:35:07}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{proof that a domain is Dedekind if its ideals are products of primes}
+\pmrecord{5}{41311}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13A15}
+\pmclassification{msc}{13F05}
+%\pmkeywords{Dedekind domain}
+%\pmkeywords{prime ideal}
+%\pmkeywords{invertible ideal}
+\pmrelated{DedekindDomain}
+\pmrelated{PrimeIdeal}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+
+
+\begin{document}
+\PMlinkescapeword{maximal}
+\PMlinkescapeword{invertible}
+\PMlinkescapeword{prime factorizations}
+\PMlinkescapeword{prime factorization}
+\PMlinkescapeword{primes}
+ We show that for an integral domain $R$, the following are equivalent.
+\begin{enumerate}
+\item $R$ is a Dedekind domain.\label{dedekind}
+\item every nonzero proper ideal is a product of maximal ideals.\label{max prop}
+\item every nonzero proper ideal is a product of prime ideals.\label{prime prop}
+\end{enumerate}
+For the equivalence of \ref{dedekind} and \ref{max prop} see proof that a domain is Dedekind if its ideals 
+are products of maximals. Also, as every maximal ideal is prime, it is immediate that \ref{max prop} implies \ref{prime prop}. So, we just need to consider the case where \ref{prime prop} is satisfied and show that \ref{max prop} follows, for which it enough to show that every nonzero prime ideal is maximal.
+
+We first suppose that $\mathfrak{p}$ is an \PMlinkname{invertible}{FractionalIdeal} prime ideal and show that it is maximal.
+To do this it is enough to show that any $a\in R\setminus\mathfrak{p}$ gives $\mathfrak{p}+(a)=R$. First, we have the following inclusions,
+\begin{equation*}
+\mathfrak{p}\subsetneq\mathfrak{p}+(a^2)\subseteq\mathfrak{p}+(a).
+\end{equation*}
+Then, consider the prime factorizations
+\begin{align}
+&\mathfrak{p}+(a)=\mathfrak{p}_1\cdots\mathfrak{p}_m,\label{eq:2}\\
+&\mathfrak{p}+(a^2)=\mathfrak{q}_1\cdots\mathfrak{q}_n.\label{eq:3}
+\end{align}
+We write $\bar a$ for the image of $a$ under the \PMlinkname{natural homorphism}{NaturalHomomorphism} $R\rightarrow R/\mathfrak{p}$ and $\mathfrak{\bar a}$ for the image of any ideal $\mathfrak{a}$. Equations (\ref{eq:2}) and (\ref{eq:3}) give
+\begin{equation}\label{eq:4}
+\mathfrak{\bar q}_1\cdots\mathfrak{\bar q}_n=(\bar a)^2=(\mathfrak{\bar p}_1\cdots\mathfrak{\bar p}_m)^2.
+\end{equation}
+As $\mathfrak{p}$ is strictly contained in $\mathfrak{p}+(a)$ and $\mathfrak{p}+(a^2)$, it must also be strictly contained in $\mathfrak{p}_k$ and $\mathfrak{q}_k$. So, $\mathfrak{\bar p}_k,\mathfrak{\bar q}_k$ are nonzero prime ideals, and by uniqueness of prime factorization (see, prime ideal factorization is unique) Equation (\ref{eq:4}) gives $n=2m$ and $\mathfrak{\bar p}_k=\mathfrak{\bar q}_k=\mathfrak{\bar q}_{k+m}$, after reordering of the factors. So $\mathfrak{p}_k=\mathfrak{q}_k=\mathfrak{q}_{k+m}$ and,
+\begin{equation}\label{eq:5}
+\mathfrak{p}+(a^2)
+=\mathfrak{q}_1\cdots\mathfrak{q}_n
+= \left(\mathfrak{p}_1\cdots\mathfrak{p}_m\right)^2
+=\left(\mathfrak{p}+(a)\right)^2 = \mathfrak{p}^2+a\mathfrak{p}+(a^2).
+\end{equation}
+Then, $a\not\in\mathfrak{p}$ gives $\mathfrak{p}\cap(a^2)\subseteq a\mathfrak{p}$ and taking the intersection of both sides of (\ref{eq:5}) with $\mathfrak{p}$,
+\begin{equation*}
+\mathfrak{p}=\mathfrak{p}^2+a\mathfrak{p}+\mathfrak{p}\cap(a^2)\subseteq\mathfrak{p}^2+a\mathfrak{p}=\left(\mathfrak{p}+(a)\right)\mathfrak{p}.
+\end{equation*}
+But $\mathfrak{p}$ was assumed to be invertible, and can be cancelled giving $R\subseteq\mathfrak{p}+(a)$, showing that $\mathfrak{p}$ is maximal.
+
+Now let $\mathfrak{p}$ be any prime ideal and $a\in\mathfrak{p}\setminus\{0\}$. Factoring into a product of primes
+\begin{equation}\label{eq:6}
+\mathfrak{p}_1\cdots\mathfrak{p}_n=(a)\subseteq\mathfrak{p},
+\end{equation}
+each of the $\mathfrak{p}_k$ is invertible and, by the above argument, must be maximal. Finally, as $\mathfrak{p}$ is prime, (\ref{eq:6}) gives $\mathfrak{p}_k\subseteq\mathfrak{p}$ for some $k$, so $\mathfrak{p}=\mathfrak{p}_k$ is maximal.
+
+%%%%%
+%%%%%
+\end{document}

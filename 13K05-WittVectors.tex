@@ -1,0 +1,121 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{WittVectors}
+\pmcreated{2013-03-22 15:14:31}
+\pmmodified{2013-03-22 15:14:31}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{Witt vectors}
+\pmrecord{5}{37017}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13K05}
+\pmclassification{msc}{13J10}
+\pmdefines{Witt polynomials}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{exa}{Example}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\begin{document}
+In this entry we define a commutative ring, the Witt vectors, which is particularly useful in number theory, algebraic geometry and other areas of commutative algebra. The Witt vectors are named after Ernst Witt.
+
+\begin{thm}
+Let $p$ be a prime and let $\mathbb{K}$ be a perfect ring of characteristic $p$. There exists a unique \PMlinkname{strict $p$-ring}{PRing} $W(\mathbb{K})$ with residue ring $\mathbb{K}$. 
+\end{thm}
+
+\begin{defn}
+Let $\mathbb{K}$ be a perfect ring of characteristic $p$. The unique \PMlinkname{strict $p$-ring}{PRing} $W(\mathbb{K})$ with residue ring $\mathbb{K}$ is called the ring of Witt vectors with coefficients in $\mathbb{K}$.
+\end{defn}
+
+Next, we give an explicit construction of the Witt vectors.
+
+\begin{defn}
+Let $p$ be a prime number and let $\{ X_i\}_{i=0}^\infty$ be a sequence of indeterminates. The polynomials $W_n\in\Ints[X_1,\ldots,X_n]$ given by:
+\begin{eqnarray*}
+W_0 &=& X_0,\\
+W_1 &=& X_0^p+pX_1,\\
+W_n &=& X_0^{p^n}+pX_1^{p^{n-1}}+\ldots+p^nX_n=\sum_{i=0}^n p^iX_i^{p^{n-i}}.
+\end{eqnarray*}
+are called the Witt polynomials.
+\end{defn}
+
+\begin{prop}
+Let $\{X_i\},\ \{Y_i\}$ be two sequences of indeterminates. For every polynomial in two variables $Q(U,V)\in \Ints[U,V]$ there exist polynomials $\{t_i\}_{i=0}^\infty$ in the variables $\{X_i\}$ and $\{Y_i\}$
+$$t_i \in \Ints[\{X_i\},\{Y_i\}]$$
+such that
+$$W_n(t_0,t_1,t_2,\ldots,t_n)=Q(W_n(X_0,X_1,\ldots),W_n(Y_0,Y_1,\ldots))$$
+for all $n\geq 0$.
+\end{prop}
+\begin{proof}
+See \cite{serre}, p. 40.
+\end{proof}
+
+Let $S_0,\ S_1,\ S_2,\ldots$ (resp. $P_0,\ P_1,\ P_2,\ldots$) be the polynomials 
+$t_0,\ t_1,\ t_2,\ldots$ associated with $Q(U,V)=U+V$ (resp. $Q(U,V)=U\cdot V$) given by the previous proposition. We will use the polynomials $S_i$, $P_i$ to define the addition and multiplication in a new ring. In the following proposition, the notation $R^\infty$ stands for the set of all sequences $(r_1,r_2,\ldots)$ of elements in $R$.
+
+\begin{thm}
+Let $\mathbb{K}$ be a perfect ring of characteristic $p$. We define a ring $W=(\mathbb{K}^\infty,+,\cdot)$ where the addition and multiplication, for $k,h \in \mathbb{K}^\infty$, are defined by:
+$$k+h=(S_0(k,h),S_1(k,h),\ldots),\quad k\cdot h =(P_0(k,h),P_1(k,h),\ldots).$$
+Then the ring $W$ concides with $W(\mathbb{K})$, the ring of Witt vectors with coefficients in $\mathbb{K}$.
+\end{thm}
+
+\begin{defn}
+Let $\mathbb{K}$ be a perfect ring of characteristic $p$. We define the ring of Witt vectors of length $n$ (over $\mathbb{K}$) to be the ring $W_n(\mathbb{K})=(\mathbb{K}^{n-1},+,\cdot)$, where, for $k,h \in \mathbb{K}^{n-1}$:
+$$ k+h=(S_0(k,h),\ldots,S_{n-1}(k,h)),\quad k\cdot h=(P_0(k,h),\ldots,P_{n-1}(k,h)).$$
+\end{defn}
+
+It is clear from the definitions that:
+$$W(\mathbb{K})=\varprojlim W_n(\mathbb{K})$$
+In words, $W(\mathbb{K})$ is the projective limit of the Witt vectors of finite length.
+
+\begin{exa}
+Let $\mathbb{K}=\mathbb{F}_p$. Then $W_n(\mathbb{F}_p)=\Ints/p^n\Ints$. Thus:
+$$W(\mathbb{F}_p)=\Ints_p,$$
+the ring of \PMlinkname{$p$-adic integers}{PAdicIntegers}.
+\end{exa}
+\begin{thebibliography}{9}
+\bibitem{serre} J. P. Serre, {\em Local Fields},
+Springer-Verlag, New York.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

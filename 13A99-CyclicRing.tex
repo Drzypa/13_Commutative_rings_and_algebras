@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CyclicRing}
+\pmcreated{2013-03-22 13:30:13}
+\pmmodified{2013-03-22 13:30:13}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{cyclic ring}
+\pmrecord{33}{34084}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13A99}
+\pmclassification{msc}{16U99}
+\pmrelated{CyclicGroup}
+\pmrelated{ProofOfTheConverseOfLagrangesTheoremForCyclicGroups}
+\pmrelated{CriterionForCyclicRingsToBePrincipalIdealRings}
+\pmrelated{MultiplicativeIdentityOfACyclicRingMustBeAGenerator}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+\begin{document}
+A ring is a {\sl cyclic ring \/} if its additive group is cyclic.
+
+Every cyclic ring is commutative under multiplication.  For if $R$ is a cyclic ring, $r$ is a \PMlinkname{generator}{Generator} of the additive group of $R$, and $s,t \in R$, then there exist $a,b \in {\mathbb Z}$ such that $s=ar$ and $t=br$.  As a result, $st=(ar)(br)=(ab)r^2=(ba)r^2=(br)(ar)=ts.$  (Note the disguised use of the \PMlinkname{distributive property}{Distributive}.)
+
+A result of the \PMlinkname{fundamental theorem of finite abelian groups}{FundamentalTheoremOfFinitelyGeneratedAbelianGroups} is that every ring with squarefree order is a cyclic ring.
+
+If $n$ is a positive integer, then, up to isomorphism, there are exactly $\tau (n)$ cyclic rings of order $n$, where $\tau$ refers to the tau function.  Also, if a cyclic ring has order $n$, then it has exactly $\tau (n)$ subrings.  This result mainly follows from Lagrange's theorem and its converse.  Note that the converse of Lagrange's theorem does not hold in general, but it does hold for finite cyclic groups.
+
+Every subring of a cyclic ring is a cyclic ring.  Moreover, every subring of a cyclic ring is an ideal.
+
+$R$ is a finite cyclic ring of order $n$ if and only if there exists a positive divisor $k$ of $n$ such that $R$ is isomorphic to $k{\mathbb Z}_{kn}$.  $R$ is an \PMlinkescapetext{infinite} cyclic ring that has no zero divisors if and only if there exists a positive integer $k$ such that $R$ is isomorphic to $k{\mathbb Z}$.  (See behavior and its attachments for details.)  Finally, $R$ is an \PMlinkescapetext{infinite} cyclic ring that has zero divisors if and only if it is isomorphic to the following subset of ${\mathbf M}_{2\operatorname{x}2}({\mathbb Z})$:
+
+\begin{center}
+$\left\{ \left. \left( \begin{array}{cc}
+c & -c \\
+c & -c \end{array} \right) \right| c \in {\mathbb Z} \right\}$
+\end{center}
+
+Thus, any \PMlinkescapetext{infinite} cyclic ring that has zero divisors is a zero ring.
+
+\begin{thebibliography}{9}
+\bibitem{buck} Buck, Warren.  \emph{\PMlinkexternal{Cyclic Rings}{http://planetmath.org/?op=getobj&from=papers&id=336}}.  Charleston, IL: Eastern Illinois University, 2004.
+
+\bibitem{kruse} Kruse, Robert L. and Price, David T.  \emph{Nilpotent Rings}.  New York: Gordon and Breach, 1969.
+
+\bibitem{maurer} Maurer, I. Gy. and Vincze, J.  ``Despre Inele Ciclice.''  \emph{Studia Universitatis Babe\c{s}-Bolyai.  Series Mathematica-Physica}, vol. 9 \#1.  Cluj, Romania: Universitatea Babe\c{s}-Bolyai, 1964, pp. 25-27.
+
+\bibitem{peinado} Peinado, Rolando E.  ``On Finite Rings.''  \emph{Mathematics Magazine}, vol. 40 \#2.  Buffalo: The Mathematical Association of America, 1967, pp. 83-85.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ZeroPolynomial}
+\pmcreated{2013-03-22 14:46:58}
+\pmmodified{2013-03-22 14:46:58}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{zero polynomial}
+\pmrecord{13}{36431}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13P05}
+\pmclassification{msc}{11C08}
+\pmclassification{msc}{12E05}
+\pmrelated{PolynomialRingOverIntegralDomain}
+\pmrelated{OrderAndDegreeOfPolynomial}
+\pmrelated{MinimalPolynomialEndomorphism}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The {\em zero polynomial} in a ring $R[X]$ of polynomials over a ring $R$ is the \PMlinkescapetext{additive} identity element $\textbf{0}$ of this polynomial ring:
+$$f\!+\!\textbf{0} \;=\; \textbf{0}\!+\!f \;=\; f \quad\forall\, f\in R[X]$$
+So the zero polynomial is also the absorbing element for the multiplication of polynomials.
+
+All coefficients of the zero polynomial are equal to 0, i.e. 
+$$\textbf{0} \;:=\; (0,\,0,\,0,\,...).$$
+
+Because always
+$$f\cdot\textbf{0} \;=\; \textbf{0}$$
+and because in general \,$\deg(fg) = \deg(f)+\deg(g)$\, when $R$ has no zero divisors, one may define that that the zero polynomial has no \PMlinkname{degree}{Polynomial} at all, or alternatively that
+$$\deg(\textbf{0}) \;=\; -\infty$$
+(see the extended real numbers).
+%%%%%
+%%%%%
+\end{document}

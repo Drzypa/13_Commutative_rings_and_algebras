@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LaskerNoetherTheorem}
+\pmcreated{2013-03-22 18:19:53}
+\pmmodified{2013-03-22 18:19:53}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Lasker-Noether theorem}
+\pmrecord{7}{40963}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13C99}
+\pmdefines{Lasker ring}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\newcommand{\quo}[2]{#1 \!:\! #2}
+\begin{document}
+\begin{thm}[Lasker-Noether]  Let $R$ be a commutative Noetherian ring with $1$.  Every ideal in $R$ is \PMlinkname{decomposable}{DecomposableIdeal}. \end{thm}
+
+The theorem can be proved in two steps:
+
+\begin{prop} Every ideal in $R$ can be written as a finite intersection of irreducible ideals \end{prop}
+\begin{proof}
+Let $S$ be the set of all ideals of a Noetherian ring $R$ which can not be written as a finite intersection of irreducible ideals.  Suppose $S\ne \varnothing$.  Then any chain $I_1\subseteq I_2 \subseteq \cdots $ in $S$ must terminate in a finite number of steps, as $R$ is Noetherian.  Say $I=I_n$ is the maxmimal element of this chain.  Since $I\in S$, $I$ itself can not be irreducible, so that $I=J\cap K$ where $J$ and $K$ are ideals strictly containing $I$.  Now, if $J\in S$, then then $I$ would not be maximal in the chain $I_1\subseteq I_2 \subseteq \cdots$.  Therefore, $J\notin S$.  Similarly, $K\notin S$.  By the definition of $S$, $J$ and $K$ are both finite intersections of irreducible ideals.  But this would imply that $I\notin S$, a contradiction.  So $S=\varnothing$ and we are done.
+\end{proof}
+
+\begin{prop} Every irreducible ideal in $R$ is primary \end{prop}
+\begin{proof}
+Suppose $I$ is irreducible and $ab\in I$.  We want to show that either $a\in I$, or some power $n$ of $b$ is in $I$.  Define $J_i=\quo{I}{(b^i)}$, the quotient of ideals $I$ and $(b^i)$.  Since $$\cdots \subseteq (b^n)\subseteq \cdots \subseteq (b^2)\subseteq (b),$$ we have, by one of the rules on quotients of ideals, an ascending chain of ideals $$J_1\subseteq J_2 \subseteq \cdots \subseteq J_n \subseteq \cdots $$ Since $R$ is Noetherian, $J:=J_n=J_m$ for all $m>n$.  Next, define $K=(b^n)+I$, the sum of ideals $(b^n)$ and $I$.  We want to show that $I=J\cap K$.
+
+First, it is clear that $I\subseteq J$ and $I\subseteq K$, which takes care of one of the inclusions.  Now, suppose $r\in J\cap K$.  Then $r=s+tb^n$, where $s\in I$ and $t\in R$, and $rb^n\in I$.  So, $rb^n=sb^n+tb^{2n}$.  Now, $t\in \quo{I}{(b^{2n})}$, so $t\in \quo{I}{(b^n)}$.  But this means that $r=s+tb^n\in I$, and this proves the other inclusion.
+
+Since $I$ is irreducible, either $I=J$ or $I=K$.  We analyze the two cases below:
+\begin{itemize}
+\item
+If $I=J=\quo{I}{(b^n)}$, then $I=\quo{I}{(b)}$ in particular, since $I\subseteq \quo{I}{(b)} \subseteq \quo{I}{(b^n)}$.  As $ab\in I$ by assumption, $a\in \quo{I}{(b)}= I$.  
+\item
+If $I=K=(b^n)+I$, then $b^n\in I$.
+\end{itemize}
+This completes the proof.
+\end{proof}
+
+\textbf{Remarks}.  
+\begin{itemize}
+\item
+The above theorem can be generalized to any submodule of a finitely generated module over a commutative Noetherian ring with 1.
+\item
+A ring is said to be \emph{Lasker} if every ideal is decomposable.  The theorem above says that every commutative Noetherian ring with 1 is Lasker.  There are Lasker rings that are not Noetherian.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

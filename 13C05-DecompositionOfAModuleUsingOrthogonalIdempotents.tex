@@ -1,0 +1,93 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DecompositionOfAModuleUsingOrthogonalIdempotents}
+\pmcreated{2013-03-22 15:12:22}
+\pmmodified{2013-03-22 15:12:22}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{decomposition of a module using orthogonal idempotents}
+\pmrecord{9}{36966}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Application}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13C05}
+\pmclassification{msc}{16S34}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem*{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{exa}{Example}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\begin{document}
+Let $K$ be a field and let $G$ be a finite abelian group. For simplicity, we will assume that the characteristic of $K$ does not divide the order of $G$. Let $\varphi_1,\ldots, \varphi_n$ be a complete set (up to equivalence) of distinct \PMlinkname{irreducible}{GroupRepresentation} (linear) representations of $G$ over $K$, so that $\varphi_i$ is a homomorphism:
+$$\varphi_i\colon G \longrightarrow \operatorname{GL}(n_i,K)$$
+where $n_i$ is the degree of the representation $\varphi_i$ and $\sum_i n_i=|G|$. Let $\chi_1,\ldots,\chi_n$ be the irreducible characters attached to the $\varphi_i$, i.e. the function $\chi_i\colon G \to K$ is defined by
+$$\chi_i(g)=\text{Trace}(\varphi_i(g)).$$
+Notice, however, that in general the map $\chi_i$ is not a homomorphism from the group into either the additive or multiplicative group of $K$. We define a system of primitive orthogonal idempotents of the group ring $K[G]$, one for each $\chi_i$, by:
+$${\bf 1}_{\chi_i}=\frac{1}{|G|}\sum_{g\in G} \chi_i(g^{-1})g\in K[G]$$
+so that $\sum_{i}{\bf 1}_{\chi_i}=1\in K$ and ${\bf 1}_{\chi_i}\cdot {\bf 1}_{\chi j}=\delta_{ij}$ where $\delta_{ij}$ is the Kronecker delta function. We define the $\chi_i$ component of 
+$K[G]$to be the ideal $K[G]_{\chi_i}={\bf 1}_{\chi_i}\cdot K[G]$. Notice that $V_i=K[G]_{\chi_i}$ is a finite dimensional $K$-vector space, on which $G$ acts. Thus, the representation of $G$ afforded by the $K[G]$-module $V_i$, call it $\varphi$, must be one of the representations $\varphi_j$ defined above. Comparing the trace, one concludes that $\varphi=\varphi_i$ and $V_i=K[G]_{\chi_i}$ is a vector space of dimension $n_i$. In particular, there is a decomposition:
+$$K[G]=\oplus_\chi K[G]_\chi.$$
+If $k\in K[G]$ then by the previous decomposition, we can write: 
+$$k=\sum_\chi k_\chi$$
+where $k_\chi \in K[G]_\chi$. Notice that the representations $\varphi_i$ can be retrieved as:
+$$\varphi_i\colon G \longrightarrow \operatorname{GL(K[G]_{\chi_i})}.$$
+
+\begin{lemma}
+Let $M$ be a $K[G]$-module and define submodules $M_\chi={\bf 1}_{\chi}\cdot M$, for each irreducible character $\chi$. Then:
+\begin{enumerate}
+\item There is a decomposition $M=\oplus_\chi M_\chi$. 
+
+\item The group $K[G]$ acts on $M_\chi$ via $K[G]_\chi$. In other words, if $k\in K[G]$, with $k=\sum_\chi k_\chi$ then:
+$$k\cdot m = k_\chi \cdot m, \text{ for all } m\in M_\chi.$$
+
+\item The representation $\varphi$ of $G$ afforded by the $K$-vector space $M_{\chi_i}$ is, up to equivalence, a number of copies of $\varphi_i$, i.e. 
+$$\varphi=\varphi_i\oplus \ldots \oplus \varphi_i=\varphi_i^{\oplus r}$$
+for some integer $r\geq 0$. In other words, $M_{\chi_i}$ is the submodule consisting of the sum of all $K[G]$-submodules of $M$ isomorphic to $K[G]_{\chi_i}$.
+
+\item Suppose that $M$, $N$ and $R$ are $K[G]$-modules which fit in the short exact sequence:
+$$0\longrightarrow R \longrightarrow M \longrightarrow N \longrightarrow 0$$
+where every map above is a $K[G]$-module homomorphism, i.e. each map is a $K$-homomorphism which is compatible with the action of $G$. Then, the exact sequence above yields an exact sequence of $\chi$ components:
+$$0\longrightarrow R_\chi \longrightarrow M_\chi \longrightarrow N_\chi \longrightarrow 0$$
+for every irreducible character $\chi$.
+\end{enumerate}
+\end{lemma}
+%%%%%
+%%%%%
+\end{document}

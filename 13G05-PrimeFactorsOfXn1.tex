@@ -1,0 +1,106 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PrimeFactorsOfXn1}
+\pmcreated{2013-03-22 16:29:51}
+\pmmodified{2013-03-22 16:29:51}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{prime factors of $x^n-1$}
+\pmrecord{12}{38673}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13G05}
+%\pmkeywords{factorization}
+\pmrelated{GausssLemmaII}
+\pmrelated{IrreducibilityOfBinomialsWithUnityCoefficients}
+\pmrelated{FactorsOfNAndXn1}
+\pmrelated{ExamplesOfCyclotomicPolynomials}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+We list prime factor \PMlinkescapetext{presentations} of the binomials 
+$x^n\!-\!1$ in $\mathbb{Q}$, i.e. in the polynomial ring $\mathbb{Q}[x]$.\, The prime factors can always be chosen to be with integer coefficients and the number of the prime factors equals to \PMlinkname{$\tau(n)$}{TauFunction}; see \PMlinkname{the proof}{FactorsOfNAndXn1}.
+
+$x-1$
+
+$x^2\!-\!1 = (x+1)(x-1)$
+
+$x^3\!-\!1 = (x^2+x+1)(x-1)$
+
+$x^4\!-\!1 = (x^2+1)(x+1)(x-1)$
+
+$x^5\!-\!1 = (x^4+x^3+x^2+x+1)(x-1)$
+
+$x^6\!-\!1 = (x^2+x+1)(x^2-x+1)(x+1)(x-1)$
+
+$x^7\!-\!1 = (x^6+x^5+x^4+x^3+x^2+x+1)(x-1)$
+
+$x^8\!-\!1 = (x^4+1)(x^2+1)(x+1)(x-1)$
+
+$x^9\!-\!1 = (x^6+x^3+1)(x^2+x+1)(x-1)$
+
+$x^{10}\!-\!1 = (x^4+x^3+x^2+1)(x^4-x^3+x^2-x+1)(x+1)(x-1)$
+
+$x^{11}\!-\!1 = (x^{10}\!+\!x^9\!+\!x^8\!+\!x^7\!+\!x^6\!+\!x^5\!+\!x^4\!+\!x^3\!+\!x^2\!+\!x\!+\!1)(x-1)$
+
+$x^{12}\!-\!1 = (x^4-x^2+1)(x^2+x+1)(x^2-x+1)(x^2+1)(x+1)(x-1)$
+
+$x^{13}\!-\!1 =(x^{12}\!+\!x^{11}\!+\!x^{10}\!+\!x^9\!+\!x^8\!+\!x^7\!+
+\!x^6\!+\!x^5\!+\!x^4\!+\!x^3\!+\!x^2\!+\!x\!+\!1)(x\!-\!1)$
+
+$x^{14}\!-\!1 = (x^6+x^5+x^4+x^3+x^2+x+1)(x^6-x^5+x^4-x^3+x^2-x+1)(x+1)(x-1)$
+
+$x^{15}\!-\!1 = (x^8-x^7+x^5-x^4+x^3-x+1)(x^4+x^3+x^2+x+1)(x^2+x+1)(x-1)$
+
+$x^{16}\!-\!1 = (x^8+1)(x^4+1)(x^2+1)(x+1)(x-1)$
+
+$x^{17}\!-\!1 = (x^{16}\!+\!x^{15}\!+\!x^{14}\!+\ldots+\!x^2\!+\!x\!+\!1)(x\!-\!1)$
+
+$x^{18}\!-\!1 = (x^6+x^3+1)(x^6-x^3+1)(x^2+x+1)(x^2-x+1)(x+1)(x-1)$
+
+$x^{19}\!-\!1 = (x^{18}\!+\!x^{17}\!+\!x^{16}\!+\ldots+\!x^2\!+\!x\!+\!1)(x-1)$
+
+$x^{20}\!-\!1 = (x^8-x^6+x^4-x^2+1)(x^4+x^3+x^2+x+1)(x^4-x^3+x^2-x+1)(x^2+1)(x+1)(x-1)$
+
+$x^{21}\!-\!1 = (x^{12}\!-\!x^{11}\!+\!x^9\!-\!x^8\!+\!x^6\!-\!x^4\!+\!x^3\!-\!x\!+\!1)(x^6\!+\!x^5\!+\!x^4\!+\!x^3\!+\!x^2\!+\!x\!+\!1)(x^2\!+\!x\!+\!1)
+(x\!-\!1)$
+
+$x^{22}\!-\!1 = (x^{10}\!+\!x^9\!+\!x^8\!+\!x^7\!+\!x^6\!+\!x^5\!+\!x^4\!+\!x^3\!+\!x^2\!+\!x\!+\!1)(x^{10}\!-\!x^9\!+\!x^8\!-\!x^7\!+\!x^6\!-\!x^5\!+\!x^4\!-\!x^3\!+\!x^2\!-\!x\!+\!1)(x\!+\!1)(x\!-\!1)$
+
+$x^{23}\!-\!1 = (x^{22}\!+\!x^{21}\!+\!x^{20}\!+\ldots+\!x^2\!+\!x\!+\!1)(x\!-\!1)$
+
+$x^{24}\!-\!1 = (x^8\!-\!x^4\!+\!1)(x^4\!-\!x^2\!+\!1)(x^4\!+\!1)(x^2\!+\!x\!+\!1)(x^2\!-\!x\!+\!1)(x^2\!+\!1)(x\!+\!1)(x\!-\!1)$
+
+\textbf{Note 1.}\, All factors shown above are irreducible polynomials (in the field\, $\mathbb{Q}$\, of their own coefficients), but of course they (except $x\!\pm\!1$) may be split into factors of positive degree in certain extension fields; so e.g.
+ $$x^4\!+\!1 = (x^2\!+\!x\sqrt{2}\!+\!1)(x^2\!-\!x\sqrt{2}\!+\!1)\quad 
+\mathrm{in\,the\,field}\,\,\,\mathbb{Q}(\sqrt{2}).$$
+\textbf{Note 2.}\, The 24 examples of factorizations are true also in the fields of characteristic $\neq 0$, but then many of the factors can be simplified or factored onwards (e.g.\, $x^2\!+\!1 \equiv (x\!+\!1)^2$\, if the \PMlinkname{characteristic}{Characteristic} is 2).
+%%%%%
+%%%%%
+\end{document}

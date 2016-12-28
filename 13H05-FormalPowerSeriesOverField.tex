@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FormalPowerSeriesOverField}
+\pmcreated{2015-10-19 9:13:35}
+\pmmodified{2015-10-19 9:13:35}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{formal power series over field}
+\pmrecord{7}{42087}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13H05}
+\pmclassification{msc}{13J05}
+\pmclassification{msc}{13F25}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Theorem.}\, If $K$ is a field, then the ring $K[[X]]$ of formal power series is a discrete valuation ring with 
+$(X)$ its unique maximal ideal.\\
+
+\emph{Proof.}\, We show first that an arbitrary ideal $I$ of $K[[X]]$ is a principal ideal.\, If\, 
+$I = (0)$,\, the thing is ready.\, Therefore, let\, $I \neq (0)$.\, Take an element 
+$$f(X) \;:=\; \sum_{i=0}^\infty a_iX^i$$
+of $I$ such that it has the least possible amount of successive zero coefficients in its beginning; let its first non-zero coefficient be $a_k$.\, Then
+$$f(X) \;=\; X^k(a_k\!+\!a_{k+1}X\!+\ldots).$$
+Here we have in the parentheses an invertible formal power series $g(X)$, whence get the equation
+$$X^k \;=\; f(X)[g(X)]^{-1}$$
+implying\, $X^k \in I$\, and consequently\, $(X^k) \subseteq I$.\\
+For obtaining the reverse inclusion, suppose that
+$$h(X) \;:=\; b_nX^n\!+\!b_{n+1}X^{n+1}\!+\ldots$$
+is an arbitrary nonzero element of $I$ where\, $b_n \neq 0$.\, Because\, $n \ge k$,\, we may write
+$$h(X) \;=\; X^k(b_nX^{n-k}\!+\!b_{n+1}X^{n-k+1}\!+\ldots).$$
+This equation says that\, $h(X) \in (X^k)$,\, whence\, $I \subseteq (X^k)$.\\
+Thus we have seen that $I$ is the principal ideal $(X^k)$, so that $K[[X]]$ is a principal ideal domain.\\
+Now, all ideals of the ring $K[[X]]$ form apparently the strictly descending chain
+$$(X) \;\supset\; (X^2) \;\supset\; (X^3) \;\supset\; \ldots \;\supset\; (0),$$
+whence the ring has the unique maximal ideal $(X)$.\, A principal ideal domain with only one maximal ideal is a discrete valuation ring.
+
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,104 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NormEuclideanNumberField}
+\pmcreated{2013-03-22 16:52:26}
+\pmmodified{2013-03-22 16:52:26}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{norm-Euclidean number field}
+\pmrecord{17}{39124}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13F07}
+\pmclassification{msc}{11R21}
+\pmclassification{msc}{11R04}
+\pmrelated{EuclideanValuation}
+\pmrelated{QuadraticImaginaryEuclideanNumberFields}
+\pmrelated{ListOfAllImaginaryQuadraticPIDs}
+\pmrelated{EuclideanField}
+\pmrelated{AlgebraicNumberTheory}
+\pmrelated{MixedFraction}
+\pmdefines{norm-Euclidean}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{integer} \PMlinkescapeword{integers}
+
+\textbf{Definition.}\, An algebraic number field $K$ is a {\em norm-Euclidean number field}, if for every pair\, $(\alpha,\,\beta)$\, of the \PMlinkname{integers}{AlgebraicInteger} of $K$, where\, $\beta \neq 0$,\, there exist  \PMlinkescapetext{integers} $\varkappa$ and $\varrho$ of the field such that
+$$\alpha \;=\; \varkappa\beta+\varrho, \quad |\mbox{N}(\varrho)| < |\mbox{N}(\beta)|.$$
+Here $\mbox{N}$ means the norm function in $K$.\\
+
+\textbf{Theorem 1.}\, A field $K$ is norm-Euclidean if and only if each number $\gamma$ of $K$ is \PMlinkescapetext{expressible} in the form
+\begin{align}
+\gamma \;=\; \varkappa+\delta
+\end{align}
+where $\varkappa$ is an \PMlinkescapetext{integer} of the field and\, 
+$|\mbox{N}(\delta)| < 1.$
+
+{\em Proof.}\, First assume the condition (1).\, Let $\alpha$ and $\beta$ be integers of $K$,\, $\beta \neq 0$.\, Then there are the numbers\, $\varkappa,\,\delta \in K$\, such that $\varkappa$ is integer and
+   $$\frac{\alpha}{\beta} \;=\; \varkappa+\delta, \quad |\mbox{N}(\delta)| \;<\; 1.$$
+Thus we have
+ $$\alpha \;=\; \varkappa\beta+\beta\delta \;=\; \varkappa\beta+\varrho.$$
+Here\, $\varrho = \beta\delta$\, is integer, since $\alpha$ and $\varkappa\beta$ are integers.\, We also have
+$$|\mbox{N}(\varrho)| \;=\; |\mbox{N}(\beta)|\cdot|\mbox{N}(\delta)|
+\;<\; |\mbox{N}(\beta)|\cdot1 \;=\; |\mbox{N}(\beta)|.$$
+Accordingly, $K$ is a norm-Euclidean number field.
+Secondly assume that $K$ is norm-Euclidean.\, Let $\gamma$ be an arbitrary element of the field.\, We \PMlinkname{can determine}{MultiplesOfAnAlgebraicNumber} a rational integer $m\,(\neq 0)$ such that $m\gamma$ is an algebraic integer of $K$.\, The assumption guarantees the integers $\varkappa$, $\varrho$ of $K$ such that
+ $$m\gamma \;=\; \varkappa m+\varrho, \quad \mbox{N}(\varrho) \;<\; \mbox{N}(m).$$
+Thus
+ $$\gamma = \frac{m\gamma}{m} = \varkappa+\frac{\varrho}{m}, \quad
+\left\vert\mbox{N} \left(\frac{\varrho}{m}\right)\right\vert = \frac{|\mbox{N}(\varrho)|}{|\mbox{N}(m)|} < 1,$$
+Q.E.D.\\
+
+\textbf{Theorem 2.}\, In a norm-Euclidean number field, any two non-zero \PMlinkescapetext{integers} have a greatest common divisor.
+
+{\em Proof.}\, We recall that the {\em greatest common divisor} of two elements of a commutative ring means such a common divisor of the elements that it is divisible by each common divisor of the elements.\, Let now $\varrho_0$ and $\varrho_1$ be two algebraic integers of a norm-Euclidean number field $K$.\, According the definition there are the integers $\varkappa_i$ and $\varrho_i$ of $K$ such that
+$$
+\begin{cases}
+\varrho_0 = \varkappa_2\varrho_1+\varrho_2, \quad
+  |\mbox{N}(\varrho_2)| < |\mbox{N}(\varrho_1)|\\
+\varrho_1 = \varkappa_3\varrho_2+\varrho_3, \quad
+  |\mbox{N}(\varrho_3)| < |\mbox{N}(\varrho_2)|\\
+\varrho_2 = \varkappa_4\varrho_3+\varrho_4, \quad
+  |\mbox{N}(\varrho_4)| < |\mbox{N}(\varrho_3)|\\
+\qquad\cdots\cdots\\
+\varrho_{n-2} = \varkappa_n\varrho_{n-1}+\varrho_n,\;\;
+  |\mbox{N}(\varrho_n)| < |\mbox{N}(\varrho_{n-1})|\\
+\varrho_{n-1} = \varkappa_{n+1}\varrho_n+0,
+\end{cases}
+$$
+The \PMlinkescapetext{chain} ends to the remainder 0, because the numbers $|\mbox{N}(\varrho_i)|$ form a descending sequence of non-negative rational integers --- see the entry norm and trace of algebraic number.\, As in the Euclid's algorithm in $\mathbb{Z}$, one sees that the last divisor $\varrho_n$ is one greatest common divisor of $\varrho_0$ and $\varrho_1$.\, N.B. that $\varrho_0$ and $\varrho_1$ may have an infinite amount of their greatest common divisors, depending the amount of the units in $K$.\\
+
+\textbf{Remark.}\, The ring of integers of any norm-Euclidean number field is a unique factorization domain and thus all ideals of the ring are principal ideals.\, But not all algebraic number fields with ring of integers a \PMlinkname{UFD}{UFD} are norm-Euclidean, e.g. $\mathbb{Q}(\sqrt{14})$.\\
+
+\textbf{Theorem 3.}\, The only norm-Euclidean quadratic fields $\mathbb{Q}(\sqrt{d})$ are those with 
+$$d\in\{-11,\,-7,\,-3,\,-2,\,-1,\,2,\,3,\,5,\,6,\,7,\,11,\,13,\,17,\,19,\,21,\,29,\,33,\,37,\,41,\,57,\,73\}.$$
+%%%%%
+%%%%%
+\end{document}

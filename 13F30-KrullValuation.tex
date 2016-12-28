@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{KrullValuation}
+\pmcreated{2013-03-22 14:54:39}
+\pmmodified{2013-03-22 14:54:39}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Krull valuation}
+\pmrecord{19}{36596}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13F30}
+\pmclassification{msc}{13A18}
+\pmclassification{msc}{12J20}
+\pmclassification{msc}{11R99}
+\pmrelated{OrderedGroup}
+\pmrelated{TrivialValuation}
+\pmrelated{IsolatedSubgroup}
+\pmrelated{ValueGroupOfCompletion}
+\pmrelated{PlaceOfField}
+\pmrelated{OrderValuation}
+\pmrelated{AlternativeDefinitionOfValuation2}
+\pmrelated{UniquenessOfDivisionAlgorithmInEuclideanDomain}
+\pmdefines{value group}
+\pmdefines{rank of Krull valuation}
+\pmdefines{rank of valuation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\textbf{Definition.}\, The mapping\, $|.|\!:\, K\to G$,\, where $K$ is a field and $G$ an ordered group equipped with zero, is a {\em Krull valuation} of $K$, if it has the properties
+\begin{enumerate}
+ \item $|x| = 0 \,\,\Leftrightarrow\,\, x = 0$;
+ \item $|xy| = |x|\cdot|y|$;
+ \item $|x+y| \leqq \max\{|x|,\,|y|\}$.
+\end{enumerate}
+
+Thus the Krull valuation is more general than the usual \PMlinkname{valuation}{Valuation}, which is also characterized as \PMlinkescapetext{{\em valuation of rank 1}} and which has real values.\, The image\, $|K\!\smallsetminus\!\{0\}|$\, is called the {\em value group} of the Krull valuation; it is abelian.\, In general, the {\em rank of Krull valuation} \PMlinkescapetext{means} the \PMlinkname{rank}{IsolatedSubgroup} of the value group.
+
+We may say that a Krull valuation is \PMlinkname{non-archimedean}{Valuation}.
+
+\subsection*{Some values}
+\begin{itemize}
+ \item $|1| = 1$\,\, because the Krull valuation is a group homomorphism from the multiplicative group of $K$ to the ordered group.
+ \item $|-1| = 1$\,\, because\, $1 = |(-1)^2| = |-1|^2$\,\, and 1 is the only element of the ordered group being its own inverse ($S\cap S^{-1} = \varnothing$).
+ \item $|-x| = |(-1)x| = |-1|\cdot|x| = |x|$
+\end{itemize}
+
+\begin{thebibliography}{9}
+\bibitem{Artin} {\sc Emil Artin}: {\em Theory of Algebraic Numbers}.\, Lecture notes.\, Mathematisches Institut, G\"ottingen (1959).
+\bibitem{J}{\sc P. Jaffard}: {\em Les syst\`emes d'id\'eaux}.\, Dunod, Paris (1960).
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

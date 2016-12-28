@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EquivalentValuations}
+\pmcreated{2013-03-22 14:25:27}
+\pmmodified{2013-03-22 14:25:27}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{equivalent valuations}
+\pmrecord{18}{35932}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13A18}
+\pmrelated{DiscreteValuation}
+\pmrelated{IndependenceOfTheValuations}
+\pmdefines{equivalence of valuations}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+Let $K$ be a field. \,The {\em equivalence of valuations} $|\cdot|_1$ and  $|\cdot|_2$ of $K$ may be defined so that
+\begin{enumerate}
+\item $|\cdot|_1$ is not the trivial valuation;
+\item if \, $|a|_1 < 1$ then $|a|_2 < 1 \qquad \forall a \in K.$
+\end{enumerate}
+
+It it easy to see that these conditions imply \PMlinkescapetext{symmetry} for both valuations (use $\frac{1}{a}$). \,Also, we have always
+     $$|a|_1 \leqq 1 \, \Leftrightarrow \, |a|_2 \leqq 1;$$
+so both valuations have a common valuation ring in the case they are non-archimedean. \,(The \PMlinkescapetext{equivalence} of the more general Krull valuations is defined to \PMlinkescapetext{mean} that they have common valuation rings.) \,Further, both valuations determine a common metric on $K$. 
+
+\begin{thmplain}
+\,Two valuations (of \PMlinkname{rank}{KrullValuation} one)  \,$|\cdot|_1$\, and \,$|\cdot|_2$\, of $K$ are \PMlinkescapetext{equivalent} iff one of them is a positive power of the other,
+       $$|a|_1 = |a|_2^c \qquad \forall a \in K,$$
+where $c$ is a positive \PMlinkescapetext{constant}.
+\end{thmplain}
+%%%%%
+%%%%%
+\end{document}

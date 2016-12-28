@@ -1,0 +1,46 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TorsionElement}
+\pmcreated{2013-03-22 13:54:41}
+\pmmodified{2013-03-22 13:54:41}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{torsion element}
+\pmrecord{7}{34665}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13C12}
+\pmdefines{torsion submodule}
+\pmdefines{torsion module}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{clearly}
+Let $R$ be a commutative ring, and $M$ an $R$-module. We call an element $m\in M$ a \emph{torsion element} if there exists a non-zero-divisor $\alpha \in R$ such that $\alpha\cdot m=0$. The set is denoted by $tor(M)$.
+
+$tor(M)$ is not empty since $0 \in tor(M)$. Let $m, n \in tor(M)$, so there exist $\alpha, \beta \ne 0 \in R$ such that $0=\alpha\cdot m=\beta\cdot n$. Since $\alpha\beta \cdot (m-n)=\beta\cdot \alpha\cdot m -\alpha\cdot \beta\cdot n=0, \alpha\beta\ne 0$, this implies that $m-n \in tor(M)$. So $tor(M)$ is a subgroup of $M$. Clearly $\tau\cdot m \in tor(M)$ for any non-zero $\tau \in R$. This shows that $tor(M)$ is a submodule of $M$, the \textbf{torsion submodule} of $M$.  In particular, a module that equals its own torsion submodule is said to be a \emph{torsion module}.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IdealInvertingInPruferRing}
+\pmcreated{2015-05-06 14:34:48}
+\pmmodified{2015-05-06 14:34:48}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{ideal inverting in Pr\"ufer ring}
+\pmrecord{15}{36103}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13C13}
+\pmrelated{DualityInMathematics}
+\pmrelated{DualityOfGudermannianAndItsInverseFunction}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+\textbf{Theorem.}\, Let\, $\mathfrak{a}_1$, \ldots, $\mathfrak{a}_n$\, be invertible fractional ideals of a Pr\"ufer ring.\, Then also their sum and intersection are invertible, and the inverse ideals of these are obtained by the formulae resembling de Morgan's laws:
+$$(\mathfrak{a}_1+\cdots+\mathfrak{a}_n)^{-1} \;=\; 
+\mathfrak{a}_1^{-1}\cap\cdots\cap\mathfrak{a}_n^{-1}$$
+$$(\mathfrak{a}_1\cap\cdots\cap\mathfrak{a}_n)^{-1} \;=\;  
+\mathfrak{a}_1^{-1}+\cdots+\mathfrak{a}_n^{-1}
+$$\\
+
+
+This \PMlinkescapetext{duality} is due to the fact, that the sum of any ideals is the smallest ideal containing these ideals and the intersection of the ideals is the largest ideal contained in each of these ideals.\, Cf. sum of ideals,\, quotient of ideals.
+
+\begin{thebibliography}{9}
+\bibitem{JPa}{\sc J. Pahikkala}:\, ``Some formulae for multiplying and inverting ideals''. $-$ \emph{Annales universitatis turkuensis} \textbf{183}.\, Turun yliopisto (University of Turku) 1982.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

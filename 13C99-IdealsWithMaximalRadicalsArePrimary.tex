@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IdealsWithMaximalRadicalsArePrimary}
+\pmcreated{2013-03-22 19:04:31}
+\pmmodified{2013-03-22 19:04:31}
+\pmowner{joking}{16130}
+\pmmodifier{joking}{16130}
+\pmtitle{ideals with maximal radicals are primary}
+\pmrecord{4}{41961}
+\pmprivacy{1}
+\pmauthor{joking}{16130}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13C99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\textbf{Proposition.} Assume that $R$ is a commutative ring and $I\subseteq R$ is an ideal, such that the radical $r(I)$ of $I$ is a maximal ideal. Then $I$ is a primary ideal.
+
+\textit{Proof.} We will show, that every zero divisor in $R/I$ is nilpotent (please, see parent object for details).
+
+First of all, recall that $r(I)$ is an intersection of all prime ideals containing $I$ (please, see \PMlinkname{this entry}{ACharacterizationOfTheRadicalOfAnIdeal} for more details). Since $r(I)$ is maximal, it follows that there is exactly one prime ideal $P=r(I)$ such that $I\subseteq P$. In particular the ring $R/I$ has only one prime ideal (because there is one-to-one correspondence between prime ideals in $R/I$ and prime ideals in $R$ containing $I$). Thus, in $R/I$ an ideal $r(0)$ is prime.
+
+Now assume that $\alpha\in R/I$ is a zero divisor. In particular $\alpha\neq 0+I$ and for some $\beta\neq 0+I \in R/I$ we have
+$$\alpha\beta=0+I.$$
+But $0+I\in r(0)$ and $r(0)$ is prime. This shows, that either $\alpha\in r(0)$ or $\beta\in r(0)$.
+
+Obviously $\alpha\in r(0)$ (and $\beta\in r(0)$), because $r(0)$ is the only maximal ideal in $R/I$ (the ring $R/I$ is local). Therefore elements not belonging to $r(0)$ are invertible, but $\alpha$ cannot be invertible, because it is a zero divisor.
+
+On the other hand $r(0)=\{x+I\in R/I\ |\ (x+I)^n=0\mbox{ for some }n\in\mathbb{N}\}$. Therefore $\alpha$ is nilpotent and this completes the proof. $\square$
+
+\textbf{Corollary.} Let $p\in\mathbb{N}$ be a prime number and $n\in\mathbb{N}$. Then the ideal $(p^n)\subseteq\mathbb{Z}$ is primary.
+
+\textit{Proof.} Of course the ideal $(p)$ is maximal and we have 
+$$r\big((p^n)\big)=r\big((p)^n\big)=(p),$$
+since for any prime ideal $P$ (in arbitrary ring $R$) we have $r(P^n)=P$. The result follows from the proposition. $\square$
+%%%%%
+%%%%%
+\end{document}

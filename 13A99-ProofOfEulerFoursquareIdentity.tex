@@ -1,0 +1,92 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfEulerFoursquareIdentity}
+\pmcreated{2013-03-22 13:18:10}
+\pmmodified{2013-03-22 13:18:10}
+\pmowner{Thomas Heye}{1234}
+\pmmodifier{Thomas Heye}{1234}
+\pmtitle{proof of Euler four-square identity}
+\pmrecord{7}{33807}
+\pmprivacy{1}
+\pmauthor{Thomas Heye}{1234}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Using Lagrange's identity, we have
+\begin{eqnarray}
+\label{1}
+\left(\sum_{k=1}^4 x_ky_k\right)^2 & = \left(\sum_{k=1}^4
+x_k^2\right)\left(\sum_{k=1}^4 y_k^2\right) -\sum_{1 \le k < i \le 4} (x_ky_i
+-x_iy_k)^2\mbox{.}
+\end{eqnarray}
+We group the six squares into 3 groups of two squares and rewrite:
+\begin{eqnarray}
+\label{2}
+&(x_1y_2 -x_2y_1)^2 +(x_3y_4 -x_4y_3)^2  \\ \nonumber
+= &((x_1y_2 -x_2y_1) +(x_3y_4 -x_4y_3))^2  -2((x_1y_2 -x_2y_1)(x_3y_4 -x_4y_3)) \\
+\label{3}
+&(x_1y_3 -x_3y_1)^2 +(x_2y_4 -x_4y_2)^2 \\  \nonumber
+ =& ((x_1y_3 -x_3y_1) -(x_2y_4
+-x_4y_2))^2 +2(x_1y_3 -x_3y_1)(x_2y_4 -x_4y_2) \\
+\label{4}
+&(x_1y_4 -x_4y_1)^2 +(x_2y_3 -x_3y_2)^2\\
+ =& ((x_1y_4 -x_4y_1) +(x_2y_3
+-x_3y_2))^2
+-2(x_1y_4 -x_4y_1)(x_2y_3 -x_3y_2)\mbox{.}
+\end{eqnarray}
+Using
+\begin{eqnarray}
+\label{5}
+-2((x_1y_2 -x_2y_1)(x_3y_4 -x_4y_3))
+&+2(x_1y_3 -x_3y_1)(x_2y_4 -x_4y_2) \\
+\nonumber
+-2(x_1y_4 -x_4y_1)(x_2y_3 -x_3y_2)& =0
+\end{eqnarray}
+we get
+\begin{eqnarray}
+\label{6}
+\sum_{1 \le k < i \le 4} (x_ky_i -x_iy_k)^2 & = ((x_1y_2 -x_2y_1) & +(x_3y_4
+-x_4y_3))^2 \\
+&+((x_1y_3 -x_3y_1) -(x_2y_4
+-x_4y_2))^2 \\ \nonumber
+&+((x_1y_4 -x_4y_1) +(x_2y_3
+-x_3y_2))^2
+\end{eqnarray}
+by adding equations \ref{2}-\ref{4}. We put the result of equation \ref{6} into
+\ref{1} and get
+\begin{eqnarray}
+\left(\sum_{k=1}^4 x_ky_k\right)^2 \\
+\nonumber  =\left(\sum_{k=1}^4
+x_k^2\right)\left(\sum_{k=1}^4 y_k^2\right) &-( (x_1y_2 -x_2y_1 +x_3y_4
+-x_4y_3)^2 \\ \nonumber
+&-(x_1y_3 -x_3y_1 +x_4y_2 -x_2y_4
+)^2 & -(x_1y_4 -x_4y_1 +x_2y_3
+-x_3y_2)^2
+\end{eqnarray}
+which is equivalent to the claimed identity.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Algebramodule}
+\pmcreated{2013-03-22 13:20:50}
+\pmmodified{2013-03-22 13:20:50}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{algebra (module)}
+\pmrecord{5}{33865}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13B99}
+\pmclassification{msc}{20C99}
+\pmclassification{msc}{16S99}
+\pmdefines{Jacobi identity}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Given a commutative ring $R$, an algebra over $R$ is a
+module $M$ over $R$, endowed with a law of composition
+$$f:M\times M\to M$$
+which is $R$-bilinear.
+
+Most of the important algebras in mathematics belong to
+one or the other of two classes: the unital associative
+algebras, and the Lie algebras.
+
+\section{Unital associative algebras}
+In these cases, the ``product'' (as it is called) of two elements
+$v$ and $w$ of the module, is denoted simply by $vw$ or $v\centerdot w$ or the
+like.
+
+Any unital associative algebra is an algebra in the sense of djao (a
+sense which is also used by Lang in his book \emph{Algebra}
+(Springer-Verlag)).
+
+Examples of unital associative algebras:
+
+-- tensor algebras and quotients of them
+
+-- Cayley algebras, such as the ring of quaternions
+
+-- polynomial rings
+
+-- the ring of endomorphisms of a vector space, in which the bilinear
+product of two mappings is simply the composite mapping.
+
+\section{Lie algebras}
+In these cases the bilinear product is denoted by $[v,w]$,
+and satisfies
+$$[v,v]=0\textrm{ for all }v\in M$$
+$$[v,[w,x]]+[w,[x,v]]+[x,[v,w]]=0\textrm{ for all }v,w,x\in M$$
+The second of these formulas is called the Jacobi identity. One proves
+easily
+$$[v,w]+[w,v]=0\textrm{ for all }v,w\in M$$
+for any Lie algebra M.
+
+Lie algebras arise naturally from Lie groups, q.v.
+%%%%%
+%%%%%
+\end{document}

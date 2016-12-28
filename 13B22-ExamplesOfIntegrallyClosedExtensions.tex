@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExamplesOfIntegrallyClosedExtensions}
+\pmcreated{2013-03-22 17:01:32}
+\pmmodified{2013-03-22 17:01:32}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{examples of integrally closed extensions}
+\pmrecord{9}{39311}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13B22}
+\pmclassification{msc}{11R04}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\newcommand{\Alg}{\mathcal{O}}
+\newcommand{\ol}{\overline}
+\renewcommand{\frak}[1]{\mathfrak{#1}}
+\newcommand{\ip}[2]{(#1,#2)}
+\newcommand{\conv}[2]{(#1*#2)}
+
+\begin{document}
+\textbf{Example. } $\Ints[\sqrt{5}]$ is not integrally closed, for $u=\frac{1+\sqrt{5}}{2}\in\Rats[\sqrt{5}]$ is integral over $\Ints[\sqrt{5}]$ since $u^2-u-1=0$, but $u\notin\Ints[\sqrt{5}]$.
+
+\textbf{Example. } $R=\Ints[\sqrt{2},\sqrt{3}]$ is not integrally closed. Note that $(\sqrt{6}+\sqrt{2})/2\notin R$, but that
+\[\left(\frac{\sqrt{6}+\sqrt{2}}{2}\right)^2=2+\sqrt{3}\]
+and so $(\sqrt{6}+\sqrt{2})/2$ is integral over $\Ints$ since it satisfies the polynomial $(z^2-2)^2-3=0$.
+
+\textbf{Example. } $\Alg_K$ is integrally closed when $[K:\Rats]<\infty$. For if $u\in K$ is integral over $\Alg_K$, then $\Ints\subset\Alg_K\subset \Alg_K[u]$ are all integral extensions, so $u$ is integral over $\Ints$, so $u\in\Alg_K$ by definition. In fact, $\Alg_K$ can be defined as the integral closure of $\Ints$ in $K$.
+
+\textbf{Example. } $\Complex[x,y]/(y^2-x^3)$. This is a domain because $y^2-x^3$ is irreducible hence a prime ideal. But this quotient ring is not integrally closed. To see this, parameterize $\Complex[x,y]\rightarrow\Complex[t]$ by
+\begin{eqnarray*}
+&x&\mapsto t^2\\
+&y&\mapsto t^3
+\end{eqnarray*}
+The kernel of this map is $(y^2-x^3)$, and its image is $\Complex[t^2,t^3]$. Hence
+\[\Complex[x,y]/(y^2-x^3)\cong\Complex[t^2,t^3]\]
+and the field of fractions of the latter ring is obviously $\Complex(t)$. Now, $t$ is integral over $\Complex[t^2,t^3]$ ($z^2-t^2$ is its polynomial), but is not in $\Complex[t^2,t^3]$. $t$ corresponds to $\frac{y}{x}$ in the original ring $\Complex[x,y]/(y^2-x^3)$, which is thus not integrally closed (the minimal polynomial of $\frac{y}{x}$ is $z^2-x$ since $(\frac{y}{x})^2-x=\frac{y^2}{x^2}-x=\frac{x^3}{x^2}-x=0$). The failure of integral closure in this coordinate ring is due to a codimension 1 singularity of $y^2-x^3$ at $0$.
+
+\textbf{Example. } $A=\Complex[x,y,z]/(z^2-xy)$ is integrally closed. For again, parameterize $A\rightarrow \Complex[u,v]$ by
+\begin{eqnarray*}
+&x&\mapsto u^2\\
+&y&\mapsto v^2\\
+&z&\mapsto uv
+\end{eqnarray*}
+The kernel of this map is $z^2-xy$ and its image is $B=\Complex[u^2,v^2,uv]$. Claim $B$ is integrally closed. We prove this by showing that the integral closure of $\Complex[x,y]$ in $\Complex(x,y,\sqrt{xy})$ is $\Complex[x,y,\sqrt{xy}]$. Choose $r+s\sqrt{xy}\in\Complex(x,y,\sqrt{xy}), r,s\in\Complex(x,y)$ such that $r+s\sqrt{xy}$ is integral over $\Complex[x,y]$. Then $r-s\sqrt{xy}$ is also integral over $\Complex[x,y]$, so their sum is. Hence $2r$ is integral over $\Complex[x,y]$. But $\Complex[x,y]$ is a UFD, hence integrally closed, so $2r\in\Complex[x,y]$ and thus $r\in\Complex[x,y]$. Similarly, $s\sqrt{xy}$ is integral over $\Complex[x,y]$, hence $s^2xy\in\Complex[x,y], s\in\Complex(x,y)$. Clearly, then, $s$ can have no denominator, so $s\in\Complex[x,y]$. Hence $r+s\sqrt{xy}\in\Complex[x,y,\sqrt{xy}]$.
+
+%%%%%
+%%%%%
+\end{document}

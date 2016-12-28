@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OrdinaryGeneratingFunctionForLinearRecursiveRelations}
+\pmcreated{2013-03-22 19:20:07}
+\pmmodified{2013-03-22 19:20:07}
+\pmowner{joking}{16130}
+\pmmodifier{joking}{16130}
+\pmtitle{ordinary generating function for linear recursive relations}
+\pmrecord{7}{42282}
+\pmprivacy{1}
+\pmauthor{joking}{16130}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13H05}
+\pmclassification{msc}{13B35}
+\pmclassification{msc}{13F25}
+\pmclassification{msc}{13J05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $(a_n)$ be a linear recursive sequence with values in a (commutative) ring $R$, i.e. there exist constants $\beta_1,\ldots,\beta_k\in R$ such that for any $n>k$ we have
+$$a_n=\beta_1\cdot a_{n-1} + \cdots + \beta_i\cdot a_{n-i} + \cdots + \beta_{k}\cdot a_{n-k}.$$
+Now consider the ordinary generating function for this sequence
+$$f(t)=\sum_{n\geqslant 0}a_n\cdot t^n$$
+which is a formal power series in the ring of formal power series $R[[t]]$. We will try to find the closed form of $f(t)$.
+
+First write down first $k$ elements of this power series:
+$$f(t)=\sum_{n=0}^{k}a_n\cdot t^n + \sum_{n>k}a_n\cdot t^n$$
+and note that for $n>k$ we can use our recursive relation:
+$$f(t)=\sum_{n=0}^{k}a_n\cdot t^n + \sum_{n>k}(\beta_1\cdot a_{n-1}+\cdots +\beta_k\cdot a_{n-k})\cdot t^n$$
+which gives us
+\begin{align}
+f(t)=\sum_{n=0}^{k}a_n\cdot t^n + \left(\beta_1\cdot t\cdot \sum_{n>k}a_{n-1}\cdot t^{n-1}\right) +\cdots +\left(\beta_k\cdot t^k\cdot \sum_{n>k}a_{n-k}\cdot t^{n-k}\right).
+\end{align}
+Now focus on those sums on the right. For any $j$ we have
+$$\sum_{n>k}a_{n-j}\cdot t^{n-j} = \left(\sum_{n\geqslant 0}a_n\cdot t^n \right) - \left(\sum_{n=0}^{k-j}a_n\cdot t^n\right) = f(t) - \left(\sum_{n=0}^{k-j}a_n\cdot t^n\right).$$
+Inserting this into (1) gives us
+$$f(t) = \sum_{n=0}^{k}a_n\cdot t^n + \left(\beta_1\cdot t\cdot(f(t)-\sum_{n=0}^{k-1}a_n\cdot t^n)\right) + \cdots + \left(\beta_k\cdot t^k\cdot(f(t)-\sum_{n=0}^{0}a_n\cdot t^n)\right)$$
+which can be simplified as follows:
+$$f(t) = \sum_{n=0}^{k}a_n\cdot t^n  + \sum_{j=1}^{k}\left(\beta_j\cdot t^j\cdot(f(t)-\sum_{n=0}^{k-j}a_n\cdot t^n)\right).$$
+Taking the components with $f(t)$ to the left side gives us
+$$f(t)-\sum_{j=1}^{k}\beta_j\cdot t^j\cdot f(t) = \sum_{n=0}^{k}a_n\cdot t^n  - \sum_{j=1}^{k}\left(\beta_j\cdot t^j\cdot\sum_{n=0}^{k-j}a_n\cdot t^n\right),$$
+which finally gives us the closed formula for $f(t)$ (note that all sums are finite):
+$$f(t)=\frac{\sum\limits_{n=0}^{k}a_n\cdot t^n - \sum\limits_{j=1}^{k}\left(\beta_j\cdot t^j\cdot\sum\limits_{n=0}^{k-j}a_n\cdot t^n\right)}{1-\sum\limits_{j=1}^{k}\beta_j\cdot t^j}.$$
+Note that in the denominator we have a power series with the constant term $1$, thus (by general properties of formal power series) it is invertible in $R[[t]]$. Thus we proved the following theorem:
+
+\textbf{Theorem.} If $(a_n)$ is a recursive sequnce given by 
+$$a_n=\beta_1\cdot a_{n-1}+\cdots+\beta_k\cdot a_{n-k}$$
+for all $n>k$ then the ordinary generating function
+$$f(t)=\sum_{n\geqslant 0}a_n\cdot t^n$$
+has its closed form given by
+$$f(t)=\frac{\sum\limits_{n=0}^{k}a_n\cdot t^n  - \sum\limits_{j=1}^{k}\left(\beta_j\cdot t^j\cdot\sum\limits_{n=0}^{k-j}a_n\cdot t^n\right)}{1-\sum\limits_{j=1}^{k}\beta_j\cdot t^j}.$$
+
+\textbf{Remark.} Note that if we replace $R$ with (for example) the reals $\mathbb{R}$ then the theorem is still valid if we treat those power series as functions. Of course such equalites hold only there where those functions are defined.
+%%%%%
+%%%%%
+\end{document}

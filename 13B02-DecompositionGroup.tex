@@ -1,0 +1,177 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DecompositionGroup}
+\pmcreated{2013-03-22 12:43:25}
+\pmmodified{2013-03-22 12:43:25}
+\pmowner{djao}{24}
+\pmmodifier{djao}{24}
+\pmtitle{decomposition group}
+\pmrecord{10}{33022}
+\pmprivacy{1}
+\pmauthor{djao}{24}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13B02}
+\pmclassification{msc}{11S15}
+\pmsynonym{splitting group}{DecompositionGroup}
+\pmrelated{Ramification}
+\pmrelated{InertialDegree}
+\pmdefines{inertia group}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+\usepackage[all]{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\p}{{\mathfrak{p}}}
+\renewcommand{\a}{{\mathfrak{a}}}
+\renewcommand{\b}{{\mathfrak{b}}}
+\newcommand{\m}{{\mathfrak{m}}}
+\newcommand{\M}{{\mathfrak{M}}}
+\renewcommand{\P}{{\mathfrak{P}}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\renewcommand{\H}{\mathcal{H}}
+\newcommand{\A}{\mathbb{A}}
+\renewcommand{\c}{\mathcal{C}}
+\renewcommand{\O}{\mathcal{O}}
+\newcommand{\D}{\mathcal{D}}
+\newcommand{\lra}{\longrightarrow}
+\renewcommand{\div}{\mid}
+\newcommand{\res}{\operatorname{res}}
+\newcommand{\Spec}{\operatorname{Spec}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\diff}{\operatorname{diff}}
+\newcommand{\incl}{\operatorname{incl}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\renewcommand{\Re}{\operatorname{Re}}
+\newcommand{\intersect}{\cap}
+\newcommand{\union}{\cup}
+\newcommand{\bigintersect}{\bigcap}
+\newcommand{\bigunion}{\bigcup}
+\newcommand{\ilim}{\,\underset{\longleftarrow}{\lim}\,}
+\begin{document}
+\section{Decomposition Group}
+
+Let $A$ be a Noetherian integrally closed integral domain with field
+of fractions $K$. Let $L$ be a Galois extension of $K$ and denote by
+$B$ the integral closure of $A$ in $L$. Then, for any prime ideal $\p
+\subset A$, the Galois group $G := \Gal(L/K)$ acts transitively on the
+set of all prime ideals $\P \subset B$ containing $\p$. If we fix a
+particular prime ideal $\P \subset B$ lying over $\p$, then the
+stabilizer of $\P$ under this group action is a subgroup of
+$G$, called the {\em decomposition group} at $\P$ and denoted
+$D(\P/\p)$. In other words,
+$$
+D(\P/\p) := \{\sigma \in G \mid \sigma(\P) = (\P)\}.
+$$
+If $\P' \subset B$ is another prime ideal of $B$ lying over $\p$, then
+the decomposition groups $D(\P/\p)$ and $D(\P'/\p)$ are conjugate in
+$G$ via any Galois automorphism mapping $\P$ to $\P'$.
+
+\section{Inertia Group}
+
+Write $l$ for the residue field $B/\P$ and $k$ for the residue field
+$A/\p$. Assume that the extension $l/k$ is separable (if it is not,
+then this development is still possible, but considerably more
+complicated; see~\cite[p. 20]{serre}). Any element $\sigma \in
+D(\P/\p)$, by definition, fixes $\P$ and hence descends to a well
+defined automorphism of the field $l$. Since $\sigma$ also fixes $A$
+by virtue of being in $G$, it induces an automorphism of the extension
+$l/k$ fixing $k$. We therefore have a group homomorphism
+$$
+D(\P/\p) \lra \Gal(l/k),
+$$
+and the \PMlinkname{kernel}{KernelOfAGroupHomomorphism} of this homomorphism is called the {\em inertia group} of
+$\P$, and written $T(\P/\p)$. It turns out that this homomorphism is
+actually surjective, so there is an exact sequence
+\begin{equation}\label{exact}
+\xymatrix{
+1 \ar[r] & T(\P/\p) \ar[r] & D(\P/\p) \ar[r] & \Gal(l/k) \ar[r] & 1
+}
+\end{equation}
+
+\section{Decomposition of Extensions}
+
+The decomposition group is so named because it can be used to
+decompose the field extension $L/K$ into a series of intermediate
+extensions each of which has very simple factorization behavior at
+$\p$. If we let $L^D$ denote the fixed field of $D(\P/\p)$ and $L^T$
+the fixed field of $T(\P/\p)$, then the exact sequence~\eqref{exact}
+corresponds under Galois theory to the lattice of fields
+$$
+\xymatrix{
+L \ar@{-}[d]^e \\
+L^T \ar@{-}[d]^f \\
+L^D \ar@{-}[d]^g \\
+K
+}
+$$
+If we write $e,f,g$ for the degrees of these intermediate extensions
+as in the diagram, then we have the following remarkable series of
+equalities:
+\begin{enumerate}
+\item The number $e$ equals the ramification index $e(\P/\p)$ of $\P$
+  over $\p$, which is independent of the choice of prime ideal $\P$
+  lying over $\p$ since $L/K$ is Galois.
+\item The number $f$ equals the inertial degree $f(\P/\p)$ of $\P$
+  over $\p$, which is also independent of the choice of prime ideal $\P$
+  since $L/K$ is Galois.
+\item The number $g$ is equal to the number of prime ideals $\P$ of
+  $B$ that lie over $\p \subset A$.
+\end{enumerate}
+
+Furthermore, the fields $L^D$ and $L^T$ have the following independent
+characterizations:
+\begin{itemize}
+\item $L^T$ is the smallest intermediate field $F$ such that $\P$ is
+  totally ramified over $\P \cap F$, and it is the largest
+  intermediate field such that $e(\P \cap F, \p) = 1$.
+\item $L^D$ is the smallest intermediate field $F$ such that $\P$ is
+  the only prime of $B$ lying over $\P \cap F$, and it is the largest
+  intermediate field such that $e(\P \cap F, \p) = f(\P \cap F, \p) =
+  1$.
+\end{itemize}
+
+Informally, this decomposition of the extension says that the
+extension $L^D/K$ encapsulates all of the factorization of $\p$ into
+distinct primes, while the extension $L^T/L^D$ is the source of all
+the inertial degree in $\P$ over $\p$ and the extension $L/L^T$ is
+responsible for all of the ramification that occurs over $\p$.
+
+\section{Localization}
+
+The decomposition groups and inertia groups of $\P$ behave well under
+localization. That is, the decomposition and inertia groups of $\P
+B_\P \subset B_\P$ over the prime ideal $\p A_\p$ in the localization
+$A_\p$ of $A$ are identical to the ones obtained using $A$ and $B$
+themselves. In fact, the same holds true even in the completions of
+the local rings $A_\p$ and $B_\P$ at $\p$ and $\P$.
+
+\begin{thebibliography}{9}
+\bibitem{serre} J.P. Serre, {\em Local Fields}, Springer--Verlag, 1979
+  (GTM {\bf 67})
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

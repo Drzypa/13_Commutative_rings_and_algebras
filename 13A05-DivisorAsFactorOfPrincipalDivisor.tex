@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DivisorAsFactorOfPrincipalDivisor}
+\pmcreated{2013-03-22 18:02:09}
+\pmmodified{2013-03-22 18:02:09}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{divisor as factor of principal divisor}
+\pmrecord{9}{40556}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13A05}
+\pmclassification{msc}{11A51}
+\pmrelated{EveryIdealInADedekindDomainIsAFactorOfAPrincipalIdeal}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+ \usepackage[T2A]{fontenc}
+ \usepackage[russian, english]{babel}
+
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+Let an integral domain $\mathcal{O}$ have a divisor theory \,$\mathcal{O}^* \to \mathfrak{D}$.\, The \PMlinkname{definition of divisor theory}{DivisorTheory} implies that for any divisor $\mathfrak{a}$, there exists an element $\omega$ of $\mathcal{O}$ such that $\mathfrak{a}$ divides the principal divisor $(\omega)$, i.e. that\, $\mathfrak{ac} = (\omega)$\, with $\mathfrak{c}$ a divisor.\, The following theorem states that $\mathfrak{c}$ may always be chosen such that it is coprime with any beforehand given divisor.\\
+
+\textbf{Theorem.}\, For any two divisors $\mathfrak{a}$ and $\mathfrak{b}$, there is a principal divisor $(\omega)$ such that
+$$\mathfrak{ac} \;=\; (\omega)$$
+and
+$$\gcd(\mathfrak{b},\,\mathfrak{c}) \;=\; (1).$$
+
+
+{\em Proof.}\, Let\, $\mathfrak{p}_1,\,\ldots,\,\mathfrak{p}_s$\, all distinct prime divisors, which divide the product $\mathfrak{ab}$, and let the divisor $\mathfrak{a}$ be \PMlinkname{exactly divisible}{ExactlyDivides} by the powers\, $\mathfrak{p}_1^{a_1},\,\ldots,\,\mathfrak{p}_s^{a_s}$ (the cases\, $a_i = 0$\, are not excluded).\, For each\, $i = 1,\,\ldots,\,s$,\, we choose a nonzero element $\alpha_i$ of $\mathcal{O}$ being exactly divisible by the power $\mathfrak{p}_i^{a_i}$; the choosing is possible, since any nonzero element of the ideal determined by the divisor $\mathfrak{p}_i^{a_i}$, not belonging to the sub-ideal determined by the divisor $\mathfrak{p}_i^{a_i+1}$, will do.\, According to the \PMlinkname{Chinese remainder theorem}{ChineseRemainderTheoremInTermsOfDivisorTheory}, there exists a nonzero element $\omega$ of the ring $\mathcal{O}$ such that
+\begin{align}
+\omega \;\equiv\; \alpha_i \mod{\mathfrak{p}_i^{a_i+1}} \quad (i \,=\, 1,\,\ldots,\,s).
+\end{align}
+Because $\alpha_i$ is divisible by $\mathfrak{p}_i^{a_i}$, the element $\omega$ is divisible by\, $\mathfrak{p}_1^{a_1}\cdots\mathfrak{p}_s^{a_s} = \mathfrak{a}$,\, i.e.\, $(\omega) = \mathfrak{ac}$.\, If one of the divisors $\mathfrak{p}_i$ would divide $\mathfrak{c}$, then $(\omega)$ would be divisible by $\mathfrak{p}_i^{a_i+1}$ and thus by (1), also $\alpha_i$ were divisible by $\mathfrak{p}_i^{a_i+1}$.\, Therefore, no one of the prime divisors\, $\mathfrak{p}_1,\,\ldots,\,\mathfrak{p}_s$\, divides $\mathfrak{c}$.\, On the other hand, every prime divisor dividing the divisor $\mathfrak{b}$ divides $\mathfrak{ab}$ and thus is one of\, $\mathfrak{p}_1,\,\ldots,\,\mathfrak{p}_s$.\, Accordingly, the divisors $\mathfrak{b}$ and $\mathfrak{c}$ have no common prime divisor, i.e.\, $\gcd(\mathfrak{b},\,\mathfrak{c}) = (1)$.
+
+
+\begin{thebibliography}{9}
+\bibitem{MMP} \CYRM. \CYRM. \CYRP\cyro\cyrs\cyrt\cyrn\cyri\cyrk\cyro\cyrv: 
+{\em \CYRV\cyrv\cyre\cyrd\cyre\cyrn\cyri\cyre\, \cyrv\, \cyrt\cyre\cyro\cyrr\cyri\cyryu\, \cyra\cyrl\cyrg\cyre\cyrb\cyrr\cyra\cyri\cyrch\cyre\cyrs\cyrk\cyri\cyrh \,
+\cyrch\cyri\cyrs\cyre\cyrl}. \,\CYRI\cyrz\cyrd\cyra\cyrt\cyre\cyrl\cyrsftsn\cyrs\cyrt\cyrv\cyro \,
+``\CYRN\cyra\cyru\cyrk\cyra''. \CYRM\cyro\cyrs\cyrk\cyrv\cyra \,(1982).
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

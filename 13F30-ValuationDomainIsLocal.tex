@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ValuationDomainIsLocal}
+\pmcreated{2013-03-22 14:54:49}
+\pmmodified{2013-03-22 14:54:49}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{valuation domain is local}
+\pmrecord{10}{36599}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13F30}
+\pmclassification{msc}{13G05}
+\pmclassification{msc}{16U10}
+\pmrelated{ValuationRing}
+\pmrelated{ValuationDeterminedByValuationDomain}
+\pmrelated{HenselianField}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+\begin{thmplain}
+\, \,Every valuation domain is a local ring.
+\end{thmplain}
+
+{\em Proof.} \,Let $R$ be a valuation domain and $K$ its field of fractions. \,We shall show that the set of all non-units of $R$ is the only maximal ideal of $R$.
+
+Let $a$ and $b$ first be such elements of $R$ that $a-b$ is a unit of $R$; we may suppose that \,$ab \neq 0$\, since otherwise one of $a$ and $b$ is instantly stated to be a unit. \,Because $R$ is a valuation domain in $K$, therefore e.g. \,$\frac{a}{b}\in R$. \,Because now \,$\frac{a-b}{b} = 1-\frac{a}{b}$\, and \,$(a-b)^{-1}$\, belong to $R$, so does also the product \,$\frac{a-b}{b}\cdot(a-b)^{-1} = \frac{1}{b}$, \,i.e. $b$ is a unit of $R$. \,We can conclude that the difference $a-b$ must be a non-unit whenever $a$ and $b$ are non-units.
+
+Let $a$ and $b$ then be such elements of $R$ that $ab$ is its unit, i.e. \,$a^{-1}b^{-1}\in R$. \,Now we see that
+ $$a^{-1} = b\cdot a^{-1}b^{-1}\in R,\,\,\,b^{-1} = a\cdot a^{-1}b^{-1}\in R ,$$
+and consequently $a$ and $b$ both are units. \,So we conclude that the product $ab$ must be a non-unit whenever $a$ is an element of $R$ and $b$ is a non-unit.
+
+Thus the non-units form an ideal $\mathfrak{m}$. \,Suppose now that there is another ideal $\mathfrak{n}$ of $R$ such that \,$\mathfrak{m}\subset\mathfrak{n}\subseteq R$. \,Since $\mathfrak{m}$ contains all non-units, we can take a unit $\varepsilon$ in $\mathfrak{n}$. \,Thus also the product $\varepsilon^{-1}\varepsilon$, i.e. 1, belongs to $\mathfrak{n}$, or \,$R\subseteq\mathfrak{n}$. \,So we see that $\mathfrak{m}$ is a maximal ideal. \,On the other hand, any maximal ideal of $R$ contains no units and hence is contained in $\mathfrak{m}$; therefore $\mathfrak{m}$ is the only maximal ideal.
+%%%%%
+%%%%%
+\end{document}

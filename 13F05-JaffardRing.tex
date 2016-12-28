@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{JaffardRing}
+\pmcreated{2013-03-22 15:22:15}
+\pmmodified{2013-03-22 15:22:15}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{Jaffard ring}
+\pmrecord{4}{37197}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13F05}
+\pmdefines{Jaffard domain}
+\pmdefines{Jaffard}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\mc}{\mathcal}
+\newcommand{\mb}{\mathbb}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\ol}{\overline}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\la}{\leftarrow}
+\newcommand{\La}{\Leftarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\nor}{\vartriangleleft}
+\newcommand{\Gal}{\text{Gal}}
+\newcommand{\GL}{\text{GL}}
+\newcommand{\Z}{\mb{Z}}
+\newcommand{\R}{\mb{R}}
+\newcommand{\Q}{\mb{Q}}
+\newcommand{\C}{\mb{C}}
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+\begin{document}
+Let $\operatorname{dim}$ denote Krull dimension.  A \emph{Jaffard} ring is a ring $A$ for which $\operatorname{dim}(A[x])=\operatorname{dim}(A)+1$ (compare to the bound on the Krull dimension of polynomial rings).  Such a ring is said to be \emph{Jaffardian}.
+
+Since this condition holds for Noetherian rings, every Noetherian ring is Jaffardian.  Examples of rings that are not Jaffardian are thus relatively difficult to come by, since we are already forced to search exclusively in the realm of non-Noetherian rings.  The first example of a non-Jaffardian ring seems to have been found by A. Seidenberg \cite{Seid}:  the subring of $\ol{\mathbb{Q}}[[T]]$ consisting of power series whose constant term is rational.
+
+A \emph{Jaffard domain} is a Jaffard ring which is also an integral domain.
+
+\begin{thebibliography}{9}
+\bibitem[Seid]{Seid} A. Seidenberg, \emph{A note on the dimension theory of rings.} Pacific J. of Mathematics, Volume 3 (1953), 505-512.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

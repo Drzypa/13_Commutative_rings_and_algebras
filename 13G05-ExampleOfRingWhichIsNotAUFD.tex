@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfRingWhichIsNotAUFD}
+\pmcreated{2013-03-22 15:08:19}
+\pmmodified{2013-03-22 15:08:19}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{example of ring which is not a UFD}
+\pmrecord{7}{36882}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13G05}
+\pmsynonym{example of a ring of integers which is not a UFD}{ExampleOfRingWhichIsNotAUFD}
+\pmrelated{DeterminingTheContinuationsOfExponent}
+\pmdefines{example of a number ring which is not a UFD}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{exa}{Example}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\begin{document}
+\begin{exa}
+We define a ring $R=\Ints[\sqrt{-5}]=\{ n+m\sqrt{-5} : n,m\in\Ints\}$ with addition and multiplication inherited from $\Complex$ (notice that $R$ is the ring of integers of the quadratic number field $\Rats(\sqrt{-5})$). Notice that the only \PMlinkname{units}{UnitsOfQuadraticFields} of $R$ are $R^\times=\{ \pm 1 \}$. Then:
+\begin{eqnarray} \label{eq1} 6=2\cdot 3 = (1+\sqrt{-5})\cdot (1-\sqrt{-5}).\end{eqnarray}
+Moreover, $2,\ 3,\ 1+\sqrt{-5}$ and $1-\sqrt{-5}$ are irreducible elements of $R$ and they are not associates (to see this, one can compare the norm of every element). Therefore, $R$ is not a UFD. \\
+
+However, the ideals of $R$ \PMlinkname{factor}{DivisibilityInRings} uniquely into prime ideals. For example:
+$$(6)=(2,1+\sqrt{-5})^2\cdot (3,1+\sqrt{-5})\cdot (3,1-\sqrt{-5})$$
+where $\mathfrak{P}=(2,1+\sqrt{-5})$, $\mathfrak{Q}=(3,1+\sqrt{-5})$, and $\overline{\mathfrak{Q}}=(3,1-\sqrt{-5})$ are all prime ideals (see \PMlinkname{prime ideal decomposition of quadratic extensions of $\mathbb{Q}$}{PrimeIdealDecompositionInQuadraticExtensionsOfMathbbQ}). Notice that:
+$$\mathfrak{P}^2=(2),\quad \mathfrak{Q}\cdot\overline{\mathfrak{Q}}=(3),\quad  \mathfrak{P}\cdot\mathfrak{Q}=(1+\sqrt{-5}),\quad  \mathfrak{P}\cdot \overline{\mathfrak{Q}}=(1-\sqrt{-5}).$$
+Thus, Eq. (\ref{eq1}) above is the outcome of different rearrangements of the product of prime ideals:
+$$(6)=\mathfrak{P}^2\cdot(\mathfrak{Q}\cdot \overline{\mathfrak{Q}})=(\mathfrak{P}\cdot \mathfrak{Q})\cdot (\mathfrak{P}\cdot \overline{\mathfrak{Q}}).$$
+Notice also that if $\mathfrak{P}$ was a principal ideal then there would be an element $\alpha \in R$ with $(\alpha)=\mathfrak{P}$ and $(\alpha)^2 = (2)$. Thus such a number $\alpha$ would have norm $2$, but the norm of $n+m\sqrt{-5}$ is $n^2+5m^2$ so it is clear that there are no algebraic integers of norm $2$. Therefore $\mathfrak{P}$ is not principal. Thus $R$ is not a PID. 
+\end{exa}
+%%%%%
+%%%%%
+\end{document}

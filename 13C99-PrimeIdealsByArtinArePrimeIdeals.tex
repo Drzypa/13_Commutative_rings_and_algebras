@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PrimeIdealsByArtinArePrimeIdeals}
+\pmcreated{2013-03-22 18:44:55}
+\pmmodified{2013-03-22 18:44:55}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{prime ideals by Artin are prime ideals}
+\pmrecord{10}{41525}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13C99}
+\pmclassification{msc}{06A06}
+\pmrelated{IdealGeneratedByASet}
+\pmrelated{PrimeIdeal}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Theorem.}\, Due to Artin, a prime ideal of a commutative ring $R$ is the maximal element among the ideals not intersecting a multiplicative subset $S$ of $R$.\, This is \PMlinkname{equivalent}{Equivalent3} to the usual criterion 
+\begin{align}
+ab \in \mathfrak{p} \quad \Rightarrow \quad a \in \mathfrak{p} \;\lor\; b \in \mathfrak{p}
+\end{align}
+of prime ideal (see the entry \PMlinkname{prime ideal}{PrimeIdeal}).
+
+
+{\em Proof.}\, $1^{\underline{o}}$.\, Let $\mathfrak{p}$ be a prime ideal by Artin, corresponding the semigroup $S$, and let the ring product $ab$ belong to $\mathfrak{p}$.\, Assume, contrary to the assertion, that\, neither of $a$ and $b$ lies in $\mathfrak{p}$.\, When\, $(\mathfrak{p},\,x)$\, generally means the least ideal containing $\mathfrak{p}$ and an element $x$, the antithesis implies that
+$$\mathfrak{p} \subset (\mathfrak{p},\,a) \;\; \land \;\; \mathfrak{p} \subset (\mathfrak{p},\,a),$$
+whence by the maximality of $\mathfrak{p}$ we have
+$$(\mathfrak{p},\,a)\cap S \neq \varnothing \;\; \land \;\; (\mathfrak{p},\,b)\cap S \neq \varnothing.$$
+Therefore we can chose such elements \,$s_i = p_i+r_ia+n_ia$\, of $S$ (N.B. the multiples) that
+$$p_i \in \mathfrak{p},\;\, r_i \in R,\;\, n_i \in \mathbb{Z} \quad (i \,=\, 1,\,2).$$
+But then
+$$s_1s_2 \;=\; (p_2+r_2b+n_2b)p_1+(r_1a+n_1a)p_2+(r_1r_2+n_2r_1+n_1r_2)ab+(n_1n_2)ab \in \mathfrak{p}.$$
+This is however impossible, since the product $s_1s_2$ belongs to the semigroup $S$ and\, 
+$\mathfrak{p}\cap S = \varnothing$.\, Because the antithesis thus is wrong, we must have\, $a \in \mathfrak{p}$\, or\, $b \in \mathfrak{p}$.
+
+$2^{\underline{o}}$.\, Let us then suppose that an ideal $\mathfrak{p}$ satisfies the condition (1) for all\, 
+$a,\,b \in R$.\, It means that the set\, $S = R\!\smallsetminus\!\mathfrak{p}$\, is a multiplicative semigroup.\, Accordingly, the $\mathfrak{p}$ is the greatest ideal not intersecting the semigroup $S$, Q.E.D.\\
+
+\textbf{Remark.}\, It follows easily from the theorem, that if $\mathfrak{p}$ is a prime ideal of the commutative ring 
+$\mathfrak{O}$ and $\mathfrak{o}$ is a subring of $\mathfrak{O}$, then $\mathfrak{p\cap o}$ is a prime ideal of 
+$\mathfrak{o}$.
+
+
+%%%%%
+%%%%%
+\end{document}

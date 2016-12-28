@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GcdDomain}
+\pmcreated{2013-03-22 14:19:51}
+\pmmodified{2013-03-22 14:19:51}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{gcd domain}
+\pmrecord{26}{35800}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13G05}
+\pmrelated{GreatestCommonDivisor}
+\pmrelated{BezoutDomain}
+\pmrelated{DivisibilityInRings}
+\pmdefines{gcd}
+\pmdefines{greatest common divisor}
+\pmdefines{relatively prime}
+\pmdefines{lcm domain}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Throughout this entry, let $D$ be a commutative ring with $1\neq 0$.  
+
+A gcd (greatest common divisor) of two elements $a, b \in D$, is an element $d \in D$ such that: 
+\begin{enumerate}
+\item
+$d\mid a$ and $d\mid b$,
+\item
+if $c\in D$ with $c\mid a$ and $c\mid b$, then $c\mid d$.
+\end{enumerate}
+
+For example, $0$ is a gcd of $0$ and $0$ in any $D$.  In fact, if $d$ is a gcd of $0$ and $0$, then $d \mid 0$.  But $0\mid 0$, so that $0 \mid d$, which means that, for some $x\in D$, $d=0x=0$.  As a result, $0$ is the unique gcd of $0$ and $0$.
+
+In general, however, a gcd of two elements is not unique.  For example, in the ring of integers, $1$ and $-1$ are both gcd's of two relatively prime elements.  By definition, any two gcd's of a pair of elements in $D$ are associates of each other.  Since the binary relation ``being associates'' of one anther is an equivalence relation (\emph{not} a congruence relation!), we may define \emph{the} gcd of $a$ and $b$ as the set 
+$$\operatorname{GCD}(a,b):=\lbrace c\in D\mid c\mbox{ is a gcd of }a\mbox{ and }b\rbrace,$$
+For example, as we have seen, $\operatorname{GCD}(0,0)=\lbrace 0\rbrace$.  Also, for any $a\in D$, $\operatorname{GCD}(a,1)=\operatorname{U}(D)$, the group of units of $D$.
+
+If there is no confusion, let us denote $\gcd(a,b)$ to be any element of $\operatorname{GCD}(a,b)$.
+
+If $\operatorname{GCD}(a,b)$ contains a unit, then $a$ and $b$ are said to be \emph{relatively prime}.  If $a$ is irreducible, then for any $b\in D$, $a,b$ are either relatively prime, or $a\mid b$.
+
+An integral domain $D$ is called a \emph{gcd domain} if any two elements of $D$, not both zero, have a gcd.  In other words, $D$ is a gcd domain if for any $a,b\in D$, $\operatorname{GCD}(a,b)\ne \varnothing$.
+
+\textbf{Remarks}
+\begin{itemize}
+\item A unique factorization domain, or UFD is a gcd domain, but the converse is not true.
+\item A Bezout domain is always a gcd domain.  A gcd domain $D$ is a Bezout domain if $\gcd(a,b) = ra+sb$ for any $a, b \in D$ and some $r, s \in D$.
+\item In a gcd domain, an irreducible element is a prime element.
+\item A gcd domain is integrally closed.  In fact, it is a Schreier domain.
+\item Given an integral domain, one can similarly define an lcm of two elements $a,b$: it is an element $c$ such that $a \mid c$ and $b \mid c$, and if $d$ is an element such that $a \mid d$ and $b \mid d$, then $c \mid d$.  Then, a 
+\emph{lcm domain} is an integral domain such that every pair of elements has a lcm.  As it turns out, the two notions are equivalent: an integral domain is lcm iff it is gcd.
+\end{itemize}
+The following diagram indicates how the different domains are related:
+\begin{center}
+\begin{tabular}{c c c c c}
+\PMlinkname{Euclidean domain}{EuclideanRing} & $\Longrightarrow$ & PID & $\Longrightarrow$ & UFD \\
+& & & & \\
+& & $\Downarrow$ & & $\Downarrow$ \\
+& & & & \\
+& & Bezout domain & $\Longrightarrow$ & gcd domain \\
+\end{tabular}
+\end{center}
+
+\begin{thebibliography}{7}
+\bibitem{DA} D. D. Anderson, {\it Advances in Commutative Ring Theory: Extensions of Unique Factorization, A Survey}, 3rd Edition, CRC Press (1999)
+\bibitem{DA} D. D. Anderson, {\it Non-Noetherian Commutative Ring Theory: GCD Domains, Gauss' Lemma, and Contents of Polynomials}, Springer (2009)
+\bibitem{DA} D. D. Anderson (editor), {\it Factorizations in Integral Domains}, CRC Press (1997)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

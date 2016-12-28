@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfHilbertsNullstellensatz}
+\pmcreated{2013-03-22 15:27:46}
+\pmmodified{2013-03-22 15:27:46}
+\pmowner{pbruin}{1001}
+\pmmodifier{pbruin}{1001}
+\pmtitle{proof of Hilbert's Nullstellensatz}
+\pmrecord{4}{37314}
+\pmprivacy{1}
+\pmauthor{pbruin}{1001}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13A10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $K$ be an algebraically closed field, let $n\ge 0$, and let $I$ be an ideal of the polynomial ring $K[x_1,\ldots,x_n]$.  Let $f\in K[x_1,\ldots,x_n]$ be
+a polynomial with the property that
+$$
+f(a_1,\ldots,a_n)=0\hbox{ for all }(a_1,\ldots,a_n)\in V(I).
+$$
+Suppose that $f^r\not\in I$ for all $r>0$; in particular, $I$ is strictly smaller than $K[x_1,\ldots,x_n]$ and $f\ne 0$.  Consider the ring
+$$
+R=K[x_1,\ldots,x_n,1/f]\subset K(x_1,\ldots,x_n).
+$$
+The $R$-ideal $RI$ is strictly smaller than $R$, since
+$$
+RI=\bigcup_{r=0}^\infty f^{-r}I
+$$
+does not contain the unit element.  Let $y$ be an indeterminate over
+$K[x_1,\ldots,x_n]$, and let $J$ be the inverse image of $RI$ under
+the homomorphism
+$$
+\phi\colon K[x_1,\ldots,x_n,y]\to R
+$$
+acting as the identity on $K[x_1,\ldots,x_n]$ and sending $y$ to
+$1/f$.  Then $J$ is strictly smaller than $K[x_1,\ldots,x_n,y]$, so
+the weak Nullstellensatz gives us an element $(a_1,\ldots,a_n,b)\in                       
+K^{n+1}$ such that $g(a_1,\ldots,a_n,b)=0$ for all $g\in J$.  In
+particular, we see that $g(a_1,\ldots,a_n)=0$ for all $g\in I$.  Our
+assumption on $f$ therefore implies $f(a_1,\ldots,a_n)=0$.  However,
+$J$ also contains the element $1-yf$ since $\phi$ sends this element
+to zero.  This leads to the following contradiction:
+$$
+0=(1-yf)(a_1,\ldots,a_n,b)=1-bf(a_1,\ldots,a_n)=1.
+$$
+The assumption that $f^r\not\in I$ for all $r>0$ is therefore false,
+i.e.~there is an $r>0$ with $f^r\in I$.
+%%%%%
+%%%%%
+\end{document}

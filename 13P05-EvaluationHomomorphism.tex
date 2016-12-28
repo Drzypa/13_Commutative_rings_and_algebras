@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EvaluationHomomorphism}
+\pmcreated{2013-03-22 14:13:51}
+\pmmodified{2013-03-22 14:13:51}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{evaluation homomorphism}
+\pmrecord{6}{35671}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13P05}
+\pmclassification{msc}{11C08}
+\pmclassification{msc}{12E05}
+\pmsynonym{substitution homomorphism}{EvaluationHomomorphism}
+\pmrelated{LectureNotesOnPolynomialInterpolation}
+\pmdefines{evaluation homomorphism}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+Let $R$ be a commutative ring and let $R[X]$ be the ring of polynomials with coefficients in $R$. 
+
+\begin{theorem}
+Let $S$ be a commutative ring, and let $\psi\colon R\to S$ be a homomorphism.  Further, let $s\in S$.  Then there is a unique homomorphism $\phi\colon R[X]\to S$ taking $X$ to $s$ and taking every $r\in R$ to $\psi(r)$. 
+\end{theorem}
+
+This amounts to saying that polynomial rings are free objects in the category of $R$-algebras; the theorem then states that they are projective.  This is true in much greater generality; in fact, the property of being projective is intended to extract the essential property of being free.
+
+\begin{proof}
+We first prove existence.  Let $f\in R[X]$.  Then by definition there is some finite list of $a_i$ such that $f = \sum_i a_i X^i$.  Then define $\phi(f)$ to be $\sum_i \psi(a_i) s^i$.  It is clear from the definition of addition and multiplication on polynomials that $\phi$ is a homomorphism; the definition makes it clear that $\phi(X)=s$ and $\phi(r)=\psi(r)$. 
+
+Now, to show uniqueness, suppose $\gamma$ is any homomorphism satisfying the conditions of the theorem, and let $f\in R[X]$.  Write $f = \sum_i a_i X^i$ as before.  Then $\gamma(a_i) = \psi(a_i)$ and $\gamma(s)$ by assumption.  But then since $\gamma$ is a homomorphism, $\gamma(a_iX^i) = \psi(a_i)s^i$ and $\gamma(f) = \sum_i \psi(a_i) s^i = \phi(f)$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,102 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FormalPowerSeriesConvergesIfAndOnlyIfItConvergesAlongEveryLine}
+\pmcreated{2013-03-22 17:42:11}
+\pmmodified{2013-03-22 17:42:11}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{formal power series converges if and only if it converges along every line}
+\pmrecord{5}{40145}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13H05}
+\pmclassification{msc}{13B35}
+\pmclassification{msc}{13J05}
+\pmclassification{msc}{13F25}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+
+\begin{document}
+Suppose $T(x)$ denotes the formal power series 
+$\sum_{\alpha} a_\alpha x^\alpha ,$ using the multi-index notation,
+where $x = (x_1,\ldots,x_N)$ and $a_\alpha \in \mathbb{C}.$
+Fixing $v \in {\mathbb{R}}^N$ and we can also talk of the formal power series in $t \in \mathbb{R}$
+\begin{equation*}
+\begin{split}
+T(tv) & = \sum_{\alpha} a_\alpha (tv)^\alpha \\
+ & = \sum_{\alpha} a_\alpha v^\alpha t^{\lvert \alpha \rvert} \\
+ & = \sum_{k=0}^\infty \left( \sum_{\lvert \alpha \rvert = k} a_\alpha v^\alpha \right) t^k .
+\end{split}
+\end{equation*}
+
+\begin{thm}
+Suppose $T(x)$ is a formal power series in $x \in {\mathbb{R}}^N$.  Suppose 
+$T(tv)$ is a convergent power series in $t \in \mathbb{R}$ for
+all $v \in {\mathbb{R}}^N$.  Then $T$ is convergent.
+\end{thm}
+
+The other direction, if $T(x)$ converges then $t \mapsto T(tv)$ converges, is obvious.
+
+%\begin{proof}
+%Note that we only need to show this for $v \in S^{N-1}, $ that is, the unit sphere.
+%Write
+%\begin{equation*}
+%T(x) := \sum_{k=0}^\infty T_k(x)
+%\end{equation*}
+%where $T_k$ are homogeneous polynomials of degree $k.$  As $T(tv)$ converges, then we have by standard
+%Cauchy estimates that
+%for every $v$ there exists a constant $C_v$ such that $\lvert T_k(tv) \rvert \leq C_v^k \lvert t \rvert^k ,$
+%or since $T_k$ is homogeneous of degree $k,$
+%\begin{equation*}
+%\lvert T_k(v) \rvert \leq C_v^k .
+%\end{equation*}
+%
+%%FIXME: finish (need bernstein's)
+%\end{proof}
+
+
+\begin{thebibliography}{9}
+\bibitem{ber:submanifold}
+M.\@ Salah Baouendi,
+Peter Ebenfelt,
+Linda Preiss Rothschild.
+{\em \PMlinkescapetext{Real Submanifolds in Complex Space and Their Mappings}},
+Princeton University Press,
+Princeton, New Jersey, 1999.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

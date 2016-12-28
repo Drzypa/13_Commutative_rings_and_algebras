@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FiniteExtensionsOfDedekindDomainsAreDedekind}
+\pmcreated{2013-03-22 18:35:30}
+\pmmodified{2013-03-22 18:35:30}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{finite extensions of Dedekind domains are Dedekind}
+\pmrecord{5}{41319}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13A15}
+\pmclassification{msc}{13F05}
+%\pmkeywords{Dedekind domain}
+%\pmkeywords{finite extension}
+%\pmkeywords{integral closure}
+\pmrelated{FiniteExtension}
+\pmrelated{DivisorTheoryInFiniteExtension}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+
+
+\begin{document}
+\begin{theorem*}
+Let $R$ be a Dedekind domain with field of fractions $K$. If $L/K$ is a finite extension of fields and $A$ is the integral closure of $R$ in $L$, then $A$ is also a Dedekind domain.
+\end{theorem*}
+
+For example, a number field $K$ is a finite extension of $\mathbb{Q}$ and its ring of integers is denoted by $\mathcal{O}_K$. Although such rings can fail to be unique factorization domains, the above theorem shows that they are always Dedekind domains and therefore \PMlinkname{unique factorization of ideals}{IdealDecompositionInDedekindDomain} is satisfied.
+
+%%%%%
+%%%%%
+\end{document}

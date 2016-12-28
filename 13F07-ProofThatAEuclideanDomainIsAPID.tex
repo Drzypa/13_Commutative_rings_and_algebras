@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofThatAEuclideanDomainIsAPID}
+\pmcreated{2013-03-22 12:43:11}
+\pmmodified{2013-03-22 12:43:11}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{proof that a Euclidean domain is a PID}
+\pmrecord{7}{33015}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13F07}
+\pmrelated{PID}
+\pmrelated{UFD}
+\pmrelated{IntegralDomain}
+\pmrelated{EuclideanValuation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $D$ be a Euclidean domain, and let $\mathfrak{a} \subseteq D$ be a nonzero ideal. We show that $\mathfrak{a}$ is principal. Let
+\[ A = \{\nu(x) : x \in \mathfrak{a}, x \neq 0\} \]
+be the set of Euclidean valuations of the non-zero elements of $\mathfrak{a}$. Since $A$ is a non-empty set of non-negative integers, it has a minimum $m$. Choose $d\in \mathfrak{a}$ such that $\nu(d) = m$. Claim that $\mathfrak{a} = (d)$. Clearly $(d) \subseteq \mathfrak{a}$. To see the reverse inclusion, choose $x\in \mathfrak{a}$. Since $D$ is a Euclidean domain, there exist elements $y,r\in D$ such that
+\[ x = yd + r \]
+with $\nu(r) < \nu(d)$ or $r = 0$. Since $r \in \mathfrak{a}$ and $\nu(d)$ is minimal in $A$, we must have $r = 0$. Thus $d \lvert x$ and $x\in(d)$.
+%%%%%
+%%%%%
+\end{document}

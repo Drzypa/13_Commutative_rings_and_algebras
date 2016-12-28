@@ -1,0 +1,46 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofThatEverySubringOfACyclicRingIsAnIdeal}
+\pmcreated{2013-03-22 13:30:52}
+\pmmodified{2013-03-22 13:30:52}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{proof that every subring of a cyclic ring is an ideal}
+\pmrecord{9}{34100}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13A99}
+\pmclassification{msc}{16U99}
+\pmrelated{ProofThatEverySubringOfACyclicRingIsACyclicRing}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+\begin{document}
+\PMlinkescapeword{generator}
+
+The following is a proof that every subring of a cyclic ring is an ideal.
+
+\begin{proof}
+Let $R$ be a cyclic ring and $S$ be a subring of $R$.  Then $R$ and $S$ are both cyclic rings.  Let $r$ be a \PMlinkname{generator}{Generator} of the additive group of $R$ and $s$ be a generator of the additive group of $S$.  Then $s \in R$.  Thus, there exists $z \in \mathbb{Z}$ with $s=zr$.
+
+Let $t \in R$ and $u \in S$.  Then $u \in R$.  Since multiplication is commutative in a cyclic ring, $tu=ut$.  Since $t \in R$, there exists $a \in {\mathbb Z}$ with $t=ar$.  Since $u \in S$, there exists $b \in {\mathbb Z}$ with $u=bs$.
+
+Since $R$ is a ring, $r^2 \in R$.  Thus, there exists $k \in {\mathbb Z}$ with $r^2=kr$.  Since $tu=(ar)(bs)=(ar)[b(zr)]=(abz)r^2=(abz)(kr)=(abkz)r=(abk)(zr)=(abk)s \in S$, it follows that $S$ is an ideal of $R$.
+\end{proof}
+
+\begin{thebibliography}{9}
+\bibitem{buck} Buck, Warren. \emph{\PMlinkexternal{Cyclic Rings}{http://planetmath.org/?op=getobj&from=papers&id=336}}. Charleston, IL: Eastern Illinois University, 2004.
+
+\bibitem{maurer} Maurer, I. Gy. and Vincze, J. ``Despre Inele Ciclece.'' \emph{Studia Universitatis Babe\c{s}-Bolyai. Series Mathematica-Physica}, vol. 9 \#1. Cluj, Romania: Universitatea Babe\c{s}-Bolyai, 1964, pp. 25-27.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

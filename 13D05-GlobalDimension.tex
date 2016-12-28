@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GlobalDimension}
+\pmcreated{2013-03-22 14:51:51}
+\pmmodified{2013-03-22 14:51:51}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{global dimension}
+\pmrecord{5}{36539}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13D05}
+\pmclassification{msc}{16E10}
+\pmclassification{msc}{18G20}
+\pmsynonym{homological dimension}{GlobalDimension}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{terms}
+\PMlinkescapeword{mean}
+
+For any ring $R$, the \emph{left global dimension} of $R$ is defined to be the supremum of projective dimensions of left modules of $R$:
+$$l.\operatorname{Gd}(R):=\operatorname{sup}\lbrace\operatorname{pd}_R(M)\mid M\mbox{ is a left R-module }\rbrace.$$
+
+Similarly, the \emph{right global dimension} of $R$ is:
+$$r.\operatorname{Gd}(R):=\operatorname{sup}\lbrace\operatorname{pd}_R(M)\mid M\mbox{ is a right R-module }\rbrace.$$
+
+If $R$ is commutative, then $l.\operatorname{Gd}(R)=r.\operatorname{Gd}(R)$ and we may drop $l$ and $r$ and simply use $\operatorname{Gd}(R)$ to mean the \emph{global dimension} of $R$.
+
+\textbf{Remarks}.  
+\begin{enumerate}
+\item For a ring $R$, $l.\operatorname{Gd}(R)=0$ iff $r.\operatorname{Gd}(R)=0$ (see the first example below).  However, in general, $l.\operatorname{Gd}(R)$ is not necessarily the same as $r.\operatorname{Gd}(R)$.
+\item The left (right) global dimension of a ring can also be defined in terms of injective dimensions.  For example, for right global dimension of $R$, we have: $r.\operatorname{Gd}(R)=\operatorname{sup}\lbrace\operatorname{id}_R(M)\mid M\mbox{ is a right R-module }\rbrace$.  This definition turns out to be equivalent to the one using projective dimensions.
+\end{enumerate}
+
+\textbf{Examples}.
+\begin{enumerate}
+\item $l.\operatorname{Gd}(R)=0$ iff $R$ is a semisimple ring iff $r.\operatorname{Gd}(R)=0$.
+\item $r.\operatorname{Gd}(R)=1$ iff $R$ is a right hereditary ring that is not semisimple.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

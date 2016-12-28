@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PlaceOfField}
+\pmcreated{2013-03-22 14:56:51}
+\pmmodified{2013-03-22 14:56:51}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{place of field}
+\pmrecord{16}{36640}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13F30}
+\pmclassification{msc}{13A18}
+\pmclassification{msc}{12E99}
+\pmsynonym{place}{PlaceOfField}
+\pmsynonym{spot of field}{PlaceOfField}
+\pmrelated{KrullValuation}
+\pmrelated{ValuationDeterminedByValuationDomain}
+\pmrelated{IntegrityCharacterizedByPlaces}
+\pmrelated{RamificationOfArchimedeanPlaces}
+\pmdefines{place of field}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+Let $F$ be a field and $\infty$ an element not belonging to $F$.\, The mapping
+               $$\varphi: \,k\to F\cup\{\infty\},$$
+where $k$ is a field, is called a {\em place of the field} $k$, if it satisfies the following conditions.
+\begin{itemize}
+ \item The preimage\, $\varphi^{-1}(F) = \mathfrak{o}$\, is a subring of $k$.
+ \item The restriction\, $\varphi|_\mathfrak{o}$\, is a ring homomorphism from $\mathfrak{o}$ to $F$.
+ \item If\, $\varphi(a) = \infty$,\, then\, $\varphi(a^{-1}) = 0$.
+\end{itemize}
+
+It is easy to see that the subring $\mathfrak{o}$ of the field $k$ is a valuation domain; so any place of a field determines a unique valuation domain in the field.\, Conversely, every valuation domain $\mathfrak{o}$ with field of fractions $k$ determines a place of $k$:
+
+\begin{thmplain}
+\,Let $\mathfrak{o}$ be a valuation domain with field of fractions $k$ and $\mathfrak{p}$ the maximal ideal of $\mathfrak{o}$, consisting of the non-units of $\mathfrak{o}$.\, Then the mapping
+   $$\varphi: \,k\to \mathfrak{o/p}\cup\{\infty\}$$
+defined by
+$$
+\varphi(x):=
+\begin{cases}
+x+\mathfrak{p} \quad \mathrm{when} \,\,\, x \in\mathfrak{o}, \\
+\infty \quad \mathrm{when} \,\,\, x \in k\smallsetminus\mathfrak{o},
+\end{cases}
+$$
+is a place of the field $k$.
+\end{thmplain}
+
+{\em Proof.}\, Apparently,\, $\varphi^{-1}(\mathfrak{o/p}) = \mathfrak{o}$\, and the restriction\, $\varphi|_\mathfrak{o}$\, is the canonical homomorphism from the ring $\mathfrak{o}$ onto the residue-class ring $\mathfrak{o/p}$.\, Moreover, if\, $\varphi(x) = \infty$,\, then $x$ does not belong to the valuation domain $\mathfrak{o}$ and thus the inverse element $x^{-1}$ must belong to it without being its unit.\, Hence $x^{-1}$ belongs to the ideal $\mathfrak{p}$ which is the kernel of the homomorphism\, 
+$\varphi|\mathfrak{o}$.\, So we see that\, $\varphi(x^{-1}) = 0$.
+
+\begin{thebibliography}{7}
+\bibitem{artin} Emil Artin: {\em \PMlinkescapetext{Theory of Algebraic Numbers}}.\, Lecture notes.\, Mathematisches Institut, G\"ottingen (1959).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

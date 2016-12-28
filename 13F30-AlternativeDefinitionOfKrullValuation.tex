@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AlternativeDefinitionOfKrullValuation}
+\pmcreated{2013-03-22 17:02:08}
+\pmmodified{2013-03-22 17:02:08}
+\pmowner{polarbear}{3475}
+\pmmodifier{polarbear}{3475}
+\pmtitle{alternative definition of Krull valuation}
+\pmrecord{10}{39322}
+\pmprivacy{1}
+\pmauthor{polarbear}{3475}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13F30}
+\pmclassification{msc}{13A18}
+\pmclassification{msc}{12J20}
+\pmclassification{msc}{11R99}
+\pmrelated{OrderValuation}
+\pmrelated{Valuation}
+\pmrelated{Krullvaluation}
+\pmrelated{KrullValuation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{defn}{Definition}
+\begin{document}
+ Let $G$ be an abelian totally ordered group, denoted additively. We adjoin to $G$ a new element $\infty$ such that $g < +\infty$, for all $g\in G$ and we extend the addition on $G_{\infty} = G \cup \{+\infty\}$ by declaring $g + (+\infty) = (+\infty) + (+\infty) = +\infty$.
+\begin{defn} Let $R$ be an unital ring, a \emph{valuation} of $R$ with values in $G$ is a function from $R$ to $G_{\infty}$ such that , for all $x, y \in R$:
+
+1) $v(xy)= v(x)+v(y)$,
+
+2) $v(x+y) \geq \min \{v(x),v(y)\}$,
+
+3) $v(x)=+\infty$ iff $v(x)=0$.
+
+\end{defn}
+\textbf{Remarks} a) The condition 1) means that $v$ is a homomorhism of $R\smallsetminus\{0\}$ with multiplication in the group $G$. In particular, $v(1)=0$ and $v(-x)=v(x)$, for all $x\in G$. If $x$ is invertible then $0=v(1)=v(xx^{-1})=v(x)+v(x^{-1})$, so $v(x^{-1}) = -v(x)$.\newline
+b) If 3) is replaced by the \PMlinkescapetext{weaker} condition $v(0)=+\infty$ then the set $P = v^{-1}\{+\infty\}$ is a prime ideal of $R$ and $v$ is \PMlinkescapetext{induced} on the integral domain $R/P$.\newline
+c) In particular, conditions 1) and 3) \PMlinkescapetext{imply} that $R$ is an integral domain and let $K$ be its quotient field. There is a unique valuation of $K$ with values in $G$ that extends $v$, namely $v(x/y)=v(x)-v(y)$, for all $x\in R$ and $y\in R\smallsetminus\{0\}$.\newline
+d) The element $v(x)$ is sometimes denoted by $vx$.
+
+%%%%%
+%%%%%
+\end{document}

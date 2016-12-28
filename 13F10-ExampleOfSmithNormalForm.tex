@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfSmithNormalForm}
+\pmcreated{2013-03-22 14:22:51}
+\pmmodified{2013-03-22 14:22:51}
+\pmowner{aoh45}{5079}
+\pmmodifier{aoh45}{5079}
+\pmtitle{example of Smith normal form}
+\pmrecord{4}{35873}
+\pmprivacy{1}
+\pmauthor{aoh45}{5079}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13F10}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\begin{document}
+As an example, we will find the Smith normal form of the following matrix over the integers.
+\begin{equation*}
+\left(\begin{array}{ccc}
+2  & 4  & 4  \\
+-6 & 6  & 12 \\
+10 & -4 & -16
+\end{array}\right)
+\end{equation*}
+The following matrices are the intermediate steps as the algorithm is applied to the above matrix.
+
+\begin{equation*}
+\left(\begin{array}{ccc}
+2  & 0  & 0  \\
+-6 & 18 & 24 \\
+10 & -24& -36
+\end{array}\right)
+\to
+\left(\begin{array}{ccc}
+2  & 0  & 0  \\
+0  & 18 & 24 \\
+0  & -24& -36
+\end{array}\right)
+\end{equation*}
+
+\begin{equation*}
+\to
+\left(\begin{array}{ccc}
+2  & 0  & 0  \\
+0  & 18 & 24 \\
+0  & -6 & -12
+\end{array}\right)
+\to
+\left(\begin{array}{ccc}
+2  & 0  & 0  \\
+0  & 6  & 12 \\
+0  & 18 & 24
+\end{array}\right)
+\end{equation*}
+
+\begin{equation*}
+\to
+\left(\begin{array}{ccc}
+2  & 0  & 0  \\
+0  & 6  & 12 \\
+0  & 0  & -12
+\end{array}\right)
+\to
+\left(\begin{array}{ccc}
+2  & 0  & 0  \\
+0  & 6  & 0  \\
+0  & 0  & 12
+\end{array}\right)
+\end{equation*}
+
+So the Smith normal form is
+
+\begin{equation*}
+\left(\begin{array}{ccc}
+2  & 0  & 0  \\
+0  & 6  & 0  \\
+0  & 0  & 12
+\end{array}\right)
+\end{equation*}
+
+and the elementary divisors are $2$, $6$ and $12$.
+%%%%%
+%%%%%
+\end{document}

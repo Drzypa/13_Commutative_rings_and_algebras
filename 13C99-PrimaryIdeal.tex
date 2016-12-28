@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PrimaryIdeal}
+\pmcreated{2013-03-22 14:15:01}
+\pmmodified{2013-03-22 14:15:01}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{primary ideal}
+\pmrecord{6}{35697}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13C99}
+\pmdefines{primary}
+\pmdefines{$P$-primary}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\mc}{\mathcal}
+\newcommand{\mb}{\mathbb}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\ol}{\overline}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\la}{\leftarrow}
+\newcommand{\La}{\Leftarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\nor}{\vartriangleleft}
+\newcommand{\Gal}{\text{Gal}}
+\newcommand{\GL}{\text{GL}}
+\newcommand{\Z}{\mb{Z}}
+\newcommand{\R}{\mb{R}}
+\newcommand{\Q}{\mb{Q}}
+\newcommand{\C}{\mb{C}}
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+\begin{document}
+An ideal $Q$ in a commutative ring $R$ is a \emph{primary ideal} if for all elements $x,y\in R$, we have that if $xy\in Q$, then either $x\in Q$ or $y^n\in Q$ for some $n\in\mb{N}$.
+
+This is clearly a generalization of the notion of a prime ideal, and (very) loosely mirrors the relationship in $\mb{Z}$ between prime numbers and prime powers.
+
+It is clear that every prime ideal is primary.
+
+\textbf{Example.}  Let $Q=(25)$ in $R=\mb{Z}$.  Suppose that $xy\in Q$ but $x\notin Q$.  Then $25|xy$, but 25 does not divide $x$.  Thus 5 must divide $y$, and thus some power of $y$ (namely, $y^2$), must be in $Q$.
+
+The radical of a primary ideal is always a prime ideal.  If $P$ is the radical of the primary ideal $Q$, we say that $Q$ is \emph{$P$-primary}.
+
+%If the radical of the primary ideal $Q$ is the prime ideal $P$, then $Q$ is said to be \emph{$P$-primary}.
+%%%%%
+%%%%%
+\end{document}

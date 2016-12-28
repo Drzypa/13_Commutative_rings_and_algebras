@@ -1,0 +1,157 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RulesOfCalculusForDerivativeOfPolynomial}
+\pmcreated{2013-03-22 18:20:05}
+\pmmodified{2013-03-22 18:20:05}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{rules of calculus for derivative of polynomial}
+\pmrecord{10}{40967}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13P05}
+\pmclassification{msc}{11C08}
+\pmclassification{msc}{12E05}
+\pmrelated{ProofOfPropertiesOfDerivativesByPureAlgebra}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+\newtheorem{dfn}{Definition}
+\begin{document}
+In this entry, we will derive the properties of derivatives
+of polynomials in a rigorous fashion.  We begin by showing
+that the derivative exists.
+
+\begin{thm}  
+If $A$ is a commutative ring and $p$ is a polynomial in 
+$A[x]$, then there exist unique polynomials $q$ and $A$ 
+such that $p(x+y) = p(x) + y \, q(x) + y^2 \, r(x,y)$.
+\end{thm}
+
+\begin{proof}
+We will first show existence, then uniqueness.  Define $f(y) 
+= p(x+y) - p(x)$.  Since $f$ is a polynomial in $y$ with
+coefficients in the ring $A[x]$ and $f(0) = 0$, we must have
+$y$ be a factor of $f(y)$, so $f(y) = y\,g(x,y)$ for some $g$ 
+in $A[x,y]$.  By definition of $f$, this means that $p(x+y) -
+p(x) = y\,g(x,y)$. \footnote{We are here making use of the
+identification of $A[x][y]$ with $A[x,y]$ to write the
+polynomial $g$ either as a polynomial in $y$ with coefficients
+in $A[x]$ or as a polynomial in $x$ and $y$ with coefficients
+in $A$.}  Define $q(x) = g(x,0)$ and $h(x,y) = g(x,y) - g(x,0)$.
+Regarding $h$ as a polynomial in $y$ with coefficients in
+$A[x]$, we may, similiarly to what we did earlier, note that,
+since $h(0) = 0$ by construction, $y$ must be a factor of $h(y)$.
+Hence there exists a polynomial $r$ with coefficients in $A[x,y]$ 
+such that $h(y) = y \, r(x,y)$.  Combining our definitions, we
+conclude that $p(x+y) = p(x) + y \, q(x) + y^2 \, r(x,y)$.
+
+We will now show uniqueness.  Assume that there
+exists polymonomials $q,\,r,\,Q,\,R$ such that $p(x+y) = p(x) + y \, 
+q(x) + y^2 \, r(x,y)$ and $p(x+y) = p(x) + y \, Q(x) + y^2 \, 
+R(x,y)$.  Subtracting and rearranging terms, $y (q(x) - Q(x)) =
+y^2 (R(x,y) - r(x,y))$.  Cancelling $y$\footnote{Note that, in
+general, the cancellation law need not hold.  However, even if
+$A$ has divisors of zero, it still will be the case that the
+polynomial $y$ cannot divide zero, so we may cancel it.}, 
+we have $q(x) - Q(x) = y (R(x,y) - r(x,y))$.  Substituting 
+$0$ for $y$, we have $q(x) - Q(x) = 0$.  Replacing this in our
+equation, $y (R(x,y) - r(x,y)) = 0$.  Cancelling another $y$,
+$R(x,y) - r(x,y) = 0$.  Hence, we conclude that $Q = q$ and
+$R = r$, so our \PMlinkescapetext{representation} is unique.
+\end{proof}
+
+Hence, the following is well-defined:
+
+\begin{dfn}
+Let $A$ be a commutative ring and let $p$ be polynomial in
+$A[x]$.  Then $p'$ is the unique element of $A[x]$ such that
+$p(x+y) = p(x) + y \, p'(x) + y^2 \, r[x,y]$ for some
+$r \in A[x,y]$
+\end{dfn}
+
+We will now derive some of the rules for manipulating
+derivatives familiar form calculus for polynomials using
+purely algebraic operations with no limits involved.
+
+\begin{thm}
+If $A$ is a commutative ring and $p,q \in A[x]$, then
+$(p + q)' = p' + q'$.
+\end{thm}
+
+\begin{proof}
+Let us write $p(x+y) = p(x) + y \, p'(x) + y^2 \, r(x,y)$
+and $q(x+y) = q(x) + y \, q'(y) + y^2 \, s(x,y)$.  Adding,
+we have 
+\[
+p(x,y) + q(x,y) = 
+  p(x) + q(x) + y (p'(x) + q'(x)) + 
+  y^2 (r(x,y) + s(x,y)).
+\]  
+By definition of derivative, this means that $(p+q)' = p' + q'$.
+\end{proof}
+
+\begin{thm}
+If $A$ is a commutative ring and $p,q \in A[x]$, then
+$(p \cdot q)' = p' \cdot q + p \cdot q'$.
+\end{thm}
+
+\begin{proof}
+Let us write $p(x+y) = p(x) + y \, p'(x) + y^2 \, r(x,y)$
+and $q(x+y) = q(x) + y \, q'(y) + y^2 \, s(x,y)$.  Multiplying,
+grouping terms, and pulling out some common factors, we have
+\begin{align*}
+ p(x+y) q(x+y) &= p(x) q(y) + y (p'(x) q(x) + p(x) q'(x)) \\ &+ 
+   y^2 (p(x) s(x,y) + q(x) r(x,y) + p'(x) q'(y) \\ & \quad+
+   y\, p'(x) s(x,y) + y\, q'(x) r(x,y) + y^2 \, r(x,y) s(x,y)).
+\end{align*}
+By definition of derivative, this means that 
+$(p \cdot q)' = p' \cdot q + p \cdot q'$.
+\end{proof}
+
+\begin{thm}
+If $A$ is a commutative ring and $p,q \in A[x]$, then
+$(p \circ q)' = (p' \circ q) \cdot q'$.
+\end{thm}
+
+\begin{proof}
+Let us write $p(x+y) = p(x) + y \, p'(x) + y^2 \, r(x,y)$
+and $q(x+y) = q(x) + y \, q'(y) + y^2 \, s(x,y)$.  Composing,
+grouping terms, and pulling out some common factors, we have
+\begin{align*}
+p(q(x+y)) &= p \left( q(x) + y\,q'(y) + y^2 \, s(x,y) \right) \\
+ &= p(q(x)) + \left( y\,q'(y) + y^2 \, s(x,y) \right) p'(q(x)) \\
+&\quad+ \left( y\,q'(y) + y^2 \, s(x,y) \right)^2
+                r \left( q(x), y\,q'(y) + y^2 \, s(x,y) \right) \\
+&= p(q(x)) + y \, p'(q(x)) q'(y) \\ &\quad+
+ y^2 \left( s(x,y) p'(q(x)) + \left( q'(y) + y \, s(x,y) \right)^2 
+ r \left( q(x), y\,q'(y) + y^2 \, s(x,y) \right) \right)
+\end{align*}
+By definition of derivative, this means that 
+$(p \circ q)' = (p' \circ q) \cdot q'$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

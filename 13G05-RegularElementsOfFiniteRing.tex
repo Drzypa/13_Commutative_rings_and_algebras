@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RegularElementsOfFiniteRing}
+\pmcreated{2013-03-22 15:11:09}
+\pmmodified{2013-03-22 15:11:09}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{regular elements of finite ring}
+\pmrecord{19}{36941}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13G05}
+\pmclassification{msc}{16U60}
+\pmrelated{GroupOfUnits}
+\pmrelated{PrimeResidueClass}
+\pmrelated{WedderburnsTheorem}
+\pmrelated{Unity}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+\begin{thmplain}
+\, If the finite ring $R$ has regular elements, then it has a unity.\, All regular elements of $R$ form a group under the ring multiplication and with identity element the unity of $R$.\, Thus the regular elements are exactly the units of the ring; the rest of the elements are the zero and the zero divisors.
+\end{thmplain}
+
+{\em Proof.}\, Obviously, the set of the regular elements is non-empty and closed under the multiplication.\, Let's think the multiplication table of this set.\, It is a finite \PMlinkescapetext{square where every row only contains} distinct elements (any equation\, $ax = ay$\, reduces to\, $x = y$).\, Hence, for every regular element $a$, the square $a^2$ determines another $a'$ such that\, $a^2a' = a$.\, This implies\, $a'(a^2a')(aa') = a'a(aa')$,\, i.e.\, $(a'a)(aa')^2 = (a'a)(aa')$,\, and since $a'a$ is \PMlinkname{regular}{ZeroDivisor},\, we obtain that\, $(aa')^2 = aa'$.\, So $aa'$ is idempotent, and because it also is \PMlinkescapetext{regular}, it must be the \PMlinkname{unity of the ring}{Unity}:\, $aa' = 1$.\, Thus we see that $R$ has a unity which is a regular element and that $a$ has a multiplicative inverse $a'$, also regular.\, Consequently the regular elements form a group.
+%%%%%
+%%%%%
+\end{document}

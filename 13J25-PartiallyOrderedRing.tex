@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PartiallyOrderedRing}
+\pmcreated{2013-03-22 16:55:04}
+\pmmodified{2013-03-22 16:55:04}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{partially ordered ring}
+\pmrecord{8}{39179}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13J25}
+\pmclassification{msc}{16W80}
+\pmclassification{msc}{06F25}
+\pmsynonym{po-ring}{PartiallyOrderedRing}
+\pmsynonym{l-ring}{PartiallyOrderedRing}
+\pmsynonym{lattice-ordered ring}{PartiallyOrderedRing}
+\pmdefines{lattice ordered ring}
+\pmdefines{positive cone}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\begin{document}
+A ring $R$ that is a poset at the same time is called a \emph{partially ordered ring}, or a \emph{po-ring}, if, for $a,b,c\in R$,
+\begin{itemize}
+\item $a\le b$ implies $a+c\le b+c$, and
+\item $0\le a$ and $0\le b$ implies $0\le ab$.
+\end{itemize}
+
+Note that $R$ does not have to be associative.
+
+If the underlying poset of a po-ring $R$ is in fact a lattice, then $R$ is called a \emph{lattice-ordered ring}, or an \emph{l-ring} for short.
+
+\textbf{Remark}.  The underlying abelian group of a po-ring (with addition being the binary operation) is a po-group.  The same is true for l-rings.
+
+Below are some examples of po-rings:
+\begin{itemize}
+\item Clearly, any (totally) ordered ring is a po-ring.
+\item The ring of continuous functions over a topological space is an l-ring.
+\item Any matrix ring over an ordered field is an l-ring if we define $(a_{ij})\le (b_{ij})$ whenever $a_{ij}\le b_{ij}$ for all $i,j$.
+\end{itemize}
+
+\textbf{Remark}.  Let $R$ be a po-ring.  The set $R^+:=\lbrace r\in R\mid 0\le r\rbrace$ is called the \emph{positive cone} of $R$.
+
+\begin{thebibliography}{8}
+\bibitem{gb} G. Birkhoff {\em Lattice Theory}, 3rd Edition, AMS Volume XXV, (1967).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

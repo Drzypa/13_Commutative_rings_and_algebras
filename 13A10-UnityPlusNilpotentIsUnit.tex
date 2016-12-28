@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UnityPlusNilpotentIsUnit}
+\pmcreated{2013-03-22 15:11:54}
+\pmmodified{2013-03-22 15:11:54}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{unity plus nilpotent is unit}
+\pmrecord{21}{36956}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13A10}
+\pmclassification{msc}{16U60}
+\pmrelated{DivisibilityInRings}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+\begin{thmplain}
+If $x$ is a nilpotent element of a ring with unity 1 (which may be 0), then the sum $1\!+\!x$ is a unit of the ring.
+\end{thmplain}
+
+\begin{proof}
+If $x=0$, then $1\!+\!x=1$, which is a unit.  Thus, we may assume that $x \neq 0$.
+
+Since $x$ is nilpotent, there is a positive integer $n$ such that $x^n=0$. We multiply $1\!+\!x$ by another ring element:
+\begin{eqnarray*}
+(1\!+\!x)\cdot\sum_{j=0}^{n-1}(-1)^jx^j
+&=& \sum_{j=0}^{n-1}(-1)^jx^j\!+\!\sum_{k=0}^{n-1}(-1)^kx^{k+1}\\
+&=& \sum_{j=0}^{n-1}(-1)^jx^j\!-\!\sum_{k=1}^n(-1)^kx^k\\
+&=& 1\!+\!\sum_{j=1}^{n-1}(-1)^jx^j\!-\!\sum_{k=1}^{n-1}(-1)^kx^k\!-\!(-1)^nx^n\\
+&=& 1\!+\!0\!+\!0\\
+&=& 1
+\end{eqnarray*}
+
+(Note that the summations include the term\, $(-1)^0x^0$, which is why $x=0$ is excluded from this case.)
+
+The reversed multiplication gives the same result. Therefore, $1\!+\!x$ has a multiplicative inverse and thus is a unit.
+\end{proof}
+
+Note that there is a \PMlinkescapetext{similarity between} this proof and geometric series:  The goal was to produce a multiplicative inverse of $1\!+\!x$, and geometric series yields that
+
+$$\displaystyle \frac{1}{1\!+\!x}=\sum_{n=0}^{\infty} (-1)^nx^n,$$
+
+provided that the summation \PMlinkname{converges}{AbsoluteConvergence}.  Since $x$ is nilpotent, the summation has a finite number of nonzero terms and thus \PMlinkescapetext{converges}.
+%%%%%
+%%%%%
+\end{document}

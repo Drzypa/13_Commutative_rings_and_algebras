@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MultiplicationRuleGivesInverseIdeal}
+\pmcreated{2013-03-22 15:24:16}
+\pmmodified{2013-03-22 15:24:16}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{multiplication rule gives inverse ideal}
+\pmrecord{5}{37243}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13A15}
+\pmclassification{msc}{16D25}
+\pmrelated{PruferRing}
+\pmrelated{Characterization}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+\begin{thmplain}
+Let $R$ be a commutative ring with non-zero unity.\, If an ideal\, $(a,\,b)$\, of $R$, with $a$ or $b$ \PMlinkname{regular}{RegularElement}, obeys the multiplication rule
+\begin{align}
+      (a,\,b)(c,\,d) = (ac,\,ad\!+\!bc,\,bd)
+\end{align}
+with all ideals $(c,\,d)$\, of $R$, then\, $(a,\,b)$ is an invertible ideal.
+\end{thmplain}
+
+{\em Proof.}\, The rule gives
+$$(a,\,b)^2 = (a,\,-b)(a,\,b) = (a^2,\,ab\!-\!ba,\,b^2) = (a^2,\,b^2).$$
+Thus the product $ab$ may be written in the form
+$$ab = ua^2\!+\!vb^2,$$
+where $u$ and $v$ are elements of $R$.\, Let's assume that e.g. $a$ is regular.\, Then $a$ has the multiplicative inverse $a^{-1}$ in the total ring of fractions $R$.\, Again applying the rule yields
+$$(a,\,b)(va,\,a-vb)(a^{-2}) = (va^2,\,a^2-vab+vab,\,ab-vb^2)(a^{-2}) =
+ (va^2,\,a^2,\,ua^2)(a^{-2}) = (v,\,1,\,u) = R.$$
+Consequently the ideal\, $(a,\,b)$\, has an inverse ideal (which may be a \PMlinkname{fractional ideal}{FractionalIdealOfCommutativeRing}); this settles the proof.
+
+\textbf{Remark.}\, The rule (1) in the theorem may be replaced with the rule
+\begin{align}
+(a,\,b)(c,\,d) = (ac,\,(a\!+\!b)(c\!+\!d),\,bd)
+\end{align}
+as is seen from the identical equation\, $(a\!+\!b)(c\!+\!d)\!-\!ac\!-\!bd = ad+bc$.
+%%%%%
+%%%%%
+\end{document}

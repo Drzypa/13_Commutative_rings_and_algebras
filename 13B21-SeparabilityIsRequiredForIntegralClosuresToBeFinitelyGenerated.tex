@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SeparabilityIsRequiredForIntegralClosuresToBeFinitelyGenerated}
+\pmcreated{2013-03-22 17:02:15}
+\pmmodified{2013-03-22 17:02:15}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{separability is required for integral closures to be finitely generated}
+\pmrecord{6}{39324}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13B21}
+\pmclassification{msc}{12F05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Proj}{\mathbb{P}}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\newcommand{\Alg}{\mathcal{O}}
+\newcommand{\ol}{\overline}
+\newcommand{\Leg}[2]{\left(\frac{#1}{#2}\right)}
+\newcommand{\Spec}[1]{\text{Spec }#1}
+\newcommand{\Pic}[1]{\text{Pic }#1}
+\newcommand{\kx}{k[x_1,\ldots,x_n]}
+\newcommand{\Order}[1]{\left\lvert #1 \right\rvert}
+\renewcommand{\frak}[1]{\mathfrak{#1}}
+\newcommand{\ip}[2]{(#1,#2)}
+\newcommand{\conv}[2]{(#1*#2)}
+\newcommand{\Hom}{\mathrm{Hom}}
+
+\begin{document}
+The parent theorem assumed that $L$ was a separable extension of $K$. Here is an example that shows that separability is in fact a necessary condition for the result to hold.
+
+
+Let $k=(\Ints/p\Ints)(b_1,b_2,\ldots)$ where the $b_i$ are indeterminates.
+
+Let $B$ be the subring of $k[[t]]$ (power series in $t$ over $k$) consisting of
+\[\left\{\sum_{i=0}^{\infty} c_i t^i\right\}\]
+such that $\{c_0,c_1,c_2,\ldots\}$ generates a finite extension of $(\Ints/p\Ints)(b^p_1,b^p_2,\ldots)$. Then every element of $B$ is a power of $t$ times a unit (first factor out the largest power of $t$. What's left is $a(1+c_1 t+c_2 t^2+\cdots)$; its inverse is $a^{-1}(1-c_1 t-\cdots)$). Hence the ideals of $B$ are powers of $t$, so $B$ is a PID (in fact, it is a DVR).
+
+Now, let $u=b_0 + b_1 t+b_2 t^2+\cdots$. Now, $u\notin B$ because it uses all of the $b_i$ and thus the coefficients do not define a finite extension of $(\Ints/p\Ints)(b^p_1,b^p_2,\ldots)$. However, $u$ is integral over $B$: $b^p_i\in B\Rightarrow u^p\in B$ which implies that the degree of $u$ over the field of fractions is $p$. Hence a basis for $K(u)/K$ is $\{1,u,u^2,\ldots,u^{p-1}\}$. There are other elements integral over $B$:
+\begin{gather*}
+b_1+b_2 t+b_3 t^2+\cdots = \frac{u-b_0}{t}=\frac{-b_0}{t}+\frac{1}{t}u\\
+b_2+b_3 t+b_4 t^2+\cdots = \frac{u-b_0-b_1 t}{t^2}=\frac{-b_0-b_1t}{t^2}+\frac{1}{t^2}u\\
+\vdots
+\end{gather*}
+Clearly the denominators are getting bigger, so the integral closure of $B$ cannot be finitely generated as a $B$-module.
+
+%%%%%
+%%%%%
+\end{document}

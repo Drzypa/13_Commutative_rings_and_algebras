@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PrimaryDecomposition}
+\pmcreated{2013-03-22 14:15:05}
+\pmmodified{2013-03-22 14:15:05}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{primary decomposition}
+\pmrecord{8}{35698}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13C99}
+\pmsynonym{shortest primary decomposition}{PrimaryDecomposition}
+\pmdefines{decomposable ideal}
+\pmdefines{minimal primary decomposition}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\mc}{\mathcal}
+\newcommand{\mb}{\mathbb}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\ol}{\overline}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\la}{\leftarrow}
+\newcommand{\La}{\Leftarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\nor}{\vartriangleleft}
+\newcommand{\Gal}{\text{Gal}}
+\newcommand{\GL}{\text{GL}}
+\newcommand{\Z}{\mb{Z}}
+\newcommand{\R}{\mb{R}}
+\newcommand{\Q}{\mb{Q}}
+\newcommand{\C}{\mb{C}}
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+\begin{document}
+Let $R$ be a commutative ring and $A$ be an ideal in $R$.  A \emph{\PMlinkescapetext{primary} decomposition} of $A$ is a way of writing $A$ as a finite intersection of primary ideals:
+\begin{align*}
+A=\bigcap_{i=1}^n Q_i,
+\end{align*}
+
+where the $Q_i$ are primary in $R$.
+
+Not every ideal admits a primary decomposition, so we define a \emph{decomposable ideal} to be one that does.
+
+\textbf{Example}.  Let $R=\Z$ and take $A=(180)$.  Then $A$ is decomposable, and a primary decomposition of $A$ is given by 
+\begin{align*}
+A=(4)\cap (9)\cap (5),
+\end{align*}
+since $(4)$, $(9)$, and $(5)$ are all primary ideals in $\Z$.
+
+Given a primary decomposition $A=\cap Q_i$, we say that the decomposition is a \emph{minimal primary decomposition} if for all $i$, the prime ideals $P_i=\text{rad}(Q_i)$ (where rad denotes the radical of an ideal) are distinct, and for all $1\leq i\leq n$, we have
+\begin{align*}
+Q_i\not\subset \bigcap_{j\neq i} Q_j
+\end{align*}
+
+In the example above, the decomposition $(4)\cap (9)\cap (5)$ of $A$ is minimal, where as $A=(2)\cap (4) \cap (3) \cap (9) \cap (5)$ is not.
+
+Every primary decomposition can be refined to admit a minimal primary decomposition.
+%%%%%
+%%%%%
+\end{document}

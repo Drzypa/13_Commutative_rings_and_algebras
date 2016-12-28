@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SymmetricMultilinearFunction}
+\pmcreated{2013-03-22 16:10:53}
+\pmmodified{2013-03-22 16:10:53}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{symmetric multilinear function}
+\pmrecord{11}{38269}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{13A99}
+\pmdefines{skew-symmetric multilinear function}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $R$ be a commutative ring with identity and $M,N$ be unital $R$-modules.
+
+Suppose that $\phi : M \times \cdots \times M \to N$ is a multilinear map, where there
+are $n$ copies of $M$. 
+
+Let $H$ be a subgroup of $S_n$, the symmetric group on $\{1, \ldots ,n\}$, and
+$\chi : H \to R$ satisfy 
+\begin{enumerate}
+\item
+$\chi(e) = 1$ 
+\item
+$\chi(g_1g_2) = \chi(g_1)\chi(g_2)$ for all $g_1, g_2 \in H $
+\end{enumerate}
+\PMlinkescapeword{symmetric}
+We say that $\phi$ is \emph{symmetric with respect to $H$ and $\chi$}
+if 
+$$ \phi(m_{\sigma(1)} , \ldots, m_{\sigma(n)}) = \chi(\sigma)\phi(m_1,\ldots,m_n)$$
+holds for all $\sigma\in H$ and all $m_i\in M$. 
+
+Now suppose that $H = S_n$.
+
+If $\chi=1$ then we say that $\phi$ is a \emph{symmetric multilinear function}.
+\PMlinkescapeword{skew-symmetric}
+If $\chi = \epsilon$, the sign of the permutation $\sigma$, we say that 
+$\phi$ is a \emph{skew-symmetric multilinear function}.
+
+For example, the permanent is a symmetric multilinear function of its rows (columns).
+
+The determinant is a skew-symmetric multilinear function of its rows (columns).
+%%%%%
+%%%%%
+\end{document}
