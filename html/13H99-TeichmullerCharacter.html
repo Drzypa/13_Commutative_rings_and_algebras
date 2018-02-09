@@ -1,0 +1,165 @@
+<!DOCTYPE html><html>
+<head>
+<title>Teichmüller character</title>
+<!--Generated on Fri Feb  9 17:34:12 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Teichmüller character</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Before we define the Teichmüller character, we begin with a corollary of Hensel’s lemma.</p>
+</div>
+<div id="Thmcorx1" class="ltx_theorem ltx_theorem_cor">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Corollary</span>.</h6>
+<div id="Thmcorx1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmcorx1.p1.m1" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> be a prime number. The ring of <math id="Thmcorx1.p1.m2" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>-adic integers (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/PAdicIntegers</span>) <math id="Thmcorx1.p1.m3" class="ltx_Math" alttext="\mathbb{Z}_{p}" display="inline"><msub><mi mathvariant="normal">Z</mi><mi>p</mi></msub></math> contains exactly <math id="Thmcorx1.p1.m4" class="ltx_Math" alttext="p-1" display="inline"><mrow><mi>p</mi><mo mathvariant="normal">-</mo><mn mathvariant="normal">1</mn></mrow></math> distinct <math id="Thmcorx1.p1.m5" class="ltx_Math" alttext="(p-1)" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><mrow><mi>p</mi><mo mathvariant="normal">-</mo><mn mathvariant="normal">1</mn></mrow><mo mathvariant="normal" stretchy="false">)</mo></mrow></math>th roots of unity. Furthermore, every <math id="Thmcorx1.p1.m6" class="ltx_Math" alttext="(p-1)" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><mrow><mi>p</mi><mo mathvariant="normal">-</mo><mn mathvariant="normal">1</mn></mrow><mo mathvariant="normal" stretchy="false">)</mo></mrow></math>th root of unity is distinct modulo <math id="Thmcorx1.p1.m7" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Notice that <math id="p2.m1" class="ltx_Math" alttext="\mathbb{Q}_{p}" display="inline"><msub><mi>ℚ</mi><mi>p</mi></msub></math>, the <math id="p2.m2" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>-adic rationals, is a field. Therefore <math id="p2.m3" class="ltx_Math" alttext="f(x)=x^{p-1}-1" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>x</mi><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>-</mo><mn>1</mn></mrow></mrow></math> has at most <math id="p2.m4" class="ltx_Math" alttext="p-1" display="inline"><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow></math> roots in <math id="p2.m5" class="ltx_Math" alttext="\mathbb{Q}_{p}" display="inline"><msub><mi>ℚ</mi><mi>p</mi></msub></math> (see this entry (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/APolynomialOfDegreeNOverAFieldHasAtMostNRoots</span>)). Moreover, if we let <math id="p2.m6" class="ltx_Math" alttext="a\in\mathbb{Z}" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>ℤ</mi></mrow></math> with <math id="p2.m7" class="ltx_Math" alttext="1\leq a\leq p-1" display="inline"><mrow><mn>1</mn><mo>≤</mo><mi>a</mi><mo>≤</mo><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow></mrow></math> then <math id="p2.m8" class="ltx_Math" alttext="f(a)=a^{p-1}-1\equiv 0\mod p" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>a</mi><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>-</mo><mn>1</mn></mrow><mo>≡</mo><mrow><mn>0</mn><mo lspace="2.5pt" rspace="2.5pt">mod</mo><mi>p</mi></mrow></mrow></math> by Fermat’s little theorem. Since <math id="p2.m9" class="ltx_Math" alttext="f^{\prime}(a)=(p-1)\cdot a^{p-2}" display="inline"><mrow><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⋅</mo><msup><mi>a</mi><mrow><mi>p</mi><mo>-</mo><mn>2</mn></mrow></msup></mrow></mrow></math> is non-zero modulo <math id="p2.m10" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>, the trivial case of Hensel’s lemma implies that there exist a root of <math id="p2.m11" class="ltx_Math" alttext="x^{p-1}-1" display="inline"><mrow><msup><mi>x</mi><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>-</mo><mn>1</mn></mrow></math> in <math id="p2.m12" class="ltx_Math" alttext="\mathbb{Z}_{p}" display="inline"><msub><mi>ℤ</mi><mi>p</mi></msub></math> which is congruent to <math id="p2.m13" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> modulo <math id="p2.m14" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>. Hence, there are at least <math id="p2.m15" class="ltx_Math" alttext="p-1" display="inline"><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow></math> roots in <math id="p2.m16" class="ltx_Math" alttext="\mathbb{Z}_{p}" display="inline"><msub><mi>ℤ</mi><mi>p</mi></msub></math>, and we can conclude that there are exactly <math id="p2.m17" class="ltx_Math" alttext="p-1" display="inline"><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow></math> roots.
+∎</p>
+</div>
+</div>
+<div id="Thmdefnx1" class="ltx_theorem ltx_theorem_defn">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition</span>.</h6>
+<div id="Thmdefnx1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The Teichmüller character is a homomorphism of multiplicative groups:</span></p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\omega\colon\mathbb{F}_{p}^{\times}\to\mathbb{Z}_{p}^{\times}" display="block"><mrow><mi>ω</mi><mo>:</mo><mrow><msubsup><mi>𝔽</mi><mi>p</mi><mo>×</mo></msubsup><mo>→</mo><msubsup><mi>ℤ</mi><mi>p</mi><mo>×</mo></msubsup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">such that <math id="Thmdefnx1.p1.m1" class="ltx_Math" alttext="\omega(a)" display="inline"><mrow><mi>ω</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>a</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> is the unique <math id="Thmdefnx1.p1.m2" class="ltx_Math" alttext="(p-1)" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><mrow><mi>p</mi><mo mathvariant="normal">-</mo><mn mathvariant="normal">1</mn></mrow><mo mathvariant="normal" stretchy="false">)</mo></mrow></math>th root of unity in <math id="Thmdefnx1.p1.m3" class="ltx_Math" alttext="\mathbb{Z}_{p}" display="inline"><msub><mi mathvariant="normal">Z</mi><mi>p</mi></msub></math> which is congruent to <math id="Thmdefnx1.p1.m4" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> modulo <math id="Thmdefnx1.p1.m5" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> (which exists by the corollary above). The map <math id="Thmdefnx1.p1.m6" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> is sometimes called the Teichmüller lift of <math id="Thmdefnx1.p1.m7" class="ltx_Math" alttext="\mathbb{F}_{p}" display="inline"><msub><mi mathvariant="normal">F</mi><mi>p</mi></msub></math> to <math id="Thmdefnx1.p1.m8" class="ltx_Math" alttext="\mathbb{Z}_{p}" display="inline"><msub><mi mathvariant="normal">Z</mi><mi>p</mi></msub></math> (<math id="Thmdefnx1.p1.m9" class="ltx_Math" alttext="0\mod p" display="inline"><mrow><mn mathvariant="normal">0</mn><mo lspace="2.5pt" mathvariant="normal" rspace="2.5pt">mod</mo><mi>p</mi></mrow></math> would lift to <math id="Thmdefnx1.p1.m10" class="ltx_Math" alttext="0\in\mathbb{Z}_{p}" display="inline"><mrow><mn mathvariant="normal">0</mn><mo mathvariant="normal">∈</mo><msub><mi mathvariant="normal">Z</mi><mi>p</mi></msub></mrow></math>).</span></p>
+</div>
+</div>
+<div id="Thmremx1" class="ltx_theorem ltx_theorem_rem">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Remark</span>.</h6>
+<div id="Thmremx1.p1" class="ltx_para">
+<p class="ltx_p">Some authors define the Teichmüller character to be the homomorphism:</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\hat{\omega}\colon\mathbb{Z}_{p}^{\times}\to\mathbb{Z}_{p}^{\times}" display="block"><mrow><mover accent="true"><mi>ω</mi><mo stretchy="false">^</mo></mover><mo>:</mo><mrow><msubsup><mi>ℤ</mi><mi>p</mi><mo>×</mo></msubsup><mo>→</mo><msubsup><mi>ℤ</mi><mi>p</mi><mo>×</mo></msubsup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">defined by</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\hat{\omega}(z)=\lim_{n\to\infty}z^{p^{n}}." display="block"><mrow><mrow><mrow><mover accent="true"><mi>ω</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><msup><mi>z</mi><msup><mi>p</mi><mi>n</mi></msup></msup></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Notice that for any <math id="Thmremx1.p1.m1" class="ltx_Math" alttext="z\in\mathbb{Z}_{p}^{\times}" display="inline"><mrow><mi>z</mi><mo>∈</mo><msubsup><mi>ℤ</mi><mi>p</mi><mo>×</mo></msubsup></mrow></math>, <math id="Thmremx1.p1.m2" class="ltx_Math" alttext="\hat{\omega}(z)" display="inline"><mrow><mover accent="true"><mi>ω</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a <math id="Thmremx1.p1.m3" class="ltx_Math" alttext="(p-1)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></math>th root of unity:</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="(\hat{\omega}(z))^{p}=\left(\lim_{n\to\infty}z^{p^{n}}\right)^{p}=\lim_{n\to%
+\infty}z^{p^{n+1}}=\hat{\omega}(z)." display="block"><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>ω</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mi>p</mi></msup><mo>=</mo><msup><mrow><mo>(</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><msup><mi>z</mi><msup><mi>p</mi><mi>n</mi></msup></msup></mrow><mo>)</mo></mrow><mi>p</mi></msup><mo>=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><msup><mi>z</mi><msup><mi>p</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup></msup></mrow><mo>=</mo><mrow><mover accent="true"><mi>ω</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus, the value <math id="Thmremx1.p1.m4" class="ltx_Math" alttext="\hat{\omega}(z)" display="inline"><mrow><mover accent="true"><mi>ω</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the same than <math id="Thmremx1.p1.m5" class="ltx_Math" alttext="\omega(z\mod p)" display="inline"><mrow><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo lspace="2.5pt" rspace="2.5pt">mod</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+</div>
+<div id="p3" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Teichmüller character</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">TeichmullerCharacter</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:09:04</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:09:04</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">alozano (2414)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">alozano (2414)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">7</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">alozano (2414)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 13H99</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 11S99</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 12J99</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Teichmuler character</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Teichmuller lift</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Teichmüller lift</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">PAdicIntegers</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 17:34:12 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html><html>
+<head>
+<title>proof that a domain is Dedekind if its ideals are invertible</title>
+<!--Generated on Fri Feb  9 17:22:34 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">proof that a domain is Dedekind if its ideals are invertible</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> be an integral domain with field of fractions <math id="p1.m2" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>. We show that the following are equivalent.</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> is Dedekind. That is, it is Noetherian (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Noetherian</span>), integrally closed, and every prime ideal is maximal (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/MaximalIdeal</span>).</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Every nonzero (integral) ideal is invertible.</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Every fractional ideal is invertible.</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">As every fractional ideal is the product of an element of <math id="p1.m3" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> and an integral ideal, statements (<a href="#I1.i2" title="2. ‣ proof that a domain is Dedekind if its ideals are invertible" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>) and (<a href="#I1.i3" title="3. ‣ proof that a domain is Dedekind if its ideals are invertible" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>) are equivalent.
+We start by proving that (<a href="#I1.i3" title="3. ‣ proof that a domain is Dedekind if its ideals are invertible" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>) implies <math id="p1.m4" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> is Dedekind.</p>
+</div>
+<div id="Thmlemmax1" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Lemma</span>.</h6>
+<div id="Thmlemmax1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If every fractional ideal is invertible, then <math id="Thmlemmax1.p1.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> is Dedekind.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">First, every invertible ideal is finitely generated, so <math id="p2.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> is Noetherian.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Now, let <math id="p3.m1" class="ltx_Math" alttext="\mathfrak{p}" display="inline"><mi>𝔭</mi></math> be a prime ideal, and <math id="p3.m2" class="ltx_Math" alttext="\mathfrak{m}" display="inline"><mi>𝔪</mi></math> be a maximal ideal containing <math id="p3.m3" class="ltx_Math" alttext="\mathfrak{p}" display="inline"><mi>𝔭</mi></math>. As <math id="p3.m4" class="ltx_Math" alttext="\mathfrak{m}" display="inline"><mi>𝔪</mi></math> is invertible, there exists an ideal <math id="p3.m5" class="ltx_Math" alttext="\mathfrak{a}" display="inline"><mi>𝔞</mi></math> such that <math id="p3.m6" class="ltx_Math" alttext="\mathfrak{p}=\mathfrak{m}\mathfrak{a}" display="inline"><mrow><mi>𝔭</mi><mo>=</mo><mrow><mi>𝔪</mi><mo>⁢</mo><mi>𝔞</mi></mrow></mrow></math>.
+That <math id="p3.m7" class="ltx_Math" alttext="\mathfrak{p}" display="inline"><mi>𝔭</mi></math> is a prime ideal implies <math id="p3.m8" class="ltx_Math" alttext="\mathfrak{a}\subseteq\mathfrak{p}" display="inline"><mrow><mi>𝔞</mi><mo>⊆</mo><mi>𝔭</mi></mrow></math> or <math id="p3.m9" class="ltx_Math" alttext="\mathfrak{m}\subseteq\mathfrak{p}" display="inline"><mrow><mi>𝔪</mi><mo>⊆</mo><mi>𝔭</mi></mrow></math>. The first case gives <math id="p3.m10" class="ltx_Math" alttext="\mathfrak{p}\subseteq\mathfrak{m}\mathfrak{p}" display="inline"><mrow><mi>𝔭</mi><mo>⊆</mo><mrow><mi>𝔪</mi><mo>⁢</mo><mi>𝔭</mi></mrow></mrow></math> and, by cancelling the invertible ideal <math id="p3.m11" class="ltx_Math" alttext="\mathfrak{p}" display="inline"><mi>𝔭</mi></math> implies that <math id="p3.m12" class="ltx_Math" alttext="\mathfrak{m}=R" display="inline"><mrow><mi>𝔪</mi><mo>=</mo><mi>R</mi></mrow></math>, a contradiction. So, the second case must be true and, by maximality of <math id="p3.m13" class="ltx_Math" alttext="\mathfrak{m}" display="inline"><mi>𝔪</mi></math>, <math id="p3.m14" class="ltx_Math" alttext="\mathfrak{p}=\mathfrak{m}" display="inline"><mrow><mi>𝔭</mi><mo>=</mo><mi>𝔪</mi></mrow></math>, showing that all prime ideals are maximal.
+</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Now let <math id="p4.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> be an element of the field of fractions <math id="p4.m2" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> and be integral over <math id="p4.m3" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>.
+Then, we can write <math id="p4.m4" class="ltx_Math" alttext="x^{n}=c_{0}+c_{1}x+\cdots+c_{n-1}x^{n-1}" display="inline"><mrow><msup><mi>x</mi><mi>n</mi></msup><mo>=</mo><mrow><msub><mi>c</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>c</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msup><mi>x</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></mrow></math> for coefficients <math id="p4.m5" class="ltx_Math" alttext="c_{k}\in R" display="inline"><mrow><msub><mi>c</mi><mi>k</mi></msub><mo>∈</mo><mi>R</mi></mrow></math>.
+Letting <math id="p4.m6" class="ltx_Math" alttext="\mathfrak{a}" display="inline"><mi>𝔞</mi></math> be the fractional ideal</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\mathfrak{a}=(1,x,x^{2},\ldots,x^{n-1})" display="block"><mrow><mi>𝔞</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mi>x</mi><mo>,</mo><msup><mi>x</mi><mn>2</mn></msup><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msup><mi>x</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">gives <math id="p4.m7" class="ltx_Math" alttext="x^{n}\in\mathfrak{a}" display="inline"><mrow><msup><mi>x</mi><mi>n</mi></msup><mo>∈</mo><mi>𝔞</mi></mrow></math>, so <math id="p4.m8" class="ltx_Math" alttext="x\mathfrak{a}\subseteq\mathfrak{a}" display="inline"><mrow><mrow><mi>x</mi><mo>⁢</mo><mi>𝔞</mi></mrow><mo>⊆</mo><mi>𝔞</mi></mrow></math>. As <math id="p4.m9" class="ltx_Math" alttext="\mathfrak{a}" display="inline"><mi>𝔞</mi></math> is invertible, it can be cancelled to give <math id="p4.m10" class="ltx_Math" alttext="x\in R" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>R</mi></mrow></math>, showing that <math id="p4.m11" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> is integrally closed.
+∎</p>
+</div>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">It only remains to show the converse, that is if <math id="p5.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> is Dedekind then every nonzero ideal is invertible. We start with the following lemmas.</p>
+</div>
+<div id="Thmlemmax2" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Lemma</span>.</h6>
+<div id="Thmlemmax2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Every nonzero ideal <math id="Thmlemmax2.p1.m1" class="ltx_Math" alttext="\mathfrak{a}" display="inline"><mi mathvariant="normal">a</mi></math> contains a product of prime ideals. That is, <math id="Thmlemmax2.p1.m2" class="ltx_Math" alttext="\mathfrak{p}_{1}\cdots\mathfrak{p}_{n}\subseteq\mathfrak{a}" display="inline"><mrow><mrow><msub><mi mathvariant="normal">p</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="italic">⁢</mo><mi mathvariant="normal">⋯</mi><mo mathvariant="italic">⁢</mo><msub><mi mathvariant="normal">p</mi><mi>n</mi></msub></mrow><mo mathvariant="normal">⊆</mo><mi mathvariant="normal">a</mi></mrow></math> for some nonzero prime ideals <math id="Thmlemmax2.p1.m3" class="ltx_Math" alttext="\mathfrak{p}_{k}" display="inline"><msub><mi mathvariant="normal">p</mi><mi>k</mi></msub></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">We use proof by contradiction, so suppose this is not the case. As <math id="p6.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> is Noetherian, the set of nonzero ideals which do not contain a product of nonzero primes has a maximal element (w.r.t. the partial order of set inclusion) say, <math id="p6.m2" class="ltx_Math" alttext="\mathfrak{a}" display="inline"><mi>𝔞</mi></math>.</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">In particular <math id="p7.m1" class="ltx_Math" alttext="\mathfrak{a}" display="inline"><mi>𝔞</mi></math> cannot be prime itself, so there exist <math id="p7.m2" class="ltx_Math" alttext="x,y\in R" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><mi>R</mi></mrow></math> such that <math id="p7.m3" class="ltx_Math" alttext="xy\in\mathfrak{a}" display="inline"><mrow><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow><mo>∈</mo><mi>𝔞</mi></mrow></math> and <math id="p7.m4" class="ltx_Math" alttext="x,y\not\in\mathfrak{a}" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∉</mo><mi>𝔞</mi></mrow></math>.
+Therefore <math id="p7.m5" class="ltx_Math" alttext="\mathfrak{a}" display="inline"><mi>𝔞</mi></math> is strictly contained in <math id="p7.m6" class="ltx_Math" alttext="\mathfrak{a}+(x)" display="inline"><mrow><mi>𝔞</mi><mo>+</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="p7.m7" class="ltx_Math" alttext="\mathfrak{a}+(y)" display="inline"><mrow><mi>𝔞</mi><mo>+</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math> and, by the choice of <math id="p7.m8" class="ltx_Math" alttext="\mathfrak{a}" display="inline"><mi>𝔞</mi></math>, these ideals must contain a product of primes. So,</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="(\mathfrak{a}+(x))(\mathfrak{a}+(y))=\mathfrak{a}^{2}+x\mathfrak{a}+y\mathfrak%
+{a}+(xy)\subseteq\mathfrak{a}" display="block"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>𝔞</mi><mo>+</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>𝔞</mi><mo>+</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>𝔞</mi><mn>2</mn></msup><mo>+</mo><mrow><mi>x</mi><mo>⁢</mo><mi>𝔞</mi></mrow><mo>+</mo><mrow><mi>y</mi><mo>⁢</mo><mi>𝔞</mi></mrow><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mi>𝔞</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">contains a product of primes, which is the required contradiction.
+∎</p>
+</div>
+</div>
+<div id="Thmlemmax3" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Lemma</span>.</h6>
+<div id="Thmlemmax3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">For any nonzero proper ideal <math id="Thmlemmax3.p1.m1" class="ltx_Math" alttext="\mathfrak{a}" display="inline"><mi mathvariant="normal">a</mi></math> there is an element <math id="Thmlemmax3.p1.m2" class="ltx_Math" alttext="x\in k\setminus R" display="inline"><mrow><mi>x</mi><mo mathvariant="normal">∈</mo><mrow><mi>k</mi><mo mathvariant="normal">∖</mo><mi>R</mi></mrow></mrow></math> such that <math id="Thmlemmax3.p1.m3" class="ltx_Math" alttext="x\mathfrak{a}\subseteq R" display="inline"><mrow><mrow><mi>x</mi><mo mathvariant="italic">⁢</mo><mi mathvariant="normal">a</mi></mrow><mo mathvariant="normal">⊆</mo><mi>R</mi></mrow></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">Let <math id="p8.m1" class="ltx_Math" alttext="\mathfrak{p}" display="inline"><mi>𝔭</mi></math> be a maximal ideal containing <math id="p8.m2" class="ltx_Math" alttext="\mathfrak{a}" display="inline"><mi>𝔞</mi></math> and <math id="p8.m3" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> be a nonzero element of <math id="p8.m4" class="ltx_Math" alttext="\mathfrak{a}" display="inline"><mi>𝔞</mi></math>. By the previous lemma there are prime ideals <math id="p8.m5" class="ltx_Math" alttext="\mathfrak{p}_{1},\ldots,\mathfrak{p}_{n}" display="inline"><mrow><msub><mi>𝔭</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>𝔭</mi><mi>n</mi></msub></mrow></math> satisfying</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\mathfrak{p}_{1}\cdots\mathfrak{p}_{n}\subseteq(a)\subseteq\mathfrak{a}%
+\subseteq\mathfrak{p}." display="block"><mrow><mrow><mrow><msub><mi>𝔭</mi><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msub><mi>𝔭</mi><mi>n</mi></msub></mrow><mo>⊆</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><mo>⊆</mo><mi>𝔞</mi><mo>⊆</mo><mi>𝔭</mi></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We choose <math id="p8.m6" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> as small as possible. As <math id="p8.m7" class="ltx_Math" alttext="\mathfrak{p}" display="inline"><mi>𝔭</mi></math> is prime, this gives <math id="p8.m8" class="ltx_Math" alttext="\mathfrak{p}_{k}\subseteq\mathfrak{p}" display="inline"><mrow><msub><mi>𝔭</mi><mi>k</mi></msub><mo>⊆</mo><mi>𝔭</mi></mrow></math> for some <math id="p8.m9" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> and, as every prime ideal is maximal, this is an equality. Without loss of generality we may take <math id="p8.m10" class="ltx_Math" alttext="\mathfrak{p}=\mathfrak{p}_{n}" display="inline"><mrow><mi>𝔭</mi><mo>=</mo><msub><mi>𝔭</mi><mi>n</mi></msub></mrow></math>.
+As <math id="p8.m11" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> was assumed to be as small as possible, <math id="p8.m12" class="ltx_Math" alttext="\mathfrak{p}_{1}\cdots\mathfrak{p}_{n-1}" display="inline"><mrow><msub><mi>𝔭</mi><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msub><mi>𝔭</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow></math> is not a subset of <math id="p8.m13" class="ltx_Math" alttext="(a)" display="inline"><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></math>, so there exists <math id="p8.m14" class="ltx_Math" alttext="b\in\mathfrak{p}_{1}\cdots\mathfrak{p}_{n-1}\setminus(a)" display="inline"><mrow><mi>b</mi><mo>∈</mo><mrow><mrow><msub><mi>𝔭</mi><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msub><mi>𝔭</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow><mo>∖</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Then, <math id="p8.m15" class="ltx_Math" alttext="b\not\in(a)" display="inline"><mrow><mi>b</mi><mo>∉</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></math> gives <math id="p8.m16" class="ltx_Math" alttext="x\equiv a^{-1}b\not\in R" display="inline"><mrow><mi>x</mi><mo>≡</mo><mrow><msup><mi>a</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>b</mi></mrow><mo>∉</mo><mi>R</mi></mrow></math> and</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="x\mathfrak{a}\subseteq a^{-1}b\mathfrak{p}\subseteq a^{-1}\mathfrak{p}_{1}%
+\cdots\mathfrak{p}_{n-1}\mathfrak{p}\subseteq a^{-1}(a)=R" display="block"><mrow><mrow><mi>x</mi><mo>⁢</mo><mi>𝔞</mi></mrow><mo>⊆</mo><mrow><msup><mi>a</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>b</mi><mo>⁢</mo><mi>𝔭</mi></mrow><mo>⊆</mo><mrow><msup><mi>a</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>𝔭</mi><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msub><mi>𝔭</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mi>𝔭</mi></mrow><mo>⊆</mo><mrow><msup><mi>a</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>R</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">as required.
+∎</p>
+</div>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">We finally show that every nonzero ideal <math id="p9.m1" class="ltx_Math" alttext="\mathfrak{a}" display="inline"><mi>𝔞</mi></math> is invertible. If its inverse exists then it should be the largest fractional ideal satisfying <math id="p9.m2" class="ltx_Math" alttext="\mathfrak{ba}\subseteq R" display="inline"><mrow><mrow><mi>𝔟</mi><mo>⁢</mo><mi>𝔞</mi></mrow><mo>⊆</mo><mi>R</mi></mrow></math>, so we set</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\mathfrak{b}=\left\{x\in k:x\mathfrak{a}\subseteq R\right\}." display="block"><mrow><mrow><mi>𝔟</mi><mo>=</mo><mrow><mo>{</mo><mrow><mi>x</mi><mo>∈</mo><mi>k</mi></mrow><mo>:</mo><mrow><mrow><mi>x</mi><mo>⁢</mo><mi>𝔞</mi></mrow><mo>⊆</mo><mi>R</mi></mrow><mo>}</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Choosing any nonzero <math id="p9.m3" class="ltx_Math" alttext="a\in\mathfrak{a}" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>𝔞</mi></mrow></math> gives <math id="p9.m4" class="ltx_Math" alttext="a\mathfrak{b}\subseteq\mathfrak{ba}\subseteq R" display="inline"><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>𝔟</mi></mrow><mo>⊆</mo><mrow><mi>𝔟</mi><mo>⁢</mo><mi>𝔞</mi></mrow><mo>⊆</mo><mi>R</mi></mrow></math> so <math id="p9.m5" class="ltx_Math" alttext="\mathfrak{b}" display="inline"><mi>𝔟</mi></math> is indeed a fractional ideal. It only remains to be shown that <math id="p9.m6" class="ltx_Math" alttext="\mathfrak{ba}=R" display="inline"><mrow><mrow><mi>𝔟</mi><mo>⁢</mo><mi>𝔞</mi></mrow><mo>=</mo><mi>R</mi></mrow></math>, for which we use proof by contradiction. If this were not the case then the previous lemma gives an <math id="p9.m7" class="ltx_Math" alttext="x\in k\setminus R" display="inline"><mrow><mi>x</mi><mo>∈</mo><mrow><mi>k</mi><mo>∖</mo><mi>R</mi></mrow></mrow></math> such that <math id="p9.m8" class="ltx_Math" alttext="x\mathfrak{ba}\subseteq R" display="inline"><mrow><mrow><mi>x</mi><mo>⁢</mo><mi>𝔟</mi><mo>⁢</mo><mi>𝔞</mi></mrow><mo>⊆</mo><mi>R</mi></mrow></math>.
+By the definition of <math id="p9.m9" class="ltx_Math" alttext="\mathfrak{b}" display="inline"><mi>𝔟</mi></math>, this gives <math id="p9.m10" class="ltx_Math" alttext="x\mathfrak{b}\subseteq\mathfrak{b}" display="inline"><mrow><mrow><mi>x</mi><mo>⁢</mo><mi>𝔟</mi></mrow><mo>⊆</mo><mi>𝔟</mi></mrow></math> and therefore <math id="p9.m11" class="ltx_Math" alttext="\mathfrak{b}" display="inline"><mi>𝔟</mi></math> is an <math id="p9.m12" class="ltx_Math" alttext="R[x]" display="inline"><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow></math>-module. Furthermore, as <math id="p9.m13" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> is Noetherian, <math id="p9.m14" class="ltx_Math" alttext="\mathfrak{b}" display="inline"><mi>𝔟</mi></math> will be finitely generated as an <math id="p9.m15" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>-module. This implies that <math id="p9.m16" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is integral over the integrally closed ring <math id="p9.m17" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>, so <math id="p9.m18" class="ltx_Math" alttext="x\in R" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>R</mi></mrow></math>, giving the required contradiction.</p>
+</div>
+<div id="p10" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">proof that a domain is Dedekind if its ideals are invertible</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ProofThatADomainIsDedekindIfItsIdealsAreInvertible</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:34:54</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:34:54</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">gel (22282)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">gel (22282)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">5</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">gel (22282)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Proof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 13A15</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 13F05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">DedekindDomain</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">FractionalIdeal</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 17:22:34 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

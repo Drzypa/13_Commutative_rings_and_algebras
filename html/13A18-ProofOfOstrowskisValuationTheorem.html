@@ -1,0 +1,163 @@
+<!DOCTYPE html><html>
+<head>
+<title>proof of Ostrowski’s valuation theorem</title>
+<!--Generated on Fri Feb  9 17:23:15 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">proof of Ostrowski’s valuation theorem</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">This article proves Ostrowski’s theorem on valuations of <math id="p1.m1" class="ltx_Math" alttext="\mathbb{Q}" display="inline"><mi>ℚ</mi></math>, which states:</p>
+</div>
+<div id="Thmthm1" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 1</span>.</h6>
+<div id="Thmthm1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">(Ostrowski) Over <math id="Thmthm1.p1.m1" class="ltx_Math" alttext="\mathbb{Q}" display="inline"><mi mathvariant="normal">Q</mi></math>, every nontrivial absolute value is equivalent either to <math id="Thmthm1.p1.m2" class="ltx_Math" alttext="\left\lvert\cdot\right\rvert_{p}" display="inline"><msub><mrow><mo fence="true" mathvariant="normal">|</mo><mo mathvariant="normal">⋅</mo><mo fence="true" mathvariant="normal">|</mo></mrow><mi>p</mi></msub></math> for some prime <math id="Thmthm1.p1.m3" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>, or to the usual absolute value <math id="Thmthm1.p1.m4" class="ltx_Math" alttext="\left\lvert\cdot\right\rvert_{\infty}" display="inline"><msub><mrow><mo fence="true" mathvariant="normal">|</mo><mo mathvariant="normal">⋅</mo><mo fence="true" mathvariant="normal">|</mo></mrow><mi mathvariant="normal">∞</mi></msub></math>.</span></p>
+</div>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">We start with an estimation lemma:</p>
+</div>
+<div id="Thmthm2" class="ltx_theorem ltx_theorem_lem">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Lemma 2</span>.</h6>
+<div id="Thmthm2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmthm2.p1.m1" class="ltx_Math" alttext="m,n&gt;1" display="inline"><mrow><mrow><mi>m</mi><mo mathvariant="normal">,</mo><mi>n</mi></mrow><mo mathvariant="normal">&gt;</mo><mn mathvariant="normal">1</mn></mrow></math> are integers and <math id="Thmthm2.p1.m2" class="ltx_Math" alttext="\left\lvert\cdot\right\rvert" display="inline"><mrow><mo fence="true" mathvariant="normal">|</mo><mo mathvariant="normal">⋅</mo><mo fence="true" mathvariant="normal">|</mo></mrow></math> any nontrivial absolute value on <math id="Thmthm2.p1.m3" class="ltx_Math" alttext="\mathbb{Q}" display="inline"><mi mathvariant="normal">Q</mi></math>, then <math id="Thmthm2.p1.m4" class="ltx_Math" alttext="\left\lvert m\right\rvert\leq\max(1,\left\lvert n\right\rvert)^{\log m/\log n}" display="inline"><mrow><mrow><mo fence="true" mathvariant="normal">|</mo><mi>m</mi><mo fence="true" mathvariant="normal">|</mo></mrow><mo mathvariant="normal">≤</mo><mi mathvariant="normal">max</mi><msup><mrow><mo mathvariant="normal" stretchy="false">(</mo><mn mathvariant="normal">1</mn><mo mathvariant="normal">,</mo><mrow><mo fence="true" mathvariant="normal">|</mo><mi>n</mi><mo fence="true" mathvariant="normal">|</mo></mrow><mo mathvariant="normal" stretchy="false">)</mo></mrow><mrow><mi mathvariant="normal">log</mi><mo mathvariant="italic">⁡</mo><mrow><mi>m</mi><mo mathvariant="normal">/</mo><mrow><mi mathvariant="normal">log</mi><mo mathvariant="italic">⁡</mo><mi>n</mi></mrow></mrow></mrow></msup></mrow></math>.</span></p>
+</div>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proof. </span> Write <math id="p3.m1" class="ltx_Math" alttext="m=a_{0}+a_{1}n+\cdots+a_{r}n^{r}" display="inline"><mrow><mi>m</mi><mo>=</mo><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>a</mi><mi>r</mi></msub><mo>⁢</mo><msup><mi>n</mi><mi>r</mi></msup></mrow></mrow></mrow></math> for <math id="p3.m2" class="ltx_Math" alttext="a_{i}\in\mathbb{Z},0\leq a_{i}\leq n-1" display="inline"><mrow><mrow><msub><mi>a</mi><mi>i</mi></msub><mo>∈</mo><mi>ℤ</mi></mrow><mo>,</mo><mrow><mn>0</mn><mo>≤</mo><msub><mi>a</mi><mi>i</mi></msub><mo>≤</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></mrow></mrow></math>, and with <math id="p3.m3" class="ltx_Math" alttext="a_{r}\neq 0" display="inline"><mrow><msub><mi>a</mi><mi>r</mi></msub><mo>≠</mo><mn>0</mn></mrow></math>. Then clearly</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\left\lvert a_{i}\right\rvert=\left\lvert\underset{a_{i}}{\underbrace{1+\cdots%
++1}}\right\rvert\leq a_{i}\left\lvert 1\right\rvert=a_{i}\leq n" display="block"><mrow><mrow><mo fence="true">|</mo><msub><mi>a</mi><mi>i</mi></msub><mo fence="true">|</mo></mrow><mo>=</mo><mrow><mo fence="true">|</mo><munder accentunder="true"><munder accentunder="true"><mrow><mn>1</mn><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mn>1</mn></mrow><mo>⏟</mo></munder><msub><mi>a</mi><mi>i</mi></msub></munder><mo fence="true">|</mo></mrow><mo>≤</mo><mrow><msub><mi>a</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo fence="true">|</mo><mn>1</mn><mo fence="true">|</mo></mrow></mrow><mo>=</mo><msub><mi>a</mi><mi>i</mi></msub><mo>≤</mo><mi>n</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">by the triangle inequality; also, <math id="p3.m4" class="ltx_Math" alttext="r&lt;\frac{\log m}{\log n}" display="inline"><mrow><mi>r</mi><mo>&lt;</mo><mfrac><mrow><mi>log</mi><mo>⁡</mo><mi>m</mi></mrow><mrow><mi>log</mi><mo>⁡</mo><mi>n</mi></mrow></mfrac></mrow></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Thus</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\displaystyle\left\lvert m\right\rvert" display="inline"><mrow><mo fence="true">|</mo><mi>m</mi><mo fence="true">|</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex2.m2" class="ltx_Math" alttext="\displaystyle=\left\lvert a_{0}+a_{1}n+\cdots+a_{r}n^{r}\right\rvert\leq(r+1)n%
+\max(1,\left\lvert n\right\rvert)^{r}" display="inline"><mrow><mo>=</mo><mrow><mo fence="true">|</mo><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><msub><mi>a</mi><mn>1</mn></msub><mi>n</mi><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>a</mi><mi>r</mi></msub><msup><mi>n</mi><mi>r</mi></msup><mo fence="true">|</mo></mrow><mo>≤</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mi>n</mi><mi>max</mi><msup><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mrow><mo fence="true">|</mo><mi>n</mi><mo fence="true">|</mo></mrow><mo stretchy="false">)</mo></mrow><mi>r</mi></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex3" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex3.m2" class="ltx_Math" alttext="\displaystyle\leq\left(1+\frac{\log m}{\log n}\right)n\max(1,\left\lvert n%
+\right\rvert)^{\log m/\log n}" display="inline"><mrow><mo>≤</mo><mrow><mo>(</mo><mn>1</mn><mo>+</mo><mstyle displaystyle="true"><mfrac><mrow><mi>log</mi><mo>⁡</mo><mi>m</mi></mrow><mrow><mi>log</mi><mo>⁡</mo><mi>n</mi></mrow></mfrac></mstyle><mo>)</mo></mrow><mi>n</mi><mi>max</mi><msup><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mrow><mo fence="true">|</mo><mi>n</mi><mo fence="true">|</mo></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>log</mi><mo>⁡</mo><mrow><mi>m</mi><mo>/</mo><mrow><mi>log</mi><mo>⁡</mo><mi>n</mi></mrow></mrow></mrow></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Replace <math id="p4.m1" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> by <math id="p4.m2" class="ltx_Math" alttext="m^{t}" display="inline"><msup><mi>m</mi><mi>t</mi></msup></math> for <math id="p4.m3" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> a positive integer, and take <math id="p4.m4" class="ltx_Math" alttext="t^{\mathrm{th}}" display="inline"><msup><mi>t</mi><mi>th</mi></msup></math> roots of the resulting inequality, to get</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\left\lvert m\right\rvert\leq\left(1+t\frac{\log m}{\log n}\right)^{1/t}n^{1/t%
+}\max(1,\left\lvert n\right\rvert)^{\log m/\log n}" display="block"><mrow><mrow><mo fence="true">|</mo><mi>m</mi><mo fence="true">|</mo></mrow><mo>≤</mo><msup><mrow><mo>(</mo><mn>1</mn><mo>+</mo><mi>t</mi><mfrac><mrow><mi>log</mi><mo>⁡</mo><mi>m</mi></mrow><mrow><mi>log</mi><mo>⁡</mo><mi>n</mi></mrow></mfrac><mo>)</mo></mrow><mrow><mn>1</mn><mo>/</mo><mi>t</mi></mrow></msup><msup><mi>n</mi><mrow><mn>1</mn><mo>/</mo><mi>t</mi></mrow></msup><mi>max</mi><msup><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mrow><mo fence="true">|</mo><mi>n</mi><mo fence="true">|</mo></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>log</mi><mo>⁡</mo><mrow><mi>m</mi><mo>/</mo><mrow><mi>log</mi><mo>⁡</mo><mi>n</mi></mrow></mrow></mrow></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Now let <math id="p4.m5" class="ltx_Math" alttext="t\to\infty" display="inline"><mrow><mi>t</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></math>; the first two factors each approach <math id="p4.m6" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math>, and the lemma follows.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proof of Ostrowski’s theorem: </span>
+
+<br class="ltx_break">First assume that for every <math id="p5.m1" class="ltx_Math" alttext="n&gt;1" display="inline"><mrow><mi>n</mi><mo>&gt;</mo><mn>1</mn></mrow></math> we have <math id="p5.m2" class="ltx_Math" alttext="\left\lvert n\right\rvert&gt;1" display="inline"><mrow><mrow><mo fence="true">|</mo><mi>n</mi><mo fence="true">|</mo></mrow><mo>&gt;</mo><mn>1</mn></mrow></math>. Then by the lemma, <math id="p5.m3" class="ltx_Math" alttext="\left\lvert m\right\rvert\leq\left\lvert n\right\rvert^{\log m/\log n}" display="inline"><mrow><mrow><mo fence="true">|</mo><mi>m</mi><mo fence="true">|</mo></mrow><mo>≤</mo><msup><mrow><mo fence="true">|</mo><mi>n</mi><mo fence="true">|</mo></mrow><mrow><mi>log</mi><mo>⁡</mo><mrow><mi>m</mi><mo>/</mo><mrow><mi>log</mi><mo>⁡</mo><mi>n</mi></mrow></mrow></mrow></msup></mrow></math>, so that for every <math id="p5.m4" class="ltx_Math" alttext="m,n" display="inline"><mrow><mi>m</mi><mo>,</mo><mi>n</mi></mrow></math> we have</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\left\lvert m\right\rvert^{1/\log m}\leq\left\lvert n\right\rvert^{1/\log n}" display="block"><mrow><msup><mrow><mo fence="true">|</mo><mi>m</mi><mo fence="true">|</mo></mrow><mrow><mn>1</mn><mo>/</mo><mrow><mi>log</mi><mo>⁡</mo><mi>m</mi></mrow></mrow></msup><mo>≤</mo><msup><mrow><mo fence="true">|</mo><mi>n</mi><mo fence="true">|</mo></mrow><mrow><mn>1</mn><mo>/</mo><mrow><mi>log</mi><mo>⁡</mo><mi>n</mi></mrow></mrow></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Since this holds for every <math id="p5.m5" class="ltx_Math" alttext="m,n&gt;0" display="inline"><mrow><mrow><mi>m</mi><mo>,</mo><mi>n</mi></mrow><mo>&gt;</mo><mn>0</mn></mrow></math>, after reversing the roles of <math id="p5.m6" class="ltx_Math" alttext="m,n" display="inline"><mrow><mi>m</mi><mo>,</mo><mi>n</mi></mrow></math>, we see that in fact equality holds, so that for every <math id="p5.m7" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>, <math id="p5.m8" class="ltx_Math" alttext="\left\lvert m\right\rvert^{1/\log m}=c" display="inline"><mrow><msup><mrow><mo fence="true">|</mo><mi>m</mi><mo fence="true">|</mo></mrow><mrow><mn>1</mn><mo>/</mo><mrow><mi>log</mi><mo>⁡</mo><mi>m</mi></mrow></mrow></msup><mo>=</mo><mi>c</mi></mrow></math> and <math id="p5.m9" class="ltx_Math" alttext="\left\lvert m\right\rvert=c^{\log m}" display="inline"><mrow><mrow><mo fence="true">|</mo><mi>m</mi><mo fence="true">|</mo></mrow><mo>=</mo><msup><mi>c</mi><mrow><mi>log</mi><mo>⁡</mo><mi>m</mi></mrow></msup></mrow></math> for some constant <math id="p5.m10" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>; this absolute value is obviously equivalent to <math id="p5.m11" class="ltx_Math" alttext="\left\lvert m\right\rvert_{\infty}=e^{\log m}" display="inline"><mrow><msub><mrow><mo fence="true">|</mo><mi>m</mi><mo fence="true">|</mo></mrow><mi mathvariant="normal">∞</mi></msub><mo>=</mo><msup><mi>e</mi><mrow><mi>log</mi><mo>⁡</mo><mi>m</mi></mrow></msup></mrow></math>.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">If instead, for some <math id="p6.m1" class="ltx_Math" alttext="n&gt;1" display="inline"><mrow><mi>n</mi><mo>&gt;</mo><mn>1</mn></mrow></math> we have <math id="p6.m2" class="ltx_Math" alttext="\left\lvert n\right\rvert&lt;1" display="inline"><mrow><mrow><mo fence="true">|</mo><mi>n</mi><mo fence="true">|</mo></mrow><mo>&lt;</mo><mn>1</mn></mrow></math>, then by the lemma, for every <math id="p6.m3" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>, <math id="p6.m4" class="ltx_Math" alttext="\left\lvert m\right\rvert\leq 1" display="inline"><mrow><mrow><mo fence="true">|</mo><mi>m</mi><mo fence="true">|</mo></mrow><mo>≤</mo><mn>1</mn></mrow></math>. Thus the absolute value is nonarchimedean. Define <math id="p6.m5" class="ltx_Math" alttext="A=\{x\in\mathbb{Q}\ \mid\ \left\lvert x\right\rvert\leq 1\}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mpadded width="+5pt"><mi>ℚ</mi></mpadded></mrow><mo rspace="7.5pt">∣</mo><mrow><mrow><mo fence="true">|</mo><mi>x</mi><mo fence="true">|</mo></mrow><mo>≤</mo><mn>1</mn></mrow><mo stretchy="false">}</mo></mrow></mrow></math> and let <math id="p6.m6" class="ltx_Math" alttext="\mathfrak{m}\subset A" display="inline"><mrow><mi>𝔪</mi><mo>⊂</mo><mi>A</mi></mrow></math> be the (unique) maximal ideal defined by <math id="p6.m7" class="ltx_Math" alttext="\mathfrak{m}=\{x\in\mathbb{Q}\ \mid\ \left\lvert x\right\rvert&lt;1\}" display="inline"><mrow><mi>𝔪</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mpadded width="+5pt"><mi>ℚ</mi></mpadded></mrow><mo rspace="7.5pt">∣</mo><mrow><mrow><mo fence="true">|</mo><mi>x</mi><mo fence="true">|</mo></mrow><mo>&lt;</mo><mn>1</mn></mrow><mo stretchy="false">}</mo></mrow></mrow></math>. Then <math id="p6.m8" class="ltx_Math" alttext="\mathbb{Z}\subset A" display="inline"><mrow><mi>ℤ</mi><mo>⊂</mo><mi>A</mi></mrow></math> since <math id="p6.m9" class="ltx_Math" alttext="\left\lvert m\right\rvert\leq 1" display="inline"><mrow><mrow><mo fence="true">|</mo><mi>m</mi><mo fence="true">|</mo></mrow><mo>≤</mo><mn>1</mn></mrow></math> for every <math id="p6.m10" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>, and <math id="p6.m11" class="ltx_Math" alttext="\mathfrak{m}\cap\mathbb{Z}" display="inline"><mrow><mi>𝔪</mi><mo>∩</mo><mi>ℤ</mi></mrow></math> is nonzero since otherwise the valuation would be trivial (we would have <math id="p6.m12" class="ltx_Math" alttext="\left\lvert m\right\rvert=1" display="inline"><mrow><mrow><mo fence="true">|</mo><mi>m</mi><mo fence="true">|</mo></mrow><mo>=</mo><mn>1</mn></mrow></math> for every <math id="p6.m13" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>). Thus <math id="p6.m14" class="ltx_Math" alttext="\mathfrak{m}\cap\mathbb{Z}" display="inline"><mrow><mi>𝔪</mi><mo>∩</mo><mi>ℤ</mi></mrow></math> is prime since <math id="p6.m15" class="ltx_Math" alttext="\mathfrak{m}" display="inline"><mi>𝔪</mi></math> is, so is equal to <math id="p6.m16" class="ltx_Math" alttext="(p)" display="inline"><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></math> for some rational prime <math id="p6.m17" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>. Now, if <math id="p6.m18" class="ltx_Math" alttext="p\nmid a" display="inline"><mrow><mi>p</mi><mo>∤</mo><mi>a</mi></mrow></math> for an integer <math id="p6.m19" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>, then <math id="p6.m20" class="ltx_Math" alttext="\left\lvert a\right\rvert" display="inline"><mrow><mo fence="true">|</mo><mi>a</mi><mo fence="true">|</mo></mrow></math> cannot be strictly less than <math id="p6.m21" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> (else it would be in <math id="p6.m22" class="ltx_Math" alttext="(p)" display="inline"><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></math>), so <math id="p6.m23" class="ltx_Math" alttext="\left\lvert a\right\rvert=1" display="inline"><mrow><mrow><mo fence="true">|</mo><mi>a</mi><mo fence="true">|</mo></mrow><mo>=</mo><mn>1</mn></mrow></math> and <math id="p6.m24" class="ltx_Math" alttext="a\in A^{\star}" display="inline"><mrow><mi>a</mi><mo>∈</mo><msup><mi>A</mi><mo>⋆</mo></msup></mrow></math>. But given any <math id="p6.m25" class="ltx_Math" alttext="x\in\mathbb{Q}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>ℚ</mi></mrow></math>, we can write <math id="p6.m26" class="ltx_Math" alttext="x=\frac{ap^{t}}{b}" display="inline"><mrow><mi>x</mi><mo>=</mo><mfrac><mrow><mi>a</mi><mo>⁢</mo><msup><mi>p</mi><mi>t</mi></msup></mrow><mi>b</mi></mfrac></mrow></math> with <math id="p6.m27" class="ltx_Math" alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math> prime to <math id="p6.m28" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>, so that</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\left\lvert x\right\rvert=\frac{\left\lvert a\right\rvert\cdot\left\lvert p%
+\right\rvert^{t}}{\left\lvert b\right\rvert}=\left\lvert p\right\rvert^{t}" display="block"><mrow><mrow><mo fence="true">|</mo><mi>x</mi><mo fence="true">|</mo></mrow><mo>=</mo><mfrac><mrow><mrow><mo fence="true">|</mo><mi>a</mi><mo fence="true">|</mo></mrow><mo>⋅</mo><msup><mrow><mo fence="true">|</mo><mi>p</mi><mo fence="true">|</mo></mrow><mi>t</mi></msup></mrow><mrow><mo fence="true">|</mo><mi>b</mi><mo fence="true">|</mo></mrow></mfrac><mo>=</mo><msup><mrow><mo fence="true">|</mo><mi>p</mi><mo fence="true">|</mo></mrow><mi>t</mi></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">so that the valuation is obviously equivalent to the <math id="p6.m29" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>-adic valuation.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">proof of Ostrowski’s valuation theorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ProofOfOstrowskisValuationTheorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:58:26</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:58:26</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rm50 (10146)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rm50 (10146)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">4</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rm50 (10146)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Proof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 13A18</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 17:23:15 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

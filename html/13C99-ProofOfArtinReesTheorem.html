@@ -1,0 +1,193 @@
+<!DOCTYPE html><html>
+<head>
+<title>proof of Artin-Rees theorem</title>
+<!--Generated on Fri Feb  9 17:29:37 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">proof of Artin-Rees theorem</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Define the graded ring <math id="p1.m1" class="ltx_Math" alttext="\mathrm{Pow}_{{\mathfrak{A}}}(A)\subseteq A[X]" display="inline"><mrow><mrow><msub><mi>Pow</mi><mi>𝔄</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math>,
+where <math id="p1.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is an indeterminate by</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\displaystyle\mathrm{Pow}_{{\mathfrak{A}}}(A)" display="inline"><mrow><msub><mi>Pow</mi><mi>𝔄</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex1.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex1.m3" class="ltx_Math" alttext="\displaystyle\coprod_{n\geq 0}{\mathfrak{A}}^{n}X^{n}" display="inline"><mrow><mstyle displaystyle="true"><munder><mo largeop="true" movablelimits="false" symmetric="true">∐</mo><mrow><mi>n</mi><mo>≥</mo><mn>0</mn></mrow></munder></mstyle><mrow><msup><mi>𝔄</mi><mi>n</mi></msup><mo>⁢</mo><msup><mi>X</mi><mi>n</mi></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex2.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex2.m3" class="ltx_Math" alttext="\displaystyle\{z_{0}+z_{1}X+\cdots+z_{r}X^{r}\mid r\geq 0,\&gt;z_{j}\in{\mathfrak%
+{A}}^{j}\}." display="inline"><mrow><mi mathvariant="normal">{</mi><msub><mi>z</mi><mn>0</mn></msub><mo>+</mo><msub><mi>z</mi><mn>1</mn></msub><mi>X</mi><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>z</mi><mi>r</mi></msub><msup><mi>X</mi><mi>r</mi></msup><mo>∣</mo><mi>r</mi><mo>≥</mo><mn>0</mn><mo rspace="4.7pt">,</mo><msub><mi>z</mi><mi>j</mi></msub><mo>∈</mo><msup><mi>𝔄</mi><mi>j</mi></msup><mo stretchy="false">}</mo><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Now, <math id="p1.m3" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> gives rise to a graded module, <math id="p1.m4" class="ltx_Math" alttext="M^{\prime}" display="inline"><msup><mi>M</mi><mo>′</mo></msup></math>, over <math id="p1.m5" class="ltx_Math" alttext="\mathrm{Pow}_{{\mathfrak{A}}}(A)" display="inline"><mrow><msub><mi>Pow</mi><mi>𝔄</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></math>,
+namely</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\displaystyle M^{\prime}" display="inline"><msup><mi>M</mi><mo>′</mo></msup></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex3.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex3.m3" class="ltx_Math" alttext="\displaystyle\coprod_{n\geq 0}{\mathfrak{A}}^{n}MX^{n}" display="inline"><mrow><mstyle displaystyle="true"><munder><mo largeop="true" movablelimits="false" symmetric="true">∐</mo><mrow><mi>n</mi><mo>≥</mo><mn>0</mn></mrow></munder></mstyle><mrow><msup><mi>𝔄</mi><mi>n</mi></msup><mo>⁢</mo><mi>M</mi><mo>⁢</mo><msup><mi>X</mi><mi>n</mi></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex4.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex4.m3" class="ltx_Math" alttext="\displaystyle\{z_{0}+z_{1}X+\cdots+z_{r}X^{r}\mid r\geq 0,\&gt;z_{j}\in{\mathfrak%
+{A}}^{j}M\}." display="inline"><mrow><mi mathvariant="normal">{</mi><msub><mi>z</mi><mn>0</mn></msub><mo>+</mo><msub><mi>z</mi><mn>1</mn></msub><mi>X</mi><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>z</mi><mi>r</mi></msub><msup><mi>X</mi><mi>r</mi></msup><mo>∣</mo><mi>r</mi><mo>≥</mo><mn>0</mn><mo rspace="4.7pt">,</mo><msub><mi>z</mi><mi>j</mi></msub><mo>∈</mo><msup><mi>𝔄</mi><mi>j</mi></msup><mi>M</mi><mo stretchy="false">}</mo><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Observe that <math id="p1.m6" class="ltx_Math" alttext="\mathrm{Pow}_{{\mathfrak{A}}}(A)" display="inline"><mrow><msub><mi>Pow</mi><mi>𝔄</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a noetherian ring. For, if
+<math id="p1.m7" class="ltx_Math" alttext="\alpha_{1},\ldots,\alpha_{q}" display="inline"><mrow><msub><mi>α</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>α</mi><mi>q</mi></msub></mrow></math> generate <math id="p1.m8" class="ltx_Math" alttext="{\mathfrak{A}}" display="inline"><mi>𝔄</mi></math> in <math id="p1.m9" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, then the
+elements of <math id="p1.m10" class="ltx_Math" alttext="{\mathfrak{A}}^{n}" display="inline"><msup><mi>𝔄</mi><mi>n</mi></msup></math> are sums of degree <math id="p1.m11" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> monomials in the
+<math id="p1.m12" class="ltx_Math" alttext="\alpha_{j}" display="inline"><msub><mi>α</mi><mi>j</mi></msub></math>’s, i.e., if <math id="p1.m13" class="ltx_Math" alttext="Y_{1},\ldots,Y_{q}" display="inline"><mrow><msub><mi>Y</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>Y</mi><mi>q</mi></msub></mrow></math> are independent indeterminates
+the map</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="A[Y_{1},\ldots,Y_{q}]\longrightarrow\mathrm{Pow}_{{\mathfrak{A}}}(A)" display="block"><mrow><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msub><mi>Y</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>Y</mi><mi>q</mi></msub><mo stretchy="false">]</mo></mrow></mrow><mo>⟶</mo><mrow><msub><mi>Pow</mi><mi>𝔄</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">via</span> <math id="p1.m14" class="ltx_Math" alttext="Y_{j}\mapsto\alpha_{j}X" display="inline"><mrow><msub><mi>Y</mi><mi>j</mi></msub><mo>↦</mo><mrow><msub><mi>α</mi><mi>j</mi></msub><mo>⁢</mo><mi>X</mi></mrow></mrow></math> is surjective, and as
+<math id="p1.m15" class="ltx_Math" alttext="A[Y_{1},\ldots,Y_{q}]" display="inline"><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msub><mi>Y</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>Y</mi><mi>q</mi></msub><mo stretchy="false">]</mo></mrow></mrow></math> is noetherian, so is <math id="p1.m16" class="ltx_Math" alttext="\mathrm{Pow}_{{\mathfrak{A}}}(A)" display="inline"><mrow><msub><mi>Pow</mi><mi>𝔄</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Let <math id="p2.m1" class="ltx_Math" alttext="m_{1},\ldots,m_{t}" display="inline"><mrow><msub><mi>m</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>m</mi><mi>t</mi></msub></mrow></math> generate <math id="p2.m2" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> over <math id="p2.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. Then, <math id="p2.m4" class="ltx_Math" alttext="m_{1},\ldots,m_{t}" display="inline"><mrow><msub><mi>m</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>m</mi><mi>t</mi></msub></mrow></math> generate <math id="p2.m5" class="ltx_Math" alttext="M^{\prime}" display="inline"><msup><mi>M</mi><mo>′</mo></msup></math> over <math id="p2.m6" class="ltx_Math" alttext="\mathrm{Pow}_{{\mathfrak{A}}}(A)" display="inline"><mrow><msub><mi>Pow</mi><mi>𝔄</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></math>. Therefore, <math id="p2.m7" class="ltx_Math" alttext="M^{\prime}" display="inline"><msup><mi>M</mi><mo>′</mo></msup></math> is
+a noetherian module. Set</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="N^{\prime}=\coprod_{n\geq 0}({\mathfrak{A}}^{n}M\cap N)X^{n}\subseteq M^{%
+\prime}," display="block"><mrow><mrow><msup><mi>N</mi><mo>′</mo></msup><mo>=</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∐</mo><mrow><mi>n</mi><mo>≥</mo><mn>0</mn></mrow></munder><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><msup><mi>𝔄</mi><mi>n</mi></msup><mo>⁢</mo><mi>M</mi></mrow><mo>∩</mo><mi>N</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>X</mi><mi>n</mi></msup></mrow></mrow><mo>⊆</mo><msup><mi>M</mi><mo>′</mo></msup></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">a submodule of <math id="p2.m8" class="ltx_Math" alttext="M^{\prime}" display="inline"><msup><mi>M</mi><mo>′</mo></msup></math>.
+Moreover, <math id="p2.m9" class="ltx_Math" alttext="N^{\prime}" display="inline"><msup><mi>N</mi><mo>′</mo></msup></math> is a homogeneous submodule of <math id="p2.m10" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> and it is f.g.
+as <math id="p2.m11" class="ltx_Math" alttext="M^{\prime}" display="inline"><msup><mi>M</mi><mo>′</mo></msup></math> is noetherian.
+Consequently, <math id="p2.m12" class="ltx_Math" alttext="N^{\prime}" display="inline"><msup><mi>N</mi><mo>′</mo></msup></math> possesses a finite number of homogeneous
+generators: <math id="p2.m13" class="ltx_Math" alttext="u_{1}X^{n_{1}},\ldots,u_{s}X^{n_{s}}" display="inline"><mrow><mrow><msub><mi>u</mi><mn>1</mn></msub><mo>⁢</mo><msup><mi>X</mi><msub><mi>n</mi><mn>1</mn></msub></msup></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><msub><mi>u</mi><mi>s</mi></msub><mo>⁢</mo><msup><mi>X</mi><msub><mi>n</mi><mi>s</mi></msub></msup></mrow></mrow></math>, where
+<math id="p2.m14" class="ltx_Math" alttext="u_{j}\in{\mathfrak{A}}^{n_{j}}M\cap N" display="inline"><mrow><msub><mi>u</mi><mi>j</mi></msub><mo>∈</mo><mrow><mrow><msup><mi>𝔄</mi><msub><mi>n</mi><mi>j</mi></msub></msup><mo>⁢</mo><mi>M</mi></mrow><mo>∩</mo><mi>N</mi></mrow></mrow></math>. Let <math id="p2.m15" class="ltx_Math" alttext="k=\max\{n_{1},\ldots,n_{s}\}" display="inline"><mrow><mi>k</mi><mo>=</mo><mrow><mi>max</mi><mo>⁡</mo><mrow><mo stretchy="false">{</mo><msub><mi>n</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>n</mi><mi>s</mi></msub><mo stretchy="false">}</mo></mrow></mrow></mrow></math>.
+Given any <math id="p2.m16" class="ltx_Math" alttext="n\geq k" display="inline"><mrow><mi>n</mi><mo>≥</mo><mi>k</mi></mrow></math> and any <math id="p2.m17" class="ltx_Math" alttext="z\in{\mathfrak{A}}^{n}M\cap N" display="inline"><mrow><mi>z</mi><mo>∈</mo><mrow><mrow><msup><mi>𝔄</mi><mi>n</mi></msup><mo>⁢</mo><mi>M</mi></mrow><mo>∩</mo><mi>N</mi></mrow></mrow></math>, look at
+<math id="p2.m18" class="ltx_Math" alttext="zX^{n}\in N^{\prime}_{n}" display="inline"><mrow><mrow><mi>z</mi><mo>⁢</mo><msup><mi>X</mi><mi>n</mi></msup></mrow><mo>∈</mo><msubsup><mi>N</mi><mi>n</mi><mo>′</mo></msubsup></mrow></math>. We have</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="zX^{n}=\sum_{l=1}^{s}a_{l}X^{n-n_{l}}u_{l}X^{n_{l}}," display="block"><mrow><mrow><mrow><mi>z</mi><mo>⁢</mo><msup><mi>X</mi><mi>n</mi></msup></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>l</mi><mo>=</mo><mn>1</mn></mrow><mi>s</mi></munderover><mrow><msub><mi>a</mi><mi>l</mi></msub><mo>⁢</mo><msup><mi>X</mi><mrow><mi>n</mi><mo>-</mo><msub><mi>n</mi><mi>l</mi></msub></mrow></msup><mo>⁢</mo><msub><mi>u</mi><mi>l</mi></msub><mo>⁢</mo><msup><mi>X</mi><msub><mi>n</mi><mi>l</mi></msub></msup></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="p2.m19" class="ltx_Math" alttext="a_{l}X^{n-n_{l}}\in\bigl{(}\mathrm{Pow}_{{\mathfrak{A}}}(A)\bigr{)}_{n-n_{l}}" display="inline"><mrow><mrow><msub><mi>a</mi><mi>l</mi></msub><mo>⁢</mo><msup><mi>X</mi><mrow><mi>n</mi><mo>-</mo><msub><mi>n</mi><mi>l</mi></msub></mrow></msup></mrow><mo>∈</mo><msub><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><msub><mi>Pow</mi><mi>𝔄</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow><mrow><mi>n</mi><mo>-</mo><msub><mi>n</mi><mi>l</mi></msub></mrow></msub></mrow></math>.
+Thus,</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="a_{l}\in{\mathfrak{A}}^{n-n_{l}}={\mathfrak{A}}^{n-k}{\mathfrak{A}}^{k-n_{l}}" display="block"><mrow><msub><mi>a</mi><mi>l</mi></msub><mo>∈</mo><msup><mi>𝔄</mi><mrow><mi>n</mi><mo>-</mo><msub><mi>n</mi><mi>l</mi></msub></mrow></msup><mo>=</mo><mrow><msup><mi>𝔄</mi><mrow><mi>n</mi><mo>-</mo><mi>k</mi></mrow></msup><mo>⁢</mo><msup><mi>𝔄</mi><mrow><mi>k</mi><mo>-</mo><msub><mi>n</mi><mi>l</mi></msub></mrow></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="a_{l}u_{l}\in{\mathfrak{A}}^{n-k}({\mathfrak{A}}^{k-n_{l}}u_{l})\subseteq{%
+\mathfrak{A}}^{n-k}({\mathfrak{A}}^{k-n_{l}}({\mathfrak{A}}^{n_{l}}M\cap N))%
+\subseteq{\mathfrak{A}}^{n-k}({\mathfrak{A}}^{k}M\cap N)." display="block"><mrow><mrow><mrow><msub><mi>a</mi><mi>l</mi></msub><mo>⁢</mo><msub><mi>u</mi><mi>l</mi></msub></mrow><mo>∈</mo><mrow><msup><mi>𝔄</mi><mrow><mi>n</mi><mo>-</mo><mi>k</mi></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>𝔄</mi><mrow><mi>k</mi><mo>-</mo><msub><mi>n</mi><mi>l</mi></msub></mrow></msup><mo>⁢</mo><msub><mi>u</mi><mi>l</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mrow><msup><mi>𝔄</mi><mrow><mi>n</mi><mo>-</mo><mi>k</mi></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>𝔄</mi><mrow><mi>k</mi><mo>-</mo><msub><mi>n</mi><mi>l</mi></msub></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msup><mi>𝔄</mi><msub><mi>n</mi><mi>l</mi></msub></msup><mo>⁢</mo><mi>M</mi></mrow><mo>∩</mo><mi>N</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mrow><msup><mi>𝔄</mi><mrow><mi>n</mi><mo>-</mo><mi>k</mi></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msup><mi>𝔄</mi><mi>k</mi></msup><mo>⁢</mo><mi>M</mi></mrow><mo>∩</mo><mi>N</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">It follows that <math id="p2.m20" class="ltx_Math" alttext="z=\sum_{l=1}^{s}a_{l}u_{l}\in{\mathfrak{A}}^{n-k}({\mathfrak{A}}^{k}M\cap N)" display="inline"><mrow><mi>z</mi><mo>=</mo><mrow><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>l</mi><mo>=</mo><mn>1</mn></mrow><mi>s</mi></msubsup><mrow><msub><mi>a</mi><mi>l</mi></msub><mo>⁢</mo><msub><mi>u</mi><mi>l</mi></msub></mrow></mrow><mo>∈</mo><mrow><msup><mi>𝔄</mi><mrow><mi>n</mi><mo>-</mo><mi>k</mi></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msup><mi>𝔄</mi><mi>k</mi></msup><mo>⁢</mo><mi>M</mi></mrow><mo>∩</mo><mi>N</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, so
+</p>
+<table id="S0.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex10.m1" class="ltx_Math" alttext="{\mathfrak{A}}^{n}M\cap N\subseteq{\mathfrak{A}}^{n-k}({\mathfrak{A}}^{k}M\cap
+N)." display="block"><mrow><mrow><mrow><mrow><msup><mi>𝔄</mi><mi>n</mi></msup><mo>⁢</mo><mi>M</mi></mrow><mo>∩</mo><mi>N</mi></mrow><mo>⊆</mo><mrow><msup><mi>𝔄</mi><mrow><mi>n</mi><mo>-</mo><mi>k</mi></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msup><mi>𝔄</mi><mi>k</mi></msup><mo>⁢</mo><mi>M</mi></mrow><mo>∩</mo><mi>N</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Now, it is clear that the righthand side is contained in
+<math id="p2.m21" class="ltx_Math" alttext="{\mathfrak{A}}^{n}M\cap N" display="inline"><mrow><mrow><msup><mi>𝔄</mi><mi>n</mi></msup><mo>⁢</mo><mi>M</mi></mrow><mo>∩</mo><mi>N</mi></mrow></math>, as <math id="p2.m22" class="ltx_Math" alttext="{\mathfrak{A}}^{n-k}N\subseteq N" display="inline"><mrow><mrow><msup><mi>𝔄</mi><mrow><mi>n</mi><mo>-</mo><mi>k</mi></mrow></msup><mo>⁢</mo><mi>N</mi></mrow><mo>⊆</mo><mi>N</mi></mrow></math>.
+<math id="p2.m23" class="ltx_Math" alttext="\Box" display="inline"><mi mathvariant="normal">□</mi></math>
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">proof of Artin-Rees theorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ProofOfArtinReesTheorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:28:43</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:28:43</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mat_cross (707)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mat_cross (707)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">4</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mat_cross (707)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Proof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 13C99</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 17:29:37 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

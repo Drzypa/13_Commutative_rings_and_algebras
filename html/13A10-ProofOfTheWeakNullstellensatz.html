@@ -1,0 +1,150 @@
+<!DOCTYPE html><html>
+<head>
+<title>proof of the weak Nullstellensatz</title>
+<!--Generated on Fri Feb  9 17:20:40 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">proof of the weak Nullstellensatz</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> be an algebraically closed field, let <math id="p1.m2" class="ltx_Math" alttext="n\geq 0" display="inline"><mrow><mi>n</mi><mo>≥</mo><mn>0</mn></mrow></math>, and let <math id="p1.m3" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> be
+an ideal in the polynomial ring <math id="p1.m4" class="ltx_Math" alttext="K[x_{1},\ldots,x_{n}]" display="inline"><mrow><mi>K</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">]</mo></mrow></mrow></math>. Suppose <math id="p1.m5" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> is
+strictly smaller than <math id="p1.m6" class="ltx_Math" alttext="K[x_{1},\ldots,x_{n}]" display="inline"><mrow><mi>K</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">]</mo></mrow></mrow></math>. Then <math id="p1.m7" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> is contained in a
+maximal ideal <math id="p1.m8" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> of <math id="p1.m9" class="ltx_Math" alttext="K[x_{1},\ldots,x_{n}]" display="inline"><mrow><mi>K</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">]</mo></mrow></mrow></math> (note that we don’t have to
+accept Zorn’s lemma to find such an <math id="p1.m10" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>, since <math id="p1.m11" class="ltx_Math" alttext="K[x_{1},\ldots,x_{n}]" display="inline"><mrow><mi>K</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">]</mo></mrow></mrow></math> is
+Noetherian by Hilbert’s basis theorem), and the quotient ring</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="L=K[x_{1},\ldots,x_{n}]/M" display="block"><mrow><mi>L</mi><mo>=</mo><mrow><mrow><mi>K</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">]</mo></mrow></mrow><mo>/</mo><mi>M</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is a field. We view <math id="p1.m12" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> as a subfield of <math id="p1.m13" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> via the natural
+homomorphism <math id="p1.m14" class="ltx_Math" alttext="K\hookrightarrow L" display="inline"><mrow><mi>K</mi><mo>↪</mo><mi>L</mi></mrow></math>, and we denote the images of
+<math id="p1.m15" class="ltx_Math" alttext="x_{1},\ldots,x_{n}" display="inline"><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub></mrow></math> in <math id="p1.m16" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> by <math id="p1.m17" class="ltx_Math" alttext="\bar{x}_{1},\ldots,\bar{x}_{n}" display="inline"><mrow><msub><mover accent="true"><mi>x</mi><mo stretchy="false">¯</mo></mover><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mover accent="true"><mi>x</mi><mo stretchy="false">¯</mo></mover><mi>n</mi></msub></mrow></math>. Let
+<math id="p1.m18" class="ltx_Math" alttext="\{t_{1},\ldots,t_{m}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>t</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>t</mi><mi>m</mi></msub><mo stretchy="false">}</mo></mrow></math> be a transcendence basis of <math id="p1.m19" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> over <math id="p1.m20" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>; it is
+finite since <math id="p1.m21" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> is finitely generated as a <math id="p1.m22" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>-algebra. Now <math id="p1.m23" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> is
+an algebraic extension of <math id="p1.m24" class="ltx_Math" alttext="K(t_{1},\ldots,t_{m})" display="inline"><mrow><mi>K</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>t</mi><mi>m</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math>. By multiplying the
+minimal polynomial of <math id="p1.m25" class="ltx_Math" alttext="\bar{x}_{i}" display="inline"><msub><mover accent="true"><mi>x</mi><mo stretchy="false">¯</mo></mover><mi>i</mi></msub></math> over <math id="p1.m26" class="ltx_Math" alttext="K(t_{1},\ldots,t_{m})" display="inline"><mrow><mi>K</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>t</mi><mi>m</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math> by a
+suitable element of <math id="p1.m27" class="ltx_Math" alttext="K[t_{1},\ldots,t_{m}]" display="inline"><mrow><mi>K</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msub><mi>t</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>t</mi><mi>m</mi></msub><mo stretchy="false">]</mo></mrow></mrow></math> for each <math id="p1.m28" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>, we obtain
+non-zero polynomials <math id="p1.m29" class="ltx_Math" alttext="f_{i}\in K[t_{1},\ldots,t_{m}][X]" display="inline"><mrow><msub><mi>f</mi><mi>i</mi></msub><mo>∈</mo><mrow><mi>K</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msub><mi>t</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>t</mi><mi>m</mi></msub><mo stretchy="false">]</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math> with the
+property that <math id="p1.m30" class="ltx_Math" alttext="f_{i}(\bar{x}_{i})=0" display="inline"><mrow><mrow><msub><mi>f</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mover accent="true"><mi>x</mi><mo stretchy="false">¯</mo></mover><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> in <math id="p1.m31" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>:</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="f_{i}=c_{i,0}+c_{i,1}X+\cdots+c_{i,d_{i}}X^{d_{i}}\qquad(1\leq i\leq n)" display="block"><mrow><msub><mi>f</mi><mi>i</mi></msub><mo>=</mo><msub><mi>c</mi><mrow><mi>i</mi><mo>,</mo><mn>0</mn></mrow></msub><mo>+</mo><msub><mi>c</mi><mrow><mi>i</mi><mo>,</mo><mn>1</mn></mrow></msub><mi>X</mi><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>c</mi><mrow><mi>i</mi><mo>,</mo><msub><mi>d</mi><mi>i</mi></msub></mrow></msub><msup><mi>X</mi><msub><mi>d</mi><mi>i</mi></msub></msup><mo mathvariant="italic" separator="true">  </mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>≤</mo><mi>i</mi><mo>≤</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for certain integers <math id="p1.m32" class="ltx_Math" alttext="d_{i}&gt;0" display="inline"><mrow><msub><mi>d</mi><mi>i</mi></msub><mo>&gt;</mo><mn>0</mn></mrow></math> and polynomials <math id="p1.m33" class="ltx_Math" alttext="c_{i,j}\in K[t_{1},\ldots,t_{m}]" display="inline"><mrow><msub><mi>c</mi><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow></msub><mo>∈</mo><mrow><mi>K</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msub><mi>t</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>t</mi><mi>m</mi></msub><mo stretchy="false">]</mo></mrow></mrow></mrow></math> with <math id="p1.m34" class="ltx_Math" alttext="c_{i,d_{i}}\neq 0" display="inline"><mrow><msub><mi>c</mi><mrow><mi>i</mi><mo>,</mo><msub><mi>d</mi><mi>i</mi></msub></mrow></msub><mo>≠</mo><mn>0</mn></mrow></math>. Since <math id="p1.m35" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> is algebraically
+closed (hence infinite), we can choose <math id="p1.m36" class="ltx_Math" alttext="u_{1},\ldots,u_{n}\in K" display="inline"><mrow><mrow><msub><mi>u</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>u</mi><mi>n</mi></msub></mrow><mo>∈</mo><mi>K</mi></mrow></math> such that
+<math id="p1.m37" class="ltx_Math" alttext="c_{i,d_{i}}(u_{1},\ldots,u_{m})\neq 0" display="inline"><mrow><mrow><msub><mi>c</mi><mrow><mi>i</mi><mo>,</mo><msub><mi>d</mi><mi>i</mi></msub></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>u</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>u</mi><mi>m</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mn>0</mn></mrow></math> for all <math id="p1.m38" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>. We define a homomorphism</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\phi\colon K[t_{1},\ldots,t_{m}]\longrightarrow K" display="block"><mrow><mi>ϕ</mi><mo>:</mo><mrow><mrow><mi>K</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msub><mi>t</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>t</mi><mi>m</mi></msub><mo stretchy="false">]</mo></mrow></mrow><mo>⟶</mo><mi>K</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">by taking <math id="p1.m39" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math> to be the identity on <math id="p1.m40" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> and sending <math id="p1.m41" class="ltx_Math" alttext="t_{j}" display="inline"><msub><mi>t</mi><mi>j</mi></msub></math> to <math id="p1.m42" class="ltx_Math" alttext="u_{j}" display="inline"><msub><mi>u</mi><mi>j</mi></msub></math>.
+Let <math id="p1.m43" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> be the kernel of this homomorphism. Then <math id="p1.m44" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math> can be
+extended to the localization <math id="p1.m45" class="ltx_Math" alttext="K[t_{1},\ldots,t_{m}]_{N}" display="inline"><mrow><mi>K</mi><mo>⁢</mo><msub><mrow><mo stretchy="false">[</mo><msub><mi>t</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>t</mi><mi>m</mi></msub><mo stretchy="false">]</mo></mrow><mi>N</mi></msub></mrow></math> of
+<math id="p1.m46" class="ltx_Math" alttext="K[t_{1},\ldots,t_{m}]" display="inline"><mrow><mi>K</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msub><mi>t</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>t</mi><mi>m</mi></msub><mo stretchy="false">]</mo></mrow></mrow></math>. Since <math id="p1.m47" class="ltx_Math" alttext="c_{i,d_{i}}\not\in N" display="inline"><mrow><msub><mi>c</mi><mrow><mi>i</mi><mo>,</mo><msub><mi>d</mi><mi>i</mi></msub></mrow></msub><mo>∉</mo><mi>N</mi></mrow></math> for all <math id="p1.m48" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>, the
+<math id="p1.m49" class="ltx_Math" alttext="\bar{x}_{i}" display="inline"><msub><mover accent="true"><mi>x</mi><mo stretchy="false">¯</mo></mover><mi>i</mi></msub></math> are integral over this ring. Since <math id="p1.m50" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> is algebraically
+closed, the extension theorem for ring homomorphisms implies that
+<math id="p1.m51" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math> can be extended to a homomorphism</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\phi\colon(K[t_{1},\ldots,t_{m}]_{N})[\bar{x}_{1},\ldots,\bar{x}_{n}]=L%
+\longrightarrow K." display="block"><mrow><mrow><mi>ϕ</mi><mo>:</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>K</mi><mo>⁢</mo><msub><mrow><mo stretchy="false">[</mo><msub><mi>t</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>t</mi><mi>m</mi></msub><mo stretchy="false">]</mo></mrow><mi>N</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msub><mover accent="true"><mi>x</mi><mo stretchy="false">¯</mo></mover><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mover accent="true"><mi>x</mi><mo stretchy="false">¯</mo></mover><mi>n</mi></msub><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mi>L</mi><mo>⟶</mo><mi>K</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Because <math id="p1.m52" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> is an extension field of <math id="p1.m53" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> and <math id="p1.m54" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math> is the identity on
+<math id="p1.m55" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>, we see that <math id="p1.m56" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math> is actually an isomorphism, that <math id="p1.m57" class="ltx_Math" alttext="m=0" display="inline"><mrow><mi>m</mi><mo>=</mo><mn>0</mn></mrow></math>, and
+that <math id="p1.m58" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> is the zero ideal of <math id="p1.m59" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>. Now let <math id="p1.m60" class="ltx_Math" alttext="a_{1}=\phi(\bar{x}_{1}),\ldots,a_{n}=\phi(\bar{x}_{n})" display="inline"><mrow><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><mrow><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mover accent="true"><mi>x</mi><mo stretchy="false">¯</mo></mover><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow><mo>,</mo><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mover accent="true"><mi>x</mi><mo stretchy="false">¯</mo></mover><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>. Then for all polynomials <math id="p1.m61" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> in the
+ideal <math id="p1.m62" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> we started with, the fact that <math id="p1.m63" class="ltx_Math" alttext="f\in M" display="inline"><mrow><mi>f</mi><mo>∈</mo><mi>M</mi></mrow></math> implies</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="f(a_{1},\ldots,a_{n})=\phi(f(x_{1},\ldots,x_{n})+M)=0." display="block"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mi>M</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We conclude that the zero set <math id="p1.m64" class="ltx_Math" alttext="V(I)" display="inline"><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>I</mi><mo stretchy="false">)</mo></mrow></mrow></math> of <math id="p1.m65" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> is not empty.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">proof of the weak Nullstellensatz</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ProofOfTheWeakNullstellensatz</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:27:43</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:27:43</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pbruin (1001)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pbruin (1001)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">4</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pbruin (1001)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Proof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 13A10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 13A15</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 17:20:40 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

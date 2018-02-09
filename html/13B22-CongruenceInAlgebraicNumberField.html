@@ -1,0 +1,176 @@
+<!DOCTYPE html><html>
+<head>
+<title>congruence in algebraic number field</title>
+<!--Generated on Fri Feb  9 17:25:43 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">congruence in algebraic number field</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Definition.</span>  Let <math id="p1.m1" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math>, <math id="p1.m2" class="ltx_Math" alttext="\beta" display="inline"><mi>β</mi></math> and <math id="p1.m3" class="ltx_Math" alttext="\kappa" display="inline"><mi>κ</mi></math> be integers (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/AlgebraicInteger</span>) of an algebraic number field <math id="p1.m4" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> and  <math id="p1.m5" class="ltx_Math" alttext="\kappa\neq 0" display="inline"><mrow><mi>κ</mi><mo>≠</mo><mn>0</mn></mrow></math>.  One defines</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E1.m1" class="ltx_Math" alttext="\displaystyle\alpha\equiv\beta\pmod{\kappa}" display="inline"><mrow><mi>α</mi><mo>≡</mo><mrow><mi>β</mi><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo movablelimits="false">mod</mo><mi>κ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">if and only if  <math id="p1.m6" class="ltx_Math" alttext="\kappa\mid\alpha\!-\!\beta" display="inline"><mrow><mi>κ</mi><mo>∣</mo><mpadded width="-1.7pt"><mi>α</mi></mpadded><mo rspace="0.8pt">-</mo><mi>β</mi></mrow></math>,  i.e. iff there is an integer <math id="p1.m7" class="ltx_Math" alttext="\lambda" display="inline"><mi>λ</mi></math> of <math id="p1.m8" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> with 
+<math id="p1.m9" class="ltx_Math" alttext="\alpha\!-\!\beta=\lambda\kappa" display="inline"><mrow><mrow><mpadded width="-1.7pt"><mi>α</mi></mpadded><mo rspace="0.8pt">-</mo><mi>β</mi></mrow><mo>=</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>κ</mi></mrow></mrow></math>.
+<br class="ltx_break"></p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Theorem.</span>  The congruence “<math id="p2.m1" class="ltx_Math" alttext="\equiv" display="inline"><mo>≡</mo></math>” modulo <math id="p2.m2" class="ltx_Math" alttext="\kappa" display="inline"><mi>κ</mi></math> defined above is an equivalence relation in the maximal order of <math id="p2.m3" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>.  There are only a finite amount of the equivalence classes, the <span class="ltx_text ltx_font_italic">residue classes modulo <math id="p2.m4" class="ltx_Math" alttext="\kappa" display="inline"><mi>κ</mi></math></span>.
+<br class="ltx_break"></p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Proof.</span>  For justifying the transitivity of “<math id="p3.m1" class="ltx_Math" alttext="\equiv" display="inline"><mo>≡</mo></math>”, suppose (1) and  <math id="p3.m2" class="ltx_Math" alttext="\beta\equiv\gamma\pmod{\kappa}" display="inline"><mrow><mi>β</mi><mo>≡</mo><mrow><mi>γ</mi><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo>mod</mo><mi>κ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>; then there are the integers <math id="p3.m3" class="ltx_Math" alttext="\lambda" display="inline"><mi>λ</mi></math> and <math id="p3.m4" class="ltx_Math" alttext="\mu" display="inline"><mi>μ</mi></math> of <math id="p3.m5" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> such that  <math id="p3.m6" class="ltx_Math" alttext="\alpha\!-\!\beta=\lambda\kappa" display="inline"><mrow><mrow><mpadded width="-1.7pt"><mi>α</mi></mpadded><mo rspace="0.8pt">-</mo><mi>β</mi></mrow><mo>=</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>κ</mi></mrow></mrow></math>, 
+<math id="p3.m7" class="ltx_Math" alttext="\beta\!-\!\gamma=\mu\kappa" display="inline"><mrow><mrow><mpadded width="-1.7pt"><mi>β</mi></mpadded><mo rspace="0.8pt">-</mo><mi>γ</mi></mrow><mo>=</mo><mrow><mi>μ</mi><mo>⁢</mo><mi>κ</mi></mrow></mrow></math>.  Adding these equations we see that  <math id="p3.m8" class="ltx_Math" alttext="\alpha\!-\!\gamma=(\lambda\!+\!\mu)\kappa" display="inline"><mrow><mrow><mpadded width="-1.7pt"><mi>α</mi></mpadded><mo rspace="0.8pt">-</mo><mi>γ</mi></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>λ</mi></mpadded><mo rspace="0.8pt">+</mo><mi>μ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>κ</mi></mrow></mrow></math>  with the integer <math id="p3.m9" class="ltx_Math" alttext="\lambda\!+\!\mu" display="inline"><mrow><mpadded width="-1.7pt"><mi>λ</mi></mpadded><mo rspace="0.8pt">+</mo><mi>μ</mi></mrow></math> of <math id="p3.m10" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>.  Accordingly,  <math id="p3.m11" class="ltx_Math" alttext="\alpha\equiv\gamma\pmod{\kappa}" display="inline"><mrow><mi>α</mi><mo>≡</mo><mrow><mi>γ</mi><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo>mod</mo><mi>κ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.
+<br class="ltx_break">Let <math id="p3.m12" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> be an arbitrary integer of <math id="p3.m13" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> and  <math id="p3.m14" class="ltx_Math" alttext="\{\omega_{1},\,\omega_{2},\,\ldots,\,\omega_{n}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>ω</mi><mn>1</mn></msub><mo rspace="4.2pt">,</mo><msub><mi>ω</mi><mn>2</mn></msub><mo rspace="4.2pt">,</mo><mi mathvariant="normal">…</mi><mo rspace="4.2pt">,</mo><msub><mi>ω</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></math>  a minimal basis of the field.  Then we can write</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\omega=a_{1}\omega_{1}+a_{2}\omega_{2}+\ldots+a_{n}\omega_{n}," display="block"><mrow><mrow><mi>ω</mi><mo>=</mo><mrow><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>ω</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>ω</mi><mn>2</mn></msub></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi>ω</mi><mi>n</mi></msub></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where the <math id="p3.m15" class="ltx_Math" alttext="a_{i}" display="inline"><msub><mi>a</mi><mi>i</mi></msub></math>’s are rational integers.  For  <math id="p3.m16" class="ltx_Math" alttext="i=1,\,2,\,\ldots,\,n" display="inline"><mrow><mi>i</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mn> 2</mn><mo rspace="4.2pt">,</mo><mi mathvariant="normal">…</mi><mo rspace="4.2pt">,</mo><mi>n</mi></mrow></mrow></math>, the division algorithm determines the rational integers <math id="p3.m17" class="ltx_Math" alttext="q_{i}" display="inline"><msub><mi>q</mi><mi>i</mi></msub></math> and <math id="p3.m18" class="ltx_Math" alttext="r_{i}" display="inline"><msub><mi>r</mi><mi>i</mi></msub></math> with</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="a_{i}=\mbox{N}(\kappa)q_{i}+r_{i},\quad 0\leqq r_{i}&lt;|\mbox{N}(\kappa)|," display="block"><mrow><mrow><mrow><msub><mi>a</mi><mi>i</mi></msub><mo>=</mo><mrow><mrow><mtext>N</mtext><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>κ</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>q</mi><mi>i</mi></msub></mrow><mo>+</mo><msub><mi>r</mi><mi>i</mi></msub></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mn>0</mn><mo>≦</mo><msub><mi>r</mi><mi>i</mi></msub><mo>&lt;</mo><mrow><mo stretchy="false">|</mo><mrow><mtext>N</mtext><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>κ</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">whence</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\omega=\mbox{N}(\kappa)(\underbrace{q_{1}\omega_{1}+q_{2}\omega_{2}+\ldots+q_{%
+n}\omega_{n}}_{=\,\pi})+(\underbrace{r_{1}\omega_{1}+r_{2}\omega_{2}+\ldots+r_%
+{n}\omega_{n}}_{=\,\varrho})." display="block"><mrow><mrow><mi>ω</mi><mo>=</mo><mrow><mrow><mtext>N</mtext><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>κ</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><munder><munder accentunder="true"><mrow><mrow><msub><mi>q</mi><mn>1</mn></msub><mo movablelimits="false">⁢</mo><msub><mi>ω</mi><mn>1</mn></msub></mrow><mo movablelimits="false">+</mo><mrow><msub><mi>q</mi><mn>2</mn></msub><mo movablelimits="false">⁢</mo><msub><mi>ω</mi><mn>2</mn></msub></mrow><mo movablelimits="false">+</mo><mi mathvariant="normal">…</mi><mo movablelimits="false">+</mo><mrow><msub><mi>q</mi><mi>n</mi></msub><mo movablelimits="false">⁢</mo><msub><mi>ω</mi><mi>n</mi></msub></mrow></mrow><mo movablelimits="false">⏟</mo></munder><mrow><mi></mi><mo rspace="4.2pt">=</mo><mi>π</mi></mrow></munder><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mo stretchy="false">(</mo><munder><munder accentunder="true"><mrow><mrow><msub><mi>r</mi><mn>1</mn></msub><mo movablelimits="false">⁢</mo><msub><mi>ω</mi><mn>1</mn></msub></mrow><mo movablelimits="false">+</mo><mrow><msub><mi>r</mi><mn>2</mn></msub><mo movablelimits="false">⁢</mo><msub><mi>ω</mi><mn>2</mn></msub></mrow><mo movablelimits="false">+</mo><mi mathvariant="normal">…</mi><mo movablelimits="false">+</mo><mrow><msub><mi>r</mi><mi>n</mi></msub><mo movablelimits="false">⁢</mo><msub><mi>ω</mi><mi>n</mi></msub></mrow></mrow><mo movablelimits="false">⏟</mo></munder><mrow><mi></mi><mo rspace="4.2pt">=</mo><mi>ϱ</mi></mrow></munder><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">So we have</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E2.m1" class="ltx_Math" alttext="\displaystyle\omega=\mbox{N}(\kappa)\pi\!+\!\varrho," display="inline"><mrow><mrow><mi>ω</mi><mo>=</mo><mrow><mrow><mtext>N</mtext><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>κ</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mpadded width="-1.7pt"><mi>π</mi></mpadded></mrow><mo rspace="0.8pt">+</mo><mi>ϱ</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where <math id="p3.m19" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math> and <math id="p3.m20" class="ltx_Math" alttext="\varrho" display="inline"><mi>ϱ</mi></math> are some integers of the field.  If  <math id="p3.m21" class="ltx_Math" alttext="\kappa^{(1)},\,\kappa^{(2)},\,\ldots,\,\kappa^{(n)}" display="inline"><mrow><msup><mi>κ</mi><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msup><mo rspace="4.2pt">,</mo><msup><mi>κ</mi><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></msup><mo rspace="4.2pt">,</mo><mi mathvariant="normal">…</mi><mo rspace="4.2pt">,</mo><msup><mi>κ</mi><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></msup></mrow></math>  are the algebraic conjugates of  <math id="p3.m22" class="ltx_Math" alttext="\kappa=\kappa^{(1)}" display="inline"><mrow><mi>κ</mi><mo>=</mo><msup><mi>κ</mi><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msup></mrow></math>,  then</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\mbox{N}(\kappa)=\underbrace{\kappa^{(1)}}_{\mbox{integer}}\underbrace{\kappa^%
+{(2)}\cdots\kappa^{(n)}}_{\mbox{integer}}=\kappa\kappa^{\prime}\in\mathbb{Z}." display="block"><mrow><mrow><mrow><mtext>N</mtext><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>κ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munder><munder accentunder="true"><msup><mi>κ</mi><mrow><mo movablelimits="false" stretchy="false">(</mo><mn>1</mn><mo movablelimits="false" stretchy="false">)</mo></mrow></msup><mo movablelimits="false">⏟</mo></munder><mtext>integer</mtext></munder><mo>⁢</mo><munder><munder accentunder="true"><mrow><msup><mi>κ</mi><mrow><mo movablelimits="false" stretchy="false">(</mo><mn>2</mn><mo movablelimits="false" stretchy="false">)</mo></mrow></msup><mo movablelimits="false">⁢</mo><mi mathvariant="normal">⋯</mi><mo movablelimits="false">⁢</mo><msup><mi>κ</mi><mrow><mo movablelimits="false" stretchy="false">(</mo><mi>n</mi><mo movablelimits="false" stretchy="false">)</mo></mrow></msup></mrow><mo movablelimits="false">⏟</mo></munder><mtext>integer</mtext></munder></mrow><mo>=</mo><mrow><mi>κ</mi><mo>⁢</mo><msup><mi>κ</mi><mo>′</mo></msup></mrow><mo>∈</mo><mi>ℤ</mi></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Hence, <math id="p3.m23" class="ltx_Math" alttext="\kappa" display="inline"><mi>κ</mi></math> divides <math id="p3.m24" class="ltx_Math" alttext="\mbox{N}(\kappa)" display="inline"><mrow><mtext>N</mtext><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>κ</mi><mo stretchy="false">)</mo></mrow></mrow></math> in the ring of integers of <math id="p3.m25" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>, and (2) implies</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\omega\equiv\varrho\pmod{\kappa}." display="block"><mrow><mrow><mi>ω</mi><mo>≡</mo><mrow><mi>ϱ</mi><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo movablelimits="false">mod</mo><mi>κ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Since any number <math id="p3.m26" class="ltx_Math" alttext="r_{i}" display="inline"><msub><mi>r</mi><mi>i</mi></msub></math> has <math id="p3.m27" class="ltx_Math" alttext="|\mbox{N}(\kappa)|" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mtext>N</mtext><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>κ</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></math> different possible values <math id="p3.m28" class="ltx_Math" alttext="0,\,1,\,\ldots,\,|\mbox{N}(\kappa)|\!-\!1" display="inline"><mrow><mn>0</mn><mo>,</mo><mn> 1</mn><mo rspace="4.2pt">,</mo><mi mathvariant="normal">…</mi><mo rspace="4.2pt">,</mo><mrow><mrow><mo stretchy="false">|</mo><mrow><mtext>N</mtext><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>κ</mi><mo stretchy="false">)</mo></mrow></mrow><mo rspace="0.8pt" stretchy="false">|</mo></mrow><mo rspace="0.8pt">-</mo><mn>1</mn></mrow></mrow></math>, there exist <math id="p3.m29" class="ltx_Math" alttext="|\mbox{N}(\kappa)|^{n}" display="inline"><msup><mrow><mo stretchy="false">|</mo><mrow><mtext>N</mtext><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>κ</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mi>n</mi></msup></math> different ordered tuplets  <math id="p3.m30" class="ltx_Math" alttext="(r_{1},\,r_{2},\,\ldots,\,r_{n})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mn>1</mn></msub><mo rspace="4.2pt">,</mo><msub><mi>r</mi><mn>2</mn></msub><mo rspace="4.2pt">,</mo><mi mathvariant="normal">…</mi><mo rspace="4.2pt">,</mo><msub><mi>r</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></math>.  Therefore there exist at most
+<math id="p3.m31" class="ltx_Math" alttext="|\mbox{N}(\kappa)|^{n}" display="inline"><msup><mrow><mo stretchy="false">|</mo><mrow><mtext>N</mtext><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>κ</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mi>n</mi></msup></math> different residues and residue classes in the ring.</p>
+</div>
+<div id="p4" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">congruence in algebraic number field</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CongruenceInAlgebraicNumberField</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:17:11</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:17:11</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">8</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Theorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 13B22</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">congruence in number field</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CongruenceRelationOnAnAlgebraicSystem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ChineseRemainderTheoremInTermsOfDivisorTheory</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Congruences</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">residue class</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 17:25:43 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>
